@@ -115,27 +115,31 @@ public class AnnotatedApiParser implements AnnotationProvider {
             }
         }
         for (MethodInfo sourceMethod : sourceType.methods()) {
-            MethodInfo targetMethod = findTargetMethod(targetType, sourceMethod);
-            if (targetMethod != null) {
-                annotations += sourceMethod.annotations().size();
-                Data methodData = new Data(sourceMethod.annotations());
-                infoMap.put(targetMethod, methodData);
-                doParameters(sourceMethod, targetMethod);
-            } else {
-                LOGGER.warn("Ignoring method '{}', not found in target type '{}'", sourceMethod, targetType);
-                ++warnings;
+            if (!sourceMethod.isSynthetic()) {
+                MethodInfo targetMethod = findTargetMethod(targetType, sourceMethod);
+                if (targetMethod != null) {
+                    annotations += sourceMethod.annotations().size();
+                    Data methodData = new Data(sourceMethod.annotations());
+                    infoMap.put(targetMethod, methodData);
+                    doParameters(sourceMethod, targetMethod);
+                } else {
+                    LOGGER.warn("Ignoring method '{}', not found in target type '{}'", sourceMethod, targetType);
+                    ++warnings;
+                }
             }
         }
         for (MethodInfo sourceMethod : sourceType.constructors()) {
-            MethodInfo targetMethod = findTargetConstructor(targetType, sourceMethod);
-            if (targetMethod != null) {
-                annotations += sourceMethod.annotations().size();
-                Data methodData = new Data(sourceMethod.annotations());
-                infoMap.put(targetMethod, methodData);
-                doParameters(sourceMethod, targetMethod);
-            } else {
-                LOGGER.warn("Ignoring constructor '{}', not found in target type '{}'", sourceMethod, targetType);
-                ++warnings;
+            if (!sourceMethod.isSynthetic()) {
+                MethodInfo targetMethod = findTargetConstructor(targetType, sourceMethod);
+                if (targetMethod != null) {
+                    annotations += sourceMethod.annotations().size();
+                    Data methodData = new Data(sourceMethod.annotations());
+                    infoMap.put(targetMethod, methodData);
+                    doParameters(sourceMethod, targetMethod);
+                } else {
+                    LOGGER.warn("Ignoring constructor '{}', not found in target type '{}'", sourceMethod, targetType);
+                    ++warnings;
+                }
             }
         }
         for (FieldInfo sourceField : sourceType.fields()) {

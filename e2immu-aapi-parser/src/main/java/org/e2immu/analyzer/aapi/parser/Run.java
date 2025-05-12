@@ -25,41 +25,51 @@ import java.util.Set;
 public class Run {
     private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(Run.class);
 
-    public static final String[] SOURCES = {
-            "../analyzer-aapi/e2immu-aapi-archive/src/main/java/org/e2immu/analyzer/aapi/archive"
-    };
+    public static final String AAPI_DIR =
+            "../e2immu-aapi-archive/src/main/java/org/e2immu/analyzer/aapi/archive";
+    public static final String APF_DIR =
+            "../e2immu-aapi-archive/src/main/resources/org/e2immu/analyzer/aapi/archive/analyzedPackageFiles";
 
     public static void main(String[] args) throws IOException {
         ((Logger) LoggerFactory.getLogger(org.slf4j.Logger.ROOT_LOGGER_NAME)).setLevel(Level.INFO);
         ((Logger) LoggerFactory.getLogger("org.e2immu.analyzer.shallow")).setLevel(Level.DEBUG);
         ((Logger) LoggerFactory.getLogger("org.e2immu.analyzer.modification.prepwork")).setLevel(Level.DEBUG);
-
-        Run run = new Run();
-        for (ToolChain.JRE jre : ToolChain.JRES) {
-            if ("HomeBrew".equals(jre.vendor()) && 17 <= jre.mainVersion()) {
-                run.go(jre.path(), SOURCES);
-            }
-        }
+        new Run().go();
     }
 
-    public List<Message> go(String alternativeJreOrNull, String[] args) throws IOException {
-        LOGGER.info("I'm at {}", new File(".").getAbsolutePath());
+    public List<Message> go() throws IOException {
+        Run run = new Run();
+        List<Message> messages = new ArrayList<>();
+        for (ToolChain.JRE jre : ToolChain.JRES) {
+            if ("Homebrew".equals(jre.vendor()) && 21 <= jre.mainVersion()) {
+                messages.addAll(run.go("jdk", "jdk/openjdk-"+ jre.platformVersion(), jre));
+            }
+        }
+        ToolChain.JRE jre = ToolChain.currentJre();
+        for(String lib: new String[] { "e2immu", "log", "test"}) {
+            messages.addAll(run.go(lib, lib, jre));
+        }
+        return messages;
+    }
+
+    public List<Message> go(String subDirIn, String subDirOut, ToolChain.JRE jre) throws IOException {
+        LOGGER.info("I'm at {}; going for {}, {}", new File(".").getAbsolutePath(), subDirIn, jre.shortName());
         AnnotatedApiParser annotatedApiParser = new AnnotatedApiParser();
         List<String> classPath = new ArrayList<>();
         Collections.addAll(classPath, ToolChain.CLASSPATH_JUNIT);
         Collections.addAll(classPath, ToolChain.CLASSPATH_SLF4J_LOGBACK);
         classPath.add(JavaInspectorImpl.E2IMMU_SUPPORT);
-        annotatedApiParser.initialize(alternativeJreOrNull,
+        annotatedApiParser.initialize(jre.path(),
                 classPath,
-                List.of(args[0]),
-                List.of("java", "javax", "e2immu", "log", "test"));
+                List.of(AAPI_DIR),
+                List.of(subDirIn));
         ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser);
         List<TypeInfo> parsedTypes = shallowAnalyzer.go(annotatedApiParser.types());
         PrepAnalyzer prepAnalyzer = new PrepAnalyzer(annotatedApiParser.runtime());
         prepAnalyzer.initialize(annotatedApiParser.javaInspector().compiledTypesManager().typesLoaded());
 
         Set<Info> infos = annotatedApiParser.infos();
-        LOGGER.info("Parsed and analyzed {} types; {} info objects", parsedTypes.size(), infos.size());
+        LOGGER.info("Parsed and analyzed {} types; {} info objects", annotatedApiParser.types().size(), infos.size());
         infos.forEach(i -> {
             if (!i.analysis().haveAnalyzedValueFor(PropertyImpl.ANNOTATED_API)) {
                 i.analysis().set(PropertyImpl.ANNOTATED_API, ValueImpl.BoolImpl.TRUE);
@@ -68,18 +78,20 @@ public class Run {
 
         WriteAnalysis wa = new WriteAnalysis(annotatedApiParser.runtime());
         Trie<TypeInfo> trie = new Trie<>();
-        for (TypeInfo ti : parsedTypes) {
+        for (TypeInfo ti : annotatedApiParser.types()) {
             if (ti.isPrimaryType()) {
                 trie.add(ti.packageName().split("\\."), ti);
             }
         }
-        File dir = new File("build/json");
-        File targetFile = new File(dir, "OrgE2Immu.json");
-        if (targetFile.delete()) LOGGER.debug("Deleted {}", targetFile);
-        wa.write(dir.getAbsolutePath(), trie);
+        File dir = new File(APF_DIR);
+        File subDirOutFile = new File(dir, subDirOut);
+        wa.write(subDirOutFile.getAbsolutePath(), trie);
 
         WriteDecoratedAAPI writeDecoratedAAPI = new WriteDecoratedAAPI(annotatedApiParser.javaInspector());
-        writeDecoratedAAPI.write("build/decorated", trie);
+        File decorated = new File("build/decorated");
+        File subDirDeco = new File(decorated, subDirOut);
+        subDirDeco.mkdirs();
+        writeDecoratedAAPI.write(subDirDeco.getAbsolutePath(), trie);
         return shallowAnalyzer.getMessages();
     }
 }
