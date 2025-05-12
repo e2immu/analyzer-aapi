@@ -26,7 +26,7 @@ public class Run {
     private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(Run.class);
 
     public static final String[] SOURCES = {
-            "../analyzer-shallow/e2immu-shallow-aapi/src/main/java/org/e2immu/analyzer/shallow/aapi"
+            "../analyzer-aapi/e2immu-aapi-archive/src/main/java/org/e2immu/analyzer/aapi/archive"
     };
 
     public static void main(String[] args) throws IOException {

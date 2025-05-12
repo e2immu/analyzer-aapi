@@ -13,12 +13,12 @@ import java.util.List;
 public class TestRun {
     private static final Logger LOGGER = LoggerFactory.getLogger(TestRun.class);
 
-    private static final String[] SOURCES = new String[]{"../e2immu-shallow-aapi/src/main/java/org/e2immu/analyzer/shallow/aapi"};
+    private static final String[] SOURCES = new String[]{"../e2immu-aapi-archive/src/main/java/org/e2immu/analyzer/aapi/archive"};
 
     @Test
     public void test() throws IOException {
         ((ch.qos.logback.classic.Logger) LoggerFactory.getLogger(org.slf4j.Logger.ROOT_LOGGER_NAME)).setLevel(Level.INFO);
-        ((ch.qos.logback.classic.Logger) LoggerFactory.getLogger("org.e2immu.analyzer.shallow")).setLevel(Level.DEBUG);
+        ((ch.qos.logback.classic.Logger) LoggerFactory.getLogger("org.e2immu.analyzer.aapi")).setLevel(Level.DEBUG);
 
         for (ToolChain.JRE jre : ToolChain.JRES) {
             if ("Homebrew".equals(jre.vendor()) && 17 <= jre.mainVersion()) {
