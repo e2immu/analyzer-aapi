@@ -1,6 +1,5 @@
 package org.e2immu.analyzer.aapi.parser;
 
-import org.e2immu.analyzer.modification.io.DecoratorImpl;
 import org.e2immu.language.cst.api.info.Info;
 import org.e2immu.language.cst.api.info.TypeInfo;
 import org.e2immu.language.inspection.api.integration.JavaInspector;
@@ -14,14 +13,17 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class WriteDecoratedAAPI {
     private static final Logger LOGGER = LoggerFactory.getLogger(WriteDecoratedAAPI.class);
     private final JavaInspector javaInspector;
+    private final Function<Info, AnnotatedApiParser.Data> dataProvider;
 
-    public WriteDecoratedAAPI(JavaInspector javaInspector) {
+    public WriteDecoratedAAPI(JavaInspector javaInspector, Function<Info, AnnotatedApiParser.Data> dataProvider) {
         this.javaInspector = javaInspector;
+        this.dataProvider = dataProvider;
     }
 
     public void write(String destinationDirectory, Trie<TypeInfo> typeTrie) throws IOException {
@@ -49,7 +51,7 @@ public class WriteDecoratedAAPI {
         Collection<TypeInfo> apiTypes = composer.compose(list);
 
         Map<Info, Info> dollarMap = composer.translateFromDollarToReal();
-        composer.write(apiTypes, directory, new DecoratorImpl(javaInspector.runtime(), dollarMap));
+        composer.write(apiTypes, directory, new DecoratorWithComments(javaInspector.runtime(), dollarMap, dataProvider));
 
     }
 

@@ -2,11 +2,13 @@ package org.e2immu.analyzer.aapi.parser;
 
 import org.e2immu.analyzer.modification.common.defaults.AnnotationProvider;
 import org.e2immu.analyzer.modification.io.LoadAnalyzedPackageFiles;
+import org.e2immu.language.cst.api.element.Comment;
 import org.e2immu.language.cst.api.expression.AnnotationExpression;
 import org.e2immu.language.cst.api.expression.StringConstant;
 import org.e2immu.language.cst.api.info.*;
 import org.e2immu.language.cst.api.runtime.Runtime;
 import org.e2immu.language.cst.api.type.ParameterizedType;
+import org.e2immu.language.cst.impl.element.SingleLineComment;
 import org.e2immu.language.inspection.api.integration.JavaInspector;
 import org.e2immu.language.inspection.api.parser.ParseResult;
 import org.e2immu.language.inspection.api.resource.InputConfiguration;
@@ -18,11 +20,13 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class AnnotatedApiParser implements AnnotationProvider {
     private static final Logger LOGGER = LoggerFactory.getLogger(AnnotatedApiParser.class);
 
-    private record Data(List<AnnotationExpression> annotations) {
+    public record Data(List<AnnotationExpression> annotations, Integer frequency, Integer overrideHasFrequency) {
     }
 
     private final List<TypeInfo> typesParsed = new ArrayList<>();
@@ -99,8 +103,30 @@ public class AnnotatedApiParser implements AnnotationProvider {
         }
     }
 
+    private static final Pattern FREQ_PATTERN = Pattern.compile("^\\s*frequency (\\d+)");
+    private static final Pattern FREQ_OVERRIDE_PATTERN = Pattern.compile("override has frequency (\\d+)");
+
+    private Data makeData(Info info) {
+        Integer freq = null;
+        Integer overrideHasFreq = null;
+        for (Comment comment : info.comments()) {
+            if (comment instanceof SingleLineComment slc) {
+                Matcher m1 = FREQ_PATTERN.matcher(slc.comment());
+                if (m1.matches()) {
+                    freq = Integer.parseInt(m1.group(1));
+                } else {
+                    Matcher m2 = FREQ_OVERRIDE_PATTERN.matcher(slc.comment());
+                    if (m2.matches()) {
+                        overrideHasFreq = Integer.parseInt(m2.group(1));
+                    }
+                }
+            }
+        }
+        return new Data(info.annotations(), freq, overrideHasFreq);
+    }
+
     private void transferAnnotations(TypeInfo sourceType, TypeInfo targetType) {
-        Data typeData = new Data(sourceType.annotations());
+        Data typeData = makeData(sourceType);
         annotations += sourceType.annotations().size();
         infoMap.put(targetType, typeData);
 
@@ -119,7 +145,7 @@ public class AnnotatedApiParser implements AnnotationProvider {
                 MethodInfo targetMethod = findTargetMethod(targetType, sourceMethod);
                 if (targetMethod != null) {
                     annotations += sourceMethod.annotations().size();
-                    Data methodData = new Data(sourceMethod.annotations());
+                    Data methodData = makeData(sourceMethod);
                     infoMap.put(targetMethod, methodData);
                     doParameters(sourceMethod, targetMethod);
                 } else {
@@ -133,7 +159,7 @@ public class AnnotatedApiParser implements AnnotationProvider {
                 MethodInfo targetMethod = findTargetConstructor(targetType, sourceMethod);
                 if (targetMethod != null) {
                     annotations += sourceMethod.annotations().size();
-                    Data methodData = new Data(sourceMethod.annotations());
+                    Data methodData = makeData(sourceMethod);
                     infoMap.put(targetMethod, methodData);
                     doParameters(sourceMethod, targetMethod);
                 } else {
@@ -146,7 +172,7 @@ public class AnnotatedApiParser implements AnnotationProvider {
             FieldInfo targetField = findTargetField(targetType, sourceField);
             if (targetField != null) {
                 annotations += sourceField.annotations().size();
-                Data fieldData = new Data(sourceField.annotations());
+                Data fieldData = makeData(sourceField);
                 infoMap.put(targetField, fieldData);
             } else {
                 LOGGER.warn("Ignoring field '{}', not found in target type '{}'", sourceField, targetType);
@@ -160,7 +186,7 @@ public class AnnotatedApiParser implements AnnotationProvider {
         for (ParameterInfo sourceParameter : sourceMethod.parameters()) {
             ParameterInfo targetParameter = targetMethod.parameters().get(i);
             annotations += sourceParameter.annotations().size();
-            Data paramData = new Data(sourceParameter.annotations());
+            Data paramData = makeData(sourceParameter);
             infoMap.put(targetParameter, paramData);
             i++;
         }
@@ -245,5 +271,9 @@ public class AnnotatedApiParser implements AnnotationProvider {
 
     public List<TypeInfo> typesParsed() {
         return typesParsed;
+    }
+
+    public Data data(Info info) {
+        return infoMap.get(info);
     }
 }

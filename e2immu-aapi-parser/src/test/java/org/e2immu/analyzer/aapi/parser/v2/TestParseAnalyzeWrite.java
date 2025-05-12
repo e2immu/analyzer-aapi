@@ -67,7 +67,8 @@ public class TestParseAnalyzeWrite {
 
         File decorated = new File("build/decorated");
         decorated.mkdirs();
-        WriteDecoratedAAPI writeDecoratedAAPI = new WriteDecoratedAAPI(annotatedApiParser.javaInspector());
+        WriteDecoratedAAPI writeDecoratedAAPI = new WriteDecoratedAAPI(annotatedApiParser.javaInspector(),
+                annotatedApiParser::data);
         writeDecoratedAAPI.write(decorated.getAbsolutePath(), trie);
 
     }

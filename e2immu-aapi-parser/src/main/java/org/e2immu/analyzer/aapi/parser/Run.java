@@ -42,11 +42,11 @@ public class Run {
         List<Message> messages = new ArrayList<>();
         for (ToolChain.JRE jre : ToolChain.JRES) {
             if ("Homebrew".equals(jre.vendor()) && 21 <= jre.mainVersion()) {
-                messages.addAll(run.go("jdk", "jdk/openjdk-"+ jre.platformVersion(), jre));
+                messages.addAll(run.go("jdk", "jdk/openjdk-" + jre.platformVersion(), jre));
             }
         }
         ToolChain.JRE jre = ToolChain.currentJre();
-        for(String lib: new String[] { "e2immu", "log", "test"}) {
+        for (String lib : new String[]{"e2immu", "log", "test"}) {
             messages.addAll(run.go(lib, lib, jre));
         }
         return messages;
@@ -64,7 +64,7 @@ public class Run {
                 List.of(AAPI_DIR),
                 List.of(subDirIn));
         ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser);
-        List<TypeInfo> parsedTypes = shallowAnalyzer.go(annotatedApiParser.types());
+        shallowAnalyzer.go(annotatedApiParser.types());
         PrepAnalyzer prepAnalyzer = new PrepAnalyzer(annotatedApiParser.runtime());
         prepAnalyzer.initialize(annotatedApiParser.javaInspector().compiledTypesManager().typesLoaded());
 
@@ -87,7 +87,8 @@ public class Run {
         File subDirOutFile = new File(dir, subDirOut);
         wa.write(subDirOutFile.getAbsolutePath(), trie);
 
-        WriteDecoratedAAPI writeDecoratedAAPI = new WriteDecoratedAAPI(annotatedApiParser.javaInspector());
+        WriteDecoratedAAPI writeDecoratedAAPI = new WriteDecoratedAAPI(annotatedApiParser.javaInspector(),
+                annotatedApiParser::data);
         File decorated = new File("build/decorated");
         File subDirDeco = new File(decorated, subDirOut);
         subDirDeco.mkdirs();

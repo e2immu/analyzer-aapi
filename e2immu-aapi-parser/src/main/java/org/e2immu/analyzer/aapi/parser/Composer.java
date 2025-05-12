@@ -167,7 +167,7 @@ public class Composer {
     }
 
     private Comment addCommentLine(MethodInfo methodInfo) {
-        String shortString = "overrides in " + methodInfo.overrides()
+        String shortString = "override from " + methodInfo.overrides()
                 .stream().map(mi -> mi.typeInfo().fullyQualifiedName()).sorted().collect(Collectors.joining(", "));
         return runtime.newSingleLineComment(shortString);
     }
