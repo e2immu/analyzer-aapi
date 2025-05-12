@@ -21,9 +21,9 @@ Therefore, at any time, the `process-annotated-apis` plugin goal can be called
 .. confirmations are kept, defaults are removed where manual overrides are present, ripple effects of the manual overrides are written as comments, using the `//>>` prefix
 .. again, the `Composer` and `DecoratorImpl` are used to overwrite the files.
 
-. once the AAPIs are in good shape, the `compile-annotated-apis` plugin will write compiled AAPI files to be used by the normal e2immu `run-analyzer` goal.
+. once the AAPIs are in good shape, the `compile-annotated-apis` plugin will write analyzed package files to be used by the normal e2immu `run-analyzer` goal.
 
-Because AAPI and compiled API files are overwritten by the `process-annotated-apis`, we recommend storing them in Git.
+Because AAPI and analyzed package files are overwritten by the `process-annotated-apis`, we recommend storing them in Git.
 
 === Annotation rules
 
