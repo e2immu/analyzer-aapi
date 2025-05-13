@@ -64,7 +64,7 @@ public class Run {
                 List.of(AAPI_DIR),
                 List.of(subDirIn));
         ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser);
-        shallowAnalyzer.go(annotatedApiParser.types());
+        ShallowAnalyzer.Result rs = shallowAnalyzer.go(annotatedApiParser.types());
         PrepAnalyzer prepAnalyzer = new PrepAnalyzer(annotatedApiParser.runtime());
         prepAnalyzer.initialize(annotatedApiParser.javaInspector().compiledTypesManager().typesLoaded());
 
@@ -88,11 +88,11 @@ public class Run {
         wa.write(subDirOutFile.getAbsolutePath(), trie);
 
         WriteDecoratedAAPI writeDecoratedAAPI = new WriteDecoratedAAPI(annotatedApiParser.javaInspector(),
-                annotatedApiParser::data);
+                annotatedApiParser::data, i -> rs.dataMap().get(i));
         File decorated = new File("build/decorated");
         File subDirDeco = new File(decorated, subDirOut);
         subDirDeco.mkdirs();
         writeDecoratedAAPI.write(subDirDeco.getAbsolutePath(), trie);
-        return shallowAnalyzer.getMessages();
+        return rs.messages();
     }
 }

@@ -53,14 +53,14 @@ public class CommonTest {
                 List.of("../e2immu-aapi-archive/src/main/java/org/e2immu/analyzer/aapi/archive"),
                 List.of("java", "javax"));
         ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser);
-        shallowAnalyzer.go(annotatedApiParser.types());
+       ShallowAnalyzer.Result sr = shallowAnalyzer.go(annotatedApiParser.types());
 
         PrepAnalyzer prepAnalyzer = new PrepAnalyzer(annotatedApiParser.runtime());
         prepAnalyzer.initialize(annotatedApiParser.javaInspector().compiledTypesManager().typesLoaded());
 
-        sorted = shallowAnalyzer.getSorted();
-        graph = shallowAnalyzer.getGraph();
-        allTypes = shallowAnalyzer.getAllTypes();
+        sorted = sr.sorted();
+        graph = sr.typeGraph();
+        allTypes = sr.allTypes();
         compiledTypesManager = annotatedApiParser.javaInspector().compiledTypesManager();
         runtime = annotatedApiParser.runtime();
     }

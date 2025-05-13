@@ -6,12 +6,7 @@ import org.e2immu.analyzer.aapi.parser.AnnotatedAPIConfigurationImpl;
 import org.e2immu.analyzer.aapi.parser.AnnotatedApiParser;
 import org.e2immu.analyzer.aapi.parser.WriteDecoratedAAPI;
 import org.e2immu.analyzer.modification.common.defaults.ShallowAnalyzer;
-import org.e2immu.analyzer.modification.io.DecoratorImpl;
-import org.e2immu.analyzer.modification.io.WriteAnalysis;
-import org.e2immu.language.cst.api.info.ImportComputer;
 import org.e2immu.language.cst.api.info.TypeInfo;
-import org.e2immu.language.cst.api.output.Qualification;
-import org.e2immu.language.cst.impl.info.ImportComputerImpl;
 import org.e2immu.language.inspection.integration.JavaInspectorImpl;
 import org.e2immu.language.inspection.integration.ToolChain;
 import org.e2immu.language.inspection.resource.InputConfigurationImpl;
@@ -54,10 +49,9 @@ public class TestParseAnalyzeWrite {
         assertTrue(uri.endsWith("aapi/archive/v2/JavaLang.java"), "Have: " + uri);
 
         ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser);
-        shallowAnalyzer.go(annotatedApiParser.types());
+        ShallowAnalyzer.Result rs = shallowAnalyzer.go(annotatedApiParser.types());
 
 
-        WriteAnalysis wa = new WriteAnalysis(annotatedApiParser.runtime());
         Trie<TypeInfo> trie = new Trie<>();
         for (TypeInfo ti : annotatedApiParser.types()) {
             if (ti.isPrimaryType()) {
@@ -68,7 +62,7 @@ public class TestParseAnalyzeWrite {
         File decorated = new File("build/decorated");
         decorated.mkdirs();
         WriteDecoratedAAPI writeDecoratedAAPI = new WriteDecoratedAAPI(annotatedApiParser.javaInspector(),
-                annotatedApiParser::data);
+                annotatedApiParser::data, rs.dataMap()::get);
         writeDecoratedAAPI.write(decorated.getAbsolutePath(), trie);
 
     }

@@ -26,7 +26,9 @@ import java.util.regex.Pattern;
 public class AnnotatedApiParser implements AnnotationProvider {
     private static final Logger LOGGER = LoggerFactory.getLogger(AnnotatedApiParser.class);
 
-    public record Data(List<AnnotationExpression> annotations, Integer frequency, Integer overrideHasFrequency) {
+    public record Data(List<AnnotationExpression> annotations,
+                       boolean explainAnnotationInComment,
+                       Integer frequency, Integer overrideHasFrequency) {
     }
 
     private final List<TypeInfo> typesParsed = new ArrayList<>();
@@ -103,26 +105,33 @@ public class AnnotatedApiParser implements AnnotationProvider {
         }
     }
 
+    private static final Pattern EXPLAIN_PATTERN = Pattern.compile("^(\\s*@|<no annotations>)");
     private static final Pattern FREQ_PATTERN = Pattern.compile("^\\s*frequency (\\d+)");
-    private static final Pattern FREQ_OVERRIDE_PATTERN = Pattern.compile("override has frequency (\\d+)");
+    private static final Pattern FREQ_OVERRIDE_PATTERN = Pattern.compile("^\\s*override has frequency (\\d+)");
 
     private Data makeData(Info info) {
+        boolean explainAnnotationInComment = false;
         Integer freq = null;
         Integer overrideHasFreq = null;
         for (Comment comment : info.comments()) {
             if (comment instanceof SingleLineComment slc) {
-                Matcher m1 = FREQ_PATTERN.matcher(slc.comment());
-                if (m1.matches()) {
-                    freq = Integer.parseInt(m1.group(1));
+                Matcher m0 = EXPLAIN_PATTERN.matcher(slc.comment());
+                if (m0.find()) {
+                    explainAnnotationInComment = true;
                 } else {
-                    Matcher m2 = FREQ_OVERRIDE_PATTERN.matcher(slc.comment());
-                    if (m2.matches()) {
-                        overrideHasFreq = Integer.parseInt(m2.group(1));
+                    Matcher m1 = FREQ_PATTERN.matcher(slc.comment());
+                    if (m1.find()) {
+                        freq = Integer.parseInt(m1.group(1));
+                    } else {
+                        Matcher m2 = FREQ_OVERRIDE_PATTERN.matcher(slc.comment());
+                        if (m2.find()) {
+                            overrideHasFreq = Integer.parseInt(m2.group(1));
+                        }
                     }
                 }
             }
         }
-        return new Data(info.annotations(), freq, overrideHasFreq);
+        return new Data(info.annotations(), explainAnnotationInComment, freq, overrideHasFreq);
     }
 
     private void transferAnnotations(TypeInfo sourceType, TypeInfo targetType) {

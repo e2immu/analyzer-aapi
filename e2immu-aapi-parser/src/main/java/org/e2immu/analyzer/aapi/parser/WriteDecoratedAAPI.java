@@ -1,5 +1,6 @@
 package org.e2immu.analyzer.aapi.parser;
 
+import org.e2immu.analyzer.modification.common.defaults.ShallowAnalyzer;
 import org.e2immu.language.cst.api.info.Info;
 import org.e2immu.language.cst.api.info.TypeInfo;
 import org.e2immu.language.inspection.api.integration.JavaInspector;
@@ -20,10 +21,14 @@ public class WriteDecoratedAAPI {
     private static final Logger LOGGER = LoggerFactory.getLogger(WriteDecoratedAAPI.class);
     private final JavaInspector javaInspector;
     private final Function<Info, AnnotatedApiParser.Data> dataProvider;
+private final    Function<Info, ShallowAnalyzer.InfoData> infoDataProvider;
 
-    public WriteDecoratedAAPI(JavaInspector javaInspector, Function<Info, AnnotatedApiParser.Data> dataProvider) {
+    public WriteDecoratedAAPI(JavaInspector javaInspector,
+                              Function<Info, AnnotatedApiParser.Data> dataProvider,
+                              Function<Info, ShallowAnalyzer.InfoData> infoDataProvider) {
         this.javaInspector = javaInspector;
         this.dataProvider = dataProvider;
+        this.infoDataProvider  = infoDataProvider;
     }
 
     public void write(String destinationDirectory, Trie<TypeInfo> typeTrie) throws IOException {
@@ -51,7 +56,8 @@ public class WriteDecoratedAAPI {
         Collection<TypeInfo> apiTypes = composer.compose(list);
 
         Map<Info, Info> dollarMap = composer.translateFromDollarToReal();
-        composer.write(apiTypes, directory, new DecoratorWithComments(javaInspector.runtime(), dollarMap, dataProvider));
+        composer.write(apiTypes, directory, new DecoratorWithComments(javaInspector.runtime(), dollarMap,
+                infoDataProvider, dataProvider));
 
     }
 
