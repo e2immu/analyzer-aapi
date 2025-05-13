@@ -27,6 +27,7 @@ public class AnnotatedApiParser implements AnnotationProvider {
     private static final Logger LOGGER = LoggerFactory.getLogger(AnnotatedApiParser.class);
 
     public record Data(List<AnnotationExpression> annotations,
+                       List<Comment> comments,
                        boolean explainAnnotationInComment,
                        Integer frequency, Integer overrideHasFrequency) {
     }
@@ -107,31 +108,42 @@ public class AnnotatedApiParser implements AnnotationProvider {
 
     private static final Pattern EXPLAIN_PATTERN = Pattern.compile("^(\\s*@|<no annotations>)");
     private static final Pattern FREQ_PATTERN = Pattern.compile("^\\s*frequency (\\d+)");
-    private static final Pattern FREQ_OVERRIDE_PATTERN = Pattern.compile("^\\s*override has frequency (\\d+)");
+    private static final Pattern FREQ_OVERRIDE_PATTERN = Pattern.compile("^\\s*override.+frequency (\\d+)");
 
     private Data makeData(Info info) {
         boolean explainAnnotationInComment = false;
         Integer freq = null;
         Integer overrideHasFreq = null;
+        List<Comment> commentsToKeep = new ArrayList<>(info.comments().size());
         for (Comment comment : info.comments()) {
+            boolean keep;
             if (comment instanceof SingleLineComment slc) {
-                Matcher m0 = EXPLAIN_PATTERN.matcher(slc.comment());
+                String commentString = slc.comment();
+                Matcher m0 = EXPLAIN_PATTERN.matcher(commentString);
                 if (m0.find()) {
                     explainAnnotationInComment = true;
+                    keep = false;
                 } else {
-                    Matcher m1 = FREQ_PATTERN.matcher(slc.comment());
+                    Matcher m1 = FREQ_PATTERN.matcher(commentString);
                     if (m1.find()) {
                         freq = Integer.parseInt(m1.group(1));
+                        keep = false;
                     } else {
-                        Matcher m2 = FREQ_OVERRIDE_PATTERN.matcher(slc.comment());
+                        Matcher m2 = FREQ_OVERRIDE_PATTERN.matcher(commentString);
                         if (m2.find()) {
                             overrideHasFreq = Integer.parseInt(m2.group(1));
+                            keep = false;
+                        } else {
+                            keep = commentString.startsWith(" ");
                         }
                     }
                 }
+            } else {
+                keep = true;
             }
+            if (keep) commentsToKeep.add(comment);
         }
-        return new Data(info.annotations(), explainAnnotationInComment, freq, overrideHasFreq);
+        return new Data(info.annotations(), commentsToKeep, explainAnnotationInComment, freq, overrideHasFreq);
     }
 
     private void transferAnnotations(TypeInfo sourceType, TypeInfo targetType) {

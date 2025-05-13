@@ -206,9 +206,6 @@ public class Composer {
         return newField;
     }
 
-    // FIXME two issues
-    //   some method type parameters are duplicated
-    //   some method type parameters don't have the proper "extends"
     private MethodInfo createMethod(MethodInfo methodInfo, TypeInfo owner, TranslationMap typeTm) {
         MethodInfo newMethod;
         if (methodInfo.isConstructor()) {

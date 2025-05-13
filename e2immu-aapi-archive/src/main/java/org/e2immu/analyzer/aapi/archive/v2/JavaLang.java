@@ -105,6 +105,7 @@ public class JavaLang {
         //override has frequency 21
         boolean isEmpty() { return false; }
 
+        // NOTE: can we demand that the result is @Independent?
         //override has frequency 1
         CharSequence subSequence(int i, int i1) { return null; }
 

@@ -703,8 +703,10 @@ public class JavaUtil {
         Object [] toArray() { return null; }
 
         //override has frequency 3
+        @NotModified
         <T> T [] toArray(@Modified @Deprecated T [] t) { return null; }
-        <T> T [] toArray(IntFunction<T []> generator) { return null; }
+        @NotModified
+        <T> T [] toArray(@Independent(hc = true) IntFunction<T []> generator) { return null; }
         //frequency 2
         boolean add(E e) { return false; }
 

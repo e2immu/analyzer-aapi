@@ -72,7 +72,9 @@ class DecoratorWithComments extends DecoratorImpl {
         }
         if (commentParts.isEmpty()) return Stream.of();
         String comment = String.join(" ", commentParts);
-        if (translatedInfo instanceof ParameterInfo) return Stream.of(runtime.newMultilineComment(comment));
+        if (translatedInfo instanceof ParameterInfo) {
+            return Stream.of(runtime.newMultilineComment(comment));
+        }
         return Stream.of(runtime.newSingleLineComment(comment));
     }
 
@@ -92,10 +94,10 @@ class DecoratorWithComments extends DecoratorImpl {
     @Override
     public List<Comment> comments(Info infoIn) {
         Info translatedInfo = translationMap == null ? infoIn : translationMap.getOrDefault(infoIn, infoIn);
-        List<Comment> comments = super.comments(translatedInfo);
+        AnnotatedApiParser.Data data = dataProvider.apply(translatedInfo);
+        List<Comment> comments = data == null ? List.of() : data.comments();
         Stream<Comment> annotationStream = annotationsInComments(translatedInfo);
         if (translatedInfo instanceof MethodInfo mi) {
-            AnnotatedApiParser.Data data = dataProvider.apply(mi);
             Integer frequency = data != null ? data.frequency() : null;
             Comment comment;
             if (frequency != null) {
@@ -104,13 +106,11 @@ class DecoratorWithComments extends DecoratorImpl {
                 Integer overrideFrequency = data != null ? data.overrideHasFrequency() : null;
                 if (overrideFrequency != null) {
                     comment = runtime.newSingleLineComment("override has frequency " + overrideFrequency);
-                    return Stream.concat(Stream.of(comment), comments.stream()).toList();
                 } else {
                     comment = null;
                 }
             }
-            if (comment != null) LOGGER.debug("Annotating " + mi + " with " + comment.comment());
-            return Stream.concat(Stream.ofNullable(comment), Stream.concat(comments.stream(), annotationStream)).toList();
+            return Stream.concat(comments.stream(), Stream.concat(Stream.ofNullable(comment), annotationStream)).toList();
         }
         return Stream.concat(comments.stream(), annotationStream).toList();
     }

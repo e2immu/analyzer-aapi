@@ -28,6 +28,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TestParseAnalyzeWrite {
     private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(TestParseAnalyzeWrite.class);
+    public static final String NOTE_CHARSEQUENCE = " NOTE: can we demand that the result is @Independent?";
 
     @BeforeAll
     public static void beforeAll() {
@@ -49,6 +50,12 @@ public class TestParseAnalyzeWrite {
         assertEquals(2, types.size());
         TypeInfo t1 = types.getFirst();
         assertEquals("org.e2immu.analyzer.aapi.archive.v2.JavaLang", t1.fullyQualifiedName());
+        {
+            TypeInfo charSeq = t1.findSubType("CharSequence$");
+            MethodInfo sub = charSeq.findUniqueMethod("subSequence", 2);
+            assertFalse(sub.comments().isEmpty());
+            assertEquals(NOTE_CHARSEQUENCE, sub.comments().getFirst().comment());
+        }
         String uri = t1.compilationUnitOrEnclosingType().getLeft().uri().toString();
         assertTrue(uri.endsWith("aapi/archive/v2/JavaLang.java"), "Have: " + uri);
 
@@ -59,6 +66,12 @@ public class TestParseAnalyzeWrite {
         for (TypeInfo ti : annotatedApiParser.types()) {
             if (ti.isPrimaryType()) {
                 trie.add(ti.packageName().split("\\."), ti);
+            }
+            if ("java.lang.CharSequence".equals(ti.fullyQualifiedName())) {
+                MethodInfo sub = ti.findUniqueMethod("subSequence", 2);
+                assertTrue(sub.comments().isEmpty());
+                AnnotatedApiParser.Data data = annotatedApiParser.data(sub);
+                assertEquals(NOTE_CHARSEQUENCE, data.comments().getFirst().comment());
             }
             if ("java.util.Collection".equals(ti.fullyQualifiedName())) {
                 {
@@ -79,6 +92,17 @@ public class TestParseAnalyzeWrite {
                     assertSame(FROM_TYPE, id0.origin(INDEPENDENT_PARAMETER));
                     assertTrue(p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, ValueImpl.IndependentImpl.DEPENDENT)
                             .isIndependentHc());
+                }
+            } else if ("java.util.AbstractCollection".equals(ti.fullyQualifiedName())) {
+                {
+                    MethodInfo toString = ti.findUniqueMethod("toString", 0);
+                    assertTrue(toString.analysis().getOrDefault(NON_MODIFYING_METHOD, ValueImpl.BoolImpl.FALSE).isTrue());
+                }
+                {
+                    MethodInfo constructor = ti.findConstructor(0);
+                    ShallowAnalyzer.InfoData id = rs.dataMap().get(constructor);
+                    assertNull(id);
+                    assertFalse(constructor.isPublic());
                 }
             }
         }
