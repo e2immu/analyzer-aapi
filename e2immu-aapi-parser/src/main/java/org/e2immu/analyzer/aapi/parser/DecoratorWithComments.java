@@ -3,6 +3,7 @@ package org.e2immu.analyzer.aapi.parser;
 
 import org.e2immu.analyzer.modification.common.defaults.ShallowAnalyzer;
 import org.e2immu.analyzer.modification.io.DecoratorImpl;
+import org.e2immu.language.cst.api.analysis.Property;
 import org.e2immu.language.cst.api.element.Comment;
 import org.e2immu.language.cst.api.expression.AnnotationExpression;
 import org.e2immu.language.cst.api.info.Info;
@@ -41,23 +42,40 @@ class DecoratorWithComments extends DecoratorImpl {
 
     @Override
     public List<AnnotationExpression> annotations(Info infoIn) {
-        return super.annotations(infoIn).stream().filter(ae -> acceptAnnotation(ae, infoIn)).toList();
+        return annotationAndProperties(infoIn).stream()
+                .filter(ap -> acceptAnnotation(ap.property(), infoIn))
+                .map(AnnotationProperty::annotationExpression)
+                .toList();
     }
 
-    private boolean acceptAnnotation(AnnotationExpression ae, Info info) {
+    private boolean acceptAnnotation(Property property, Info info) {
         ShallowAnalyzer.InfoData infoData = infoDataProvider.apply(info);
         if (infoData == null) return true;
-        ShallowAnalyzer.AnnotationOrigin ao = infoData.origin(ae);
+        ShallowAnalyzer.AnnotationOrigin ao = infoData.origin(property);
         return ao == ShallowAnalyzer.AnnotationOrigin.ANNOTATED;
     }
 
     private Stream<Comment> annotationsInComments(Info info) {
         ShallowAnalyzer.InfoData infoData = infoDataProvider.apply(info);
         if (infoData == null) return Stream.of();
-        String comment = annotations(info).stream()
-                .filter(ae -> infoData.origin(ae) == ShallowAnalyzer.AnnotationOrigin.FROM_OVERRIDE)
-                .map(ae -> ae.print(simpleNames).toString()).collect(Collectors.joining(" "));
+        String comment = annotationAndProperties(info).stream()
+                .filter(ap -> infoData.origin(ap.property()) != ShallowAnalyzer.AnnotationOrigin.DEFAULT)
+                .map(ap -> ap.annotationExpression().print(simpleNames) + originSuffix(infoData.origin(ap.property())))
+                .collect(Collectors.joining(" "));
         return comment.isBlank() ? Stream.of() : Stream.of(runtime.newSingleLineComment(comment));
+    }
+
+    private static String originSuffix(ShallowAnalyzer.AnnotationOrigin origin) {
+        char code = switch (origin) {
+            case ANNOTATED -> 'A';
+            case FROM_FIELD -> 'F';
+            case FROM_METHOD -> 'M';
+            case FROM_OWNER -> 'O';
+            case FROM_OVERRIDE -> 'H';
+            case FROM_TYPE -> 'T';
+            default -> throw new UnsupportedOperationException();
+        };
+        return "[" + code + "]";
     }
 
     @Override
