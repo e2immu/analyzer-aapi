@@ -14,10 +14,10 @@ import org.e2immu.language.cst.api.runtime.Runtime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 class DecoratorWithComments extends DecoratorImpl {
@@ -62,13 +62,16 @@ class DecoratorWithComments extends DecoratorImpl {
         if (infoData == null) return Stream.of();
         AnnotatedApiParser.Data data = dataProvider.apply(translatedInfo);
         boolean explain = data != null && data.explainAnnotationInComment();
-        String comment = annotationAndProperties(translatedInfo).stream()
-                .filter(ap -> explain
-                              || infoData.origin(ap.property()) != ShallowAnalyzer.AnnotationOrigin.DEFAULT)
-                .map(ap -> ap.annotationExpression().print(simpleNames)
-                           + originSuffix(infoData.origin(ap.property())))
-                .collect(Collectors.joining(" "));
-        if (comment.isBlank()) return Stream.of();
+        List<String> commentParts = new ArrayList<>();
+        for (AnnotationProperty ap : annotationAndProperties(translatedInfo)) {
+            ShallowAnalyzer.AnnotationOrigin origin = infoData.origin(ap.property());
+            if (origin != ShallowAnalyzer.AnnotationOrigin.ANNOTATED &&
+                (explain || origin != ShallowAnalyzer.AnnotationOrigin.DEFAULT)) {
+                commentParts.add(ap.annotationExpression().print(simpleNames) + originSuffix(origin));
+            }
+        }
+        if (commentParts.isEmpty()) return Stream.of();
+        String comment = String.join(" ", commentParts);
         if (translatedInfo instanceof ParameterInfo) return Stream.of(runtime.newMultilineComment(comment));
         return Stream.of(runtime.newSingleLineComment(comment));
     }
