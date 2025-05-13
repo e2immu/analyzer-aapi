@@ -706,10 +706,10 @@ public class JavaUtil {
         <T> T [] toArray(@Modified @Deprecated T [] t) { return null; }
         <T> T [] toArray(IntFunction<T []> generator) { return null; }
         //frequency 2
-        boolean add(@Independent(hc = true) E e) { return false; }
+        boolean add(E e) { return false; }
 
         //override has frequency 3
-        boolean remove(@Independent(hc = true) Object object) { return false; }
+        boolean remove(Object object) { return false; }
         @NotModified
         boolean containsAll(@Independent(hc = true) Collection<?> collection) { return false; }
         //override has frequency 5

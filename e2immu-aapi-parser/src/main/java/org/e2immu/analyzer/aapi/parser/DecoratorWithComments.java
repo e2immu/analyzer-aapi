@@ -8,6 +8,7 @@ import org.e2immu.language.cst.api.element.Comment;
 import org.e2immu.language.cst.api.expression.AnnotationExpression;
 import org.e2immu.language.cst.api.info.Info;
 import org.e2immu.language.cst.api.info.MethodInfo;
+import org.e2immu.language.cst.api.info.ParameterInfo;
 import org.e2immu.language.cst.api.output.Qualification;
 import org.e2immu.language.cst.api.runtime.Runtime;
 import org.slf4j.Logger;
@@ -48,21 +49,28 @@ class DecoratorWithComments extends DecoratorImpl {
                 .toList();
     }
 
-    private boolean acceptAnnotation(Property property, Info info) {
-        ShallowAnalyzer.InfoData infoData = infoDataProvider.apply(info);
+    private boolean acceptAnnotation(Property property, Info infoIn) {
+        Info translatedInfo = translationMap == null ? infoIn : translationMap.getOrDefault(infoIn, infoIn);
+        ShallowAnalyzer.InfoData infoData = infoDataProvider.apply(translatedInfo);
         if (infoData == null) return true;
         ShallowAnalyzer.AnnotationOrigin ao = infoData.origin(property);
         return ao == ShallowAnalyzer.AnnotationOrigin.ANNOTATED;
     }
 
-    private Stream<Comment> annotationsInComments(Info info) {
-        ShallowAnalyzer.InfoData infoData = infoDataProvider.apply(info);
+    private Stream<Comment> annotationsInComments(Info translatedInfo) {
+        ShallowAnalyzer.InfoData infoData = infoDataProvider.apply(translatedInfo);
         if (infoData == null) return Stream.of();
-        String comment = annotationAndProperties(info).stream()
-                .filter(ap -> infoData.origin(ap.property()) != ShallowAnalyzer.AnnotationOrigin.DEFAULT)
-                .map(ap -> ap.annotationExpression().print(simpleNames) + originSuffix(infoData.origin(ap.property())))
+        AnnotatedApiParser.Data data = dataProvider.apply(translatedInfo);
+        boolean explain = data != null && data.explainAnnotationInComment();
+        String comment = annotationAndProperties(translatedInfo).stream()
+                .filter(ap -> explain
+                              || infoData.origin(ap.property()) != ShallowAnalyzer.AnnotationOrigin.DEFAULT)
+                .map(ap -> ap.annotationExpression().print(simpleNames)
+                           + originSuffix(infoData.origin(ap.property())))
                 .collect(Collectors.joining(" "));
-        return comment.isBlank() ? Stream.of() : Stream.of(runtime.newSingleLineComment(comment));
+        if (comment.isBlank()) return Stream.of();
+        if (translatedInfo instanceof ParameterInfo) return Stream.of(runtime.newMultilineComment(comment));
+        return Stream.of(runtime.newSingleLineComment(comment));
     }
 
     private static String originSuffix(ShallowAnalyzer.AnnotationOrigin origin) {
@@ -80,10 +88,10 @@ class DecoratorWithComments extends DecoratorImpl {
 
     @Override
     public List<Comment> comments(Info infoIn) {
-        Info info = translationMap == null ? infoIn : translationMap.getOrDefault(infoIn, infoIn);
-        List<Comment> comments = super.comments(info);
-        Stream<Comment> annotationStream = annotationsInComments(infoIn);
-        if (info instanceof MethodInfo mi) {
+        Info translatedInfo = translationMap == null ? infoIn : translationMap.getOrDefault(infoIn, infoIn);
+        List<Comment> comments = super.comments(translatedInfo);
+        Stream<Comment> annotationStream = annotationsInComments(translatedInfo);
+        if (translatedInfo instanceof MethodInfo mi) {
             AnnotatedApiParser.Data data = dataProvider.apply(mi);
             Integer frequency = data != null ? data.frequency() : null;
             Comment comment;

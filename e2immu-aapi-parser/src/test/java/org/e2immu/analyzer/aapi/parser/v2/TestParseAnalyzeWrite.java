@@ -6,7 +6,10 @@ import org.e2immu.analyzer.aapi.parser.AnnotatedAPIConfigurationImpl;
 import org.e2immu.analyzer.aapi.parser.AnnotatedApiParser;
 import org.e2immu.analyzer.aapi.parser.WriteDecoratedAAPI;
 import org.e2immu.analyzer.modification.common.defaults.ShallowAnalyzer;
+import org.e2immu.language.cst.api.info.MethodInfo;
+import org.e2immu.language.cst.api.info.ParameterInfo;
 import org.e2immu.language.cst.api.info.TypeInfo;
+import org.e2immu.language.cst.impl.analysis.ValueImpl;
 import org.e2immu.language.inspection.integration.JavaInspectorImpl;
 import org.e2immu.language.inspection.integration.ToolChain;
 import org.e2immu.language.inspection.resource.InputConfigurationImpl;
@@ -19,8 +22,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.e2immu.analyzer.modification.common.defaults.ShallowAnalyzer.AnnotationOrigin.*;
+import static org.e2immu.language.cst.impl.analysis.PropertyImpl.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestParseAnalyzeWrite {
     private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(TestParseAnalyzeWrite.class);
@@ -51,11 +55,31 @@ public class TestParseAnalyzeWrite {
         ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser);
         ShallowAnalyzer.Result rs = shallowAnalyzer.go(annotatedApiParser.types());
 
-
         Trie<TypeInfo> trie = new Trie<>();
         for (TypeInfo ti : annotatedApiParser.types()) {
             if (ti.isPrimaryType()) {
                 trie.add(ti.packageName().split("\\."), ti);
+            }
+            if ("java.util.Collection".equals(ti.fullyQualifiedName())) {
+                {
+                    MethodInfo contains = ti.findUniqueMethod("contains", 1);
+                    assertEquals("java.util.Collection.contains(Object)", contains.fullyQualifiedName());
+                    ShallowAnalyzer.InfoData id = rs.dataMap().get(contains);
+                    assertSame(ANNOTATED, id.origin(NON_MODIFYING_METHOD));
+                    ParameterInfo p0 = contains.parameters().getFirst();
+                    assertEquals("java.util.Collection.contains(Object):0:object", p0.fullyQualifiedName());
+                    ShallowAnalyzer.InfoData id0 = rs.dataMap().get(p0);
+                    assertSame(FROM_OWNER, id0.origin(UNMODIFIED_PARAMETER));
+                }
+                {
+                    MethodInfo add = ti.findUniqueMethod("add", 1);
+                    ParameterInfo p0 = add.parameters().getFirst();
+                    assertEquals("java.util.Collection.add(E):0:e", p0.fullyQualifiedName());
+                    ShallowAnalyzer.InfoData id0 = rs.dataMap().get(p0);
+                    assertSame(FROM_TYPE, id0.origin(INDEPENDENT_PARAMETER));
+                    assertTrue(p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, ValueImpl.IndependentImpl.DEPENDENT)
+                            .isIndependentHc());
+                }
             }
         }
 
