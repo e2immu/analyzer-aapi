@@ -4,24 +4,21 @@
   {"name": "C<init>(0)", "data":{"hc":{}}}]},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "MdoPrivileged(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"PT:0","1":"Tjava.security.PrivilegedAction"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":2}, "sub":
-  {"name": "Paction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[-1]]},"independentParameter":2}}},
+  {"name": "Paction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[-1]]}}}},
  {"name": "MdoPrivilegedWithCombiner(1)", "data":{"defaultsAnalyzer":1,"hc":{"0":"PT:0","1":"Tjava.security.PrivilegedAction"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":2}, "sub":
-  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]},"independentParameter":2}}},
+  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]}}}},
  {"name": "MdoPrivileged(2)", "data":{"defaultsAnalyzer":1,"hc":{"0":"PT:0","1":"Tjava.security.PrivilegedAction"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":2}, "subs":[
-  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]},"independentParameter":2}},
-  {"name": "Pcontext(1)", "data":{"independentParameter":2}}]},
+  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]}}}]},
  {"name": "MdoPrivileged(3)", "data":{"defaultsAnalyzer":1,"hc":{"0":"PT:0","1":"Tjava.security.PrivilegedAction","2":"Tjava.security.Permission"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":2}, "subs":[
-  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]},"independentParameter":2}},
-  {"name": "Pcontext(1)", "data":{"independentParameter":2}},
-  {"name": "Pperms(2)", "data":{"containerParameter":1,"hcsParameter":{"2":[[2]]},"immutableParameter":1,"independentParameter":2}}]},
+  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]}}},
+  {"name": "Pperms(2)", "data":{"containerParameter":1,"hcsParameter":{"2":[[2]]},"immutableParameter":1}}]},
  {"name": "MdoPrivilegedWithCombiner(4)", "data":{"defaultsAnalyzer":1,"hc":{"0":"PT:0","1":"Tjava.security.PrivilegedAction","2":"Tjava.security.Permission"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":2}, "subs":[
-  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]},"independentParameter":2}},
-  {"name": "Pcontext(1)", "data":{"independentParameter":2}},
-  {"name": "Pperms(2)", "data":{"containerParameter":1,"hcsParameter":{"2":[[2]]},"immutableParameter":1,"independentParameter":2}}]},
+  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]}}},
+  {"name": "Pperms(2)", "data":{"containerParameter":1,"hcsParameter":{"2":[[2]]},"immutableParameter":1}}]},
  {"name": "MdoPrivileged(5)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"PT:0","1":"Tjava.security.PrivilegedExceptionAction"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":2}, "sub":
-  {"name": "Paction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[-1]]},"independentParameter":2}}},
+  {"name": "Paction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[-1]]}}}},
  {"name": "MdoPrivilegedWithCombiner(6)", "data":{"defaultsAnalyzer":1,"hc":{"0":"PT:0","1":"Tjava.security.PrivilegedExceptionAction"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":2}, "sub":
-  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]},"independentParameter":2}}},
+  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]}}}},
  {"name": "MpreserveCombiner(7)", "data":{"hc":{"0":"Tjava.security.DomainCombiner","1":"Tjava.lang.Class","2":"Tjava.lang.Object"}}, "subs":[
   {"name": "Pcombiner(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
   {"name": "Pcaller(1)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
@@ -33,8 +30,7 @@
  {"name": "MgetProtectionDomain(10)", "data":{"hc":{"0":"Tjava.lang.Class","1":"Tjava.lang.Object","2":"Tjava.security.ProtectionDomain"},"hcsMethod":{"2":[[-1]]}}, "sub":
   {"name": "Pclass(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
  {"name": "MdoPrivileged(11)", "data":{"defaultsAnalyzer":1,"hc":{"0":"PT:0","1":"Tjava.security.PrivilegedExceptionAction"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":2}, "subs":[
-  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]},"independentParameter":2}},
-  {"name": "Pcontext(1)", "data":{"independentParameter":2}}]},
+  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]}}}]},
  {"name": "McheckContext(12)", "data":{"hc":{"0":"Tjava.lang.Class","1":"Tjava.lang.Object"}}, "subs":[
   {"name": "Pcaller(1)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
  {"name": "MensureMaterializedForStackWalk(13)", "data":{"hc":{"0":"Tjava.lang.Object"}}, "sub":
@@ -49,18 +45,16 @@
  {"name": "MwrapException(17)", "data":{"hc":{"0":"Tjava.lang.Exception","1":"Tjava.security.PrivilegedActionException"},"hcsMethod":{"1":[[-1]]}}, "sub":
   {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
  {"name": "MdoPrivileged(18)", "data":{"defaultsAnalyzer":1,"hc":{"0":"PT:0","1":"Tjava.security.PrivilegedExceptionAction","2":"Tjava.security.Permission"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":2}, "subs":[
-  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]},"independentParameter":2}},
-  {"name": "Pcontext(1)", "data":{"independentParameter":2}},
-  {"name": "Pperms(2)", "data":{"containerParameter":1,"hcsParameter":{"2":[[2]]},"immutableParameter":1,"independentParameter":2}}]},
+  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]}}},
+  {"name": "Pperms(2)", "data":{"containerParameter":1,"hcsParameter":{"2":[[2]]},"immutableParameter":1}}]},
  {"name": "MdoPrivilegedWithCombiner(19)", "data":{"defaultsAnalyzer":1,"hc":{"0":"PT:0","1":"Tjava.security.PrivilegedExceptionAction","2":"Tjava.security.Permission"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":2}, "subs":[
-  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]},"independentParameter":2}},
-  {"name": "Pcontext(1)", "data":{"independentParameter":2}},
-  {"name": "Pperms(2)", "data":{"containerParameter":1,"hcsParameter":{"2":[[2]]},"immutableParameter":1,"independentParameter":2}}]},
+  {"name": "Paction(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[-1]]}}},
+  {"name": "Pperms(2)", "data":{"containerParameter":1,"hcsParameter":{"2":[[2]]},"immutableParameter":1}}]},
  {"name": "MgetStackAccessControlContext(20)", "data":{"hc":{}}},
  {"name": "MgetInheritedAccessControlContext(21)", "data":{"hc":{}}},
  {"name": "MgetContext(22)", "data":{"defaultsAnalyzer":1,"hc":{},"independentMethod":2}},
  {"name": "McheckPermission(23)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.security.Permission"},"independentMethod":2}, "sub":
-  {"name": "Pperm(0)", "data":{"hcsParameter":{"0":[[-1]]},"independentParameter":2}}}]},
+  {"name": "Pperm(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
 
 {"name": "Tjava.security.Guard", "data":{"annotatedApi":1,"containerType":1,"defaultsAnalyzer":1,"hc":{"E":true},"immutableType":2,"independentType":2}, "sub":
  {"name": "McheckGuard(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Object"},"independentMethod":2}, "sub":
@@ -102,30 +96,30 @@
   {"name": "Pprovider(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MgetProvider(3)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.security.Provider"},"hcsMethod":{"0":[[-1]]},"independentMethod":2}},
  {"name": "Mupdate(4)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
-  {"name": "Pinput(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+  {"name": "Pinput(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "Mupdate(5)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pinput(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2,"unmodifiedParameter":1}},
-  {"name": "Poffset(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Plen(2)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Poffset(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Plen(2)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "Mupdate(6)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
   {"name": "Pinput(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "Mupdate(7)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.nio.ByteBuffer"},"independentMethod":2}, "sub":
   {"name": "Pinput(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2}}},
  {"name": "Mdigest(8)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":1,"independentMethod":2}},
- {"name": "Mdigest(9)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "subs":[
+ {"name": "Mdigest(9)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "subs":[
   {"name": "Pbuf(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2,"unmodifiedParameter":1}},
-  {"name": "Poffset(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Plen(2)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Poffset(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Plen(2)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "Mdigest(10)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":1,"independentMethod":2}, "sub":
   {"name": "Pinput(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "MgetProviderName(11)", "data":{"hc":{}}},
- {"name": "MtoString(12)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisEqual(13)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "subs":[
+ {"name": "MtoString(12)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}},
+ {"name": "MisEqual(13)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "subs":[
   {"name": "Pdigesta(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pdigestb(1)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "Mreset(14)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}},
  {"name": "MgetAlgorithm(15)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "MgetDigestLength(16)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MgetDigestLength(16)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
  {"name": "Mclone(17)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Object"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":2}}]},
 
 {"name": "Tjava.security.PrivilegedAction", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"PT:0","E":true,"M":1},"independentType":1}, "sub":
@@ -134,8 +128,8 @@
 {"name": "Tjava.security.SecureRandom", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true},"independentType":2}, "subs":[
  {"name": "SStrongPatternHolder(0)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{}}}]},
- {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"noModifyingMethod":1}},
- {"name": "C<init>(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"noModifyingMethod":1}, "sub":
+ {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"nonModifyingMethod":1}},
+ {"name": "C<init>(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"nonModifyingMethod":1}, "sub":
   {"name": "Pseed(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "C<init>(2)", "data":{"hc":{"0":"Tjava.security.SecureRandomSpi","1":"Tjava.security.Provider"}}, "subs":[
   {"name": "PsecureRandomSpi(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
@@ -167,12 +161,12 @@
   {"name": "Pprovider(2)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]},"independentParameter":2}}]},
  {"name": "MgetProvider(9)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.security.Provider"},"hcsMethod":{"0":[[-1]]},"independentMethod":2}},
  {"name": "MgetAlgorithm(10)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "MtoString(11)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MtoString(11)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}},
  {"name": "MgetParameters(12)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.security.SecureRandomParameters"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":2}},
  {"name": "MsetSeed(13)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
   {"name": "Pseed(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "MsetSeed(14)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
-  {"name": "Pseed(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+  {"name": "Pseed(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "MnextBytes(15)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
   {"name": "Pbytes(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2}}},
  {"name": "MnextBytes(16)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.security.SecureRandomParameters"},"independentMethod":2}, "subs":[
@@ -180,9 +174,9 @@
   {"name": "Pparams(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "Mnext(17)", "data":{"hc":{}}},
  {"name": "MgetSeed(18)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":1,"independentMethod":2}, "sub":
-  {"name": "PnumBytes(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+  {"name": "PnumBytes(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "MgenerateSeed(19)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":1,"independentMethod":2}, "sub":
-  {"name": "PnumBytes(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+  {"name": "PnumBytes(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "MlongToByteArray(20)", "data":{"hc":{}}},
  {"name": "MgetInstanceStrong(21)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.security.SecureRandom"},"hcsMethod":{"0":[[-1]]},"independentMethod":2}},
  {"name": "Mreseed(22)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}},

@@ -2,9 +2,8 @@
 {"name": "Torg.junit.jupiter.api.Assertions", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true},"independentType":2}, "subs":[
  {"name": "STimeoutFailureFactory(0)", "data":{"defaultsAnalyzer":1,"hc":{"0":"PT:0","E":true,"M":1}}, "sub":
   {"name": "McreateTimeoutFailure(0)", "data":{"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.function.Supplier","2":"Tjava.lang.Throwable","M":1},"hcsMethod":{"0":[[-1]]}}, "subs":[
-   {"name": "Pduration(0)", "data":{"independentParameter":2}},
-   {"name": "Psupplier(1)", "data":{"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}},
-   {"name": "Pthrowable(2)", "data":{"hcsParameter":{"2":[[-1]]},"independentParameter":2}}]}},
+   {"name": "Psupplier(1)", "data":{"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1}},
+   {"name": "Pthrowable(2)", "data":{"hcsParameter":{"2":[[-1]]}}}]}},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "Mfail(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"PV:0"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":2}},
  {"name": "Mfail(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"PV:0"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":2}, "sub":
@@ -17,9 +16,9 @@
  {"name": "Mfail(4)", "data":{"defaultsAnalyzer":1,"hc":{"0":"PV:0","1":"Tjava.util.function.Supplier"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":2}, "sub":
   {"name": "PmessageSupplier(0)", "data":{"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}},
  {"name": "MassertTrue(5)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
-  {"name": "Pcondition(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+  {"name": "Pcondition(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "MassertTrue(6)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pcondition(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pcondition(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(1)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertTrue(7)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.BooleanSupplier"},"independentMethod":2}, "sub":
   {"name": "PbooleanSupplier(0)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}},
@@ -27,18 +26,18 @@
   {"name": "PbooleanSupplier(0)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}},
   {"name": "Pmessage(1)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertTrue(9)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pcondition(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pcondition(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(1)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertTrue(10)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.BooleanSupplier","1":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "PbooleanSupplier(0)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}},
   {"name": "PmessageSupplier(1)", "data":{"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertFalse(11)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
-  {"name": "Pcondition(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+  {"name": "Pcondition(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "MassertFalse(12)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pcondition(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pcondition(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(1)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertFalse(13)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pcondition(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pcondition(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(1)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertFalse(14)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.BooleanSupplier"},"independentMethod":2}, "sub":
   {"name": "PbooleanSupplier(0)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}},
@@ -65,342 +64,342 @@
   {"name": "Pactual(0)", "data":{"hcsParameter":{"0":[[-1]]},"independentParameter":2}},
   {"name": "PmessageSupplier(1)", "data":{"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(23)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(24)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertEquals(25)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(26)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertEquals(27)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(28)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(29)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(30)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(31)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(32)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(33)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(34)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(35)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(36)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertEquals(37)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(38)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertEquals(39)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(40)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(41)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(42)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(43)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(44)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(45)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(46)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(47)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(48)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertEquals(49)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(50)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertEquals(51)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(52)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(53)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(54)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(55)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(56)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(57)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(58)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(59)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pl(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pl(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(60)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Plong(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertEquals(61)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(62)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertEquals(63)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pl(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pl(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(64)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Plong(1)", "data":{"independentParameter":2}},
   {"name": "Pactual(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(65)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pstring(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(66)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(67)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pl(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pl(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(68)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Plong(1)", "data":{"independentParameter":2}},
   {"name": "Pactual(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(69)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Psupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(70)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(71)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(72)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertEquals(73)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(74)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertEquals(75)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(76)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(77)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(78)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(79)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(80)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(81)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(82)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(83)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(84)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(3)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(85)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(3)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(86)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(87)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pdouble(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertEquals(88)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(89)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertEquals(90)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(91)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pdouble(1)", "data":{"independentParameter":2}},
   {"name": "Pactual(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(92)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pstring(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(93)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(94)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(95)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pdouble(1)", "data":{"independentParameter":2}},
   {"name": "Pactual(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(96)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Psupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(97)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(98)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(99)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pstring(3)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(100)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Psupplier(3)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(101)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(102)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertEquals(103)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(104)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertEquals(105)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(106)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(107)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(108)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertEquals(109)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(110)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(111)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertEquals(112)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
- {"name": "MassertEquals(113)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Object"},"independentMethod":2,"noModifyingMethod":1}, "subs":[
+ {"name": "MassertEquals(113)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Object"},"independentMethod":2,"nonModifyingMethod":1}, "subs":[
   {"name": "Pexpected(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2}}]},
  {"name": "MassertEquals(114)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Object"},"independentMethod":2}, "subs":[
@@ -491,16 +490,16 @@
  {"name": "MassertArrayEquals(137)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"containerParameter":1,"immutableParameter":1,"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"containerParameter":1,"immutableParameter":1,"independentParameter":2}},
-  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertArrayEquals(138)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"containerParameter":1,"immutableParameter":1,"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"containerParameter":1,"immutableParameter":1,"independentParameter":2}},
-  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(3)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertArrayEquals(139)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"containerParameter":1,"immutableParameter":1,"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"containerParameter":1,"immutableParameter":1,"independentParameter":2}},
-  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(3)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertArrayEquals(140)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"containerParameter":1,"immutableParameter":1,"independentParameter":2}},
@@ -516,16 +515,16 @@
  {"name": "MassertArrayEquals(143)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"containerParameter":1,"immutableParameter":1,"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"containerParameter":1,"immutableParameter":1,"independentParameter":2}},
-  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertArrayEquals(144)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"containerParameter":1,"immutableParameter":1,"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"containerParameter":1,"immutableParameter":1,"independentParameter":2}},
-  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pstring(3)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertArrayEquals(145)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"containerParameter":1,"immutableParameter":1,"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"containerParameter":1,"immutableParameter":1,"independentParameter":2}},
-  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Psupplier(3)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertArrayEquals(146)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Object"},"independentMethod":2}, "subs":[
   {"name": "Pexpected(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[0]]},"immutableParameter":1,"independentParameter":2}},
@@ -572,336 +571,336 @@
   {"name": "PactualLines(1)", "data":{"hcsParameter":{"0":[[-1]]},"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(158)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(159)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertNotEquals(160)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(161)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertNotEquals(162)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(163)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(164)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(165)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(166)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(167)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(168)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(169)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(170)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(171)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertNotEquals(172)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(173)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertNotEquals(174)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(175)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(176)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(177)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(178)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(179)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(180)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(181)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(182)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(183)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertNotEquals(184)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(185)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertNotEquals(186)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(187)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(188)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(189)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(190)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(191)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(192)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(193)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(194)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pl(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pl(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(195)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Plong(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertNotEquals(196)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(197)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertNotEquals(198)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pl(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pl(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(199)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Plong(1)", "data":{"independentParameter":2}},
   {"name": "Pactual(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(200)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pstring(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(201)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(202)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pl(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pl(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(203)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Plong(1)", "data":{"independentParameter":2}},
   {"name": "Pactual(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(204)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Psupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(205)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(206)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(207)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertNotEquals(208)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(209)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertNotEquals(210)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(211)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(212)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(213)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(214)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(215)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(216)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(217)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(218)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(219)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(3)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(220)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pdelta(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(3)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(221)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(222)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pdouble(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertNotEquals(223)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(224)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertNotEquals(225)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(226)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pdouble(1)", "data":{"independentParameter":2}},
   {"name": "Pactual(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(227)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pstring(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(228)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(229)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(230)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pdouble(1)", "data":{"independentParameter":2}},
   {"name": "Pactual(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(231)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Psupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(232)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(233)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(234)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pstring(3)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(235)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pd(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Psupplier(3)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(236)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(237)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertNotEquals(238)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(239)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}}]},
  {"name": "MassertNotEquals(240)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(241)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(242)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(243)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "Pmessage(2)", "data":{"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MassertNotEquals(244)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(245)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
-  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Punexpected(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pactual(1)", "data":{"independentParameter":2}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(246)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},
-  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pactual(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PmessageSupplier(2)", "data":{"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}]},
  {"name": "MassertNotEquals(247)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Supplier"},"independentMethod":2}, "subs":[
   {"name": "Punexpected(0)", "data":{"independentParameter":2}},

@@ -43,22 +43,22 @@ public class TestParseAnalyzeWrite {
                         .addClassPath(ToolChain.CLASSPATH_SLF4J_LOGBACK)
                         .addClassPath(JavaInspectorImpl.E2IMMU_SUPPORT)
                         .addSources("../e2immu-aapi-archive/src/main/java")
-                        .addRestrictSourceToPackages("org.e2immu.analyzer.aapi.archive.v2").build(),
+                        .addRestrictSourceToPackages("org.e2immu.analyzer.aapi.archive.v2.jdk").build(),
                 new AnnotatedAPIConfigurationImpl.Builder().build());
 
         List<TypeInfo> types = annotatedApiParser.typesParsed();
         assertEquals(2, types.size());
-        TypeInfo t1 = types.getFirst();
-        assertEquals("org.e2immu.analyzer.aapi.archive.v2.JavaLang", t1.fullyQualifiedName());
-        {
-            TypeInfo charSeq = t1.findSubType("CharSequence$");
-            MethodInfo sub = charSeq.findUniqueMethod("subSequence", 2);
-            assertFalse(sub.comments().isEmpty());
-            assertEquals(NOTE_CHARSEQUENCE, sub.comments().getFirst().comment());
-        }
-        String uri = t1.compilationUnitOrEnclosingType().getLeft().uri().toString();
-        assertTrue(uri.endsWith("aapi/archive/v2/JavaLang.java"), "Have: " + uri);
+        for (TypeInfo typeInfo : types) {
+            if ("org.e2immu.analyzer.aapi.archive.v2.jdk.JavaLang".equals(typeInfo.fullyQualifiedName())) {
+                TypeInfo charSeq = typeInfo.findSubType("CharSequence$");
+                MethodInfo sub = charSeq.findUniqueMethod("subSequence", 2);
+                assertFalse(sub.comments().isEmpty());
+                assertEquals(NOTE_CHARSEQUENCE, sub.comments().getFirst().comment());
 
+                String uri = typeInfo.compilationUnitOrEnclosingType().getLeft().uri().toString();
+                assertTrue(uri.endsWith("aapi/archive/v2/jdk/JavaLang.java"), "Have: " + uri);
+            }
+        }
         ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser);
         ShallowAnalyzer.Result rs = shallowAnalyzer.go(annotatedApiParser.types());
 

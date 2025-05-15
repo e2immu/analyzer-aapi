@@ -25,28 +25,28 @@
  {"name": "FlevelStr(23)", "data":{"defaultsAnalyzer":1,"finalField":1}},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "MtoString(0)", "data":{"defaultsAnalyzer":1,"hc":{},"independentMethod":2}},
- {"name": "MtoInt(1)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MtoInt(1)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
  {"name": "MconvertAnSLF4JLevel(2)", "data":{"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
   {"name": "Pslf4jLevel(0)", "data":{"independentParameter":2}}},
  {"name": "MtoInteger(3)", "data":{"defaultsAnalyzer":1,"hc":{},"independentMethod":2}},
- {"name": "MisGreaterOrEqual(4)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+ {"name": "MisGreaterOrEqual(4)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
   {"name": "Pr(0)", "data":{"independentParameter":2}}},
  {"name": "MtoLevel(5)", "data":{"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
   {"name": "PsArg(0)", "data":{"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "MvalueOf(6)", "data":{"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
   {"name": "PsArg(0)", "data":{"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "MtoLevel(7)", "data":{"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
-  {"name": "Pval(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+  {"name": "Pval(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "MtoLevel(8)", "data":{"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
-  {"name": "Pval(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pval(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PdefaultLevel(1)", "data":{"independentParameter":2}}]},
  {"name": "MtoLevel(9)", "data":{"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "subs":[
   {"name": "PsArg(0)", "data":{"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PdefaultLevel(1)", "data":{"independentParameter":2}}]},
  {"name": "MreadResolve(10)", "data":{"hc":{"0":"Tjava.lang.Object"},"hcsMethod":{"0":[[-1]]}}},
  {"name": "MfromLocationAwareLoggerInteger(11)", "data":{"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
-  {"name": "PlevelInt(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
- {"name": "MtoLocationAwareLoggerInteger(12)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "PlevelInt(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "MtoLocationAwareLoggerInteger(12)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
   {"name": "Plevel(0)", "data":{"independentParameter":2}}}]},
 
 {"name": "Tch.qos.logback.classic.Logger", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
@@ -56,28 +56,28 @@
  {"name": "MgetEffectiveLevel(0)", "data":{"defaultsAnalyzer":1,"hc":{}}},
  {"name": "MgetEffectiveLevelInt(1)", "data":{"hc":{}}},
  {"name": "MgetLevel(2)", "data":{"defaultsAnalyzer":1,"hc":{}}},
- {"name": "MgetName(3)", "data":{"defaultsAnalyzer":1,"hc":{},"independentMethod":2}},
+ {"name": "MgetName(3)", "data":{"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"nonModifyingMethod":1}},
  {"name": "MisRootLogger(4)", "data":{"hc":{}}},
  {"name": "MgetChildByName(5)", "data":{"hc":{}}},
  {"name": "MsetLevel(6)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
   {"name": "PnewLevel(0)", "data":{"annotatedApi":1,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
  {"name": "MhandleParentLevelChange(7)", "data":{"hc":{}}},
  {"name": "MdetachAndStopAllAppenders(8)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}},
- {"name": "MdetachAppender(9)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
-  {"name": "Pname(0)", "data":{"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "MdetachAppender(9)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
+  {"name": "Pname(0)", "data":{"unmodifiedParameter":1}}},
  {"name": "MaddAppender(10)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tch.qos.logback.core.Appender","1":"Tch.qos.logback.classic.spi.ILoggingEvent"},"independentMethod":2}, "sub":
-  {"name": "PnewAppender(0)", "data":{"hcsParameter":{"0":[[-1]],"1":[[0]]},"independentParameter":2}}},
- {"name": "MisAttached(11)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tch.qos.logback.core.Appender","1":"Tch.qos.logback.classic.spi.ILoggingEvent"},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
-  {"name": "Pappender(0)", "data":{"hcsParameter":{"0":[[-1]],"1":[[0]]},"independentParameter":2}}},
+  {"name": "PnewAppender(0)", "data":{"hcsParameter":{"0":[[-1]],"1":[[0]]}}}},
+ {"name": "MisAttached(11)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tch.qos.logback.core.Appender","1":"Tch.qos.logback.classic.spi.ILoggingEvent"},"immutableMethod":3,"independentMethod":2}, "sub":
+  {"name": "Pappender(0)", "data":{"hcsParameter":{"0":[[-1]],"1":[[0]]}}}},
  {"name": "MiteratorForAppenders(12)", "data":{"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.Iterator","1":"Tch.qos.logback.core.Appender","2":"Tch.qos.logback.classic.spi.ILoggingEvent"},"hcsMethod":{"0":[[-1]],"2":[[0,0]]}}},
  {"name": "MgetAppender(13)", "data":{"defaultsAnalyzer":1,"hc":{"0":"Tch.qos.logback.core.Appender","1":"Tch.qos.logback.classic.spi.ILoggingEvent"},"hcsMethod":{"0":[[-1]],"1":[[0]]}}, "sub":
-  {"name": "Pname(0)", "data":{"independentParameter":2,"unmodifiedParameter":1}}},
+  {"name": "Pname(0)", "data":{"unmodifiedParameter":1}}},
  {"name": "McallAppenders(14)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tch.qos.logback.classic.spi.ILoggingEvent"},"independentMethod":2}, "sub":
-  {"name": "Pevent(0)", "data":{"hcsParameter":{"0":[[-1]]},"independentParameter":2}}},
+  {"name": "Pevent(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
  {"name": "MappendLoopOnAppenders(15)", "data":{"hc":{"0":"Tch.qos.logback.classic.spi.ILoggingEvent"}}, "sub":
   {"name": "Pevent(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
- {"name": "MdetachAppender(16)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tch.qos.logback.core.Appender","1":"Tch.qos.logback.classic.spi.ILoggingEvent"},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
-  {"name": "Pappender(0)", "data":{"hcsParameter":{"0":[[-1]],"1":[[0]]},"independentParameter":2}}},
+ {"name": "MdetachAppender(16)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tch.qos.logback.core.Appender","1":"Tch.qos.logback.classic.spi.ILoggingEvent"},"immutableMethod":3,"independentMethod":2}, "sub":
+  {"name": "Pappender(0)", "data":{"hcsParameter":{"0":[[-1]],"1":[[0]]}}}},
  {"name": "McreateChildByLastNamePart(17)", "data":{"hc":{}}},
  {"name": "MlocalLevelReset(18)", "data":{"hc":{}}},
  {"name": "MrecursiveReset(19)", "data":{"hc":{}}},
@@ -134,8 +134,8 @@
   {"name": "Pmarker(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmsg(1)", "data":{"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pt(2)", "data":{"hcsParameter":{"1":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}}]},
- {"name": "MisDebugEnabled(35)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisDebugEnabled(36)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.Marker"},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+ {"name": "MisDebugEnabled(35)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1}},
+ {"name": "MisDebugEnabled(36)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.Marker"},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1}, "sub":
   {"name": "Pmarker(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "Mdebug(37)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
   {"name": "Pmsg(0)", "data":{"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
@@ -207,8 +207,8 @@
   {"name": "Pmarker(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmsg(1)", "data":{"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pt(2)", "data":{"hcsParameter":{"1":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}}]},
- {"name": "MisInfoEnabled(57)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisInfoEnabled(58)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.Marker"},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+ {"name": "MisInfoEnabled(57)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1}},
+ {"name": "MisInfoEnabled(58)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.Marker"},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1}, "sub":
   {"name": "Pmarker(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "Minfo(59)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
   {"name": "Pmsg(0)", "data":{"independentParameter":2,"unmodifiedParameter":1}}},
@@ -245,20 +245,18 @@
   {"name": "Pmarker(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmsg(1)", "data":{"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pt(2)", "data":{"hcsParameter":{"1":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}}]},
- {"name": "MisTraceEnabled(69)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisTraceEnabled(70)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.Marker"},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+ {"name": "MisTraceEnabled(69)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1}},
+ {"name": "MisTraceEnabled(70)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.Marker"},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1}, "sub":
   {"name": "Pmarker(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MisErrorEnabled(71)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisErrorEnabled(72)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.Marker"},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+ {"name": "MisErrorEnabled(71)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1}},
+ {"name": "MisErrorEnabled(72)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.Marker"},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1}, "sub":
   {"name": "Pmarker(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MisWarnEnabled(73)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisWarnEnabled(74)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.Marker"},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+ {"name": "MisWarnEnabled(73)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1}},
+ {"name": "MisWarnEnabled(74)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.Marker"},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1}, "sub":
   {"name": "Pmarker(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MisEnabledFor(75)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.Marker"},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "subs":[
-  {"name": "Pmarker(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2}},
-  {"name": "Plevel(1)", "data":{"independentParameter":2}}]},
- {"name": "MisEnabledFor(76)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
-  {"name": "Plevel(0)", "data":{"independentParameter":2}}},
+ {"name": "MisEnabledFor(75)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.Marker"},"immutableMethod":3,"independentMethod":2}, "subs":[
+  {"name": "Pmarker(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]}}}]},
+ {"name": "MisEnabledFor(76)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
  {"name": "Mwarn(77)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
   {"name": "Pmsg(0)", "data":{"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "Mwarn(78)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Throwable"},"independentMethod":2}, "subs":[
@@ -294,23 +292,23 @@
   {"name": "Pmarker(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmsg(1)", "data":{"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pt(2)", "data":{"hcsParameter":{"1":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}}]},
- {"name": "MisAdditive(87)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MisAdditive(87)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
  {"name": "MsetAdditive(88)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2}, "sub":
-  {"name": "Padditive(0)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+  {"name": "Padditive(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "MtoString(89)", "data":{"defaultsAnalyzer":1,"hc":{}}},
  {"name": "McallTurboFilters(90)", "data":{"hc":{"0":"Torg.slf4j.Marker"}}, "subs":[
   {"name": "Pmarker(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
  {"name": "MgetLoggerContext(91)", "data":{"defaultsAnalyzer":1,"hc":{"0":"Tch.qos.logback.classic.LoggerContext"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MmakeLoggingEventBuilder(92)", "data":{"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.spi.LoggingEventBuilder"},"hcsMethod":{"0":[[-1]]},"independentMethod":2}, "sub":
+ {"name": "MmakeLoggingEventBuilder(92)", "data":{"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.spi.LoggingEventBuilder"},"hcsMethod":{"0":[[-1]]},"independentMethod":2,"nonModifyingMethod":1}, "sub":
   {"name": "Plevel(0)", "data":{"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "Mlog(93)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.Marker","1":"Tjava.lang.Object","2":"Tjava.lang.Throwable"},"independentMethod":2}, "subs":[
   {"name": "Pmarker(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pfqcn(1)", "data":{"independentParameter":2,"unmodifiedParameter":1}},
-  {"name": "PlevelInt(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "PlevelInt(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pmessage(3)", "data":{"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PargArray(4)", "data":{"containerParameter":1,"hcsParameter":{"1":[[1]]},"immutableParameter":1,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pt(5)", "data":{"hcsParameter":{"2":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "Mlog(94)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.event.LoggingEvent"},"independentMethod":2}, "sub":
-  {"name": "Pslf4jEvent(0)", "data":{"hcsParameter":{"0":[[-1]]},"independentParameter":2}}},
+  {"name": "Pslf4jEvent(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
  {"name": "MreadResolve(95)", "data":{"hc":{"0":"Tjava.lang.Object"},"hcsMethod":{"0":[[-1]]}}}]}
 ]

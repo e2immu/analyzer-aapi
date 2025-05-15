@@ -1,4 +1,4 @@
-package org.e2immu.analyzer.aapi.archive.v2;
+package org.e2immu.analyzer.aapi.archive.v2.jdk;
 import org.e2immu.annotation.*;
 import org.e2immu.annotation.rare.StaticSideEffects;
 import org.e2immu.annotation.type.UtilityClass;

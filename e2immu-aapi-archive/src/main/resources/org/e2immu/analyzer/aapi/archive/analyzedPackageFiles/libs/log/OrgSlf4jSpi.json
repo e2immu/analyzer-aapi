@@ -8,7 +8,7 @@
  {"name": "Mlog(0)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Torg.slf4j.Marker","1":"Tjava.lang.Object","2":"Tjava.lang.Throwable"},"independentMethod":2}, "subs":[
   {"name": "Pmarker(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pstring(1)", "data":{"independentParameter":2,"unmodifiedParameter":1}},
-  {"name": "Pi(2)", "data":{"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pi(2)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pstring1(3)", "data":{"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pobject(4)", "data":{"containerParameter":1,"hcsParameter":{"1":[[1]]},"immutableParameter":1,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Pthrowable(5)", "data":{"hcsParameter":{"2":[[-1]]},"independentParameter":2,"unmodifiedParameter":1}}]}]}

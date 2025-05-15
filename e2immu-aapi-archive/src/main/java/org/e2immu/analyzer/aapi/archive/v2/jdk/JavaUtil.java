@@ -1,4 +1,4 @@
-package org.e2immu.analyzer.aapi.archive.v2;
+package org.e2immu.analyzer.aapi.archive.v2.jdk;
 import org.e2immu.annotation.*;
 import org.e2immu.annotation.type.UtilityClass;
 
@@ -65,6 +65,7 @@ import java.util.stream.Stream;
 public class JavaUtil {
     public static final String PACKAGE_NAME = "java.util";
     //public abstract class AbstractCollection implements Collection<E>
+    @Container
     class AbstractCollection$<E> {
         //overrides in java.lang.Iterable, java.util.Collection
         Iterator<E> iterator() { return null; }
@@ -112,6 +113,7 @@ public class JavaUtil {
     }
 
     //public abstract class AbstractList extends AbstractCollection<E> implements List<E>
+    @Container
     class AbstractList$<E> {
         //overrides in java.util.AbstractCollection, java.util.Collection, java.util.List
         //override has frequency 16
@@ -161,6 +163,7 @@ public class JavaUtil {
     }
 
     //public abstract class AbstractMap implements Map<K,V>
+    @Container
     class AbstractMap$<K, V> {
         //overrides in java.util.Map
         int size() { return 0; }
@@ -225,6 +228,7 @@ public class JavaUtil {
     }
 
     //public class ArrayList extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, Serializable
+    @Container
     class ArrayList$<E> {
         //frequency 1
         ArrayList$(int initialCapacity) { }
@@ -349,6 +353,7 @@ public class JavaUtil {
     }
 
     //public final class Arrays
+    @UtilityClass
     class Arrays$ {
         static void sort(int [] a) { }
         static void sort(int [] a, int fromIndex, int toIndex) { }
@@ -394,67 +399,67 @@ public class JavaUtil {
         static void parallelPrefix(double [] array, int fromIndex, int toIndex, DoubleBinaryOperator op) { }
         static void parallelPrefix(int [] array, IntBinaryOperator op) { }
         static void parallelPrefix(int [] array, int fromIndex, int toIndex, IntBinaryOperator op) { }
-        static int binarySearch(long [] a, long key) { return 0; }
-        static int binarySearch(long [] a, int fromIndex, int toIndex, long key) { return 0; }
-        static int binarySearch(int [] a, int key) { return 0; }
-        static int binarySearch(int [] a, int fromIndex, int toIndex, int key) { return 0; }
-        static int binarySearch(short [] a, short key) { return 0; }
-        static int binarySearch(short [] a, int fromIndex, int toIndex, short key) { return 0; }
-        static int binarySearch(char [] a, char key) { return 0; }
-        static int binarySearch(char [] a, int fromIndex, int toIndex, char key) { return 0; }
-        static int binarySearch(byte [] a, byte key) { return 0; }
-        static int binarySearch(byte [] a, int fromIndex, int toIndex, byte key) { return 0; }
-        static int binarySearch(double [] a, double key) { return 0; }
-        static int binarySearch(double [] a, int fromIndex, int toIndex, double key) { return 0; }
-        static int binarySearch(float [] a, float key) { return 0; }
-        static int binarySearch(float [] a, int fromIndex, int toIndex, float key) { return 0; }
-        static int binarySearch(Object [] a, Object key) { return 0; }
-        static int binarySearch(Object [] a, int fromIndex, int toIndex, Object key) { return 0; }
-        static <T> int binarySearch(T [] a, T key, Comparator<? super T> c) { return 0; }
-        static <T> int binarySearch(T [] a, int fromIndex, int toIndex, T key, Comparator<? super T> c) { return 0; }
-        static boolean equals(long [] a, long [] a2) { return false; }
-        static boolean equals(long [] a, int aFromIndex, int aToIndex, long [] b, int bFromIndex, int bToIndex) {
+        static int binarySearch(@NotModified long [] a, long key) { return 0; }
+        static int binarySearch(@NotModified long [] a, int fromIndex, int toIndex, long key) { return 0; }
+        static int binarySearch(@NotModified int [] a, int key) { return 0; }
+        static int binarySearch(@NotModified int [] a, int fromIndex, int toIndex, int key) { return 0; }
+        static int binarySearch(@NotModified short [] a, short key) { return 0; }
+        static int binarySearch(@NotModified short [] a, int fromIndex, int toIndex, short key) { return 0; }
+        static int binarySearch(@NotModified char [] a, char key) { return 0; }
+        static int binarySearch(@NotModified char [] a, int fromIndex, int toIndex, char key) { return 0; }
+        static int binarySearch(@NotModified byte [] a, byte key) { return 0; }
+        static int binarySearch(@NotModified byte [] a, int fromIndex, int toIndex, byte key) { return 0; }
+        static int binarySearch(@NotModified double [] a, double key) { return 0; }
+        static int binarySearch(@NotModified double [] a, int fromIndex, int toIndex, double key) { return 0; }
+        static int binarySearch(@NotModified float [] a, float key) { return 0; }
+        static int binarySearch(@NotModified float [] a, int fromIndex, int toIndex, float key) { return 0; }
+        static int binarySearch(@NotModified Object [] a, Object key) { return 0; }
+        static int binarySearch(@NotModified Object [] a, int fromIndex, int toIndex, Object key) { return 0; }
+        static <T> int binarySearch(@NotModified T [] a, T key, Comparator<? super T> c) { return 0; }
+        static <T> int binarySearch(@NotModified T [] a, int fromIndex, int toIndex, T key, Comparator<? super T> c) { return 0; }
+        static boolean equals(@NotModified long [] a, @NotModified long [] a2) { return false; }
+        static boolean equals(@NotModified long [] a, int aFromIndex, int aToIndex, @NotModified long [] b, int bFromIndex, int bToIndex) {
             return false;
         }
-        static boolean equals(int [] a, int [] a2) { return false; }
-        static boolean equals(int [] a, int aFromIndex, int aToIndex, int [] b, int bFromIndex, int bToIndex) { return false; }
-        static boolean equals(short [] a, short [] a2) { return false; }
-        static boolean equals(short [] a, int aFromIndex, int aToIndex, short [] b, int bFromIndex, int bToIndex) {
+        static boolean equals(@NotModified int [] a, @NotModified int [] a2) { return false; }
+        static boolean equals(@NotModified int [] a, int aFromIndex, int aToIndex, @NotModified int [] b, int bFromIndex, int bToIndex) { return false; }
+        static boolean equals(@NotModified short [] a, @NotModified short [] a2) { return false; }
+        static boolean equals(@NotModified short [] a, int aFromIndex, int aToIndex, @NotModified short [] b, int bFromIndex, int bToIndex) {
             return false;
         }
-        static boolean equals(char [] a, char [] a2) { return false; }
+        static boolean equals(@NotModified char [] a, @NotModified char [] a2) { return false; }
         static boolean equals(char [] a, int aFromIndex, int aToIndex, char [] b, int bFromIndex, int bToIndex) {
             return false;
         }
-        static boolean equals(byte [] a, byte [] a2) { return false; }
-        static boolean equals(byte [] a, int aFromIndex, int aToIndex, byte [] b, int bFromIndex, int bToIndex) {
+        static boolean equals(@NotModified byte [] a, @NotModified byte [] a2) { return false; }
+        static boolean equals(@NotModified byte [] a, int aFromIndex, int aToIndex, @NotModified byte [] b, int bFromIndex, int bToIndex) {
             return false;
         }
-        static boolean equals(boolean [] a, boolean [] a2) { return false; }
-        static boolean equals(boolean [] a, int aFromIndex, int aToIndex, boolean [] b, int bFromIndex, int bToIndex) {
+        static boolean equals(@NotModified boolean [] a, @NotModified boolean [] a2) { return false; }
+        static boolean equals(@NotModified boolean [] a, int aFromIndex, int aToIndex, @NotModified boolean [] b, int bFromIndex, int bToIndex) {
             return false;
         }
-        static boolean equals(double [] a, double [] a2) { return false; }
-        static boolean equals(double [] a, int aFromIndex, int aToIndex, double [] b, int bFromIndex, int bToIndex) {
+        static boolean equals(@NotModified double [] a, @NotModified double [] a2) { return false; }
+        static boolean equals(@NotModified double [] a, int aFromIndex, int aToIndex, double [] b, int bFromIndex, int bToIndex) {
             return false;
         }
-        static boolean equals(float [] a, float [] a2) { return false; }
-        static boolean equals(float [] a, int aFromIndex, int aToIndex, float [] b, int bFromIndex, int bToIndex) {
+        static boolean equals(@NotModified float [] a, @NotModified float [] a2) { return false; }
+        static boolean equals(@NotModified float [] a, int aFromIndex, int aToIndex, @NotModified float [] b, int bFromIndex, int bToIndex) {
             return false;
         }
 
         //frequency 1
         static boolean equals(@NotModified Object [] a, @NotModified Object [] a2) { return false; }
 
-        static boolean equals(Object [] a, int aFromIndex, int aToIndex, Object [] b, int bFromIndex, int bToIndex) {
+        static boolean equals(@NotModified Object [] a, int aFromIndex, int aToIndex, @NotModified Object [] b, int bFromIndex, int bToIndex) {
             return false;
         }
-        static <T> boolean equals(T [] a, T [] a2, Comparator<? super T> cmp) { return false; }
+        static <T> boolean equals(@NotModified T [] a, @NotModified  T [] a2, Comparator<? super T> cmp) { return false; }
         static <T> boolean equals(
-            T [] a,
+            @NotModified T [] a,
             int aFromIndex,
             int aToIndex,
-            T [] b,
+            @NotModified T [] b,
             int bFromIndex,
             int bToIndex,
             Comparator<? super T> cmp) { return false; }
@@ -474,28 +479,28 @@ public class JavaUtil {
         static void fill(double [] a, int fromIndex, int toIndex, double val) { }
         static void fill(float [] a, float val) { }
         static void fill(float [] a, int fromIndex, int toIndex, float val) { }
-        static void fill(Object [] a, Object val) { }
-        static void fill(Object [] a, int fromIndex, int toIndex, Object val) { }
-        static <T> T [] copyOf(T [] original, int newLength) { return null; }
-        static <T, U> T [] copyOf(U [] original, int newLength, Class<? extends T []> newType) { return null; }
-        static byte [] copyOf(byte [] original, int newLength) { return null; }
-        static short [] copyOf(short [] original, int newLength) { return null; }
-        static int [] copyOf(int [] original, int newLength) { return null; }
-        static long [] copyOf(long [] original, int newLength) { return null; }
-        static char [] copyOf(char [] original, int newLength) { return null; }
-        static float [] copyOf(float [] original, int newLength) { return null; }
-        static double [] copyOf(double [] original, int newLength) { return null; }
-        static boolean [] copyOf(boolean [] original, int newLength) { return null; }
-        static <T> T [] copyOfRange(T [] original, int from, int to) { return null; }
-        static <T, U> T [] copyOfRange(U [] original, int from, int to, Class<? extends T []> newType) { return null; }
-        static byte [] copyOfRange(byte [] original, int from, int to) { return null; }
-        static short [] copyOfRange(short [] original, int from, int to) { return null; }
-        static int [] copyOfRange(int [] original, int from, int to) { return null; }
-        static long [] copyOfRange(long [] original, int from, int to) { return null; }
-        static char [] copyOfRange(char [] original, int from, int to) { return null; }
-        static float [] copyOfRange(float [] original, int from, int to) { return null; }
-        static double [] copyOfRange(double [] original, int from, int to) { return null; }
-        static boolean [] copyOfRange(boolean [] original, int from, int to) { return null; }
+        static void fill(@Independent(hcParameters = {1}) Object [] a, Object val) { }
+        static void fill( @Independent(hcParameters = {3}) Object [] a, int fromIndex, int toIndex, Object val) { }
+        static <T> T [] copyOf( @Independent(hcReturnValue = true) @NotModified T [] original, int newLength) { return null; }
+        static <T, U> T [] copyOf(@Independent(hcReturnValue = true) @NotModified U [] original, int newLength, Class<? extends T []> newType) { return null; }
+        static byte [] copyOf(@NotModified byte [] original, int newLength) { return null; }
+        static short [] copyOf(@NotModified short [] original, int newLength) { return null; }
+        static int [] copyOf(@NotModified int [] original, int newLength) { return null; }
+        static long [] copyOf(@NotModified long [] original, int newLength) { return null; }
+        static char [] copyOf(@NotModified char [] original, int newLength) { return null; }
+        static float [] copyOf(@NotModified float [] original, int newLength) { return null; }
+        static double [] copyOf(@NotModified double [] original, int newLength) { return null; }
+        static boolean [] copyOf(@NotModified boolean [] original, int newLength) { return null; }
+        static <T> T [] copyOfRange(@NotModified T [] original, int from, int to) { return null; }
+        static <T, U> T [] copyOfRange(@Independent(hcReturnValue = true) @NotModified U [] original, int from, int to, Class<? extends T []> newType) { return null; }
+        static byte [] copyOfRange(@NotModified byte [] original, int from, int to) { return null; }
+        static short [] copyOfRange(@NotModified short [] original, int from, int to) { return null; }
+        static int [] copyOfRange(@NotModified int [] original, int from, int to) { return null; }
+        static long [] copyOfRange(@NotModified long [] original, int from, int to) { return null; }
+        static char [] copyOfRange(@NotModified char [] original, int from, int to) { return null; }
+        static float [] copyOfRange(@NotModified float [] original, int from, int to) { return null; }
+        static double [] copyOfRange(@NotModified double [] original, int from, int to) { return null; }
+        static boolean [] copyOfRange(@NotModified boolean [] original, int from, int to) { return null; }
         //frequency 21
         @NotModified
         static <T> List<T> asList(@NotModified T ... a) { return null; }
@@ -735,9 +740,9 @@ public class JavaUtil {
         Spliterator<E> spliterator() { return null; }
 
         //frequency 238
-        @NotModified @Independent(hc = true)
+        @NotModified @Independent(hc = true) @NotNull(content = true)
         Stream<E> stream() { return null; }
-        @NotModified @Independent(hc = true)
+        @NotModified @Independent(hc = true) @NotNull(content = true)
         Stream<E> parallelStream() { return null; }
     }
 
@@ -759,14 +764,14 @@ public class JavaUtil {
         static void shuffle(List<?> list, Random rnd) { }
         static void shuffle(List<?> list, RandomGenerator rnd) { }
         static void swap(List<?> list, int i, int j) { }
-        static <T> void fill(List<? super T> list, T obj) { }
-        static <T> void copy(List<? super T> dest, List<? extends T> src) { }
+        static <T> void fill( @Independent(hcParameters = {1}) List<? super T> list, T obj) { }
+        static <T> void copy(@Independent(hcParameters = {1}) List<? super T> dest, @NotModified List<? extends T> src) { }
         static <T extends Comparable<? super T>> T min(Collection<? extends T> coll) { return null; }
         static <T> T min(Collection<? extends T> coll, Comparator<? super T> comp) { return null; }
         static <T extends Comparable<? super T>> T max(Collection<? extends T> coll) { return null; }
         static <T> T max(Collection<? extends T> coll, Comparator<? super T> comp) { return null; }
         static void rotate(List<?> list, int distance) { }
-        static <T> boolean replaceAll(List<T> list, T oldVal, T newVal) { return false; }
+        static <T> boolean replaceAll(@Independent(hcParameters = {2}) List<T> list, T oldVal, T newVal) { return false; }
         static int indexOfSubList(List<?> source, List<?> target) { return 0; }
         static int lastIndexOfSubList(List<?> source, List<?> target) { return 0; }
         static <T> Collection<T> unmodifiableCollection(Collection<? extends T> c) { return null; }
@@ -833,7 +838,7 @@ public class JavaUtil {
         static <T> ArrayList<T> list(Enumeration<T> e) { return null; }
         static int frequency(Collection<?> c, Object o) { return 0; }
         static boolean disjoint(Collection<?> c1, Collection<?> c2) { return false; }
-        static <T> boolean addAll(Collection<? super T> c, T ... elements) { return false; }
+        static <T> boolean addAll(@NotNull @Modified @Independent(hcParameters = {1}) Collection<? super T> c, @NotModified T ... elements) { return false; }
         static <E> Set<E> newSetFromMap(Map<E, Boolean> map) { return null; }
         static <E> SequencedSet<E> newSequencedSetFromMap(SequencedMap<E, Boolean> map) { return null; }
         static <T> Queue<T> asLifoQueue(Deque<T> deque) { return null; }
@@ -937,7 +942,7 @@ public class JavaUtil {
         HashMap$(int initialCapacity) { }
         //frequency 15
         HashMap$() { }
-        HashMap$(@Independent(hc = true) Map<? extends K, ? extends V> m) { }
+        HashMap$(@Independent(hc = true) @NotNull Map<? extends K, ? extends V> m) { }
         //overrides in java.util.AbstractMap, java.util.Map
         int size() { return 0; }
 
@@ -1023,7 +1028,7 @@ public class JavaUtil {
         HashSet$() { }
 
         //frequency 25
-        HashSet$(@Independent(hc = true) Collection<? extends E> c) { }
+        HashSet$(@Independent(hc = true) @NotNull Collection<? extends E> c) { }
         HashSet$(int initialCapacity, float loadFactor) { }
         HashSet$(int initialCapacity) { }
         //overrides in java.lang.Iterable, java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -1062,16 +1067,19 @@ public class JavaUtil {
     }
 
     //public interface Iterator
+    @Container
+    @Independent(hc = true)
     class Iterator$<E> {
         boolean hasNext() { return false; }
         //frequency 2
         @Independent(hc = true)
         E next() { return null; }
         void remove() { }
-        void forEachRemaining(Consumer<? super E> action) { }
+        void forEachRemaining(@NotNull @Independent(hc = true) Consumer<? super E> action) { }
     }
 
     //public interface List implements SequencedCollection<E>
+    @Container
     class List$<E> {
         //overrides in java.util.Collection
         //frequency 68
@@ -1299,6 +1307,7 @@ public class JavaUtil {
     class Map$<K, V> {
         //public interface Entry
         @Container
+        @Independent(hc = true)
         class Entry<K, V> {
             //frequency 1
             @NotModified @Independent(hc = true)
@@ -1319,7 +1328,9 @@ public class JavaUtil {
             static <K, V> Comparator<Map.Entry<K, V>> comparingByValue(Comparator<? super V> cmp) { return null; }
             static <K, V> Map.Entry<K, V> copyOf(Map.Entry<? extends K, ? extends V> e) { return null; }
         }
+        @NotModified
         int size() { return 0; }
+        @NotModified
         boolean isEmpty() { return false; }
         //frequency 5
         @NotModified
@@ -1334,6 +1345,7 @@ public class JavaUtil {
         V remove(Object object) { return null; }
         void putAll(Map<? extends K, ? extends V> map) { }
         void clear() { }
+        @NotModified
         Set<K> keySet() { return null; }
         //frequency 2
         @NotModified
@@ -1348,6 +1360,7 @@ public class JavaUtil {
 
         //overrides in java.lang.Object
         public int hashCode() { return 0; }
+        @NotModified
         V getOrDefault(Object key, V defaultValue) { return null; }
         //frequency 1
         @NotModified
@@ -1438,7 +1451,9 @@ public class JavaUtil {
             V v10) { return null; }
         static <K, V> Map<K, V> ofEntries(Map.Entry<? extends K, ? extends V> ... entries) { return null; }
         static <K, V> Map.Entry<K, V> entry(K k, V v) { return null; }
-        static <K, V> Map<K, V> copyOf(Map<? extends K, ? extends V> map) { return null; }
+        @ImmutableContainer(hc = true)
+        @NotNull
+        static <K, V> Map<K, V> copyOf(@Independent(hc = true) @NotNull  Map<? extends K, ? extends V> map) { return null; }
     }
 
     //public class NoSuchElementException extends RuntimeException
@@ -1465,23 +1480,36 @@ public class JavaUtil {
 
         //frequency 20
         static int hash(Object ... values) { return 0; }
+        @NotNull
         static String toString(Object o) { return null; }
         //frequency 5
-        static String toString(Object o, String nullDefault) { return null; }
+        @NotNull
+        static String toString(Object o, @NotNull String nullDefault) { return null; }
+        @NotNull
         static String toIdentityString(Object o) { return null; }
         static <T> int compare(T a, T b, Comparator<? super T> c) { return 0; }
         //frequency 9
-        static <T> T requireNonNull(T obj) { return null; }
+        @Identity
+        @NotNull
+        static <T> T requireNonNull(@NotNull T obj) { return null; }
 
         //frequency 2
-        static <T> T requireNonNull(T obj, String message) { return null; }
+        @Identity
+        @NotNull
+        static <T> T requireNonNull(@NotNull T obj, String message) { return null; }
         static boolean isNull(Object obj) { return false; }
         //frequency 1
         static boolean nonNull(Object obj) { return false; }
 
         //frequency 1
-        static <T> T requireNonNullElse(T obj, T defaultObj) { return null; }
+        @Identity
+        @NotNull
+        static <T> T requireNonNullElse(T obj, @NotNull  T defaultObj) { return null; }
+        @Identity
+        @NotNull
         static <T> T requireNonNullElseGet(T obj, Supplier<? extends T> supplier) { return null; }
+        @Identity
+        @NotNull
         static <T> T requireNonNull(T obj, Supplier<String> messageSupplier) { return null; }
         static int checkIndex(int index, int length) { return 0; }
         static int checkFromToIndex(int fromIndex, int toIndex, int length) { return 0; }
@@ -1495,12 +1523,16 @@ public class JavaUtil {
     @ImmutableContainer(hc = true)
     class Optional$<T> {
         //frequency 31
+        @Independent
+        @Immutable
         static <T> Optional<T> empty() { return null; }
 
         //frequency 56
-        static <T> Optional<T> of(T value) { return null; }
+        @NotNull
+        static <T> Optional<T> of(@NotNull T value) { return null; }
 
         //frequency 11
+        @NotNull
         static <T> Optional<T> ofNullable(T value) { return null; }
 
         //frequency 88

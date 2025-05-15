@@ -42,7 +42,7 @@ public class CommonTest {
     @BeforeAll
     public static void beforeAll() throws IOException {
         ((Logger) LoggerFactory.getLogger(org.slf4j.Logger.ROOT_LOGGER_NAME)).setLevel(Level.INFO);
-        ((Logger) LoggerFactory.getLogger("org.e2immu.analyzer.shallow")).setLevel(Level.DEBUG);
+        ((Logger) LoggerFactory.getLogger("org.e2immu.analyzer.aapi")).setLevel(Level.DEBUG);
 
         AnnotatedApiParser annotatedApiParser = new AnnotatedApiParser();
         annotatedApiParser.initialize(null,
@@ -50,8 +50,8 @@ public class CommonTest {
                         JavaInspectorImpl.E2IMMU_SUPPORT,
                         "jmod:java.datatransfer",
                         "jmod:java.desktop"),
-                List.of("../e2immu-aapi-archive/src/main/java/org/e2immu/analyzer/aapi/archive"),
-                List.of("java", "javax"));
+                List.of("../e2immu-aapi-archive/src/main/java/org/e2immu/analyzer/aapi/archive/v2"),
+                List.of());
         ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser);
        ShallowAnalyzer.Result sr = shallowAnalyzer.go(annotatedApiParser.types());
 

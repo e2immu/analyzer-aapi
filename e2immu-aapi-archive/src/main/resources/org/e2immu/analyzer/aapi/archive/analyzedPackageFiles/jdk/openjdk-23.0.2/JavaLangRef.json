@@ -18,8 +18,8 @@
  {"name": "MstartReferenceHandlerThread(6)", "data":{"hc":{"1":"Tjava.lang.ThreadGroup","M":1}}, "sub":
   {"name": "Ptg(0)", "data":{"hcsParameter":{"1":[[-1]]}}}},
  {"name": "Mget(7)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":1}},
- {"name": "MrefersTo(8)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
-  {"name": "Pobj(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "MrefersTo(8)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2}, "sub":
+  {"name": "Pobj(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}},
  {"name": "MrefersToImpl(9)", "data":{"hc":{"M":1}}, "sub":
   {"name": "Pobj(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
  {"name": "MrefersTo0(10)", "data":{"hc":{"1":"Tjava.lang.Object","M":1}}, "sub":
@@ -28,9 +28,9 @@
  {"name": "Mclear0(12)", "data":{"hc":{"M":1}}},
  {"name": "MgetFromInactiveFinalReference(13)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
  {"name": "MclearInactiveFinalReference(14)", "data":{"hc":{"M":1}}},
- {"name": "MisEnqueued(15)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "Menqueue(16)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MisEnqueued(15)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2}},
+ {"name": "Menqueue(16)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2}},
  {"name": "Mclone(17)", "data":{"hc":{"1":"Tjava.lang.Object","M":1},"hcsMethod":{"1":[[-1]]}}},
  {"name": "MreachabilityFence(18)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.lang.Object","M":1},"independentMethod":2}, "sub":
-  {"name": "Pref(0)", "data":{"containerParameter":1,"hcsParameter":{"1":[[-1]]},"immutableParameter":2,"independentParameter":2,"unmodifiedParameter":1}}}]}
+  {"name": "Pref(0)", "data":{"containerParameter":1,"hcsParameter":{"1":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}}]}
 ]
