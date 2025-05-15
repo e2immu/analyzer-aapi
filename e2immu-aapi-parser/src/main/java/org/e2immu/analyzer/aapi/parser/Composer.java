@@ -213,7 +213,12 @@ public class Composer {
         } else {
             MethodInfo.MethodType methodType = methodInfo.isStatic() ? runtime.methodTypeStaticMethod()
                     : runtime.methodTypeMethod();
-            String name = validJavaName(methodInfo.name());
+            String name;
+            if (methodInfo.typeInfo().isJavaLangObject() && methodInfo.isFinal()) {
+                name = methodInfo.name() + "$";
+            } else {
+                name = validJavaName(methodInfo.name());
+            }
             newMethod = runtime.newMethod(owner, name, methodType);
             if (!methodInfo.overrides().isEmpty()) {
                 newMethod.builder().addComment(addCommentLine(methodInfo));

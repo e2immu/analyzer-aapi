@@ -21,6 +21,9 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.TreeMap;
+import java.util.Vector;
+import java.util.stream.Stream;
 
 import static org.e2immu.analyzer.modification.common.defaults.ShallowAnalyzer.AnnotationOrigin.*;
 import static org.e2immu.language.cst.impl.analysis.PropertyImpl.*;
@@ -60,10 +63,16 @@ public class TestParseAnalyzeWrite {
             }
         }
         ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser);
-        ShallowAnalyzer.Result rs = shallowAnalyzer.go(annotatedApiParser.types());
+
+        TypeInfo treeMap = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(TreeMap.class);
+        TypeInfo vector = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(Vector.class);
+
+        Stream<TypeInfo> extra = Stream.of(treeMap, vector);
+        List<TypeInfo> typesToAnalyze = Stream.concat(annotatedApiParser.types().stream(), extra).distinct().toList();
+        ShallowAnalyzer.Result rs = shallowAnalyzer.go(typesToAnalyze);
 
         Trie<TypeInfo> trie = new Trie<>();
-        for (TypeInfo ti : annotatedApiParser.types()) {
+        for (TypeInfo ti : typesToAnalyze) {
             if (ti.isPrimaryType()) {
                 trie.add(ti.packageName().split("\\."), ti);
             }
