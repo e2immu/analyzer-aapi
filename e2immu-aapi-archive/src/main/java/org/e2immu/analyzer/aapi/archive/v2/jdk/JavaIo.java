@@ -12,15 +12,15 @@ import org.e2immu.annotation.ImmutableContainer;
 import org.e2immu.annotation.Independent;
 import org.e2immu.annotation.NotModified;
 import org.e2immu.annotation.NotNull;
+import org.e2immu.annotation.rare.AllowsInterrupt;
 
 public class JavaIo {
     public static final String PACKAGE_NAME = "java.io";
     //public class BufferedWriter extends Writer
-    @Independent
     class BufferedWriter$ {
         //frequency 3
-        BufferedWriter$(Writer out) { }
-        BufferedWriter$(Writer out, int sz) { }
+        BufferedWriter$(@NotNull Writer out) { }
+        BufferedWriter$(@NotNull Writer out, int sz) { }
         //override from java.io.Writer
         void write(int c) { }
 
@@ -29,6 +29,8 @@ public class JavaIo {
 
         //override from java.io.Writer
         void write(String s, int off, int len) { }
+
+        @AllowsInterrupt
         void newLine() { }
         //override from java.io.Flushable, java.io.Writer
         void flush() { }
@@ -114,6 +116,7 @@ public class JavaIo {
     @Independent
     class Closeable$ {
         //override from java.lang.AutoCloseable
+        @AllowsInterrupt
         void close() { }
     }
 
@@ -288,16 +291,18 @@ public class JavaIo {
     }
 
     //public class FilterOutputStream extends OutputStream
-    @Independent
     class FilterOutputStream$ {
-        FilterOutputStream$(OutputStream out) { }
+        FilterOutputStream$(@NotNull OutputStream out) { }
         //override from java.io.OutputStream
+        @AllowsInterrupt
         void write(int b) { }
 
         //override from java.io.OutputStream
+        @AllowsInterrupt
         void write(byte [] b) { }
 
         //override from java.io.OutputStream
+        @AllowsInterrupt
         void write(byte [] b, int off, int len) { }
 
         //override from java.io.Flushable, java.io.OutputStream
@@ -309,7 +314,10 @@ public class JavaIo {
 
     //public interface Flushable
     //@Container[M]
-    @Independent class Flushable$ {void flush() { } }
+    @Independent class Flushable$ {
+        @AllowsInterrupt
+        void flush() { }
+    }
 
     //public class IOException extends Exception
     class IOException$ {
@@ -325,20 +333,33 @@ public class JavaIo {
     class InputStream$ {
         InputStream$() { }
         static InputStream nullInputStream() { return null; }
+        @AllowsInterrupt
         int read() { return 0; }
+        @AllowsInterrupt
         int read(byte [] b) { return 0; }
+        @AllowsInterrupt
         int read(byte [] b, int off, int len) { return 0; }
+        @AllowsInterrupt
         byte [] readAllBytes() { return null; }
+        @AllowsInterrupt
         byte [] readNBytes(int len) { return null; }
+        @AllowsInterrupt
         int readNBytes(byte [] b, int off, int len) { return 0; }
+        @AllowsInterrupt
         long skip(long n) { return 0L; }
+        @AllowsInterrupt
         void skipNBytes(long n) { }
+        @NotModified
         int available() { return 0; }
         //override from java.io.Closeable, java.lang.AutoCloseable
         void close() { }
+        @AllowsInterrupt
         void mark(int readlimit) { }
+        @AllowsInterrupt
         void reset() { }
+        @NotModified
         boolean markSupported() { return false; }
+        @AllowsInterrupt
         long transferTo(OutputStream out) { return 0L; }
     }
 
@@ -409,55 +430,83 @@ public class JavaIo {
 
         //override from java.io.Closeable, java.io.FilterOutputStream, java.io.OutputStream, java.lang.AutoCloseable
         void close() { }
+        @NotModified
         boolean checkError() { return false; }
         //override from java.io.FilterOutputStream, java.io.OutputStream
         void write(int b) { }
 
         //override from java.io.FilterOutputStream, java.io.OutputStream
-        void write(byte [] buf, int off, int len) { }
+        void write(@Independent byte [] buf, int off, int len) { }
 
         //override from java.io.FilterOutputStream, java.io.OutputStream
-        void write(byte [] buf) { }
-        void writeBytes(byte [] buf) { }
+        void write(@Independent byte [] buf) { }
+        @AllowsInterrupt
+        void writeBytes(@Independent byte [] buf) { }
+        @AllowsInterrupt
         void print(boolean b) { }
+        @AllowsInterrupt
         void print(char c) { }
+        @AllowsInterrupt
         void print(int i) { }
+        @AllowsInterrupt
         void print(long l) { }
+        @AllowsInterrupt
         void print(float f) { }
+        @AllowsInterrupt
         void print(double d) { }
-        void print(char [] s) { }
+        @AllowsInterrupt
+        void print(@NotNull @Independent char [] s) { }
+        @AllowsInterrupt
         void print(String s) { }
+        @AllowsInterrupt
         void print(/*@Immutable(hc=true)[T] @Independent(hc=true)[T] @NotModified[T]*/ Object obj) { }
+        @AllowsInterrupt
         void println() { }
+        @AllowsInterrupt
         void println(boolean x) { }
+        @AllowsInterrupt
         void println(char x) { }
+        @AllowsInterrupt
         void println(int x) { }
+        @AllowsInterrupt
         void println(long x) { }
+        @AllowsInterrupt
         void println(float x) { }
+        @AllowsInterrupt
         void println(double x) { }
-        void println(char [] x) { }
+        @AllowsInterrupt
+        void println(@NotNull @Independent char [] x) { }
         //frequency 8
+        @AllowsInterrupt
         void println(String x) { }
+        @AllowsInterrupt
         void println(/*@Immutable(hc=true)[T] @Independent(hc=true)[T] @NotModified[T]*/ Object x) { }
-        PrintStream printf(String format, Object ... args) { return null; }
-        PrintStream printf(Locale l, String format, Object ... args) { return null; }
-        PrintStream format(String format, Object ... args) { return null; }
-        PrintStream format(Locale l, String format, Object ... args) { return null; }
+        @AllowsInterrupt
+        PrintStream printf(String format, @Independent Object ... args) { return null; }
+        @AllowsInterrupt
+        PrintStream printf(Locale l, String format, @Independent Object ... args) { return null; }
+        @AllowsInterrupt
+        PrintStream format(String format, @Independent Object ... args) { return null; }
+        @AllowsInterrupt
+        PrintStream format(Locale l, String format, @Independent Object ... args) { return null; }
         //override from java.lang.Appendable
         //@Independent[H]
-        PrintStream append(/*@Immutable(hc=true)[T] @Independent[H] @NotModified[T]*/ CharSequence csq) { return null; }
+        @AllowsInterrupt
+        PrintStream append(/*@Immutable(hc=true)[T] @Independent[H] @NotModified[T]*/ @Independent CharSequence csq) { return null; }
 
         //override from java.lang.Appendable
         //@Independent[H]
-
+        @AllowsInterrupt
         PrintStream append(
-            /*@Immutable(hc=true)[T] @Independent[H] @NotModified[T]*/ CharSequence csq,
+            /*@Immutable(hc=true)[T] @Independent[H] @NotModified[T]*/ @Independent CharSequence csq,
             int start,
             int end) { return null; }
 
         //override from java.lang.Appendable
         //@Independent[H]
+        @AllowsInterrupt
         PrintStream append(char c) { return null; }
+        @NotModified
         Charset charset() { return null; }
     }
 
@@ -469,26 +518,34 @@ public class JavaIo {
     //public abstract class Writer implements Appendable, Closeable, Flushable
     @Independent
     class Writer$ {
+        @NotModified @NotNull
         static Writer nullWriter() { return null; }
+        @AllowsInterrupt
         void write(int c) { }
-        void write(char [] cbuf) { }
-        void write(char [] c, int i, int i1) { }
+        @AllowsInterrupt
+        void write(@NotNull char [] cbuf) { }
+        @AllowsInterrupt
+        void write(@NotNull char [] c, int i, int i1) { }
         //frequency 4
+        @AllowsInterrupt
         void write(String str) { }
+        @AllowsInterrupt
         void write(String str, int off, int len) { }
         //override from java.lang.Appendable
         //@Independent[H]
-        Writer append(/*@Immutable(hc=true)[T] @Independent[H] @NotModified[T]*/ CharSequence csq) { return null; }
+        @AllowsInterrupt
+        Writer append(/*@Immutable(hc=true)[T] @Independent[H] @NotModified[T]*/ @NotNull CharSequence csq) { return null; }
 
         //override from java.lang.Appendable
         //@Independent[H]
-
-        Writer append(/*@Immutable(hc=true)[T] @Independent[H] @NotModified[T]*/ CharSequence csq, int start, int end) {
+        @AllowsInterrupt
+        Writer append(/*@Immutable(hc=true)[T] @Independent[H] @NotModified[T]*/ @NotNull CharSequence csq, int start, int end) {
             return null;
         }
 
         //override from java.lang.Appendable
         //@Independent[H]
+        @AllowsInterrupt
         Writer append(char c) { return null; }
 
         //override from java.io.Flushable

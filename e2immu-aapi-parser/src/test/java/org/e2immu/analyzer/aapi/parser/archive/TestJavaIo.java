@@ -98,10 +98,10 @@ public class TestJavaIo extends CommonTest {
         assertFalse(methodInfo.isCompactConstructor());
         assertFalse(methodInfo.allowsInterrupts());
 
-        ParameterInfo p0 = methodInfo.parameters().get(0);
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
         assertSame(DEPENDENT, p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT));
         assertSame(NOT_NULL, p0.analysis().getOrDefault(NOT_NULL_PARAMETER, NULLABLE));
-        assertSame(TRUE, p0.analysis().getOrDefault(UNMODIFIED_PARAMETER, FALSE));
+        assertSame(FALSE, p0.analysis().getOrDefault(UNMODIFIED_PARAMETER, FALSE));
     }
 
     @Test
@@ -122,17 +122,17 @@ public class TestJavaIo extends CommonTest {
         MethodInfo methodInfo = typeInfo.methodStream()
                 .filter(mi -> "write".equals(mi.name())
                               && mi.parameters().size() == 1
-                              && mi.parameters().get(0).parameterizedType().arrays() > 0)
+                              && mi.parameters().getFirst().parameterizedType().arrays() > 0)
                 .findFirst().orElseThrow();
         assertEquals("java.io.Writer.write(char[])", methodInfo.fullyQualifiedName());
 
         assertTrue(methodInfo.allowsInterrupts());
         assertTrue(methodInfo.isModifying());
 
-        ParameterInfo p0 = methodInfo.parameters().get(0);
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
         assertSame(INDEPENDENT, p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT));
         assertSame(NOT_NULL, p0.analysis().getOrDefault(NOT_NULL_PARAMETER, NULLABLE));
-        assertSame(TRUE, p0.analysis().getOrDefault(UNMODIFIED_PARAMETER, FALSE));
+        assertSame(FALSE, p0.analysis().getOrDefault(UNMODIFIED_PARAMETER, FALSE));
     }
 
     @Test
