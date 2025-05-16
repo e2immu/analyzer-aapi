@@ -10,6 +10,16 @@ import java.nio.file.Files;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/*
+RULES FOR THE FILES OBJECT
+
+Almost all methods are @AllowsInterrupt.
+We treat the file system as the instance, and ignore the 'static' on the methods.
+Files that do not change the file system are marked @NotModified.
+Files that change the file system are marked @Modified.
+
+Path is immutable.
+ */
 public class TestJavaNioFile extends CommonTest {
 
     @Test
@@ -21,7 +31,7 @@ public class TestJavaNioFile extends CommonTest {
         ParameterInfo p3 = methodInfo.parameters().get(3);
         assertEquals("Type java.nio.file.FileVisitor<? super java.nio.file.Path>",
                 p3.parameterizedType().toString());
-        assertTrue(p3.isIgnoreModifications());
+        assertFalse(p3.isIgnoreModifications());
     }
 
     @Test
