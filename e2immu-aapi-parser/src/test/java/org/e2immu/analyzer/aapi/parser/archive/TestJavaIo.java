@@ -20,6 +20,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TestJavaIo extends CommonTest {
     @Test
+    public void testSerializable() {
+        TypeInfo typeInfo = compiledTypesManager().get(Serializable.class);
+        testImmutableContainer(typeInfo, true, false);
+    }
+
+    @Test
     public void testPrintStream() {
         TypeInfo typeInfo = compiledTypesManager().get(PrintStream.class);
         assertSame(MUTABLE, typeInfo.analysis().getOrDefault(IMMUTABLE_TYPE, MUTABLE));

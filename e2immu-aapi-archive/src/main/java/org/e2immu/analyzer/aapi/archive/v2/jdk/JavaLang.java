@@ -24,6 +24,8 @@ import org.e2immu.annotation.type.UtilityClass;
 public class JavaLang {
     public static final String PACKAGE_NAME = "java.lang";
     //public interface Appendable
+    @Independent
+    @Container
     class Appendable$ {
         Appendable append(/*@Immutable(hc=true)[T] @Independent(hc=true)[T] @NotModified[T]*/ CharSequence charSequence) {
             return null;
@@ -49,7 +51,7 @@ public class JavaLang {
         AssertionError$(String message, /*@Independent[M]*/ Throwable cause) { }
     }
     //public interface AutoCloseable
-    @Independent(hc = true) class AutoCloseable$ {void close() { } }
+    @Independent class AutoCloseable$ {void close() { } }
     //public final class Boolean implements Serializable, Comparable<Boolean>, Constable
     @ImmutableContainer
     class Boolean$ {
@@ -986,11 +988,16 @@ public class JavaLang {
     class Iterable$<T> {
         //override has frequency 2
         @NotModified
+        @NotNull
         Iterator<T> iterator() { return null; }
 
         //frequency 69
         @NotModified
-        void forEach(/*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Consumer<? super T> action) { }
+        void forEach(/*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ @NotNull @Independent(hc = true) Consumer<? super T> action) { }
+
+        @Independent(hc = true)
+        @NotNull
+        @NotModified
         Spliterator<T> spliterator() { return null; }
     }
 
@@ -2104,18 +2111,25 @@ public class JavaLang {
     }
 
     //public final class System
-    @UtilityClass
+    @Independent
     class System$ {
         //@NotModified[O]
+        @IgnoreModifications
+        @NotNull
         static final InputStream in = null;
 
         //@NotModified[O]
+        @IgnoreModifications
+        @NotNull
         static final PrintStream out = null;
 
         //@NotModified[O]
+        @IgnoreModifications
+        @NotNull
         static final PrintStream err = null;
 
         //public interface Logger
+        @Independent
         class Logger {
             //public enum Level extends Enum<Level>
             class Level {
@@ -2144,20 +2158,30 @@ public class JavaLang {
                 String getName() { return null; }
                 int getSeverity() { return 0; }
             }
+            @NotModified
             String getName() { return null; }
+            @NotModified
             boolean isLoggable(System.Logger.Level level) { return false; }
+            @IgnoreModifications
             void log(System.Logger.Level level, String msg) { }
+            @IgnoreModifications
             void log(System.Logger.Level level, /*@IgnoreModifications[T]*/ Supplier<String> msgSupplier) { }
+            @IgnoreModifications
             void log(
                 System.Logger.Level level,
                 /*@Immutable(hc=true)[T] @Independent(hc=true)[T] @NotModified[T]*/ Object obj) { }
+            @IgnoreModifications
             void log(System.Logger.Level level, String msg, Throwable thrown) { }
+            @IgnoreModifications
             void log(
                 System.Logger.Level level,
                 /*@IgnoreModifications[T]*/ Supplier<String> msgSupplier,
                 Throwable thrown) { }
+            @IgnoreModifications
             void log(System.Logger.Level level, String format, Object ... params) { }
+            @IgnoreModifications
             void log(System.Logger.Level level, ResourceBundle resourceBundle, String string, Throwable throwable) { }
+            @IgnoreModifications
             void log(System.Logger.Level level, ResourceBundle resourceBundle, String string, Object ... object) { }
         }
 
@@ -2199,9 +2223,9 @@ public class JavaLang {
 
         //@NotModified[T]
         static void arraycopy(
-            /*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ Object object,
+            /*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ @NotNull @NotModified Object object,
             int i,
-            /*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ Object object1,
+            /*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ @NotNull @Independent(hcParameters = {0}) Object object1,
             int i1,
             int i2) { }
 

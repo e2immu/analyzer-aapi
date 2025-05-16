@@ -69,7 +69,10 @@ public class TestParseAnalyzeWrite {
         TypeInfo navigableMap = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(NavigableMap.class);
         TypeInfo sequencedMap = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(SequencedMap.class);
 
-        Stream<TypeInfo> extra = Stream.of(treeMap, vector, sortedMap, navigableMap, sequencedMap);
+        TypeInfo processHandle = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(ProcessHandle.class);
+        TypeInfo readable = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(Readable.class);
+
+        Stream<TypeInfo> extra = Stream.of(treeMap, vector, sortedMap, navigableMap, sequencedMap, processHandle, readable);
         List<TypeInfo> typesToAnalyze = Stream.concat(annotatedApiParser.types().stream(), extra).distinct().toList();
         LOGGER.info("Have {} types for the shallow analyzer", typesToAnalyze.size());
         ShallowAnalyzer.Result rs = shallowAnalyzer.go(typesToAnalyze);

@@ -190,13 +190,8 @@ public class TestJavaLang extends CommonTest {
     public void testThrowableConstructor2() {
         TypeInfo typeInfo = compiledTypesManager().get(Throwable.class);
         MethodInfo methodInfo = typeInfo.findConstructor(2);
-        assertSame(DEPENDENT, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
-    }
-
-    @Test
-    public void testSerializable() {
-        TypeInfo typeInfo = compiledTypesManager().get(Serializable.class);
-        testImmutableContainer(typeInfo, true, false);
+        ParameterInfo pi1 = methodInfo.parameters().get(1);
+        assertSame(DEPENDENT, pi1.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
     }
 
     @Test
@@ -263,7 +258,7 @@ public class TestJavaLang extends CommonTest {
         TypeInfo typeInfo = compiledTypesManager().get(System.class);
         Value.Immutable immutable = typeInfo.analysis().getOrDefault(IMMUTABLE_TYPE, MUTABLE);
         // immutable because there are @IgnoreModifications on the exposed fields!
-        assertTrue(immutable.isImmutable());
+        assertTrue(immutable.isMutable());
     }
 
     @Test
@@ -283,7 +278,7 @@ public class TestJavaLang extends CommonTest {
     public void testSystemArrayCopy() {
         TypeInfo typeInfo = compiledTypesManager().get(System.class);
         MethodInfo methodInfo = typeInfo.findUniqueMethod("arraycopy", 5);
-        ParameterInfo p0 = methodInfo.parameters().get(0);
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
         // name generated from Object
         assertEquals("object", p0.name());
         assertSame(INDEPENDENT, p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT));
@@ -294,7 +289,8 @@ public class TestJavaLang extends CommonTest {
         // name generated from Object
         assertEquals("object1", p2.name());
         Value.Independent independentP2 = p2.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT);
-        assertEquals("@Dependent(hcParameters={0})", independentP2.toString());
+        // NOTE: the decorator will not print the hc=true
+        assertEquals("@Independent(hc=true, hcParameters={0})", independentP2.toString());
         assertSame(NOT_NULL, p2.analysis().getOrDefault(NOT_NULL_PARAMETER, NULLABLE));
         assertSame(TRUE, p2.analysis().getOrDefault(UNMODIFIED_PARAMETER, FALSE));
 
@@ -346,12 +342,12 @@ public class TestJavaLang extends CommonTest {
         assertFalse(methodInfo.isModifying());
         assertSame(IMMUTABLE, methodInfo.analysis().getOrDefault(IMMUTABLE_METHOD, MUTABLE));
         assertSame(INDEPENDENT, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
-        ParameterInfo p0 = methodInfo.parameters().get(0);
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
         // name generated from int
         assertEquals("i", p0.name());
         assertSame(INDEPENDENT, p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT));
         assertSame(NOT_NULL, p0.analysis().getOrDefault(NOT_NULL_PARAMETER, NULLABLE));
-        assertSame(FALSE, p0.analysis().getOrDefault(UNMODIFIED_PARAMETER, FALSE));
+        assertSame(TRUE, p0.analysis().getOrDefault(UNMODIFIED_PARAMETER, FALSE));
     }
 
     @Test
