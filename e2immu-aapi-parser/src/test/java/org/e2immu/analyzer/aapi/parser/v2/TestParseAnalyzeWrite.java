@@ -49,7 +49,7 @@ public class TestParseAnalyzeWrite {
                 new AnnotatedAPIConfigurationImpl.Builder().build());
 
         List<TypeInfo> types = annotatedApiParser.typesParsed();
-        assertEquals(2, types.size());
+        assertEquals(3, types.size());
         for (TypeInfo typeInfo : types) {
             if ("org.e2immu.analyzer.aapi.archive.v2.jdk.JavaLang".equals(typeInfo.fullyQualifiedName())) {
                 TypeInfo charSeq = typeInfo.findSubType("CharSequence$");
