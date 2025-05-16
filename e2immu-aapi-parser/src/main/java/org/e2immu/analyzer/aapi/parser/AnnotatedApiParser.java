@@ -8,6 +8,7 @@ import org.e2immu.language.cst.api.expression.StringConstant;
 import org.e2immu.language.cst.api.info.*;
 import org.e2immu.language.cst.api.runtime.Runtime;
 import org.e2immu.language.cst.api.type.ParameterizedType;
+import org.e2immu.language.cst.impl.element.MultiLineComment;
 import org.e2immu.language.cst.impl.element.SingleLineComment;
 import org.e2immu.language.inspection.api.integration.JavaInspector;
 import org.e2immu.language.inspection.api.parser.ParseResult;
@@ -117,8 +118,8 @@ public class AnnotatedApiParser implements AnnotationProvider {
         List<Comment> commentsToKeep = new ArrayList<>(info.comments().size());
         for (Comment comment : info.comments()) {
             boolean keep;
-            if (comment instanceof SingleLineComment slc) {
-                String commentString = slc.comment();
+            String commentString = acceptComment(comment, info);
+            if (commentString != null) {
                 Matcher m0 = EXPLAIN_PATTERN.matcher(commentString);
                 if (m0.find()) {
                     explainAnnotationInComment = true;
@@ -144,6 +145,12 @@ public class AnnotatedApiParser implements AnnotationProvider {
             if (keep) commentsToKeep.add(comment);
         }
         return new Data(info.annotations(), commentsToKeep, explainAnnotationInComment, freq, overrideHasFreq);
+    }
+
+    private static String acceptComment(Comment comment, Info owner) {
+        if (owner instanceof ParameterInfo && comment instanceof MultiLineComment mlc) return mlc.comment();
+        if (comment instanceof SingleLineComment slc) return slc.comment();
+        return null;
     }
 
     private void transferAnnotations(TypeInfo sourceType, TypeInfo targetType) {

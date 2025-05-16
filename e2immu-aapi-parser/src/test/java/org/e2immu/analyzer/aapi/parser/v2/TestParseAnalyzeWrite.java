@@ -21,6 +21,7 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.SortedMap;
 import java.util.TreeMap;
 import java.util.Vector;
 import java.util.stream.Stream;
@@ -32,6 +33,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestParseAnalyzeWrite {
     private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(TestParseAnalyzeWrite.class);
     public static final String NOTE_CHARSEQUENCE = " NOTE: can we demand that the result is @Independent?";
+    public static final String JDK_PACKAGE = "org.e2immu.analyzer.aapi.archive.v2.jdk";
 
     @BeforeAll
     public static void beforeAll() {
@@ -46,7 +48,7 @@ public class TestParseAnalyzeWrite {
                         .addClassPath(ToolChain.CLASSPATH_SLF4J_LOGBACK)
                         .addClassPath(JavaInspectorImpl.E2IMMU_SUPPORT)
                         .addSources("../e2immu-aapi-archive/src/main/java")
-                        .addRestrictSourceToPackages("org.e2immu.analyzer.aapi.archive.v2.jdk").build(),
+                        .addRestrictSourceToPackages(JDK_PACKAGE).build(),
                 new AnnotatedAPIConfigurationImpl.Builder().build());
 
         List<TypeInfo> types = annotatedApiParser.typesParsed();
@@ -66,11 +68,12 @@ public class TestParseAnalyzeWrite {
 
         TypeInfo treeMap = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(TreeMap.class);
         TypeInfo vector = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(Vector.class);
+        TypeInfo sortedMap = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(SortedMap.class);
 
-        Stream<TypeInfo> extra = Stream.of(treeMap, vector);
+        Stream<TypeInfo> extra = Stream.of(treeMap, vector, sortedMap);
         List<TypeInfo> typesToAnalyze = Stream.concat(annotatedApiParser.types().stream(), extra).distinct().toList();
+        LOGGER.info("Have {} types for the shallow analyzer", typesToAnalyze.size());
         ShallowAnalyzer.Result rs = shallowAnalyzer.go(typesToAnalyze);
-
         Trie<TypeInfo> trie = new Trie<>();
         for (TypeInfo ti : typesToAnalyze) {
             if (ti.isPrimaryType()) {
@@ -117,10 +120,10 @@ public class TestParseAnalyzeWrite {
         }
 
         File decorated = new File("build/decorated");
-        decorated.mkdirs();
+        if (decorated.mkdirs()) LOGGER.info("Created {}", decorated);
         WriteDecoratedAAPI writeDecoratedAAPI = new WriteDecoratedAAPI(annotatedApiParser.javaInspector(),
                 annotatedApiParser::data, rs.dataMap()::get);
-        writeDecoratedAAPI.write(decorated.getAbsolutePath(), trie);
+        writeDecoratedAAPI.write(decorated.getAbsolutePath(), trie, JDK_PACKAGE);
 
     }
 }

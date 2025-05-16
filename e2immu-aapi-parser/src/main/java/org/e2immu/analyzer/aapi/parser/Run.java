@@ -92,7 +92,7 @@ public class Run {
         File decorated = new File("build/decorated");
         File subDirDeco = new File(decorated, subDirOut);
         subDirDeco.mkdirs();
-        writeDecoratedAAPI.write(subDirDeco.getAbsolutePath(), trie);
+        writeDecoratedAAPI.write(subDirDeco.getAbsolutePath(), trie, "org.e2immu");
         return rs.messages();
     }
 }

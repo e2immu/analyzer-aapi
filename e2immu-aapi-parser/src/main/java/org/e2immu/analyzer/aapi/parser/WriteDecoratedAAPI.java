@@ -21,23 +21,24 @@ public class WriteDecoratedAAPI {
     private static final Logger LOGGER = LoggerFactory.getLogger(WriteDecoratedAAPI.class);
     private final JavaInspector javaInspector;
     private final Function<Info, AnnotatedApiParser.Data> dataProvider;
-private final    Function<Info, ShallowAnalyzer.InfoData> infoDataProvider;
+    private final Function<Info, ShallowAnalyzer.InfoData> infoDataProvider;
 
     public WriteDecoratedAAPI(JavaInspector javaInspector,
                               Function<Info, AnnotatedApiParser.Data> dataProvider,
                               Function<Info, ShallowAnalyzer.InfoData> infoDataProvider) {
         this.javaInspector = javaInspector;
         this.dataProvider = dataProvider;
-        this.infoDataProvider  = infoDataProvider;
+        this.infoDataProvider = infoDataProvider;
     }
 
-    public void write(String destinationDirectory, Trie<TypeInfo> typeTrie) throws IOException {
+    public void write(String destinationDirectory, Trie<TypeInfo> typeTrie, String destinationPackage) throws IOException {
         File directory = new File(destinationDirectory);
         if (directory.mkdirs()) {
             LOGGER.info("Created directory {}", directory.getAbsolutePath());
         }
         try {
-            typeTrie.visitThrowing(new String[]{}, (parts, list) -> write(directory, parts, list));
+            typeTrie.visitThrowing(new String[]{}, (parts, list)
+                    -> write(directory, parts, list, destinationPackage));
         } catch (RuntimeException re) {
             if (re.getCause() instanceof IOException ioe) {
                 throw ioe;
@@ -46,13 +47,13 @@ private final    Function<Info, ShallowAnalyzer.InfoData> infoDataProvider;
         }
     }
 
-    private void write(File directory, String[] packageParts, List<TypeInfo> list) throws IOException {
+    private void write(File directory, String[] packageParts, List<TypeInfo> list, String destinationPackage) throws IOException {
         if (list.isEmpty()) return;
         String compressedPackages = Arrays.stream(packageParts).map(WriteDecoratedAAPI::capitalize)
                 .collect(Collectors.joining());
         File outputFile = new File(directory, compressedPackages + ".json");
         LOGGER.info("Writing {} type(s) to {}", list.size(), outputFile.getAbsolutePath());
-        Composer composer = new Composer(javaInspector, set -> "org.e2immu", w -> true);
+        Composer composer = new Composer(javaInspector, set -> destinationPackage, w -> true);
         Collection<TypeInfo> apiTypes = composer.compose(list);
 
         Map<Info, Info> dollarMap = composer.translateFromDollarToReal();
