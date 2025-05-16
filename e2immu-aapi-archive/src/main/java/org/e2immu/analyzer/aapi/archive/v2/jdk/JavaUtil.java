@@ -69,7 +69,7 @@ public class JavaUtil {
         void clear() { }
 
         //override from java.lang.Object
-        //@NotModified[H]
+        //@NotModified[H] @NotNull[H]
         public String toString() { return null; }
     }
 
@@ -158,7 +158,7 @@ public class JavaUtil {
             public int hashCode() { return 0; }
 
             //override from java.lang.Object
-            //@NotModified[H]
+            //@NotModified[H] @NotNull[H]
             public String toString() { return null; }
         }
 
@@ -187,7 +187,7 @@ public class JavaUtil {
             public int hashCode() { return 0; }
 
             //override from java.lang.Object
-            //@NotModified[H]
+            //@NotModified[H] @NotNull[H]
             public String toString() { return null; }
         }
 
@@ -254,7 +254,7 @@ public class JavaUtil {
         public int hashCode() { return 0; }
 
         //override from java.lang.Object
-        //@NotModified[H]
+        //@NotModified[H] @NotNull[H]
         public String toString() { return null; }
     }
 
@@ -398,7 +398,8 @@ public class JavaUtil {
         List<E> subList(int fromIndex, int toIndex) { return null; }
 
         //override from java.lang.Iterable
-        void forEach(/*@IgnoreModifications[T] @Independent[H] @NotModified[O]*/ Consumer<? super E> action) { }
+        //@NotModified[H]
+        void forEach(/*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Consumer<? super E> action) { }
 
         //override from java.lang.Iterable, java.util.Collection, java.util.List
         Spliterator<E> spliterator() { return null; }
@@ -1517,7 +1518,7 @@ public class JavaUtil {
 
         //override has frequency 3
         @NotModified
-        <T> T [] toArray(/*@Independent[M]*/ T [] t) { return null; }
+        <T> T [] toArray(/*@Independent[M] @NotModified[O]*/ T [] t) { return null; }
 
         @NotModified
         <T> T [] toArray(
@@ -1997,7 +1998,7 @@ public class JavaUtil {
         public int hashCode() { return 0; }
 
         //override from java.lang.Object
-        //@NotModified[H]
+        //@NotModified[H] @NotNull[H]
         public String toString() { return null; }
         String toLocaleString() { return null; }
         String toGMTString() { return null; }
@@ -2138,8 +2139,10 @@ public class JavaUtil {
                 ? extends V> remappingFunction) { return null; }
 
         //override from java.util.Map
+        //@NotModified[H]
+
         void forEach(
-            /*@IgnoreModifications[T] @Independent(hc=true)[H] @NotModified[O]*/ BiConsumer<? super K, ? super V> action) { }
+            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ BiConsumer<? super K, ? super V> action) { }
 
         //override from java.util.Map
         void replaceAll(
@@ -2544,7 +2547,7 @@ public class JavaUtil {
             public boolean equals(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ Object obj) { return false; }
 
             //override from java.lang.Object
-            //@NotModified[H]
+            //@NotModified[H] @NotNull[H]
             public String toString() { return null; }
         }
         Locale$(String language, String country, String variant) { }
@@ -2584,7 +2587,7 @@ public class JavaUtil {
         String getUnicodeLocaleType(String key) { return null; }
         Set<String> getUnicodeLocaleKeys() { return null; }
         //override from java.lang.Object
-        //@NotModified[H]
+        //@NotModified[H] @NotNull[H]
         public String toString() { return null; }
         String toLanguageTag() { return null; }
         static String caseFoldLanguageTag(String languageTag) { return null; }
@@ -2946,6 +2949,70 @@ public class JavaUtil {
             /*@NotModified[O]*/ @Independent(hc = true) @NotNull Map<? extends K, ? extends V> map) { return null; }
     }
 
+    //public interface NavigableMap implements SortedMap<K,V>
+    @Container
+    class NavigableMap$<K, V> {
+        @NotModified Map.Entry<K, V> lowerEntry(/*@Independent[M] @NotModified[O]*/ K k) { return null; }
+        //@Independent(hc=true)[T]
+        @NotModified
+        K lowerKey(/*@Independent[M] @NotModified[O]*/ K k) { return null; }
+        @NotModified Map.Entry<K, V> floorEntry(/*@Independent[M] @NotModified[O]*/ K k) { return null; }
+        //@Independent(hc=true)[T]
+        @NotModified
+        K floorKey(/*@Independent[M] @NotModified[O]*/ K k) { return null; }
+        @NotModified Map.Entry<K, V> ceilingEntry(/*@Independent[M] @NotModified[O]*/ K k) { return null; }
+        //@Independent(hc=true)[T]
+        @NotModified
+        K ceilingKey(/*@Independent[M] @NotModified[O]*/ K k) { return null; }
+        @NotModified Map.Entry<K, V> higherEntry(/*@Independent[M] @NotModified[O]*/ K k) { return null; }
+        //@Independent(hc=true)[T]
+        @NotModified
+        K higherKey(/*@Independent[M] @NotModified[O]*/ K k) { return null; }
+
+        //override from java.util.SequencedMap
+        @NotModified
+        Map.Entry<K, V> firstEntry() { return null; }
+
+        //override from java.util.SequencedMap
+        @NotModified
+        Map.Entry<K, V> lastEntry() { return null; }
+
+        //override from java.util.SequencedMap
+        Map.Entry<K, V> pollFirstEntry() { return null; }
+
+        //override from java.util.SequencedMap
+        Map.Entry<K, V> pollLastEntry() { return null; }
+        @NotModified NavigableMap<K, V> descendingMap() { return null; }
+        @NotModified NavigableSet<K> navigableKeySet() { return null; }
+        @NotModified NavigableSet<K> descendingKeySet() { return null; }
+        @NotModified
+        NavigableMap<K, V> subMap(
+            /*@Independent[M] @NotModified[O]*/ K k,
+            boolean b,
+            /*@Independent[M] @NotModified[O]*/ K k1,
+            boolean b1) { return null; }
+        @NotModified NavigableMap<K, V> headMap(/*@Independent[M] @NotModified[O]*/ K k, boolean b) { return null; }
+        @NotModified NavigableMap<K, V> tailMap(/*@Independent[M] @NotModified[O]*/ K k, boolean b) { return null; }
+        //override from java.util.SortedMap
+        @NotModified
+
+        SortedMap<K, V> subMap(/*@Independent[M] @NotModified[O]*/ K k, /*@Independent[M] @NotModified[O]*/ K k1) {
+            return null;
+        }
+
+        //override from java.util.SortedMap
+        @NotModified
+        SortedMap<K, V> headMap(/*@Independent[M] @NotModified[O]*/ K k) { return null; }
+
+        //override from java.util.SortedMap
+        @NotModified
+        SortedMap<K, V> tailMap(/*@Independent[M] @NotModified[O]*/ K k) { return null; }
+
+        //override from java.util.SequencedMap, java.util.SortedMap
+        @NotModified
+        NavigableMap<K, V> reversed() { return null; }
+    }
+
     //public class NoSuchElementException extends RuntimeException
     class NoSuchElementException$ {
         NoSuchElementException$() { }
@@ -3095,12 +3162,15 @@ public class JavaUtil {
         boolean isEmpty() { return false; }
 
         //frequency 99
-        void ifPresent(/*@IgnoreModifications[T] @Independent(hc=true)[T] @NotModified[O]*/ Consumer<? super T> action) { }
+        //@NotModified[T]
+        void ifPresent(/*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Consumer<? super T> action) { }
 
         //frequency 39
+        //@NotModified[T]
+
         void ifPresentOrElse(
-            /*@IgnoreModifications[T] @Independent(hc=true)[T] @NotModified[O]*/ Consumer<? super T> action,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ Runnable emptyAction) { }
+            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Consumer<? super T> action,
+            /*@Independent[M] @NotModified[O]*/ Runnable emptyAction) { }
 
         //frequency 20
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
@@ -3166,7 +3236,7 @@ public class JavaUtil {
         public int hashCode() { return 0; }
 
         //override from java.lang.Object
-        //@NotModified[T]
+        //@NotModified[T] @NotNull[H]
         public String toString() { return null; }
     }
 
@@ -3187,10 +3257,14 @@ public class JavaUtil {
 
         //@NotModified[T]
         boolean isEmpty() { return false; }
-        void ifPresent(/*@IgnoreModifications[T] @Independent[T] @NotModified[O]*/ DoubleConsumer action) { }
+
+        //@NotModified[T]
+        void ifPresent(/*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ DoubleConsumer action) { }
+
+        //@NotModified[T]
         void ifPresentOrElse(
-            /*@IgnoreModifications[T] @Independent[T] @NotModified[O]*/ DoubleConsumer action,
-            /*@Independent[T] @NotModified[O]*/ Runnable emptyAction) { }
+            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ DoubleConsumer action,
+            /*@Independent[M] @NotModified[O]*/ Runnable emptyAction) { }
 
         //@Independent[O] @NotModified[T]
         DoubleStream stream() { return null; }
@@ -3222,7 +3296,7 @@ public class JavaUtil {
         public int hashCode() { return 0; }
 
         //override from java.lang.Object
-        //@NotModified[T]
+        //@NotModified[T] @NotNull[H]
         public String toString() { return null; }
     }
 
@@ -3243,10 +3317,14 @@ public class JavaUtil {
 
         //@NotModified[T]
         boolean isEmpty() { return false; }
-        void ifPresent(/*@IgnoreModifications[T] @Independent[T] @NotModified[O]*/ IntConsumer action) { }
+
+        //@NotModified[T]
+        void ifPresent(/*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ IntConsumer action) { }
+
+        //@NotModified[T]
         void ifPresentOrElse(
-            /*@IgnoreModifications[T] @Independent[T] @NotModified[O]*/ IntConsumer action,
-            /*@Independent[T] @NotModified[O]*/ Runnable emptyAction) { }
+            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ IntConsumer action,
+            /*@Independent[M] @NotModified[O]*/ Runnable emptyAction) { }
 
         //@Independent[O] @NotModified[T]
         IntStream stream() { return null; }
@@ -3276,7 +3354,7 @@ public class JavaUtil {
         public int hashCode() { return 0; }
 
         //override from java.lang.Object
-        //@NotModified[T]
+        //@NotModified[T] @NotNull[H]
         public String toString() { return null; }
     }
 
@@ -3354,10 +3432,11 @@ public class JavaUtil {
     //public interface RandomAccess
     @Independent(hc = true) class RandomAccess$ { }
     //public interface SequencedCollection implements Collection<E>
+    @Container
     class SequencedCollection$<E> {
         SequencedCollection<E> reversed() { return null; }
-        void addFirst(/*@Independent(hc=true)[T] @NotModified[T]*/ E e) { }
-        void addLast(/*@Independent(hc=true)[T] @NotModified[T]*/ E e) { }
+        void addFirst(/*@Independent(hc=true)[T] @NotModified[O]*/ E e) { }
+        void addLast(/*@Independent(hc=true)[T] @NotModified[O]*/ E e) { }
         //override has frequency 351
         //@Independent(hc=true)[T]
         E getFirst() { return null; }
@@ -3373,7 +3452,30 @@ public class JavaUtil {
         E removeLast() { return null; }
     }
 
+    //public interface SequencedMap implements Map<K,V>
+    @Container
+    class SequencedMap$<K, V> {
+        @NotModified SequencedMap<K, V> reversed() { return null; }
+        @NotModified Map.Entry<K, V> firstEntry() { return null; }
+        @NotModified Map.Entry<K, V> lastEntry() { return null; }
+        Map.Entry<K, V> pollFirstEntry() { return null; }
+        Map.Entry<K, V> pollLastEntry() { return null; }
+        //@Independent(hc=true)[T]
+        V putFirst(/*@Independent(hc=true)[T] @NotModified[O]*/ K k, /*@Independent(hc=true)[T] @NotModified[O]*/ V v) {
+            return null;
+        }
+
+        //@Independent(hc=true)[T]
+        V putLast(/*@Independent(hc=true)[T] @NotModified[O]*/ K k, /*@Independent(hc=true)[T] @NotModified[O]*/ V v) {
+            return null;
+        }
+        @NotModified SequencedSet<K> sequencedKeySet() { return null; }
+        @NotModified SequencedCollection<V> sequencedValues() { return null; }
+        @NotModified SequencedSet<Map.Entry<K, V>> sequencedEntrySet() { return null; }
+    }
+
     //public interface Set implements Collection<E>
+    @Container
     class Set$<E> {
         //override from java.util.Collection
         //frequency 12
@@ -3388,7 +3490,7 @@ public class JavaUtil {
         //override from java.util.Collection
         //frequency 23
         //@NotModified[H]
-        boolean contains(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ Object object) { return false; }
+        boolean contains(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[O]*/ Object object) { return false; }
 
         //override from java.lang.Iterable, java.util.Collection
         //frequency 2
@@ -3402,33 +3504,33 @@ public class JavaUtil {
 
         //override from java.util.Collection
         //@NotModified[H]
-        <T> T [] toArray(/*@Independent[M]*/ T [] t) { return null; }
+        <T> T [] toArray(/*@Independent[M] @NotModified[O]*/ T [] t) { return null; }
 
         //override from java.util.Collection
         //frequency 27
-        boolean add(/*@Independent(hc=true)[H] @NotModified[T]*/ E e) { return false; }
+        boolean add(/*@Independent(hc=true)[H] @NotModified[O]*/ E e) { return false; }
 
         //override from java.util.Collection
         //frequency 3
 
-        boolean remove(/*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[T]*/ Object object) {
+        boolean remove(/*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[O]*/ Object object) {
             return false;
         }
 
         //override from java.util.Collection
         //@NotModified[H]
-        boolean containsAll(/*@Independent[M] @NotModified[H]*/ Collection<?> collection) { return false; }
+        boolean containsAll(/*@Independent[M] @NotModified[O]*/ Collection<?> collection) { return false; }
 
         //override from java.util.Collection
         //frequency 5
-        boolean addAll(/*@Independent(hc=true)[H] @NotModified[H]*/ Collection<? extends E> collection) { return false; }
+        boolean addAll(/*@Independent(hc=true)[H] @NotModified[O]*/ Collection<? extends E> collection) { return false; }
 
         //override from java.util.Collection
         //frequency 1
-        boolean retainAll(/*@Independent(hc=true)[H] @NotModified[H]*/ Collection<?> collection) { return false; }
+        boolean retainAll(/*@Independent(hc=true)[H] @NotModified[O]*/ Collection<?> collection) { return false; }
 
         //override from java.util.Collection
-        boolean removeAll(/*@Independent(hc=true)[H] @NotModified[H]*/ Collection<?> collection) { return false; }
+        boolean removeAll(/*@Independent(hc=true)[H] @NotModified[O]*/ Collection<?> collection) { return false; }
 
         //override from java.util.Collection
         void clear() { }
@@ -3436,7 +3538,7 @@ public class JavaUtil {
         //override from java.lang.Object, java.util.Collection
         //frequency 1
         //@NotModified[H]
-        public boolean equals(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ Object object) { return false; }
+        public boolean equals(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[O]*/ Object object) { return false; }
 
         //override from java.lang.Object, java.util.Collection
         //@NotModified[H]
@@ -3451,102 +3553,103 @@ public class JavaUtil {
 
         //frequency 55
         @NotModified
-        static <E> Set<E> of(/*@Independent(hc=true)[T] @NotModified[T]*/ E e1) { return null; }
+        static <E> Set<E> of(/*@Independent(hc=true)[T] @NotModified[O]*/ E e1) { return null; }
 
         //frequency 14
         @NotModified
 
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e2) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2) { return null; }
 
         //frequency 1
         @NotModified
 
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e3) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3) { return null; }
 
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e4) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4) { return null; }
 
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e5) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5) { return null; }
 
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e5,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e6) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e6) { return null; }
 
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e5,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e6,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e7) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e6,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e7) { return null; }
 
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e5,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e6,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e7,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e8) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e6,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e7,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e8) { return null; }
 
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e5,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e6,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e7,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e8,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e9) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e6,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e7,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e8,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e9) { return null; }
 
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e5,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e6,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e7,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e8,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e9,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ E e10) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e6,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e7,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e8,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e9,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ E e10) { return null; }
 
         //frequency 5
         @NotModified
-        static <E> Set<E> of(E ... elements) { return null; }
-        static <E> Set<E> copyOf(Collection<? extends E> coll) { return null; }
+        static <E> Set<E> of(/*@NotModified[O]*/ E ... elements) { return null; }
+        static <E> Set<E> copyOf(/*@NotModified[O]*/ Collection<? extends E> coll) { return null; }
     }
 
     //public interface SortedMap implements SequencedMap<K,V>
+    @Container
     class SortedMap$<K, V> {
         //@Immutable(hc=true)[T] @Independent(hc=true)[T]
         Comparator<? super K> comparator() { return null; }
 
         SortedMap<K, V> subMap(
-            /*@Independent(hc=true)[T] @NotModified[T]*/ K k,
-            /*@Independent(hc=true)[T] @NotModified[T]*/ K k1) { return null; }
-        SortedMap<K, V> headMap(/*@Independent(hc=true)[T] @NotModified[T]*/ K k) { return null; }
-        SortedMap<K, V> tailMap(/*@Independent(hc=true)[T] @NotModified[T]*/ K k) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ K k,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ K k1) { return null; }
+        SortedMap<K, V> headMap(/*@Independent(hc=true)[T] @NotModified[O]*/ K k) { return null; }
+        SortedMap<K, V> tailMap(/*@Independent(hc=true)[T] @NotModified[O]*/ K k) { return null; }
         //@Independent(hc=true)[T]
         K firstKey() { return null; }
 
@@ -3568,43 +3671,45 @@ public class JavaUtil {
         //override from java.util.SequencedMap
         //@Independent(hc=true)[H]
 
-        V putFirst(/*@Independent(hc=true)[H] @NotModified[T]*/ K k, /*@Independent(hc=true)[H] @NotModified[T]*/ V v) {
+        V putFirst(/*@Independent(hc=true)[H] @NotModified[O]*/ K k, /*@Independent(hc=true)[H] @NotModified[O]*/ V v) {
             return null;
         }
 
         //override from java.util.SequencedMap
         //@Independent(hc=true)[H]
 
-        V putLast(/*@Independent(hc=true)[H] @NotModified[T]*/ K k, /*@Independent(hc=true)[H] @NotModified[T]*/ V v) {
+        V putLast(/*@Independent(hc=true)[H] @NotModified[O]*/ K k, /*@Independent(hc=true)[H] @NotModified[O]*/ V v) {
             return null;
         }
 
         //override from java.util.SequencedMap
+        //@NotModified[H]
         SortedMap<K, V> reversed() { return null; }
     }
 
     //public class TreeMap extends AbstractMap<K,V> implements NavigableMap<K,V>, Cloneable, Serializable
+    @Container
     class TreeMap$<K, V> {
         TreeMap$() { }
-        TreeMap$(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ Comparator<? super K> comparator) { }
-        TreeMap$(/*@Independent[M]*/ Map<? extends K, ? extends V> m) { }
-        TreeMap$(/*@Independent[M]*/ SortedMap<K, ? extends V> m) { }
+        TreeMap$(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[O]*/ Comparator<? super K> comparator) { }
+        TreeMap$(/*@Independent[M] @NotModified[O]*/ Map<? extends K, ? extends V> m) { }
+        TreeMap$(/*@Independent[M] @NotModified[O]*/ SortedMap<K, ? extends V> m) { }
         //override from java.util.AbstractMap, java.util.Map
         //@NotModified[H]
         int size() { return 0; }
 
         //override from java.util.AbstractMap, java.util.Map
         //@NotModified[H]
-        boolean containsKey(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ Object key) { return false; }
+        boolean containsKey(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[O]*/ Object key) { return false; }
 
         //override from java.util.AbstractMap, java.util.Map
-        boolean containsValue(/*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[T]*/ Object value) {
+        boolean containsValue(/*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[O]*/ Object value) {
             return false;
         }
 
         //override from java.util.AbstractMap, java.util.Map
         //@Independent(hc=true)[H] @NotModified[H]
-        V get(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ Object key) { return null; }
+        V get(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[O]*/ Object key) { return null; }
 
         //override from java.util.SortedMap
         //@Immutable(hc=true)[T] @Independent(hc=true)[H]
@@ -3621,24 +3726,24 @@ public class JavaUtil {
         //override from java.util.SequencedMap, java.util.SortedMap
         //@Independent(hc=true)[H]
 
-        V putFirst(/*@Independent(hc=true)[H] @NotModified[T]*/ K k, /*@Independent(hc=true)[H] @NotModified[T]*/ V v) {
+        V putFirst(/*@Independent(hc=true)[H] @NotModified[O]*/ K k, /*@Independent(hc=true)[H] @NotModified[O]*/ V v) {
             return null;
         }
 
         //override from java.util.SequencedMap, java.util.SortedMap
         //@Independent(hc=true)[H]
 
-        V putLast(/*@Independent(hc=true)[H] @NotModified[T]*/ K k, /*@Independent(hc=true)[H] @NotModified[T]*/ V v) {
+        V putLast(/*@Independent(hc=true)[H] @NotModified[O]*/ K k, /*@Independent(hc=true)[H] @NotModified[O]*/ V v) {
             return null;
         }
 
         //override from java.util.AbstractMap, java.util.Map
-        void putAll(/*@NotModified[H]*/ Map<? extends K, ? extends V> map) { }
+        void putAll(/*@NotModified[O]*/ Map<? extends K, ? extends V> map) { }
 
         //override from java.util.AbstractMap, java.util.Map
         //@Independent(hc=true)[H]
 
-        V put(/*@Independent(hc=true)[H] @NotModified[T]*/ K key, /*@Independent(hc=true)[H] @NotModified[T]*/ V value) {
+        V put(/*@Independent(hc=true)[H] @NotModified[O]*/ K key, /*@Independent(hc=true)[H] @NotModified[O]*/ V value) {
             return null;
         }
 
@@ -3646,22 +3751,22 @@ public class JavaUtil {
         //@Independent(hc=true)[H]
 
         V putIfAbsent(
-            /*@Independent(hc=true)[H] @NotModified[T]*/ K key,
-            /*@Independent(hc=true)[H] @NotModified[T]*/ V value) { return null; }
+            /*@Independent(hc=true)[H] @NotModified[O]*/ K key,
+            /*@Independent(hc=true)[H] @NotModified[O]*/ V value) { return null; }
 
         //override from java.util.Map
         //@Independent(hc=true)[H]
 
         V computeIfAbsent(
-            /*@Independent(hc=true)[H] @NotModified[T]*/ K key,
-            /*@IgnoreModifications[T] @NotModified[H]*/ Function<? super K, ? extends V> mappingFunction) { return null; }
+            /*@Independent(hc=true)[H] @NotModified[O]*/ K key,
+            /*@IgnoreModifications[T] @NotModified[O]*/ Function<? super K, ? extends V> mappingFunction) { return null; }
 
         //override from java.util.Map
         //@Independent(hc=true)[H]
 
         V computeIfPresent(
-            /*@Independent(hc=true)[H] @NotModified[T]*/ K key,
-            /*@IgnoreModifications[T] @NotModified[H]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) {
+            /*@Independent(hc=true)[H] @NotModified[O]*/ K key,
+            /*@IgnoreModifications[T] @NotModified[O]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) {
             return null;
         }
 
@@ -3669,8 +3774,8 @@ public class JavaUtil {
         //@Independent(hc=true)[H]
 
         V compute(
-            /*@Independent(hc=true)[H] @NotModified[T]*/ K key,
-            /*@IgnoreModifications[T] @NotModified[H]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) {
+            /*@Independent(hc=true)[H] @NotModified[O]*/ K key,
+            /*@IgnoreModifications[T] @NotModified[O]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) {
             return null;
         }
 
@@ -3678,16 +3783,16 @@ public class JavaUtil {
         //@Independent(hc=true)[H]
 
         V merge(
-            /*@Independent(hc=true)[H] @NotModified[T]*/ K key,
-            /*@Independent(hc=true)[H] @NotModified[T]*/ V value,
-            /*@IgnoreModifications[T] @Independent(hc=true)[H] @NotModified[H]*/ BiFunction<
+            /*@Independent(hc=true)[H] @NotModified[O]*/ K key,
+            /*@Independent(hc=true)[H] @NotModified[O]*/ V value,
+            /*@IgnoreModifications[T] @Independent(hc=true)[H] @NotModified[O]*/ BiFunction<
                 ? super V,
                 ? super V,
                 ? extends V> remappingFunction) { return null; }
 
         //override from java.util.AbstractMap, java.util.Map
         //@Independent(hc=true)[H]
-        V remove(/*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[T]*/ Object key) { return null; }
+        V remove(/*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[O]*/ Object key) { return null; }
 
         //override from java.util.AbstractMap, java.util.Map
         void clear() { }
@@ -3697,9 +3802,11 @@ public class JavaUtil {
         protected Object clone() { return null; }
 
         //override from java.util.NavigableMap, java.util.SequencedMap
+        //@NotModified[H]
         Map.Entry<K, V> firstEntry() { return null; }
 
         //override from java.util.NavigableMap, java.util.SequencedMap
+        //@NotModified[H]
         Map.Entry<K, V> lastEntry() { return null; }
 
         //override from java.util.NavigableMap, java.util.SequencedMap
@@ -3709,41 +3816,47 @@ public class JavaUtil {
         Map.Entry<K, V> pollLastEntry() { return null; }
 
         //override from java.util.NavigableMap
-        Map.Entry<K, V> lowerEntry(/*@Independent(hc=true)[H] @NotModified[T]*/ K key) { return null; }
+        //@NotModified[H]
+        Map.Entry<K, V> lowerEntry(/*@Independent[M] @NotModified[O]*/ K key) { return null; }
 
         //override from java.util.NavigableMap
-        //@Independent(hc=true)[H]
-        K lowerKey(/*@Independent(hc=true)[H] @NotModified[T]*/ K key) { return null; }
+        //@Independent(hc=true)[H] @NotModified[H]
+        K lowerKey(/*@Independent[M] @NotModified[O]*/ K key) { return null; }
 
         //override from java.util.NavigableMap
-        Map.Entry<K, V> floorEntry(/*@Independent(hc=true)[H] @NotModified[T]*/ K key) { return null; }
+        //@NotModified[H]
+        Map.Entry<K, V> floorEntry(/*@Independent[M] @NotModified[O]*/ K key) { return null; }
 
         //override from java.util.NavigableMap
-        //@Independent(hc=true)[H]
-        K floorKey(/*@Independent(hc=true)[H] @NotModified[T]*/ K key) { return null; }
+        //@Independent(hc=true)[H] @NotModified[H]
+        K floorKey(/*@Independent[M] @NotModified[O]*/ K key) { return null; }
 
         //override from java.util.NavigableMap
-        Map.Entry<K, V> ceilingEntry(/*@Independent(hc=true)[H] @NotModified[T]*/ K key) { return null; }
+        //@NotModified[H]
+        Map.Entry<K, V> ceilingEntry(/*@Independent[M] @NotModified[O]*/ K key) { return null; }
 
         //override from java.util.NavigableMap
-        //@Independent(hc=true)[H]
-        K ceilingKey(/*@Independent(hc=true)[H] @NotModified[T]*/ K key) { return null; }
+        //@Independent(hc=true)[H] @NotModified[H]
+        K ceilingKey(/*@Independent[M] @NotModified[O]*/ K key) { return null; }
 
         //override from java.util.NavigableMap
-        Map.Entry<K, V> higherEntry(/*@Independent(hc=true)[H] @NotModified[T]*/ K key) { return null; }
+        //@NotModified[H]
+        Map.Entry<K, V> higherEntry(/*@Independent[M] @NotModified[O]*/ K key) { return null; }
 
         //override from java.util.NavigableMap
-        //@Independent(hc=true)[H]
-        K higherKey(/*@Independent(hc=true)[H] @NotModified[T]*/ K key) { return null; }
+        //@Independent(hc=true)[H] @NotModified[H]
+        K higherKey(/*@Independent[M] @NotModified[O]*/ K key) { return null; }
 
         //override from java.util.AbstractMap, java.util.Map, java.util.SortedMap
         //@NotModified[H]
         Set<K> keySet() { return null; }
 
         //override from java.util.NavigableMap
+        //@NotModified[H]
         NavigableSet<K> navigableKeySet() { return null; }
 
         //override from java.util.NavigableMap
+        //@NotModified[H]
         NavigableSet<K> descendingKeySet() { return null; }
 
         //override from java.util.AbstractMap, java.util.Map, java.util.SortedMap
@@ -3755,56 +3868,63 @@ public class JavaUtil {
         Set<Map.Entry<K, V>> entrySet() { return null; }
 
         //override from java.util.NavigableMap
+        //@NotModified[H]
         NavigableMap<K, V> descendingMap() { return null; }
 
         //override from java.util.NavigableMap
+        //@NotModified[H]
+
         NavigableMap<K, V> subMap(
-            /*@Independent(hc=true)[H] @NotModified[T]*/ K fromKey,
+            /*@Independent[M] @NotModified[O]*/ K fromKey,
             boolean fromInclusive,
-            /*@Independent(hc=true)[H] @NotModified[T]*/ K toKey,
+            /*@Independent[M] @NotModified[O]*/ K toKey,
             boolean toInclusive) { return null; }
 
         //override from java.util.NavigableMap
-        NavigableMap<K, V> headMap(/*@Independent(hc=true)[H] @NotModified[T]*/ K toKey, boolean inclusive) {
-            return null;
-        }
+        //@NotModified[H]
+        NavigableMap<K, V> headMap(/*@Independent[M] @NotModified[O]*/ K toKey, boolean inclusive) { return null; }
 
         //override from java.util.NavigableMap
-        NavigableMap<K, V> tailMap(/*@Independent(hc=true)[H] @NotModified[T]*/ K fromKey, boolean inclusive) {
-            return null;
-        }
+        //@NotModified[H]
+        NavigableMap<K, V> tailMap(/*@Independent[M] @NotModified[O]*/ K fromKey, boolean inclusive) { return null; }
 
         //override from java.util.NavigableMap, java.util.SortedMap
+        //@NotModified[H]
+
         SortedMap<K, V> subMap(
-            /*@Independent(hc=true)[H] @NotModified[T]*/ K fromKey,
-            /*@Independent(hc=true)[H] @NotModified[T]*/ K toKey) { return null; }
+            /*@Independent[M] @NotModified[O]*/ K fromKey,
+            /*@Independent[M] @NotModified[O]*/ K toKey) { return null; }
 
         //override from java.util.NavigableMap, java.util.SortedMap
-        SortedMap<K, V> headMap(/*@Independent(hc=true)[H] @NotModified[T]*/ K toKey) { return null; }
+        //@NotModified[H]
+        SortedMap<K, V> headMap(/*@Independent[M] @NotModified[O]*/ K toKey) { return null; }
 
         //override from java.util.NavigableMap, java.util.SortedMap
-        SortedMap<K, V> tailMap(/*@Independent(hc=true)[H] @NotModified[T]*/ K fromKey) { return null; }
+        //@NotModified[H]
+        SortedMap<K, V> tailMap(/*@Independent[M] @NotModified[O]*/ K fromKey) { return null; }
 
         //override from java.util.Map
         boolean replace(
-            /*@Independent(hc=true)[H] @NotModified[T]*/ K key,
-            /*@Independent(hc=true)[H] @NotModified[T]*/ V oldValue,
-            /*@Independent(hc=true)[H] @NotModified[T]*/ V newValue) { return false; }
+            /*@Independent(hc=true)[H] @NotModified[O]*/ K key,
+            /*@Independent(hc=true)[H] @NotModified[O]*/ V oldValue,
+            /*@Independent(hc=true)[H] @NotModified[O]*/ V newValue) { return false; }
 
         //override from java.util.Map
         //@Independent(hc=true)[H]
 
         V replace(
-            /*@Independent(hc=true)[H] @NotModified[T]*/ K key,
-            /*@Independent(hc=true)[H] @NotModified[T]*/ V value) { return null; }
+            /*@Independent(hc=true)[H] @NotModified[O]*/ K key,
+            /*@Independent(hc=true)[H] @NotModified[O]*/ V value) { return null; }
 
         //override from java.util.Map
+        //@NotModified[H]
+
         void forEach(
-            /*@IgnoreModifications[T] @Independent(hc=true)[H] @NotModified[H]*/ BiConsumer<? super K, ? super V> action) { }
+            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ BiConsumer<? super K, ? super V> action) { }
 
         //override from java.util.Map
         void replaceAll(
-            /*@IgnoreModifications[T] @NotModified[H]*/ BiFunction<? super K, ? super V, ? extends V> function) { }
+            /*@IgnoreModifications[T] @NotModified[O]*/ BiFunction<? super K, ? super V, ? extends V> function) { }
     }
 
     //public final class UUID implements Serializable, Comparable<UUID>
@@ -3843,7 +3963,7 @@ public class JavaUtil {
         long node() { return 0L; }
 
         //override from java.lang.Object
-        //@NotModified[T]
+        //@NotModified[T] @NotNull[H]
         public String toString() { return null; }
 
         //override from java.lang.Object
@@ -3977,7 +4097,7 @@ public class JavaUtil {
         public int hashCode() { return 0; }
 
         //override from java.lang.Object, java.util.AbstractCollection
-        //@NotModified[H]
+        //@NotModified[H] @NotNull[H]
         public String toString() { return null; }
 
         //override from java.util.AbstractList, java.util.List
@@ -3995,7 +4115,8 @@ public class JavaUtil {
         Iterator<E> iterator() { return null; }
 
         //override from java.lang.Iterable
-        void forEach(/*@IgnoreModifications[T] @Independent[H] @NotModified[H]*/ Consumer<? super E> action) { }
+        //@NotModified[H]
+        void forEach(/*@IgnoreModifications[T] @Independent[M] @NotModified[H]*/ Consumer<? super E> action) { }
 
         //override from java.util.List
         void replaceAll(/*@IgnoreModifications[T] @NotModified[H]*/ UnaryOperator<E> operator) { }

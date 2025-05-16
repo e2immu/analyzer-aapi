@@ -17,10 +17,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
-import org.e2immu.annotation.Container;
-import org.e2immu.annotation.ImmutableContainer;
-import org.e2immu.annotation.Independent;
-import org.e2immu.annotation.NotModified;
+
+import org.e2immu.annotation.*;
 import org.e2immu.annotation.rare.IgnoreModifications;
 import org.e2immu.annotation.type.UtilityClass;
 public class JavaLang {
@@ -80,7 +78,7 @@ public class JavaLang {
         static String toString(boolean b) { return null; }
 
         //override from java.lang.Object
-        //@NotModified[T]
+        //@NotModified[T] @NotNull[H]
         public String toString() { return null; }
 
         //override from java.lang.Object
@@ -121,6 +119,7 @@ public class JavaLang {
 
     //public interface CharSequence
     @ImmutableContainer(hc = true)
+    @Independent
     class CharSequence$ {
         //override has frequency 17
         //@NotModified[T]
@@ -140,7 +139,7 @@ public class JavaLang {
 
         //override from java.lang.Object
         //override has frequency 3
-        //@NotModified[T]
+        //@NotModified[T] @NotNull[H]
         public String toString() { return null; }
 
         //@Independent(hc=true)[O] @NotModified[T]
@@ -159,7 +158,7 @@ public class JavaLang {
     @ImmutableContainer
     class Class$<T> {
         //override from java.lang.Object
-        //@NotModified[T]
+        //@NotModified[T] @NotNull[H]
         public String toString() { return null; }
 
         //@NotModified[T]
@@ -429,10 +428,11 @@ public class JavaLang {
     @Independent(hc = true) class Cloneable$ { }
     //public interface Comparable
     @ImmutableContainer(hc = true)
+    @Independent
     class Comparable$<T> {
         //override has frequency 1
         //@NotModified[T]
-        int compareTo(/*@Independent[M] @NotModified[O]*/ T t) { return 0; }
+        int compareTo(/*@Independent[M] @NotModified[O]*/ @NotNull T t) { return 0; }
     }
 
     //public final class Double extends Number implements Comparable<Double>, Constable, ConstantDesc
@@ -483,7 +483,7 @@ public class JavaLang {
         boolean isInfinite() { return false; }
 
         //override from java.lang.Object
-        //@NotModified[T]
+        //@NotModified[T] @NotNull[H]
         public String toString() { return null; }
 
         //override from java.lang.Number
@@ -567,7 +567,7 @@ public class JavaLang {
             E resolveConstantDesc(MethodHandles.Lookup lookup) { return null; }
 
             //override from java.lang.Object, java.lang.constant.DynamicConstantDesc
-            //@NotModified[H]
+            //@NotModified[H] @NotNull[H]
             public String toString() { return null; }
         }
 
@@ -581,7 +581,7 @@ public class JavaLang {
 
         //override from java.lang.Object
         //frequency 22
-        //@NotModified[T]
+        //@NotModified[T] @NotNull[H]
         public String toString() { return null; }
 
         //override from java.lang.Object
@@ -682,7 +682,7 @@ public class JavaLang {
         boolean isInfinite() { return false; }
 
         //override from java.lang.Object
-        //@NotModified[T]
+        //@NotModified[T] @NotNull[H]
         public String toString() { return null; }
 
         //override from java.lang.Number
@@ -879,7 +879,7 @@ public class JavaLang {
 
         //override from java.lang.Object
         //frequency 1
-        //@NotModified[T]
+        //@NotModified[T] @NotNull[H]
         public String toString() { return null; }
 
         //override from java.lang.Object
@@ -1093,7 +1093,7 @@ public class JavaLang {
 
         //override from java.lang.Object
         //frequency 112
-        //@NotModified[T]
+        //@NotModified[T] @NotNull[H]
         public String toString() { return null; }
 
         //override from java.lang.Object
@@ -1524,6 +1524,7 @@ public class JavaLang {
 
     //public class Object
     @ImmutableContainer(hc = true)
+    @Independent
     class Object$ {
         //override has frequency 1
         Object$() { }
@@ -1542,12 +1543,28 @@ public class JavaLang {
 
         //frequency 10
         //@NotModified[T]
+        @NotNull
         public String toString() { return null; }
-        @IgnoreModifications public void notify$() { }
-        @IgnoreModifications public void notifyAll$() { }
-        @IgnoreModifications public void wait$() { }
-        @IgnoreModifications public void wait$(long timeoutMillis) { }
-        @IgnoreModifications public void wait$(long timeoutMillis, int i) { }
+
+        //@NotModified[T]
+        @IgnoreModifications
+        public void notify$() { }
+
+        //@NotModified[T]
+        @IgnoreModifications
+        public void notifyAll$() { }
+
+        //@NotModified[T]
+        @IgnoreModifications
+        public void wait$() { }
+
+        //@NotModified[T]
+        @IgnoreModifications
+        public void wait$(long timeoutMillis) { }
+
+        //@NotModified[T]
+        @IgnoreModifications
+        public void wait$(long timeoutMillis, int i) { }
     }
     //public interface Runnable
     @Independent(hc = true) class Runnable$ {void run() { } }
@@ -1567,29 +1584,29 @@ public class JavaLang {
     }
 
     //public final class String implements Serializable, Comparable<String>, CharSequence, Constable, ConstantDesc
-    @ImmutableContainer
+    @Immutable
     class String$ {
         //@Immutable(hc=true)[T] @NotModified[T]
         static final Comparator<String> CASE_INSENSITIVE_ORDER = null;
         String$() { }
         String$(String original) { }
-        String$(/*@Independent[M] @NotModified[O]*/ char [] value) { }
-        String$(/*@Independent[M] @NotModified[O]*/ char [] value, int offset, int count) { }
-        String$(/*@Independent[M] @NotModified[O]*/ int [] codePoints, int offset, int count) { }
-        String$(/*@Independent[M] @NotModified[O]*/ byte [] ascii, int hibyte, int offset, int count) { }
-        String$(/*@Independent[M] @NotModified[O]*/ byte [] ascii, int hibyte) { }
-        String$(/*@Independent[M] @NotModified[O]*/ byte [] bytes, int offset, int length, String charsetName) { }
+        String$(/*@Independent[M]*/ @NotModified char [] value) { }
+        String$(/*@Independent[M]*/ @NotModified char [] value, int offset, int count) { }
+        String$(/*@Independent[M]*/ @NotModified int [] codePoints, int offset, int count) { }
+        String$(/*@Independent[M]*/ @NotModified byte [] ascii, int hibyte, int offset, int count) { }
+        String$(/*@Independent[M]*/ @NotModified byte [] ascii, int hibyte) { }
+        String$(/*@Independent[M]*/ @NotModified byte [] bytes, int offset, int length, String charsetName) { }
         String$(
-            /*@Independent[M] @NotModified[O]*/ byte [] bytes,
+            /*@Independent[M]*/ @NotModified byte [] bytes,
             int offset,
             int length,
-            /*@Independent[M] @NotModified[O]*/ Charset charset) { }
-        String$(/*@Independent[M] @NotModified[O]*/ byte [] bytes, String charsetName) { }
-        String$(/*@Independent[M] @NotModified[O]*/ byte [] bytes, /*@Independent[M] @NotModified[O]*/ Charset charset) { }
-        String$(/*@Independent[M] @NotModified[O]*/ byte [] bytes, int offset, int length) { }
-        String$(/*@Independent[M] @NotModified[O]*/ byte [] bytes) { }
-        String$(/*@Independent[M] @NotModified[O]*/ StringBuffer buffer) { }
-        String$(/*@Independent[M] @NotModified[O]*/ StringBuilder builder) { }
+            /*@Independent[M]*/ Charset charset) { }
+        String$(/*@Independent[M]*/ @NotModified byte [] bytes, String charsetName) { }
+        String$(/*@Independent[M]*/ @NotModified byte [] bytes, /*@Independent[M]*/ Charset charset) { }
+        String$(/*@Independent[M]*/ @NotModified byte [] bytes, int offset, int length) { }
+        String$(/*@Independent[M]*/ @NotModified byte [] bytes) { }
+        String$(/*@Independent[M]*/ @NotModified StringBuffer buffer) { }
+        String$(/*@Independent[M]*/ @NotModified StringBuilder builder) { }
         //override from java.lang.CharSequence
         //frequency 17
         //@NotModified[T]
@@ -1615,14 +1632,19 @@ public class JavaLang {
 
         //@NotModified[T]
         int offsetByCodePoints(int index, int codePointOffset) { return 0; }
-        void getChars(int srcBegin, int srcEnd, /*@Independent[T] @NotModified[O]*/ char [] dst, int dstBegin) { }
-        void getBytes(int srcBegin, int srcEnd, /*@Independent[T] @NotModified[O]*/ byte [] dst, int dstBegin) { }
+
+        //@NotModified[T]
+        void getChars(int srcBegin, int srcEnd, /*@Independent[M]*/ char [] dst, int dstBegin) { }
+
+        //@NotModified[T]
+        void getBytes(int srcBegin, int srcEnd, /*@Independent[M]*/ byte [] dst, int dstBegin) { }
+
         //@Independent[O] @NotModified[T]
         byte [] getBytes(String charsetName) { return null; }
 
         //frequency 1
         //@Independent[O] @NotModified[T]
-        byte [] getBytes(/*@Independent[M] @NotModified[O]*/ Charset charset) { return null; }
+        byte [] getBytes(/*@Independent[M]*/ Charset charset) { return null; }
 
         //frequency 2
         //@Independent[O] @NotModified[T]
@@ -1632,15 +1654,15 @@ public class JavaLang {
         //frequency 40
         //@NotModified[T]
 
-        public boolean equals(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[O]*/ Object anObject) {
+        public boolean equals(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ Object anObject) {
             return false;
         }
 
         //@NotModified[T]
-        boolean contentEquals(/*@Independent[M] @NotModified[O]*/ StringBuffer sb) { return false; }
+        boolean contentEquals(/*@Independent[M]*/ StringBuffer sb) { return false; }
 
         //@NotModified[T]
-        boolean contentEquals(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[O]*/ CharSequence cs) {
+        boolean contentEquals(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ CharSequence cs) {
             return false;
         }
 
@@ -1735,7 +1757,7 @@ public class JavaLang {
 
         //frequency 6
         //@NotModified[T]
-        boolean contains(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[O]*/ CharSequence s) { return false; }
+        boolean contains(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ CharSequence s) { return false; }
 
         //@NotModified[T]
         String replaceFirst(String regex, String replacement) { return null; }
@@ -1748,8 +1770,8 @@ public class JavaLang {
         //@NotModified[T]
 
         String replace(
-            /*@Immutable(hc=true)[T] @Independent[M] @NotModified[O]*/ CharSequence target,
-            /*@Immutable(hc=true)[T] @Independent[M] @NotModified[O]*/ CharSequence replacement) { return null; }
+            /*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ CharSequence target,
+            /*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ CharSequence replacement) { return null; }
 
         //@Independent[O] @NotModified[T]
         String [] split(String regex, int limit) { return null; }
@@ -1763,24 +1785,24 @@ public class JavaLang {
 
         //@NotModified[T]
         static String join(
-            /*@Immutable(hc=true)[T] @Independent[T] @NotModified[O]*/ CharSequence delimiter,
-            /*@Independent[T] @NotModified[O]*/ CharSequence ... elements) { return null; }
+            /*@Immutable(hc=true)[T] @Independent[T] @NotModified[T]*/ CharSequence delimiter,
+            /*@Independent[T]*/ CharSequence ... elements) { return null; }
 
         //@NotModified[T]
         static String join(
-            /*@Immutable(hc=true)[T] @Independent[T] @NotModified[O]*/ CharSequence delimiter,
-            /*@Independent[T] @NotModified[O]*/ Iterable<? extends CharSequence> elements) { return null; }
+            /*@Immutable(hc=true)[T] @Independent[T] @NotModified[T]*/ CharSequence delimiter,
+            /*@Independent[T]*/ Iterable<? extends CharSequence> elements) { return null; }
 
         //frequency 3
         //@NotModified[T]
-        String toLowerCase(/*@Independent[M] @NotModified[O]*/ Locale locale) { return null; }
+        String toLowerCase(/*@Independent[M]*/ Locale locale) { return null; }
 
         //frequency 36
         //@NotModified[T]
         String toLowerCase() { return null; }
 
         //@NotModified[T]
-        String toUpperCase(/*@Independent[M] @NotModified[O]*/ Locale locale) { return null; }
+        String toUpperCase(/*@Independent[M]*/ Locale locale) { return null; }
 
         //frequency 3
         //@NotModified[T]
@@ -1816,13 +1838,12 @@ public class JavaLang {
         String translateEscapes() { return null; }
 
         //@Independent[O] @NotModified[T]
-        <R> R transform(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Function<? super String, ? extends R> f) {
+        <R> R transform(/*@IgnoreModifications[T] @Independent[M]*/ Function<? super String, ? extends R> f) {
             return null;
         }
 
         //override from java.lang.CharSequence, java.lang.Object
-        //@NotModified[T]
+        //@NotModified[T] @NotNull[H]
         public String toString() { return null; }
 
         //override from java.lang.CharSequence
@@ -1837,33 +1858,32 @@ public class JavaLang {
         char [] toCharArray() { return null; }
 
         //@NotModified[T]
-        static String format(String format, /*@Independent[T] @NotModified[O]*/ Object ... args) { return null; }
+        static String format(String format, /*@Independent[T]*/ Object ... args) { return null; }
 
         //@NotModified[T]
-        static String format(
-            /*@Independent[T] @NotModified[O]*/ Locale l,
-            String format,
-            /*@Independent[T] @NotModified[O]*/ Object ... args) { return null; }
+        static String format(/*@Independent[T]*/ Locale l, String format, /*@Independent[T]*/ Object ... args) {
+            return null;
+        }
 
         //frequency 37
         //@NotModified[T]
-        String formatted(/*@Independent[M] @NotModified[O]*/ Object ... args) { return null; }
+        String formatted(/*@Independent[M]*/ Object ... args) { return null; }
 
         //frequency 1
         //@NotModified[T]
-        static String valueOf(/*@Immutable(hc=true)[T] @Independent[T] @NotModified[O]*/ Object obj) { return null; }
+        static String valueOf(/*@Immutable(hc=true)[T] @Independent[T] @NotModified[T]*/ Object obj) { return null; }
 
         //@NotModified[T]
-        static String valueOf(/*@Independent[T] @NotModified[O]*/ char [] data) { return null; }
+        static String valueOf(/*@Independent[T]*/ char [] data) { return null; }
 
         //@NotModified[T]
-        static String valueOf(/*@Independent[T] @NotModified[O]*/ char [] data, int offset, int count) { return null; }
+        static String valueOf(/*@Independent[T]*/ char [] data, int offset, int count) { return null; }
 
         //@NotModified[T]
-        static String copyValueOf(/*@Independent[T] @NotModified[O]*/ char [] data, int offset, int count) { return null; }
+        static String copyValueOf(/*@Independent[T]*/ char [] data, int offset, int count) { return null; }
 
         //@NotModified[T]
-        static String copyValueOf(/*@Independent[T] @NotModified[O]*/ char [] data) { return null; }
+        static String copyValueOf(/*@Independent[T]*/ char [] data) { return null; }
 
         //frequency 3
         //@NotModified[T]
@@ -1899,11 +1919,12 @@ public class JavaLang {
 
         //override from java.lang.constant.ConstantDesc
         //@NotModified[T]
-        String resolveConstantDesc(/*@Independent[M] @NotModified[O]*/ MethodHandles.Lookup lookup) { return null; }
+        String resolveConstantDesc(/*@Independent[M]*/ MethodHandles.Lookup lookup) { return null; }
     }
 
     //public final class StringBuilder extends AbstractStringBuilder implements Appendable, Serializable, Comparable<StringBuilder>, CharSequence
     @Container
+    @Independent
     class StringBuilder$ {
         //frequency 3
         StringBuilder$() { }
@@ -1917,85 +1938,108 @@ public class JavaLang {
         //override from java.lang.AbstractStringBuilder
         //frequency 3
 
+        @Fluent
         StringBuilder append(/*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[O]*/ Object obj) {
             return null;
         }
 
         //override from java.lang.AbstractStringBuilder
         //frequency 6
+        @Fluent
         StringBuilder append(String str) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder append(/*@NotModified[O]*/ StringBuffer sb) { return null; }
 
         //override from java.lang.AbstractStringBuilder, java.lang.Appendable
+        @Fluent
         StringBuilder append(/*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[O]*/ CharSequence s) {
             return null;
         }
 
         //override from java.lang.AbstractStringBuilder, java.lang.Appendable
+        @Fluent
         StringBuilder append(
             /*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[O]*/ CharSequence s,
             int start,
             int end) { return null; }
 
         //override from java.lang.AbstractStringBuilder, java.lang.Appendable
+        @Fluent
         StringBuilder append(/*@Independent[H] @NotModified[O] @NotNull[H]*/ char [] str) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder append(/*@NotModified[O]*/ char [] str, int offset, int len) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder append(boolean b) { return null; }
 
         //override from java.lang.AbstractStringBuilder, java.lang.Appendable
+        @Fluent
         StringBuilder append(char c) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder append(int i) { return null; }
 
         //override from java.lang.AbstractStringBuilder
         //frequency 1
+        @Fluent
         StringBuilder append(long lng) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder append(float f) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder append(double d) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder appendCodePoint(int codePoint) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder delete(int start, int end) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder deleteCharAt(int index) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder replace(int start, int end, String str) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder insert(int index, /*@NotModified[O]*/ char [] str, int offset, int len) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder insert(int offset, /*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[O]*/ Object obj) {
             return null;
         }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder insert(int offset, String str) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder insert(int offset, /*@NotModified[O]*/ char [] str) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder insert(
             int dstOffset,
             /*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[O]*/ CharSequence s) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder insert(
             int dstOffset,
             /*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[O]*/ CharSequence s,
@@ -2003,21 +2047,27 @@ public class JavaLang {
             int end) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder insert(int offset, boolean b) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder insert(int offset, char c) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder insert(int offset, int i) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder insert(int offset, long l) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder insert(int offset, float f) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder insert(int offset, double d) { return null; }
 
         //override from java.lang.AbstractStringBuilder
@@ -2033,18 +2083,22 @@ public class JavaLang {
         int lastIndexOf(String str, int fromIndex) { return 0; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder reverse() { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder repeat(int codePoint, int count) { return null; }
 
         //override from java.lang.AbstractStringBuilder
+        @Fluent
         StringBuilder repeat(
             /*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[O]*/ CharSequence cs,
             int count) { return null; }
 
         //override from java.lang.AbstractStringBuilder, java.lang.CharSequence, java.lang.Object
         //frequency 3
+        //@NotNull[H]
         @NotModified
         public String toString() { return null; }
     }
@@ -2333,7 +2387,7 @@ public class JavaLang {
         boolean isDaemon() { return false; }
         void checkAccess() { }
         //override from java.lang.Object
-        //@NotModified[H]
+        //@NotModified[H] @NotNull[H]
         public String toString() { return null; }
         ClassLoader getContextClassLoader() { return null; }
         void setContextClassLoader(ClassLoader cl) { }
@@ -2375,7 +2429,9 @@ public class JavaLang {
         Throwable getCause() { return null; }
         Throwable initCause(Throwable cause) { return null; }
         public String toString() { return null; }
+        @IgnoreModifications
         void printStackTrace() { }
+        @NotModified
         void printStackTrace(PrintStream s) { }
         void printStackTrace(PrintWriter s) { }
         Throwable fillInStackTrace() { return null; }

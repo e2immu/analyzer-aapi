@@ -20,10 +20,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
-import java.util.SortedMap;
-import java.util.TreeMap;
-import java.util.Vector;
+import java.util.*;
 import java.util.stream.Stream;
 
 import static org.e2immu.analyzer.modification.common.defaults.ShallowAnalyzer.AnnotationOrigin.*;
@@ -69,8 +66,10 @@ public class TestParseAnalyzeWrite {
         TypeInfo treeMap = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(TreeMap.class);
         TypeInfo vector = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(Vector.class);
         TypeInfo sortedMap = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(SortedMap.class);
+        TypeInfo navigableMap = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(NavigableMap.class);
+        TypeInfo sequencedMap = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(SequencedMap.class);
 
-        Stream<TypeInfo> extra = Stream.of(treeMap, vector, sortedMap);
+        Stream<TypeInfo> extra = Stream.of(treeMap, vector, sortedMap, navigableMap, sequencedMap);
         List<TypeInfo> typesToAnalyze = Stream.concat(annotatedApiParser.types().stream(), extra).distinct().toList();
         LOGGER.info("Have {} types for the shallow analyzer", typesToAnalyze.size());
         ShallowAnalyzer.Result rs = shallowAnalyzer.go(typesToAnalyze);

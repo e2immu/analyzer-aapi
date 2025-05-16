@@ -33,7 +33,7 @@ public class TestJavaLang extends CommonTest {
     public void testObjectToString() {
         TypeInfo typeInfo = compiledTypesManager().get(Object.class);
         MethodInfo methodInfo = typeInfo.findUniqueMethod("toString", 0);
-        assertSame(TRUE, methodInfo.analysis().getOrDefault(CONTAINER_METHOD, FALSE));
+        assertSame(FALSE,  methodInfo.analysis().getOrDefault(CONTAINER_METHOD, FALSE));
         assertSame(NOT_NULL, methodInfo.analysis().getOrDefault(NOT_NULL_METHOD, NULLABLE));
         assertFalse(methodInfo.isModifying());
         assertSame(IMMUTABLE, methodInfo.analysis().getOrDefault(IMMUTABLE_METHOD, MUTABLE));
@@ -43,7 +43,8 @@ public class TestJavaLang extends CommonTest {
     @Test
     public void testString() {
         TypeInfo typeInfo = compiledTypesManager().get(String.class);
-        testImmutableContainer(typeInfo, false, false);
+        assertSame(IMMUTABLE, typeInfo.analysis().getOrDefault(IMMUTABLE_TYPE, MUTABLE));
+        assertSame(INDEPENDENT, typeInfo.analysis().getOrDefault(INDEPENDENT_TYPE, DEPENDENT));
     }
 
     @Test
@@ -51,8 +52,8 @@ public class TestJavaLang extends CommonTest {
         TypeInfo typeInfo = compiledTypesManager().get(String.class);
         MethodInfo getBytes = typeInfo.findUniqueMethod("getBytes", 4);
         assertEquals(1, getBytes.annotations().size());
-        assertEquals("@Deprecated(since=\"1.1\")", getBytes.annotations().get(0).toString());
-        assertSame(TRUE, getBytes.analysis().getOrDefault(NON_MODIFYING_METHOD, FALSE));
+        assertEquals("@Deprecated(since=\"1.1\")", getBytes.annotations().getFirst().toString());
+        assertTrue(getBytes.isNonModifying());
     }
 
     @Test
@@ -97,7 +98,7 @@ public class TestJavaLang extends CommonTest {
         assertSame(MUTABLE, methodInfo.analysis().getOrDefault(IMMUTABLE_METHOD, MUTABLE));
         assertSame(INDEPENDENT, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
 
-        ParameterInfo p0 = methodInfo.parameters().get(0);
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
         assertSame(INDEPENDENT, p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT));
         assertSame(IMMUTABLE, p0.analysis().getOrDefault(IMMUTABLE_PARAMETER, MUTABLE));
         assertSame(NOT_NULL, p0.analysis().getOrDefault(NOT_NULL_PARAMETER, NULLABLE));
@@ -114,7 +115,7 @@ public class TestJavaLang extends CommonTest {
         assertSame(MUTABLE, methodInfo.analysis().getOrDefault(IMMUTABLE_METHOD, MUTABLE));
         assertSame(INDEPENDENT, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
 
-        ParameterInfo p0 = methodInfo.parameters().get(0);
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
         assertSame(INDEPENDENT, p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT));
         assertSame(IMMUTABLE, p0.analysis().getOrDefault(IMMUTABLE_PARAMETER, MUTABLE));
         assertSame(NULLABLE, p0.analysis().getOrDefault(NOT_NULL_PARAMETER, NULLABLE));
@@ -160,7 +161,7 @@ public class TestJavaLang extends CommonTest {
         assertSame(IMMUTABLE, methodInfo.analysis().getOrDefault(IMMUTABLE_METHOD, MUTABLE));
         assertSame(INDEPENDENT, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
 
-        ParameterInfo p0 = methodInfo.parameters().get(0);
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
         // no name in the byte-code, so auto-generated from T
         assertEquals("t", p0.name());
         assertEquals(0, p0.index());
@@ -170,6 +171,11 @@ public class TestJavaLang extends CommonTest {
         assertSame(TRUE, p0.analysis().getOrDefault(UNMODIFIED_PARAMETER, FALSE));
     }
 
+    @Test
+    public void testThrowable() {
+        TypeInfo typeInfo = compiledTypesManager().get(Throwable.class);
+        assertSame(DEPENDENT, typeInfo.analysis().getOrDefault(INDEPENDENT_TYPE, DEPENDENT));
+    }
 
     @Test
     public void testThrowablePrintStackTrace() {
@@ -177,7 +183,14 @@ public class TestJavaLang extends CommonTest {
         MethodInfo methodInfo = typeInfo.findUniqueMethod("printStackTrace", 0);
         assertFalse(methodInfo.isFluent());
         assertTrue(methodInfo.isIgnoreModification());
-        assertFalse(methodInfo.isModifying());
+        assertTrue(methodInfo.isModifying());
+    }
+
+    @Test
+    public void testThrowableConstructor2() {
+        TypeInfo typeInfo = compiledTypesManager().get(Throwable.class);
+        MethodInfo methodInfo = typeInfo.findConstructor(2);
+        assertSame(DEPENDENT, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
     }
 
     @Test
