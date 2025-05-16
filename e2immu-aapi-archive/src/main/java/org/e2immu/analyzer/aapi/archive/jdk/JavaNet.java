@@ -18,7 +18,7 @@ import org.e2immu.annotation.Container;
 import org.e2immu.annotation.ImmutableContainer;
 import org.e2immu.annotation.Modified;
 import org.e2immu.annotation.NotNull;
-import org.e2immu.annotation.rare.StaticSideEffects;
+import org.e2immu.annotation.rare.IgnoreModifications;
 import org.e2immu.annotation.type.UtilityClass;
 
 import java.io.InputStream;
@@ -47,7 +47,7 @@ public class JavaNet {
         /*
          Static method setting some info regarding the runtime system, to be ignored by us.
          */
-        @StaticSideEffects
+        @IgnoreModifications
         void setURLStreamHandlerFactory(URLStreamHandlerFactory fac);
 
         @NotNull

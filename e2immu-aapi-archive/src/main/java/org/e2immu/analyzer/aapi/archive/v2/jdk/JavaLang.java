@@ -1,6 +1,6 @@
 package org.e2immu.analyzer.aapi.archive.v2.jdk;
 import org.e2immu.annotation.*;
-import org.e2immu.annotation.rare.StaticSideEffects;
+import org.e2immu.annotation.rare.IgnoreModifications;
 import org.e2immu.annotation.type.UtilityClass;
 
 import java.io.Console;
@@ -800,10 +800,16 @@ public class JavaLang {
 
         //frequency 10
         public String toString() { return null; }
+
+        @IgnoreModifications
         public void notify$() { }
+        @IgnoreModifications
         public void notifyAll$() { }
+        @IgnoreModifications
         public void wait$() { }
+        @IgnoreModifications
         public void wait$(long timeoutMillis) { }
+        @IgnoreModifications
         public void wait$(long timeoutMillis, int i) { }
     }
 
@@ -1138,7 +1144,7 @@ public class JavaLang {
         //static void setSecurityManager(SecurityManager sm) { }
         //static SecurityManager getSecurityManager() { return null; }
         //frequency 4
-        @StaticSideEffects
+        @IgnoreModifications
         static long currentTimeMillis() { return 0L; }
         static long nanoTime() { return 0L; }
         static void arraycopy(Object object, int i, Object object1, int i1, int i2) { }
@@ -1159,7 +1165,7 @@ public class JavaLang {
         static System.Logger getLogger(String name) { return null; }
         static System.Logger getLogger(String name, ResourceBundle bundle) { return null; }
         //frequency 1
-        @StaticSideEffects
+        @IgnoreModifications
         static void exit(int status) { }
         static void gc() { }
         static void runFinalization() { }
@@ -1187,7 +1193,7 @@ public class JavaLang {
         static Thread currentThread() { return null; }
         static void yield() { }
         //frequency 2
-        @StaticSideEffects
+        @IgnoreModifications
         static void sleep(long millis) { }
         static void sleep(long millis, int i) { }
         static void sleep(Duration duration) { }
@@ -1201,7 +1207,7 @@ public class JavaLang {
         void run() { }
         void stop() { }
         //frequency 3
-        @StaticSideEffects
+        @IgnoreModifications
         void interrupt() { }
         static boolean interrupted() { return false; }
         boolean isInterrupted() { return false; }

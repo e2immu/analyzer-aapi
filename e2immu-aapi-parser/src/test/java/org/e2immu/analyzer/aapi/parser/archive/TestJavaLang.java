@@ -176,7 +176,7 @@ public class TestJavaLang extends CommonTest {
         TypeInfo typeInfo = compiledTypesManager().get(Throwable.class);
         MethodInfo methodInfo = typeInfo.findUniqueMethod("printStackTrace", 0);
         assertFalse(methodInfo.isFluent());
-        assertTrue(methodInfo.isStaticSideEffects());
+        assertTrue(methodInfo.isIgnoreModification());
         assertFalse(methodInfo.isModifying());
     }
 

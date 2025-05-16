@@ -17,7 +17,6 @@ package org.e2immu.analyzer.aapi.archive.jdk;
 import org.e2immu.annotation.*;
 import org.e2immu.annotation.Commutable;
 import org.e2immu.annotation.rare.IgnoreModifications;
-import org.e2immu.annotation.rare.StaticSideEffects;
 import org.e2immu.annotation.type.UtilityClass;
 
 import java.io.PrintStream;
@@ -135,7 +134,7 @@ class JavaLang {
         @Modified
         void setStackTrace(@NotNull StackTraceElement[] stackTrace);
 
-        @StaticSideEffects
+        @IgnoreModifications
         void printStackTrace();
 
         void printStackTrace(@Modified PrintStream s);
@@ -741,7 +740,7 @@ class JavaLang {
         }
 
         // very difficult to assign semantics to this one
-        @StaticSideEffects
+        @IgnoreModifications
         void exit(int code);
 
         @Modified
