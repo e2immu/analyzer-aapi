@@ -265,7 +265,8 @@ public class AnnotatedApiParser implements AnnotationProvider {
     }
 
     private boolean sameType(ParameterizedType pt1, ParameterizedType pt2) {
-        if (pt1.typeInfo() != null) return pt1.arrays() == pt2.arrays() && pt1.typeInfo() == pt2.typeInfo();
+        if (pt1.arrays() != pt2.arrays()) return false;
+        if (pt1.typeInfo() != null) return pt1.typeInfo() == pt2.typeInfo();
         return (pt1.typeParameter() == null) == (pt2.typeParameter() == null);
     }
 
