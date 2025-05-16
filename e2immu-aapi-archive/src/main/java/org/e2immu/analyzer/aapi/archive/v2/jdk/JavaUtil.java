@@ -21,7 +21,7 @@ public class JavaUtil {
     @Container
     class AbstractCollection$<E> {
         //override from java.lang.Iterable, java.util.Collection
-        //@NotModified[H]
+        //@NotModified[H] @NotNull[H]
         Iterator<E> iterator() { return null; }
 
         //override from java.util.Collection
@@ -108,7 +108,7 @@ public class JavaUtil {
         boolean addAll(int index, /*@NotModified[O]*/ Collection<? extends E> c) { return false; }
 
         //override from java.lang.Iterable, java.util.AbstractCollection, java.util.Collection, java.util.List
-        //@NotModified[H]
+        //@NotModified[H] @NotNull[H]
         Iterator<E> iterator() { return null; }
 
         //override from java.util.List
@@ -135,8 +135,10 @@ public class JavaUtil {
     class AbstractMap$<K, V> {
         //public static class SimpleEntry implements Map.Entry<K,V>, Serializable
         class SimpleEntry<K, V> {
-            SimpleEntry(/*@Independent[M] @NotModified[T]*/ K key, /*@Independent[M] @NotModified[T]*/ V value) { }
-            SimpleEntry(/*@Independent[M]*/ Map.Entry<? extends K, ? extends V> entry) { }
+            SimpleEntry(
+                /*@Independent(hc=true)[T] @NotModified[T]*/ K key,
+                /*@Independent(hc=true)[T] @NotModified[T]*/ V value) { }
+            SimpleEntry(Map.Entry<? extends K, ? extends V> entry) { }
             //override from java.util.Map.Entry
             //@Independent(hc=true)[H] @NotModified[H]
             K getKey() { return null; }
@@ -164,8 +166,10 @@ public class JavaUtil {
 
         //public static class SimpleImmutableEntry implements Map.Entry<K,V>, Serializable
         class SimpleImmutableEntry<K, V> {
-            SimpleImmutableEntry(/*@Independent[M] @NotModified[T]*/ K key, /*@Independent[M] @NotModified[T]*/ V value) { }
-            SimpleImmutableEntry(/*@Independent[M]*/ Map.Entry<? extends K, ? extends V> entry) { }
+            SimpleImmutableEntry(
+                /*@Independent(hc=true)[T] @NotModified[T]*/ K key,
+                /*@Independent(hc=true)[T] @NotModified[T]*/ V value) { }
+            SimpleImmutableEntry(Map.Entry<? extends K, ? extends V> entry) { }
             //override from java.util.Map.Entry
             //@Independent(hc=true)[H] @NotModified[H]
             K getKey() { return null; }
@@ -390,7 +394,7 @@ public class JavaUtil {
         ListIterator<E> listIterator() { return null; }
 
         //override from java.lang.Iterable, java.util.AbstractCollection, java.util.AbstractList, java.util.Collection, java.util.List
-        //@NotModified[H]
+        //@NotModified[H] @NotNull[H]
         Iterator<E> iterator() { return null; }
 
         //override from java.util.AbstractList, java.util.List
@@ -399,9 +403,10 @@ public class JavaUtil {
 
         //override from java.lang.Iterable
         //@NotModified[H]
-        void forEach(/*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Consumer<? super E> action) { }
+        void forEach(/*@IgnoreModifications[T] @Independent[M] @NotModified[O] @NotNull[H]*/ Consumer<? super E> action) { }
 
         //override from java.lang.Iterable, java.util.Collection, java.util.List
+        //@Independent(hc=true)[H] @NotModified[H] @NotNull[H]
         Spliterator<E> spliterator() { return null; }
 
         //override from java.util.Collection
@@ -1509,6 +1514,7 @@ public class JavaUtil {
 
         //override from java.lang.Iterable
         //override has frequency 2
+        //@NotNull[H]
         @NotModified
         Iterator<E> iterator() { return null; }
 
@@ -1560,6 +1566,7 @@ public class JavaUtil {
         public int hashCode() { return 0; }
 
         //override from java.lang.Iterable
+        //@Independent(hc=true)[H] @NotModified[H] @NotNull[H]
         Spliterator<E> spliterator() { return null; }
 
         //frequency 238
@@ -1991,7 +1998,7 @@ public class JavaUtil {
 
         //override from java.lang.Comparable
         //@NotModified[H]
-        int compareTo(/*@Independent[M] @NotModified[H]*/ Date anotherDate) { return 0; }
+        int compareTo(/*@Independent[M] @NotModified[H] @NotNull[H]*/ Date anotherDate) { return 0; }
 
         //override from java.lang.Object
         //@NotModified[H]
@@ -2006,8 +2013,11 @@ public class JavaUtil {
         static Date from(Instant instant) { return null; }
         Instant toInstant() { return null; }
     }
+
     //public interface EventListener
+    //@Container[M]
     @Independent(hc = true) class EventListener$ { }
+
     //public class HashMap extends AbstractMap<K,V> implements Map<K,V>, Cloneable, Serializable
     @Container
     class HashMap$<K, V> {
@@ -2165,7 +2175,7 @@ public class JavaUtil {
         HashSet$(int initialCapacity, float loadFactor) { }
         HashSet$(int initialCapacity) { }
         //override from java.lang.Iterable, java.util.AbstractCollection, java.util.Collection, java.util.Set
-        //@NotModified[H]
+        //@NotModified[H] @NotNull[H]
         Iterator<E> iterator() { return null; }
 
         //override from java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -2194,6 +2204,7 @@ public class JavaUtil {
         protected Object clone() { return null; }
 
         //override from java.lang.Iterable, java.util.Collection, java.util.Set
+        //@Independent(hc=true)[H] @NotModified[H] @NotNull[H]
         Spliterator<E> spliterator() { return null; }
 
         //override from java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -2238,7 +2249,7 @@ public class JavaUtil {
         boolean contains(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[O]*/ Object object) { return false; }
 
         //override from java.lang.Iterable, java.util.Collection
-        //@NotModified[H]
+        //@NotModified[H] @NotNull[H]
         Iterator<E> iterator() { return null; }
 
         //override from java.util.Collection
@@ -2306,6 +2317,7 @@ public class JavaUtil {
         List<E> subList(int i, int i1) { return null; }
 
         //override from java.lang.Iterable, java.util.Collection
+        //@Independent(hc=true)[H] @NotModified[H] @NotNull[H]
         Spliterator<E> spliterator() { return null; }
 
         //override from java.util.SequencedCollection
@@ -3016,8 +3028,8 @@ public class JavaUtil {
     //public class NoSuchElementException extends RuntimeException
     class NoSuchElementException$ {
         NoSuchElementException$() { }
-        NoSuchElementException$(String s, /*@Independent[M]*/ Throwable cause) { }
-        NoSuchElementException$(/*@Independent[M]*/ Throwable cause) { }
+        NoSuchElementException$(String s, Throwable cause) { }
+        NoSuchElementException$(Throwable cause) { }
         //frequency 12
         NoSuchElementException$(String s) { }
     }
@@ -3429,8 +3441,11 @@ public class JavaUtil {
         //override from java.util.random.RandomGenerator
         DoubleStream doubles(double randomNumberOrigin, double d) { return null; }
     }
+
     //public interface RandomAccess
+    //@Container[M]
     @Independent(hc = true) class RandomAccess$ { }
+
     //public interface SequencedCollection implements Collection<E>
     @Container
     class SequencedCollection$<E> {
@@ -3494,7 +3509,7 @@ public class JavaUtil {
 
         //override from java.lang.Iterable, java.util.Collection
         //frequency 2
-        //@NotModified[H]
+        //@NotModified[H] @NotNull[H]
         Iterator<E> iterator() { return null; }
 
         //override from java.util.Collection
@@ -3545,6 +3560,7 @@ public class JavaUtil {
         public int hashCode() { return 0; }
 
         //override from java.lang.Iterable, java.util.Collection
+        //@Independent(hc=true)[H] @NotModified[H] @NotNull[H]
         Spliterator<E> spliterator() { return null; }
 
         //frequency 1
@@ -3691,9 +3707,9 @@ public class JavaUtil {
     @Container
     class TreeMap$<K, V> {
         TreeMap$() { }
-        TreeMap$(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[O]*/ Comparator<? super K> comparator) { }
-        TreeMap$(/*@Independent[M] @NotModified[O]*/ Map<? extends K, ? extends V> m) { }
-        TreeMap$(/*@Independent[M] @NotModified[O]*/ SortedMap<K, ? extends V> m) { }
+        TreeMap$(/*@Immutable(hc=true)[T] @Independent(hc=true)[T] @NotModified[O]*/ Comparator<? super K> comparator) { }
+        TreeMap$(/*@NotModified[O]*/ Map<? extends K, ? extends V> m) { }
+        TreeMap$(/*@NotModified[O]*/ SortedMap<K, ? extends V> m) { }
         //override from java.util.AbstractMap, java.util.Map
         //@NotModified[H]
         int size() { return 0; }
@@ -3976,7 +3992,7 @@ public class JavaUtil {
 
         //override from java.lang.Comparable
         //@NotModified[T]
-        int compareTo(/*@Immutable[T] @Independent[T] @NotModified[O]*/ UUID val) { return 0; }
+        int compareTo(/*@Immutable[T] @Independent[T] @NotModified[O] @NotNull[H]*/ UUID val) { return 0; }
     }
 
     //public class Vector extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, Serializable
@@ -3984,7 +4000,7 @@ public class JavaUtil {
         Vector$(int initialCapacity, int capacityIncrement) { }
         Vector$(int initialCapacity) { }
         Vector$() { }
-        Vector$(/*@Independent[M]*/ Collection<? extends E> c) { }
+        Vector$(Collection<? extends E> c) { }
         void copyInto(Object [] anArray) { }
         void trimToSize() { }
         void ensureCapacity(int minCapacity) { }
@@ -4111,12 +4127,12 @@ public class JavaUtil {
         ListIterator<E> listIterator() { return null; }
 
         //override from java.lang.Iterable, java.util.AbstractCollection, java.util.AbstractList, java.util.Collection, java.util.List
-        //@NotModified[H]
+        //@NotModified[H] @NotNull[H]
         Iterator<E> iterator() { return null; }
 
         //override from java.lang.Iterable
         //@NotModified[H]
-        void forEach(/*@IgnoreModifications[T] @Independent[M] @NotModified[H]*/ Consumer<? super E> action) { }
+        void forEach(/*@IgnoreModifications[T] @Independent[M] @NotModified[H] @NotNull[H]*/ Consumer<? super E> action) { }
 
         //override from java.util.List
         void replaceAll(/*@IgnoreModifications[T] @NotModified[H]*/ UnaryOperator<E> operator) { }
@@ -4125,6 +4141,7 @@ public class JavaUtil {
         void sort(/*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[T]*/ Comparator<? super E> c) { }
 
         //override from java.lang.Iterable, java.util.Collection, java.util.List
+        //@Independent(hc=true)[H] @NotModified[H] @NotNull[H]
         Spliterator<E> spliterator() { return null; }
     }
 }
