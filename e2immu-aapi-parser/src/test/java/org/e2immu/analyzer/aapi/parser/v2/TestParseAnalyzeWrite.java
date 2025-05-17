@@ -18,8 +18,10 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.slf4j.LoggerFactory;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.Reader;
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -72,8 +74,13 @@ public class TestParseAnalyzeWrite {
         TypeInfo processHandle = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(ProcessHandle.class);
         TypeInfo readable = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(Readable.class);
 
-        Stream<TypeInfo> extra = Stream.of(treeMap, vector, sortedMap, navigableMap, sequencedMap, processHandle, readable);
-        List<TypeInfo> typesToAnalyze = Stream.concat(annotatedApiParser.types().stream(), extra).distinct().toList();
+        TypeInfo reader = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(Reader.class);
+        TypeInfo bufferedReader = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(BufferedReader.class);
+
+        List<TypeInfo> extra = new ArrayList<>();
+        Collections.addAll(extra, treeMap, vector, sortedMap, navigableMap, sequencedMap, processHandle, readable,
+                reader, bufferedReader);
+        List<TypeInfo> typesToAnalyze = Stream.concat(annotatedApiParser.types().stream(), extra.stream()).distinct().toList();
         LOGGER.info("Have {} types for the shallow analyzer", typesToAnalyze.size());
         ShallowAnalyzer.Result rs = shallowAnalyzer.go(typesToAnalyze);
         Trie<TypeInfo> trie = new Trie<>();

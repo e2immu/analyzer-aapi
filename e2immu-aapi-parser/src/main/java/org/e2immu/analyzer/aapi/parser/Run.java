@@ -26,7 +26,7 @@ public class Run {
     private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(Run.class);
 
     public static final String AAPI_DIR =
-            "../e2immu-aapi-archive/src/main/java/org/e2immu/analyzer/aapi/archive";
+            "../e2immu-aapi-archive/src/main/java/org/e2immu/analyzer/aapi/archive/v2";
     public static final String APF_DIR =
             "../e2immu-aapi-archive/src/main/resources/org/e2immu/analyzer/aapi/archive/analyzedPackageFiles";
 

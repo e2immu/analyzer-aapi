@@ -1,4 +1,25 @@
 [
+{"name": "Tjava.util.regex.MatchResult", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
+ {"name": "Mstart(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "Mstart(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pi(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "Mstart(2)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pname(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "Mend(3)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "Mend(4)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pi(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "Mend(5)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pname(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "Mgroup(6)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
+ {"name": "Mgroup(7)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
+  {"name": "Pi(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "Mgroup(8)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
+  {"name": "Pname(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "MgroupCount(9)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MnamedGroups(10)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.Map"},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "MgroupNumber(11)", "data":{"hc":{}}},
+ {"name": "MhasMatch(12)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}}]},
+
 {"name": "Tjava.util.regex.Matcher", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
  {"name": "SImmutableMatchResult(0)", "data":{"hc":{"E":true}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.Map"}}, "subs":[
@@ -17,72 +38,73 @@
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "C<init>(1)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
   {"name": "Ptext(1)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
- {"name": "Mpattern(0)", "data":{"defaultsAnalyzer":1,"hc":{}}},
- {"name": "MtoMatchResult(1)", "data":{"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.regex.MatchResult"},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "Mpattern(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}},
+ {"name": "MtoMatchResult(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.regex.MatchResult"},"hcsMethod":{"0":[[-1]]}}},
  {"name": "MminStart(2)", "data":{"hc":{}}},
  {"name": "MmaxEnd(3)", "data":{"hc":{}}},
- {"name": "MusePattern(4)", "data":{"defaultsAnalyzer":1,"hc":{}}},
- {"name": "Mreset(5)", "data":{"defaultsAnalyzer":1,"hc":{}}},
- {"name": "Mreset(6)", "data":{"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.CharSequence"}}, "sub":
-  {"name": "Pinput(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}},
- {"name": "Mstart(7)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "Mstart(8)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
-  {"name": "Pgroup(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "Mstart(9)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
-  {"name": "Pname(0)", "data":{"containerParameter":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "Mend(10)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "Mend(11)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
-  {"name": "Pgroup(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "Mend(12)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
-  {"name": "Pname(0)", "data":{"containerParameter":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "Mgroup(13)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "Mgroup(14)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
-  {"name": "Pgroup(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "Mgroup(15)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
-  {"name": "Pname(0)", "data":{"containerParameter":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MgroupCount(16)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "Mmatches(17)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "Mfind(18)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "Mfind(19)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
-  {"name": "Pstart(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MlookingAt(20)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "MquoteReplacement(21)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
-  {"name": "Ps(0)", "data":{"containerParameter":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MappendReplacement(22)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"fluentMethod":1,"hc":{}}, "subs":[
+ {"name": "MusePattern(4)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "sub":
+  {"name": "PnewPattern(0)", "data":{"annotatedApi":1}}},
+ {"name": "Mreset(5)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}},
+ {"name": "Mreset(6)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.CharSequence"}}, "sub":
+  {"name": "Pinput(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}},
+ {"name": "Mstart(7)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "Mstart(8)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pgroup(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "Mstart(9)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pname(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "Mend(10)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "Mend(11)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pgroup(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "Mend(12)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pname(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "Mgroup(13)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
+ {"name": "Mgroup(14)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
+  {"name": "Pgroup(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "Mgroup(15)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
+  {"name": "Pname(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "MgroupCount(16)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "Mmatches(17)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "Mfind(18)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "Mfind(19)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pstart(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "MlookingAt(20)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MquoteReplacement(21)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
+  {"name": "Ps(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "MappendReplacement(22)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
+  {"name": "Psb(0)", "data":{"annotatedApi":1}},
+  {"name": "Preplacement(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
+ {"name": "MappendReplacement(23)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
   {"name": "Psb(0)", "data":{"annotatedApi":1,"containerParameter":1}},
-  {"name": "Preplacement(1)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
- {"name": "MappendReplacement(23)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"fluentMethod":1,"hc":{}}, "subs":[
-  {"name": "Psb(0)", "data":{"annotatedApi":1,"containerParameter":1}},
-  {"name": "Preplacement(1)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
+  {"name": "Preplacement(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MappendExpandedReplacement(24)", "data":{"hc":{"0":"Tjava.lang.Appendable"}}, "subs":[
   {"name": "Papp(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
- {"name": "MappendTail(25)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{}}, "sub":
-  {"name": "Psb(0)", "data":{"containerParameter":1}}},
- {"name": "MappendTail(26)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{}}, "sub":
-  {"name": "Psb(0)", "data":{"containerParameter":1}}},
- {"name": "MreplaceAll(27)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
-  {"name": "Preplacement(0)", "data":{"containerParameter":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MreplaceAll(28)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Function","1":"Tjava.util.regex.MatchResult"},"immutableMethod":3,"independentMethod":2}, "sub":
-  {"name": "Preplacer(0)", "data":{"hcsParameter":{"0":[[-1]],"1":[[0]]},"ignoreModsParameter":1}}},
- {"name": "Mresults(29)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.stream.Stream","1":"Tjava.util.regex.MatchResult"},"hcsMethod":{"0":[[-1]],"1":[[0]]}}},
- {"name": "MreplaceFirst(30)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
-  {"name": "Preplacement(0)", "data":{"containerParameter":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MreplaceFirst(31)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Function","1":"Tjava.util.regex.MatchResult"},"immutableMethod":3,"independentMethod":2}, "sub":
-  {"name": "Preplacer(0)", "data":{"hcsParameter":{"0":[[-1]],"1":[[0]]},"ignoreModsParameter":1}}},
- {"name": "Mregion(32)", "data":{"defaultsAnalyzer":1,"hc":{}}, "subs":[
-  {"name": "Pstart(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
-  {"name": "Pend(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
- {"name": "MregionStart(33)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "MregionEnd(34)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "MhasTransparentBounds(35)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "MuseTransparentBounds(36)", "data":{"defaultsAnalyzer":1,"hc":{}}, "sub":
-  {"name": "Pb(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MhasAnchoringBounds(37)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "MuseAnchoringBounds(38)", "data":{"defaultsAnalyzer":1,"hc":{}}, "sub":
-  {"name": "Pb(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MtoString(39)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}},
- {"name": "MhitEnd(40)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "MrequireEnd(41)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
+ {"name": "MappendTail(25)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "sub":
+  {"name": "Psb(0)", "data":{"annotatedApi":1}}},
+ {"name": "MappendTail(26)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{}}, "sub":
+  {"name": "Psb(0)", "data":{"annotatedApi":1,"containerParameter":1}}},
+ {"name": "MreplaceAll(27)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
+  {"name": "Preplacement(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "MreplaceAll(28)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Function","1":"Tjava.util.regex.MatchResult"},"immutableMethod":3,"independentMethod":2}, "sub":
+  {"name": "Preplacer(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]],"1":[[0]]},"ignoreModsParameter":1}}},
+ {"name": "Mresults(29)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.stream.Stream","1":"Tjava.util.regex.MatchResult"},"hcsMethod":{"0":[[-1]],"1":[[0]]}}},
+ {"name": "MreplaceFirst(30)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
+  {"name": "Preplacement(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "MreplaceFirst(31)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Function","1":"Tjava.util.regex.MatchResult"},"immutableMethod":3,"independentMethod":2}, "sub":
+  {"name": "Preplacer(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]],"1":[[0]]},"ignoreModsParameter":1}}},
+ {"name": "Mregion(32)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
+  {"name": "Pstart(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Pend(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+ {"name": "MregionStart(33)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MregionEnd(34)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MhasTransparentBounds(35)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MuseTransparentBounds(36)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "sub":
+  {"name": "Pb(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "MhasAnchoringBounds(37)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MuseAnchoringBounds(38)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "sub":
+  {"name": "Pb(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "MtoString(39)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}},
+ {"name": "MhitEnd(40)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MrequireEnd(41)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
  {"name": "Msearch(42)", "data":{"hc":{}}},
  {"name": "Mmatch(43)", "data":{"hc":{}}},
  {"name": "MgetTextLength(44)", "data":{"hc":{}}},
@@ -91,8 +113,8 @@
  {"name": "MgetMatchedGroupIndex(47)", "data":{"hc":{}}},
  {"name": "McheckGroup(48)", "data":{"hc":{}}},
  {"name": "McheckMatch(49)", "data":{"hc":{}}},
- {"name": "MnamedGroups(50)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.Map"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MhasMatch(51)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}}]},
+ {"name": "MnamedGroups(50)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.Map"},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "MhasMatch(51)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}}]},
 
 {"name": "Tjava.util.regex.Pattern", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
  {"name": "SBackRef(0)", "data":{"hc":{"E":true}}, "subs":[
@@ -386,41 +408,41 @@
   {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
    {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
   {"name": "Mstudy(1)", "data":{"hc":{}}}]},
- {"name": "FUNIX_LINES(0)", "data":{"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FCASE_INSENSITIVE(1)", "data":{"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FCOMMENTS(2)", "data":{"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FMULTILINE(3)", "data":{"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FLITERAL(4)", "data":{"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FDOTALL(5)", "data":{"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FUNICODE_CASE(6)", "data":{"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FCANON_EQ(7)", "data":{"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FUNICODE_CHARACTER_CLASS(8)", "data":{"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FUNIX_LINES(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FCASE_INSENSITIVE(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FCOMMENTS(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMULTILINE(3)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FLITERAL(4)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FDOTALL(5)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FUNICODE_CASE(6)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FCANON_EQ(7)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FUNICODE_CHARACTER_CLASS(8)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "C<init>(0)", "data":{"hc":{}}},
- {"name": "Mcompile(0)", "data":{"defaultsAnalyzer":1,"hc":{}}, "sub":
-  {"name": "Pregex(0)", "data":{"containerParameter":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "Mcompile(1)", "data":{"defaultsAnalyzer":1,"hc":{}}, "subs":[
-  {"name": "Pregex(0)", "data":{"containerParameter":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
-  {"name": "Pflags(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
- {"name": "Mpattern(2)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "MtoString(3)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}},
- {"name": "Mmatcher(4)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.CharSequence"},"notNullMethod":1}, "sub":
+ {"name": "Mcompile(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "sub":
+  {"name": "Pregex(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "Mcompile(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
+  {"name": "Pregex(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pflags(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+ {"name": "Mpattern(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
+ {"name": "MtoString(3)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}},
+ {"name": "Mmatcher(4)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.CharSequence"}}, "sub":
   {"name": "Pinput(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}},
- {"name": "Mflags(5)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "Mmatches(6)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.CharSequence"},"immutableMethod":3,"independentMethod":2}, "subs":[
-  {"name": "Pregex(0)", "data":{"containerParameter":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
-  {"name": "Pinput(1)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}]},
- {"name": "Msplit(7)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.CharSequence"},"immutableMethod":1}, "subs":[
-  {"name": "Pinput(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
-  {"name": "Plimit(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
- {"name": "MsplitWithDelimiters(8)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.CharSequence"},"immutableMethod":1}, "subs":[
-  {"name": "Pinput(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
-  {"name": "Plimit(1)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
+ {"name": "Mflags(5)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "Mmatches(6)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.CharSequence"},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "subs":[
+  {"name": "Pregex(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pinput(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}]},
+ {"name": "Msplit(7)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.CharSequence"},"immutableMethod":1}, "subs":[
+  {"name": "Pinput(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
+  {"name": "Plimit(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+ {"name": "MsplitWithDelimiters(8)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.CharSequence"},"immutableMethod":1}, "subs":[
+  {"name": "Pinput(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
+  {"name": "Plimit(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
  {"name": "Msplit(9)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
   {"name": "Pinput(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
- {"name": "Msplit(10)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.CharSequence"},"immutableMethod":1}, "sub":
-  {"name": "Pinput(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}},
- {"name": "Mquote(11)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
-  {"name": "Ps(0)", "data":{"containerParameter":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "Msplit(10)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.CharSequence"},"immutableMethod":1}, "sub":
+  {"name": "Pinput(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}},
+ {"name": "Mquote(11)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
+  {"name": "Ps(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
  {"name": "MreadObject(12)", "data":{"hc":{"0":"Tjava.io.ObjectInputStream"}}, "sub":
   {"name": "Ps(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
  {"name": "Mnormalize(13)", "data":{"hc":{}}},
@@ -434,7 +456,7 @@
  {"name": "MRemoveQEQuoting(20)", "data":{"hc":{}}},
  {"name": "Mcompile(21)", "data":{"hc":{}}},
  {"name": "MnamedGroupsMap(22)", "data":{"hc":{"0":"Tjava.util.Map"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MnamedGroups(23)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.Map"},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "MnamedGroups(23)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.Map"},"hcsMethod":{"0":[[-1]]}}},
  {"name": "Mhas(24)", "data":{"hc":{}}},
  {"name": "Maccept(25)", "data":{"hc":{}}},
  {"name": "Mmark(26)", "data":{"hc":{}}},
@@ -518,8 +540,8 @@
  {"name": "MRange(88)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharPredicate"},"hcsMethod":{"0":[[-1]]}}},
  {"name": "MCIRange(89)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharPredicate"},"hcsMethod":{"0":[[-1]]}}},
  {"name": "MCIRangeU(90)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharPredicate"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MasPredicate(91)", "data":{"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Predicate"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MasMatchPredicate(92)", "data":{"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Predicate"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MsplitAsStream(93)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.CharSequence","1":"Tjava.util.stream.Stream"},"hcsMethod":{"1":[[-1]]}}, "sub":
-  {"name": "Pinput(0)", "data":{"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}}]}
+ {"name": "MasPredicate(91)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Predicate"},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "MasMatchPredicate(92)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.function.Predicate"},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "MsplitAsStream(93)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.CharSequence","1":"Tjava.util.stream.Stream"},"hcsMethod":{"1":[[-1]]}}, "sub":
+  {"name": "Pinput(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}}]}
 ]
