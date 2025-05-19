@@ -12,6 +12,7 @@ import org.e2immu.language.inspection.integration.ToolChain;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
+import java.util.random.RandomGenerator;
 import java.util.stream.Collectors;
 
 import static org.e2immu.analyzer.modification.prepwork.hcs.HiddenContentSelector.*;
@@ -560,8 +561,8 @@ public class TestJavaUtil extends CommonTest {
         assertSame(INDEPENDENT, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
         assertSame(NO_VALUE, methodInfo.analysis().getOrDefault(IMMUTABLE_METHOD, MUTABLE));
 
-        ParameterInfo p0 = methodInfo.parameters().get(0);
-        assertFalse(p0.isModified());
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
+        assertTrue(p0.isModified());
         assertTrue(p0.isIgnoreModifications());
         assertSame(INDEPENDENT_HC, p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT));
         assertSame(NOT_NULL, p0.analysis().getOrDefault(NOT_NULL_PARAMETER, NULLABLE));
@@ -578,6 +579,16 @@ public class TestJavaUtil extends CommonTest {
 
         assertSame(INDEPENDENT, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
         assertSame(IMMUTABLE, methodInfo.analysis().getOrDefault(IMMUTABLE_METHOD, MUTABLE));
+    }
+
+    @Test
+    public void testRandomNextBytes() {
+        TypeInfo typeInfo = compiledTypesManager().getOrLoad(Random.class);
+        MethodInfo methodInfo = typeInfo.findUniqueMethod("nextBytes", 1);
+        assertTrue(methodInfo.isModifying());
+
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
+        assertFalse(p0.isUnmodified());
     }
 
 

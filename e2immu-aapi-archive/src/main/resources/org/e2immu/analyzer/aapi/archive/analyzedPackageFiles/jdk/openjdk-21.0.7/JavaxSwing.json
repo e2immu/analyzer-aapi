@@ -1006,8 +1006,8 @@
   {"name": "PintercellSpacing(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}}},
  {"name": "MgetIntercellSpacing(17)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.Dimension"},"hcsMethod":{"0":[[-1]]}}},
  {"name": "MsetGridColor(18)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.Color"},"independentMethod":2,"notNullMethod":1}, "sub":
-  {"name": "PgridColor(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}}},
- {"name": "MgetGridColor(19)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.Color"},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "PgridColor(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}},
+ {"name": "MgetGridColor(19)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.Color"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":1}},
  {"name": "MsetShowGrid(20)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "PshowGrid(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
  {"name": "MsetShowHorizontalLines(21)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
@@ -1024,7 +1024,7 @@
   {"name": "PautoCreateColumnsFromModel(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
  {"name": "MgetAutoCreateColumnsFromModel(29)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
  {"name": "McreateDefaultColumnsFromModel(30)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}},
- {"name": "MsetDefaultRenderer(31)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Class","1":"Tjava.lang.Object","2":"Tjavax.swing.table.TableCellRenderer"},"independentMethod":2,"notNullMethod":1}, "subs":[
+ {"name": "MsetDefaultRenderer(31)", "data":{"annotatedApi":1,"commutableMethods":["class,0","",""],"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Class","1":"Tjava.lang.Object","2":"Tjavax.swing.table.TableCellRenderer"},"independentMethod":2,"notNullMethod":1}, "subs":[
   {"name": "PcolumnClass(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Prenderer(1)", "data":{"annotatedApi":1,"hcsParameter":{"2":[[-1]]}}}]},
  {"name": "MgetDefaultRenderer(32)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Class","1":"Tjava.lang.Object","2":"Tjavax.swing.table.TableCellRenderer"},"hcsMethod":{"2":[[-1]]}}, "sub":
@@ -1059,7 +1059,7 @@
  {"name": "MgetRowSorter(49)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjavax.swing.RowSorter","1":"Tjavax.swing.table.TableModel"},"hcsMethod":{"0":[[-1]],"1":[[0]]}}},
  {"name": "MsetSelectionMode(50)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "PselectionMode(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
- {"name": "MsetRowSelectionAllowed(51)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+ {"name": "MsetRowSelectionAllowed(51)", "data":{"annotatedApi":1,"commutableMethods":["","",""],"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "ProwSelectionAllowed(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
  {"name": "MgetRowSelectionAllowed(52)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
  {"name": "MsetColumnSelectionAllowed(53)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
@@ -1112,12 +1112,12 @@
   {"name": "PcolumnIndex(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
   {"name": "Ptoggle(2)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
   {"name": "Pextend(3)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
- {"name": "MgetSelectionForeground(80)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.Color"},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "MgetSelectionForeground(80)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.Color"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":1}},
  {"name": "MsetSelectionForeground(81)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.Color"},"independentMethod":2,"notNullMethod":1}, "sub":
-  {"name": "PselectionForeground(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}}},
- {"name": "MgetSelectionBackground(82)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.Color"},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "PselectionForeground(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}},
+ {"name": "MgetSelectionBackground(82)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.Color"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":1}},
  {"name": "MsetSelectionBackground(83)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.Color"},"independentMethod":2,"notNullMethod":1}, "sub":
-  {"name": "PselectionBackground(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}}},
+  {"name": "PselectionBackground(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}},
  {"name": "MgetColumn(84)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Object","1":"Tjavax.swing.table.TableColumn"},"hcsMethod":{"1":[[-1]]}}, "sub":
   {"name": "Pidentifier(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}},
  {"name": "MconvertColumnIndexToModel(85)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
@@ -1269,7 +1269,7 @@
   {"name": "Prect(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
  {"name": "MgetScrollableTracksViewportWidth(163)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
  {"name": "MgetScrollableTracksViewportHeight(164)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MsetFillsViewportHeight(165)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+ {"name": "MsetFillsViewportHeight(165)", "data":{"annotatedApi":1,"commutableMethods":["","",""],"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "PfillsViewportHeight(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
  {"name": "MgetFillsViewportHeight(166)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
  {"name": "MprocessKeyBinding(167)", "data":{"hc":{"0":"Tjavax.swing.KeyStroke","1":"Tjava.awt.event.KeyEvent"}}, "subs":[

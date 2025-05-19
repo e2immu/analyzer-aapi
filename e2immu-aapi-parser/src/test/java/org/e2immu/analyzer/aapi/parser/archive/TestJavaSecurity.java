@@ -21,8 +21,8 @@ public class TestJavaSecurity extends CommonTest {
         MethodInfo methodInfo = typeInfo.findUniqueMethod("nextBytes", 1);
         assertFalse(methodInfo.allowsInterrupts());
         assertTrue(methodInfo.isModifying());
-        ParameterInfo p0 = methodInfo.parameters().get(0);
-        assertTrue(p0.isModified());
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
+        assertFalse(p0.isUnmodified());
     }
 
     @Test
@@ -38,7 +38,7 @@ public class TestJavaSecurity extends CommonTest {
         MethodInfo methodInfo = typeInfo.findUniqueMethod("update", 3);
         assertFalse(methodInfo.allowsInterrupts());
         assertTrue(methodInfo.isModifying());
-        ParameterInfo p0 = methodInfo.parameters().get(0);
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
         assertFalse(p0.isModified());
     }
 
@@ -48,7 +48,7 @@ public class TestJavaSecurity extends CommonTest {
         MethodInfo methodInfo = typeInfo.findUniqueMethod("digest", 3);
         assertFalse(methodInfo.allowsInterrupts());
         assertTrue(methodInfo.isModifying());
-        ParameterInfo p0 = methodInfo.parameters().get(0);
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
         assertFalse(p0.isModified());
     }
 

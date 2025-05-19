@@ -1,4 +1,7 @@
 package org.e2immu.analyzer.aapi.archive.v2.jdk;
+import org.e2immu.annotation.ImmutableContainer;
+import org.e2immu.annotation.Independent;
+
 import java.time.*;
 import java.time.chrono.*;
 import java.time.format.DateTimeFormatter;
@@ -64,6 +67,7 @@ public class JavaTime {
     }
 
     //public final class Duration implements TemporalAmount, Comparable<Duration>, Serializable
+    @ImmutableContainer
     class Duration$ {
         static final Duration ZERO = null;
         static Duration ofDays(long days) { return null; }
@@ -74,9 +78,11 @@ public class JavaTime {
         static Duration ofMinutes(long minutes) { return null; }
         static Duration ofSeconds(long seconds) { return null; }
         static Duration ofSeconds(long seconds, long l) { return null; }
+        @Independent
         static Duration ofMillis(long millis) { return null; }
         static Duration ofNanos(long nanos) { return null; }
         //frequency 1
+        @Independent
         static Duration of(long amount, TemporalUnit temporalUnit) { return null; }
         static Duration from(TemporalAmount amount) { return null; }
         static Duration parse(/*@Immutable(hc=true)[T] @Independent(hc=true)[T] @NotModified[T]*/ CharSequence text) {
@@ -84,6 +90,7 @@ public class JavaTime {
         }
 
         //frequency 5
+        @Independent
         static Duration between(Temporal startInclusive, Temporal endExclusive) { return null; }
 
         //override from java.time.temporal.TemporalAmount

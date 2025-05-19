@@ -1,4 +1,6 @@
 package org.e2immu.analyzer.aapi.archive.v2.jdk;
+import org.e2immu.annotation.Commutable;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.print.Printable;
@@ -371,6 +373,7 @@ public class JavaxSwing {
         void setAutoCreateColumnsFromModel(boolean autoCreateColumnsFromModel) { }
         boolean getAutoCreateColumnsFromModel() { return false; }
         void createDefaultColumnsFromModel() { }
+        @Commutable(seq="class,0")
         void setDefaultRenderer(Class<?> columnClass, TableCellRenderer renderer) { }
         TableCellRenderer getDefaultRenderer(Class<?> columnClass) { return null; }
         void setDefaultEditor(Class<?> columnClass, TableCellEditor editor) { }
@@ -387,6 +390,7 @@ public class JavaxSwing {
         void setRowSorter(RowSorter<? extends TableModel> sorter) { }
         RowSorter<? extends TableModel> getRowSorter() { return null; }
         void setSelectionMode(int selectionMode) { }
+        @Commutable
         void setRowSelectionAllowed(boolean rowSelectionAllowed) { }
         boolean getRowSelectionAllowed() { return false; }
         void setColumnSelectionAllowed(boolean columnSelectionAllowed) { }
@@ -512,6 +516,7 @@ public class JavaxSwing {
 
         //override from javax.swing.Scrollable
         boolean getScrollableTracksViewportHeight() { return false; }
+        @Commutable
         void setFillsViewportHeight(boolean fillsViewportHeight) { }
         boolean getFillsViewportHeight() { return false; }
         TableCellEditor getCellEditor() { return null; }

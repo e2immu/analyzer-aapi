@@ -86,7 +86,9 @@ class DecoratorWithComments extends DecoratorImpl {
             case FROM_OWNER -> 'O';
             case FROM_OVERRIDE -> 'H';
             case FROM_TYPE -> 'T';
-            default -> throw new UnsupportedOperationException();
+            default ->{
+                throw new UnsupportedOperationException();
+            }
         };
         return "[" + code + "]";
     }

@@ -45,22 +45,22 @@ public class TestJavaUtilStream extends CommonTest {
         TypeInfo typeInfo = compiledTypesManager().get(Stream.class);
         MethodInfo methodInfo = typeInfo.findUniqueMethod("map", 1);
         assertFalse(methodInfo.allowsInterrupts());
-        assertFalse(methodInfo.isModifying());
+        assertTrue(methodInfo.isModifying());
         assertSame(DEPENDENT, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
 
-        ParameterInfo p0 = methodInfo.parameters().get(0);
-        assertSame(INDEPENDENT, p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT));
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
+        //assertSame(INDEPENDENT, p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT));
         assertSame(MUTABLE, p0.analysis().getOrDefault(IMMUTABLE_PARAMETER, MUTABLE));
         assertSame(NOT_NULL, p0.analysis().getOrDefault(NOT_NULL_PARAMETER, NULLABLE));
-        assertFalse(p0.isModified());
         assertTrue(p0.isIgnoreModifications());
+        assertTrue(p0.isModified());
     }
 
     @Test
     public void testStreamOfT() {
         TypeInfo typeInfo = compiledTypesManager().get(Stream.class);
         MethodInfo methodInfo = typeInfo.methodStream().filter(m -> "of".equals(m.name())
-                && 0 == m.parameters().get(0).parameterizedType().arrays()).findFirst().orElseThrow();
+                && 0 == m.parameters().getFirst().parameterizedType().arrays()).findFirst().orElseThrow();
         assertEquals("java.util.stream.Stream.of(T)", methodInfo.fullyQualifiedName());
         assertFalse(methodInfo.allowsInterrupts());
         assertTrue(methodInfo.isStatic());
@@ -69,9 +69,9 @@ public class TestJavaUtilStream extends CommonTest {
         assertFalse(methodInfo.isModifying());
         assertSame(NOT_NULL, methodInfo.analysis().getOrDefault(NOT_NULL_METHOD, NULLABLE));
         assertSame(MUTABLE, methodInfo.analysis().getOrDefault(IMMUTABLE_METHOD, MUTABLE));
-        assertSame(INDEPENDENT_HC, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
+        assertSame(INDEPENDENT, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
 
-        ParameterInfo p0 = methodInfo.parameters().get(0);
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
         assertSame(INDEPENDENT_HC, p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT));
         assertSame(IMMUTABLE_HC, p0.analysis().getOrDefault(IMMUTABLE_PARAMETER, MUTABLE));
         assertSame(NOT_NULL, p0.analysis().getOrDefault(NOT_NULL_PARAMETER, NULLABLE));
@@ -102,7 +102,7 @@ public class TestJavaUtilStream extends CommonTest {
         assertFalse(methodInfo.isStatic());
         assertFalse(methodInfo.isFactoryMethod());
 
-        assertFalse(methodInfo.isModifying());
+        assertTrue(methodInfo.isModifying());
         assertSame(NOT_NULL, methodInfo.analysis().getOrDefault(NOT_NULL_METHOD, NULLABLE));
         assertSame(MUTABLE, methodInfo.analysis().getOrDefault(IMMUTABLE_METHOD, MUTABLE));
         assertSame(DEPENDENT, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));

@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.util.zip.ZipOutputStream;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TestJavaUtilZip extends CommonTest {
 
@@ -18,6 +19,6 @@ public class TestJavaUtilZip extends CommonTest {
 
         // must be "false" when the class is not present in the AAPI, and true otherwise
         // if not present, then the shallow analyser is never run, so we don't even have a value
-        assertFalse(methodInfo.isModifying());
+        assertTrue(methodInfo.isModifying());
     }
 }

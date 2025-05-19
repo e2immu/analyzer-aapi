@@ -1,4 +1,6 @@
 package org.e2immu.analyzer.aapi.archive.v2.jdk;
+import org.e2immu.annotation.Commutable;
+
 import java.beans.PropertyChangeListener;
 import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableCellRenderer;
@@ -31,6 +33,7 @@ public class JavaxSwingTable {
         TableCellEditor getCellEditor() { return null; }
         void setWidth(int width) { }
         int getWidth() { return 0; }
+        @Commutable
         void setPreferredWidth(int preferredWidth) { }
         int getPreferredWidth() { return 0; }
         void setMinWidth(int minWidth) { }

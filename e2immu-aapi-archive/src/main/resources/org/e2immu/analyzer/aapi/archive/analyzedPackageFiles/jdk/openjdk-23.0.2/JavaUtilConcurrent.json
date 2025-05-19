@@ -408,9 +408,9 @@
   {"name": "Psupplier(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[0]],"2":[[-1]]},"ignoreModsParameter":1}},
   {"name": "Pexecutor(1)", "data":{"annotatedApi":1,"hcsParameter":{"3":[[-1]]}}}]},
  {"name": "MrunAsync(57)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.lang.Runnable","2":"Tjava.util.concurrent.CompletableFuture","M":1},"hcsMethod":{"2":[[-1]]}}, "sub":
-  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]}}}},
+  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1}}},
  {"name": "MrunAsync(58)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.lang.Runnable","2":"Tjava.util.concurrent.Executor","3":"Tjava.util.concurrent.CompletableFuture","M":1},"hcsMethod":{"3":[[-1]]}}, "subs":[
-  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]}}},
+  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1}},
   {"name": "Pexecutor(1)", "data":{"annotatedApi":1,"hcsParameter":{"2":[[-1]]}}}]},
  {"name": "McompletedFuture(59)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"PU:1","2":"Tjava.util.concurrent.CompletableFuture","M":1},"hcsMethod":{"1":[[0]],"2":[[-1]]}}, "sub":
   {"name": "Pvalue(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}},
@@ -443,11 +443,11 @@
   {"name": "Paction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[-1]]},"ignoreModsParameter":1}},
   {"name": "Pexecutor(1)", "data":{"annotatedApi":1,"hcsParameter":{"2":[[-1]]}}}]},
  {"name": "MthenRun(75)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.lang.Runnable","2":"Tjava.util.concurrent.CompletableFuture","M":1},"hcsMethod":{"2":[[-1]]}}, "sub":
-  {"name": "Paction(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]}}}},
+  {"name": "Paction(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1}}},
  {"name": "MthenRunAsync(76)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.lang.Runnable","2":"Tjava.util.concurrent.CompletableFuture","M":1},"hcsMethod":{"2":[[-1]]}}, "sub":
-  {"name": "Paction(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]}}}},
+  {"name": "Paction(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1}}},
  {"name": "MthenRunAsync(77)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.lang.Runnable","2":"Tjava.util.concurrent.Executor","3":"Tjava.util.concurrent.CompletableFuture","M":1},"hcsMethod":{"3":[[-1]]}}, "subs":[
-  {"name": "Paction(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]}}},
+  {"name": "Paction(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1}},
   {"name": "Pexecutor(1)", "data":{"annotatedApi":1,"hcsParameter":{"2":[[-1]]}}}]},
  {"name": "MthenCombine(78)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"PU:1","2":"PV:2","3":"Tjava.util.concurrent.CompletionStage","4":"Tjava.util.function.BiFunction","5":"Tjava.util.concurrent.CompletableFuture","M":1},"hcsMethod":{"2":[[0]],"5":[[-1]]}}, "subs":[
   {"name": "Pother(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[0]],"3":[[-1]]}}},
@@ -471,13 +471,13 @@
   {"name": "Pexecutor(2)", "data":{"annotatedApi":1,"hcsParameter":{"4":[[-1]]}}}]},
  {"name": "MrunAfterBoth(84)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.concurrent.CompletionStage","2":"Tjava.lang.Object","3":"Tjava.lang.Runnable","4":"Tjava.util.concurrent.CompletableFuture","M":1},"hcsMethod":{"4":[[-1]]}}, "subs":[
   {"name": "Pother(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}},
-  {"name": "Paction(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]}}}]},
+  {"name": "Paction(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]},"ignoreModsParameter":1}}]},
  {"name": "MrunAfterBothAsync(85)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.concurrent.CompletionStage","2":"Tjava.lang.Object","3":"Tjava.lang.Runnable","4":"Tjava.util.concurrent.CompletableFuture","M":1},"hcsMethod":{"4":[[-1]]}}, "subs":[
   {"name": "Pother(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}},
-  {"name": "Paction(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]}}}]},
+  {"name": "Paction(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]},"ignoreModsParameter":1}}]},
  {"name": "MrunAfterBothAsync(86)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.concurrent.CompletionStage","2":"Tjava.lang.Object","3":"Tjava.lang.Runnable","4":"Tjava.util.concurrent.Executor","5":"Tjava.util.concurrent.CompletableFuture","M":1},"hcsMethod":{"5":[[-1]]}}, "subs":[
   {"name": "Pother(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}},
-  {"name": "Paction(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]}}},
+  {"name": "Paction(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]},"ignoreModsParameter":1}},
   {"name": "Pexecutor(2)", "data":{"annotatedApi":1,"hcsParameter":{"4":[[-1]]}}}]},
  {"name": "MapplyToEither(87)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"PU:1","2":"Tjava.util.concurrent.CompletionStage","3":"Tjava.util.function.Function","4":"Tjava.util.concurrent.CompletableFuture","M":1},"hcsMethod":{"1":[[0]],"4":[[-1]]}}, "subs":[
   {"name": "Pother(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"2":[[-1]]}}},
@@ -501,13 +501,13 @@
   {"name": "Pexecutor(2)", "data":{"annotatedApi":1,"hcsParameter":{"3":[[-1]]}}}]},
  {"name": "MrunAfterEither(93)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.concurrent.CompletionStage","2":"Tjava.lang.Object","3":"Tjava.lang.Runnable","4":"Tjava.util.concurrent.CompletableFuture","M":1},"hcsMethod":{"4":[[-1]]}}, "subs":[
   {"name": "Pother(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}},
-  {"name": "Paction(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]}}}]},
+  {"name": "Paction(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]},"ignoreModsParameter":1}}]},
  {"name": "MrunAfterEitherAsync(94)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.concurrent.CompletionStage","2":"Tjava.lang.Object","3":"Tjava.lang.Runnable","4":"Tjava.util.concurrent.CompletableFuture","M":1},"hcsMethod":{"4":[[-1]]}}, "subs":[
   {"name": "Pother(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}},
-  {"name": "Paction(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]}}}]},
+  {"name": "Paction(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]},"ignoreModsParameter":1}}]},
  {"name": "MrunAfterEitherAsync(95)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.concurrent.CompletionStage","2":"Tjava.lang.Object","3":"Tjava.lang.Runnable","4":"Tjava.util.concurrent.Executor","5":"Tjava.util.concurrent.CompletableFuture","M":1},"hcsMethod":{"5":[[-1]]}}, "subs":[
   {"name": "Pother(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}},
-  {"name": "Paction(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]}}},
+  {"name": "Paction(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]},"ignoreModsParameter":1}},
   {"name": "Pexecutor(2)", "data":{"annotatedApi":1,"hcsParameter":{"4":[[-1]]}}}]},
  {"name": "MthenCompose(96)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"PU:1","2":"Tjava.util.function.Function","3":"Tjava.util.concurrent.CompletionStage","4":"Tjava.util.concurrent.CompletableFuture","M":1},"hcsMethod":{"1":[[0]],"4":[[-1]]}}, "sub":
   {"name": "Pfn(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1,0]],"2":[[-1]]},"ignoreModsParameter":1}}},
@@ -606,11 +606,11 @@
   {"name": "Pconsumer(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[-1]]},"ignoreModsParameter":1}},
   {"name": "Pexecutor(1)", "data":{"annotatedApi":1,"hcsParameter":{"2":[[-1]]}}}]},
  {"name": "MthenRun(6)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.lang.Runnable","2":"Tjava.util.concurrent.CompletionStage","M":1},"hcsMethod":{"2":[[-1]]}}, "sub":
-  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]}}}},
+  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1}}},
  {"name": "MthenRunAsync(7)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.lang.Runnable","2":"Tjava.util.concurrent.CompletionStage","M":1},"hcsMethod":{"2":[[-1]]}}, "sub":
-  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]}}}},
+  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1}}},
  {"name": "MthenRunAsync(8)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.lang.Runnable","2":"Tjava.util.concurrent.Executor","3":"Tjava.util.concurrent.CompletionStage","M":1},"hcsMethod":{"3":[[-1]]}}, "subs":[
-  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]}}},
+  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1}},
   {"name": "Pexecutor(1)", "data":{"annotatedApi":1,"hcsParameter":{"2":[[-1]]}}}]},
  {"name": "MthenCombine(9)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"PU:1","2":"PV:2","3":"Tjava.util.concurrent.CompletionStage","4":"Tjava.util.function.BiFunction","M":1},"hcsMethod":{"2":[[0]],"3":[[-1]]}}, "subs":[
   {"name": "PcompletionStage(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[0]],"3":[[-1]]}}},
@@ -634,13 +634,13 @@
   {"name": "Pexecutor(2)", "data":{"annotatedApi":1,"hcsParameter":{"4":[[-1]]}}}]},
  {"name": "MrunAfterBoth(15)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.concurrent.CompletionStage","2":"Tjava.lang.Object","3":"Tjava.lang.Runnable","M":1},"hcsMethod":{"1":[[-1]]}}, "subs":[
   {"name": "PcompletionStage(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}},
-  {"name": "Prunnable(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]}}}]},
+  {"name": "Prunnable(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]},"ignoreModsParameter":1}}]},
  {"name": "MrunAfterBothAsync(16)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.concurrent.CompletionStage","2":"Tjava.lang.Object","3":"Tjava.lang.Runnable","M":1},"hcsMethod":{"1":[[-1]]}}, "subs":[
   {"name": "PcompletionStage(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}},
-  {"name": "Prunnable(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]}}}]},
+  {"name": "Prunnable(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]},"ignoreModsParameter":1}}]},
  {"name": "MrunAfterBothAsync(17)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.concurrent.CompletionStage","2":"Tjava.lang.Object","3":"Tjava.lang.Runnable","4":"Tjava.util.concurrent.Executor","M":1},"hcsMethod":{"1":[[-1]]}}, "subs":[
   {"name": "PcompletionStage(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}},
-  {"name": "Prunnable(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]}}},
+  {"name": "Prunnable(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]},"ignoreModsParameter":1}},
   {"name": "Pexecutor(2)", "data":{"annotatedApi":1,"hcsParameter":{"4":[[-1]]}}}]},
  {"name": "MapplyToEither(18)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"PU:1","2":"Tjava.util.concurrent.CompletionStage","3":"Tjava.util.function.Function","M":1},"hcsMethod":{"1":[[0]],"2":[[-1]]}}, "subs":[
   {"name": "PcompletionStage(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"2":[[-1]]}}},
@@ -664,13 +664,13 @@
   {"name": "Pexecutor(2)", "data":{"annotatedApi":1,"hcsParameter":{"3":[[-1]]}}}]},
  {"name": "MrunAfterEither(24)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.concurrent.CompletionStage","2":"Tjava.lang.Object","3":"Tjava.lang.Runnable","M":1},"hcsMethod":{"1":[[-1]]}}, "subs":[
   {"name": "PcompletionStage(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}},
-  {"name": "Prunnable(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]}}}]},
+  {"name": "Prunnable(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]},"ignoreModsParameter":1}}]},
  {"name": "MrunAfterEitherAsync(25)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.concurrent.CompletionStage","2":"Tjava.lang.Object","3":"Tjava.lang.Runnable","M":1},"hcsMethod":{"1":[[-1]]}}, "subs":[
   {"name": "PcompletionStage(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}},
-  {"name": "Prunnable(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]}}}]},
+  {"name": "Prunnable(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]},"ignoreModsParameter":1}}]},
  {"name": "MrunAfterEitherAsync(26)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.concurrent.CompletionStage","2":"Tjava.lang.Object","3":"Tjava.lang.Runnable","4":"Tjava.util.concurrent.Executor","M":1},"hcsMethod":{"1":[[-1]]}}, "subs":[
   {"name": "PcompletionStage(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}},
-  {"name": "Prunnable(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]}}},
+  {"name": "Prunnable(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[-1]]},"ignoreModsParameter":1}},
   {"name": "Pexecutor(2)", "data":{"annotatedApi":1,"hcsParameter":{"4":[[-1]]}}}]},
  {"name": "MthenCompose(27)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"PU:1","2":"Tjava.util.function.Function","3":"Tjava.util.concurrent.CompletionStage","M":1},"hcsMethod":{"1":[[0]],"3":[[-1]]}}, "sub":
   {"name": "Pfunction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1,0]],"2":[[-1]]},"ignoreModsParameter":1}}},
@@ -867,7 +867,7 @@
    {"name": "Po(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"2":[[-1]]},"immutableParameter":2,"independentParameter":2,"unmodifiedParameter":1}}},
   {"name": "Mspliterator(8)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.Spliterator","M":2},"hcsMethod":{"0":[[0]],"2":[[-1]]},"independentMethod":1,"nonModifyingMethod":1,"notNullMethod":1}},
   {"name": "MforEach(9)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.function.Consumer","M":2},"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}, "sub":
-   {"name": "Paction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"2":[[-1]]},"ignoreModsParameter":1,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}}]},
+   {"name": "Paction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"2":[[-1]]},"ignoreModsParameter":1,"independentParameter":2,"notNullParameter":1}}}]},
  {"name": "SKeySpliterator(18)", "data":{"hc":{"0":"PK:0","1":"PV:1","M":2}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{"2":"Tjava.util.concurrent.ConcurrentHashMap.Node","M":2},"hcsMethod":{"0":[[0]],"1":[[1]]}}, "subs":[
    {"name": "Ptab(0)", "data":{"hcsParameter":{"0":[[0]],"1":[[1]],"2":[[2]]}}}]},
@@ -1280,26 +1280,26 @@
   {"name": "Pkey(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"2":[[-1]]},"immutableParameter":2,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PdefaultValue(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"immutableParameter":2,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MforEach(31)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.function.BiConsumer","M":2},"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}, "sub":
-  {"name": "Paction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1]],"2":[[-1]]},"ignoreModsParameter":1,"independentParameter":2,"unmodifiedParameter":1}}},
+  {"name": "Paction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1]],"2":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}},
  {"name": "MreplaceAll(32)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.function.BiFunction","M":2},"independentMethod":2,"notNullMethod":1}, "sub":
-  {"name": "Pfunction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1],[2]],"2":[[-1]]},"ignoreModsParameter":1,"unmodifiedParameter":1}}},
+  {"name": "Pfunction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1],[2]],"2":[[-1]]},"ignoreModsParameter":1}}},
  {"name": "MremoveEntryIf(33)", "data":{"hc":{"2":"Tjava.util.function.Predicate","3":"Tjava.util.Map.Entry","M":2}}, "sub":
   {"name": "Pfunction(0)", "data":{"hcsParameter":{"0":[[0,0]],"1":[[0,1]],"2":[[-1]]}}}},
  {"name": "MremoveValueIf(34)", "data":{"hc":{"2":"Tjava.util.function.Predicate","M":2}}, "sub":
   {"name": "Pfunction(0)", "data":{"hcsParameter":{"1":[[0]],"2":[[-1]]}}}},
  {"name": "McomputeIfAbsent(35)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.function.Function","M":2},"hcsMethod":{"1":[[-1]]},"immutableMethod":2,"independentMethod":1}, "subs":[
   {"name": "Pkey(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
-  {"name": "PmappingFunction(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1]],"2":[[-1]]},"ignoreModsParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "PmappingFunction(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1]],"2":[[-1]]},"ignoreModsParameter":1}}]},
  {"name": "McomputeIfPresent(36)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.function.BiFunction","M":2},"hcsMethod":{"1":[[-1]]},"immutableMethod":2,"independentMethod":1}, "subs":[
   {"name": "Pkey(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
-  {"name": "PremappingFunction(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1],[2]],"2":[[-1]]},"ignoreModsParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "PremappingFunction(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1],[2]],"2":[[-1]]},"ignoreModsParameter":1}}]},
  {"name": "Mcompute(37)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.function.BiFunction","M":2},"hcsMethod":{"1":[[-1]]},"immutableMethod":2,"independentMethod":1}, "subs":[
   {"name": "Pkey(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
-  {"name": "PremappingFunction(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1],[2]],"2":[[-1]]},"ignoreModsParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "PremappingFunction(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1],[2]],"2":[[-1]]},"ignoreModsParameter":1}}]},
  {"name": "Mmerge(38)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.function.BiFunction","M":2},"hcsMethod":{"1":[[-1]]},"immutableMethod":2,"independentMethod":1}, "subs":[
   {"name": "Pkey(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
   {"name": "Pvalue(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
-  {"name": "PremappingFunction(2)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[0],[1],[2]],"2":[[-1]]},"ignoreModsParameter":1,"independentParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "PremappingFunction(2)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[0],[1],[2]],"2":[[-1]]},"ignoreModsParameter":1,"independentParameter":1}}]},
  {"name": "Mcontains(39)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.lang.Object","M":2},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Pvalue(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"2":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}},
  {"name": "Mkeys(40)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.Enumeration","M":2},"hcsMethod":{"0":[[0]],"2":[[-1]]}}},
@@ -1458,7 +1458,7 @@
   {"name": "Pkey(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"2":[[-1]]},"immutableParameter":2,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "PdefaultValue(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"immutableParameter":2,"independentParameter":2,"unmodifiedParameter":1}}]},
  {"name": "MforEach(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.function.BiConsumer","M":2},"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}, "sub":
-  {"name": "Paction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1]],"2":[[-1]]},"ignoreModsParameter":1,"independentParameter":2,"unmodifiedParameter":1}}},
+  {"name": "Paction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1]],"2":[[-1]]},"ignoreModsParameter":1,"independentParameter":2}}},
  {"name": "MputIfAbsent(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":2},"hcsMethod":{"1":[[-1]]},"immutableMethod":2,"independentMethod":1}, "subs":[
   {"name": "Pk(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
   {"name": "Pv(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}]},
@@ -1473,24 +1473,24 @@
   {"name": "Pk(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
   {"name": "Pv(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}]},
  {"name": "MreplaceAll(6)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.function.BiFunction","M":2},"independentMethod":2,"notNullMethod":1}, "sub":
-  {"name": "Pfunction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1],[2]],"2":[[-1]]},"ignoreModsParameter":1,"unmodifiedParameter":1}}},
+  {"name": "Pfunction(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1],[2]],"2":[[-1]]},"ignoreModsParameter":1}}},
  {"name": "McomputeIfAbsent(7)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.function.Function","M":2},"hcsMethod":{"1":[[-1]]},"immutableMethod":2,"independentMethod":1}, "subs":[
   {"name": "Pkey(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
-  {"name": "PmappingFunction(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1]],"2":[[-1]]},"ignoreModsParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "PmappingFunction(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1]],"2":[[-1]]},"ignoreModsParameter":1}}]},
  {"name": "McomputeIfPresent(8)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.function.BiFunction","M":2},"hcsMethod":{"1":[[-1]]},"immutableMethod":2,"independentMethod":1}, "subs":[
   {"name": "Pkey(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
-  {"name": "PremappingFunction(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1],[2]],"2":[[-1]]},"ignoreModsParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "PremappingFunction(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1],[2]],"2":[[-1]]},"ignoreModsParameter":1}}]},
  {"name": "Mcompute(9)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.function.BiFunction","M":2},"hcsMethod":{"1":[[-1]]},"immutableMethod":2,"independentMethod":1}, "subs":[
   {"name": "Pkey(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
-  {"name": "PremappingFunction(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1],[2]],"2":[[-1]]},"ignoreModsParameter":1,"unmodifiedParameter":1}}]},
+  {"name": "PremappingFunction(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[1],[2]],"2":[[-1]]},"ignoreModsParameter":1}}]},
  {"name": "Mmerge(10)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.function.BiFunction","M":2},"hcsMethod":{"1":[[-1]]},"immutableMethod":2,"independentMethod":1}, "subs":[
   {"name": "Pkey(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
   {"name": "Pvalue(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}},
-  {"name": "PremappingFunction(2)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[0],[1],[2]],"2":[[-1]]},"ignoreModsParameter":1,"independentParameter":1,"unmodifiedParameter":1}}]}]},
+  {"name": "PremappingFunction(2)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[0],[1],[2]],"2":[[-1]]},"ignoreModsParameter":1,"independentParameter":1}}]}]},
 
 {"name": "Tjava.util.concurrent.Executor", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "sub":
  {"name": "Mexecute(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Runnable"},"independentMethod":2,"notNullMethod":1}, "sub":
-  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]}}}}},
+  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1}}}},
 
 {"name": "Tjava.util.concurrent.ExecutorService", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
  {"name": "Mshutdown(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}},
@@ -1503,10 +1503,10 @@
  {"name": "Msubmit(5)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"PT:0","1":"Tjava.util.concurrent.Callable","2":"Tjava.util.concurrent.Future"},"hcsMethod":{"0":[[0]],"2":[[-1]]}}, "sub":
   {"name": "Pcallable(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[0]],"1":[[-1]]}}}},
  {"name": "Msubmit(6)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"PT:0","1":"Tjava.lang.Runnable","2":"Tjava.util.concurrent.Future"},"hcsMethod":{"0":[[0]],"2":[[-1]]}}, "subs":[
-  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]}}},
+  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1}},
   {"name": "Pt(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":1,"unmodifiedParameter":1}}]},
  {"name": "Msubmit(7)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Runnable","1":"Tjava.util.concurrent.Future","2":"Tjava.lang.Object"},"hcsMethod":{"1":[[-1]]}}, "sub":
-  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]}}}},
+  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1}}},
  {"name": "MinvokeAll(8)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"PT:0","1":"Tjava.util.Collection","2":"Tjava.util.concurrent.Callable","3":"Tjava.util.List","4":"Tjava.util.concurrent.Future"},"hcsMethod":{"0":[[0,0]],"3":[[-1]]}}, "sub":
   {"name": "Pcollection(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[0,0]],"1":[[-1]]}}}},
  {"name": "MinvokeAll(9)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"PT:0","1":"Tjava.util.Collection","2":"Tjava.util.concurrent.Callable","3":"Tjava.util.List","4":"Tjava.util.concurrent.Future"},"hcsMethod":{"0":[[0,0]],"3":[[-1]]}}, "subs":[
@@ -1545,7 +1545,7 @@
 
 {"name": "Tjava.util.concurrent.ThreadFactory", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "sub":
  {"name": "MnewThread(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Runnable","1":"Tjava.lang.Thread"},"hcsMethod":{"1":[[-1]]}}, "sub":
-  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]}}}}},
+  {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1}}}},
 
 {"name": "Tjava.util.concurrent.ThreadLocalRandom", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
  {"name": "SAccess(0)", "data":{"hc":{"E":true}}, "sub":

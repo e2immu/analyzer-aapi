@@ -54,6 +54,6 @@ public class TestJavaAwt extends CommonTest {
 
     private void testCommutable(MethodInfo methodInfo) {
         Value.CommutableData cd = methodInfo.analysis().getOrNull(COMMUTABLE_METHODS, ValueImpl.CommutableData.class);
-        assertTrue(cd.isDefault());
+        assertTrue(cd.isBlankMultiParSeq());
     }
 }

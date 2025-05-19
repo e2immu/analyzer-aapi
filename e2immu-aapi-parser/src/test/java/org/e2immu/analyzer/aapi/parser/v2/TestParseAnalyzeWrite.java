@@ -28,7 +28,9 @@ import java.lang.constant.Constable;
 import java.lang.reflect.Array;
 import java.net.URI;
 import java.net.http.HttpRequest;
+import java.security.Guard;
 import java.security.MessageDigest;
+import java.security.PrivilegedAction;
 import java.security.SecureRandom;
 import java.util.*;
 import java.util.List;
@@ -36,6 +38,7 @@ import java.util.function.BiConsumer;
 import java.util.function.BinaryOperator;
 import java.util.function.IntFunction;
 import java.util.function.Predicate;
+import java.util.random.RandomGenerator;
 import java.util.stream.Stream;
 import java.util.zip.ZipOutputStream;
 
@@ -88,9 +91,9 @@ public class TestParseAnalyzeWrite {
                 Annotation.class,
                 Constable.class,
                 Array.class,
-                SecureRandom.class, MessageDigest.class,
+                SecureRandom.class, MessageDigest.class, RandomGenerator.class, Guard.class, PrivilegedAction.class,
                 ZipOutputStream.class,
-                Container.class, Component.class,
+                Container.class, Component.class, Color.class, Graphics.class,
                 HttpRequest.class,  HttpRequest.Builder.class, URI.class,
                 DefaultComboBoxModel.class, JLabel.class, JComboBox.class, JTable.class, AbstractButton.class,
                 TableColumn.class, JTextComponent.class);

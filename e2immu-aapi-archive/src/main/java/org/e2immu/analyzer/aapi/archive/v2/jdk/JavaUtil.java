@@ -3371,12 +3371,11 @@ public class JavaUtil {
     }
 
     //public class Random implements RandomGenerator, Serializable
-    @Container
     class Random$ {
         //frequency 3
         Random$() { }
         Random$(long seed) { }
-        static Random from(/*@NotModified[O]*/ RandomGenerator generator) { return null; }
+        static Random from(/*@NotModified[O]*/@NotModified RandomGenerator generator) { return null; }
         void setSeed(long seed) { }
         //override from java.util.random.RandomGenerator
         //override has frequency 1
