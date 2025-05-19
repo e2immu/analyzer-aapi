@@ -18,13 +18,26 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.slf4j.LoggerFactory;
 
+import javax.swing.*;
+import javax.swing.table.TableColumn;
+import javax.swing.text.JTextComponent;
+import java.awt.*;
 import java.io.*;
+import java.lang.annotation.Annotation;
+import java.lang.constant.Constable;
+import java.lang.reflect.Array;
+import java.net.URI;
+import java.net.http.HttpRequest;
+import java.security.MessageDigest;
+import java.security.SecureRandom;
 import java.util.*;
+import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.BinaryOperator;
 import java.util.function.IntFunction;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
+import java.util.zip.ZipOutputStream;
 
 import static org.e2immu.analyzer.modification.common.defaults.ShallowAnalyzer.AnnotationOrigin.*;
 import static org.e2immu.language.cst.impl.analysis.PropertyImpl.*;
@@ -52,7 +65,7 @@ public class TestParseAnalyzeWrite {
                 new AnnotatedAPIConfigurationImpl.Builder().build());
 
         List<TypeInfo> types = annotatedApiParser.typesParsed();
-        assertEquals(16, types.size());
+        assertEquals(25, types.size());
         for (TypeInfo typeInfo : types) {
             if ("org.e2immu.analyzer.aapi.archive.v2.jdk.JavaLang".equals(typeInfo.fullyQualifiedName())) {
                 TypeInfo charSeq = typeInfo.findSubType("CharSequence$");
@@ -71,7 +84,16 @@ public class TestParseAnalyzeWrite {
                 TreeMap.class, SortedMap.class, NavigableMap.class, SequencedMap.class,
                 ProcessHandle.class,
                 Readable.class, Reader.class, BufferedReader.class, RandomAccessFile.class,
-                IntFunction.class, BinaryOperator.class, BiConsumer.class, Predicate.class);
+                IntFunction.class, BinaryOperator.class, BiConsumer.class, Predicate.class,
+                Annotation.class,
+                Constable.class,
+                Array.class,
+                SecureRandom.class, MessageDigest.class,
+                ZipOutputStream.class,
+                Container.class, Component.class,
+                HttpRequest.class,  HttpRequest.Builder.class, URI.class,
+                DefaultComboBoxModel.class, JLabel.class, JComboBox.class, JTable.class, AbstractButton.class,
+                TableColumn.class, JTextComponent.class);
         Stream<TypeInfo> extra = extraClasses.stream()
                 .map(c -> annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(c));
         List<TypeInfo> typesToAnalyze = Stream.concat(annotatedApiParser.types().stream(), extra).distinct().toList();

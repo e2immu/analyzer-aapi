@@ -1,0 +1,4 @@
+[
+{"name": "Tjava.lang.constant.Constable", "data":{"annotatedApi":1,"containerType":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "sub":
+ {"name": "MdescribeConstable(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.Optional","1":"Tjava.lang.constant.ConstantDesc"},"hcsMethod":{"0":[[-1]],"1":[[0]]},"immutableMethod":2,"independentMethod":1}}}
+]
