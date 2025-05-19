@@ -114,4 +114,11 @@ class DecoratorWithComments extends DecoratorImpl {
         }
         return Stream.concat(comments.stream(), annotationStream).toList();
     }
+
+    @Override
+    protected boolean isAnnotated(Info info, Property property) {
+        ShallowAnalyzer.InfoData id = infoDataProvider.apply(info);
+        ShallowAnalyzer.AnnotationOrigin origin = id.originMap().get(property);
+        return origin == ShallowAnalyzer.AnnotationOrigin.ANNOTATED;
+    }
 }

@@ -20,33 +20,41 @@ public class JavaIo {
     //public class BufferedReader extends Reader
     @Independent
     class BufferedReader$ {
-        BufferedReader$(Reader in, int sz) { }
-        BufferedReader$(Reader in) { }
+        BufferedReader$(/*@Independent[T]*/ Reader in, int sz) { }
+        BufferedReader$(/*@Independent[T]*/ Reader in) { }
         //override from java.io.Reader
+        //@AllowsInterrupt[H]
         int read() { return 0; }
 
         //override from java.io.Reader
-        int read(char [] cbuf, int off, int len) { return 0; }
-        @AllowsInterrupt
-        String readLine() { return null; }
+        //@AllowsInterrupt[H]
+        int read(/*@Independent[H] @NotNull[H]*/ char [] cbuf, int off, int len) { return 0; }
+        @AllowsInterrupt String readLine() { return null; }
         //override from java.io.Reader
+        //@AllowsInterrupt[H]
         long skip(long n) { return 0L; }
 
         //override from java.io.Reader
+        //@NotModified[H]
         boolean ready() { return false; }
 
         //override from java.io.Reader
+        //@NotModified[H]
         boolean markSupported() { return false; }
 
         //override from java.io.Reader
+        //@AllowsInterrupt[H]
         void mark(int readAheadLimit) { }
 
         //override from java.io.Reader
+        //@AllowsInterrupt[H]
         void reset() { }
 
         //override from java.io.Closeable, java.io.Reader, java.lang.AutoCloseable
         //@AllowsInterrupt[H]
         void close() { }
+
+        //@Independent[O]
         @AllowsInterrupt
         Stream<String> lines() { return null; }
     }
@@ -566,36 +574,141 @@ public class JavaIo {
         @NotModified Charset charset() { return null; }
     }
 
-    //public abstract class Reader implements Readable, Closeable
+    //public class RandomAccessFile implements DataOutput, DataInput, Closeable
     @Independent
-    class Reader$ {
-        @NotNull
-        static Reader nullReader() { return null; }
-        //override from java.lang.Readable
-        @AllowsInterrupt
-        int read(/*@Independent[H] @NotNull[H]*/ CharBuffer target) { return 0; }
+    class RandomAccessFile$ {
+        RandomAccessFile$(String pathname, String mode) { }
+        RandomAccessFile$(File file, String mode) { }
+        @NotModified
+        FileDescriptor getFD() { return null; }
+        @NotModified
+        FileChannel getChannel() { return null; }
         @AllowsInterrupt
         int read() { return 0; }
         @AllowsInterrupt
-        int read(@NotNull char [] cbuf) { return 0; }
+        int read(@NotNull byte [] b, int off, int len) { return 0; }
         @AllowsInterrupt
-        int read(@NotNull char [] c, int i, int i1) { return 0; }
+        int read(@NotNull byte [] b) { return 0; }
+        //override from java.io.DataInput
+        void readFully(byte [] b) { }
+
+        //override from java.io.DataInput
+        void readFully(byte [] b, int off, int len) { }
+
+        //override from java.io.DataInput
+        int skipBytes(int n) { return 0; }
+
+        //override from java.io.DataOutput
+        void write(int b) { }
+
+        //override from java.io.DataOutput
+        void write(byte [] b) { }
+
+        //override from java.io.DataOutput
+        void write(byte [] b, int off, int len) { }
+        long getFilePointer() { return 0L; }
         @AllowsInterrupt
-        long skip(long n) { return 0L; }
-        @NotModified
-        boolean ready() { return false; }
-        @NotModified
-        boolean markSupported() { return false; }
+        void seek(long pos) { }
+        @NotModified @AllowsInterrupt
+        long length() { return 0L; }
         @AllowsInterrupt
-        void mark(int readAheadLimit) { }
-        @AllowsInterrupt
-        void reset() { }
+        void setLength(long newLength) { }
         //override from java.io.Closeable, java.lang.AutoCloseable
         //@AllowsInterrupt[H]
+        void close() { }
+
+        //override from java.io.DataInput
+        boolean readBoolean() { return false; }
+
+        //override from java.io.DataInput
+        byte readByte() { return 0; }
+
+        //override from java.io.DataInput
+        int readUnsignedByte() { return 0; }
+
+        //override from java.io.DataInput
+        short readShort() { return 0; }
+
+        //override from java.io.DataInput
+        int readUnsignedShort() { return 0; }
+
+        //override from java.io.DataInput
+        char readChar() { return '\0'; }
+
+        //override from java.io.DataInput
+        int readInt() { return 0; }
+
+        //override from java.io.DataInput
+        long readLong() { return 0L; }
+
+        //override from java.io.DataInput
+        float readFloat() { return 0.0F; }
+
+        //override from java.io.DataInput
+        double readDouble() { return 0.0; }
+
+        //override from java.io.DataInput
+        String readLine() { return null; }
+
+        //override from java.io.DataInput
+        String readUTF() { return null; }
+
+        //override from java.io.DataOutput
+        void writeBoolean(boolean v) { }
+
+        //override from java.io.DataOutput
+        void writeByte(int v) { }
+
+        //override from java.io.DataOutput
+        void writeShort(int v) { }
+
+        //override from java.io.DataOutput
+        void writeChar(int v) { }
+
+        //override from java.io.DataOutput
+        void writeInt(int v) { }
+
+        //override from java.io.DataOutput
+        void writeLong(long v) { }
+
+        //override from java.io.DataOutput
+        void writeFloat(float v) { }
+
+        //override from java.io.DataOutput
+        void writeDouble(double v) { }
+
+        //override from java.io.DataOutput
+        void writeBytes(String s) { }
+
+        //override from java.io.DataOutput
+        void writeChars(String s) { }
+
+        //override from java.io.DataOutput
+        void writeUTF(String str) { }
+    }
+
+    //public abstract class Reader implements Readable, Closeable
+    @Independent
+    class Reader$ {
+        //@Independent[O]
+        @NotNull
+        static Reader nullReader() { return null; }
+
+        //override from java.lang.Readable
+        @AllowsInterrupt
+        int read(/*@Independent[H] @NotNull[H]*/ CharBuffer target) { return 0; }
+        @AllowsInterrupt int read() { return 0; }
+        @AllowsInterrupt int read(/*@Independent[T]*/ @NotNull char [] cbuf) { return 0; }
+        @AllowsInterrupt int read(/*@Independent[T]*/ @NotNull char [] c, int i, int i1) { return 0; }
+        @AllowsInterrupt long skip(long n) { return 0L; }
+        @NotModified boolean ready() { return false; }
+        @NotModified boolean markSupported() { return false; }
+        @AllowsInterrupt void mark(int readAheadLimit) { }
+        @AllowsInterrupt void reset() { }
+        //override from java.io.Closeable, java.lang.AutoCloseable
         @AllowsInterrupt
         void close() { }
-        @AllowsInterrupt
-        long transferTo(Writer out) { return 0L; }
+        @AllowsInterrupt long transferTo(/*@Independent[T]*/ Writer out) { return 0L; }
     }
     //public interface Serializable
     @ImmutableContainer(hc = true) @Independent class Serializable$ { }

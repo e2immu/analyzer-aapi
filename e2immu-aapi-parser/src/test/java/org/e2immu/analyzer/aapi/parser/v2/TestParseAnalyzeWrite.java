@@ -18,11 +18,12 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.slf4j.LoggerFactory;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.Reader;
+import java.io.*;
 import java.util.*;
+import java.util.function.BiConsumer;
+import java.util.function.BinaryOperator;
+import java.util.function.IntFunction;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 import static org.e2immu.analyzer.modification.common.defaults.ShallowAnalyzer.AnnotationOrigin.*;
@@ -65,22 +66,15 @@ public class TestParseAnalyzeWrite {
         }
         ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser);
 
-        TypeInfo treeMap = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(TreeMap.class);
-        TypeInfo vector = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(Vector.class);
-        TypeInfo sortedMap = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(SortedMap.class);
-        TypeInfo navigableMap = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(NavigableMap.class);
-        TypeInfo sequencedMap = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(SequencedMap.class);
-
-        TypeInfo processHandle = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(ProcessHandle.class);
-        TypeInfo readable = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(Readable.class);
-
-        TypeInfo reader = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(Reader.class);
-        TypeInfo bufferedReader = annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(BufferedReader.class);
-
-        List<TypeInfo> extra = new ArrayList<>();
-        Collections.addAll(extra, treeMap, vector, sortedMap, navigableMap, sequencedMap, processHandle, readable,
-                reader, bufferedReader);
-        List<TypeInfo> typesToAnalyze = Stream.concat(annotatedApiParser.types().stream(), extra.stream()).distinct().toList();
+        List<Class<?>> extraClasses = new ArrayList<>();
+        Collections.addAll(extraClasses,
+                TreeMap.class, SortedMap.class, NavigableMap.class, SequencedMap.class,
+                ProcessHandle.class,
+                Readable.class, Reader.class, BufferedReader.class, RandomAccessFile.class,
+                IntFunction.class, BinaryOperator.class, BiConsumer.class, Predicate.class);
+        Stream<TypeInfo> extra = extraClasses.stream()
+                .map(c -> annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(c));
+        List<TypeInfo> typesToAnalyze = Stream.concat(annotatedApiParser.types().stream(), extra).distinct().toList();
         LOGGER.info("Have {} types for the shallow analyzer", typesToAnalyze.size());
         ShallowAnalyzer.Result rs = shallowAnalyzer.go(typesToAnalyze);
         Trie<TypeInfo> trie = new Trie<>();

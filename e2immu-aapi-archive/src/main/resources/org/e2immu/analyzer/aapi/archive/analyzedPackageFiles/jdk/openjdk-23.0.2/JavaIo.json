@@ -538,6 +538,100 @@
   {"name": "Pc(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
  {"name": "Mcharset(54)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.nio.charset.Charset"},"hcsMethod":{"0":[[-1]]},"nonModifyingMethod":1}}]},
 
+{"name": "Tjava.io.RandomAccessFile", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true},"independentType":2}, "subs":[
+ {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "subs":[
+  {"name": "Ppathname(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
+  {"name": "Pmode(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
+ {"name": "C<init>(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.io.File"},"independentMethod":2,"notNullMethod":1}, "subs":[
+  {"name": "Pfile(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]},"independentParameter":2}},
+  {"name": "Pmode(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
+ {"name": "C<init>(2)", "data":{"hc":{"0":"Tjava.io.File"}}, "subs":[
+  {"name": "Pfile(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
+ {"name": "MgetFD(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"nonModifyingMethod":1}},
+ {"name": "MgetChannel(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.nio.channels.FileChannel"},"hcsMethod":{"0":[[-1]]},"independentMethod":2,"nonModifyingMethod":1}},
+ {"name": "Mopen0(2)", "data":{"hc":{}}},
+ {"name": "Mopen(3)", "data":{"hc":{}}},
+ {"name": "Mread(4)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"methodAllowsInterrupts":1,"notNullMethod":1}},
+ {"name": "Mread0(5)", "data":{"hc":{}}},
+ {"name": "MtraceRead0(6)", "data":{"hc":{}}},
+ {"name": "MreadBytes(7)", "data":{"hc":{}}},
+ {"name": "MreadBytes0(8)", "data":{"hc":{}}},
+ {"name": "MtraceReadBytes0(9)", "data":{"hc":{}}},
+ {"name": "Mread(10)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"methodAllowsInterrupts":1,"notNullMethod":1}, "subs":[
+  {"name": "Pb(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2,"notNullParameter":1}},
+  {"name": "Poff(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Plen(2)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+ {"name": "Mread(11)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"methodAllowsInterrupts":1,"notNullMethod":1}, "sub":
+  {"name": "Pb(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2,"notNullParameter":1}}},
+ {"name": "MreadFully(12)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pb(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2}}},
+ {"name": "MreadFully(13)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "subs":[
+  {"name": "Pb(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2}},
+  {"name": "Poff(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Plen(2)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+ {"name": "MskipBytes(14)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pn(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "Mwrite(15)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pb(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "MimplWrite(16)", "data":{"hc":{}}},
+ {"name": "MtraceImplWrite(17)", "data":{"hc":{}}},
+ {"name": "Mwrite0(18)", "data":{"hc":{}}},
+ {"name": "MwriteBytes(19)", "data":{"hc":{}}},
+ {"name": "MimplWriteBytes(20)", "data":{"hc":{}}},
+ {"name": "MtraceImplWriteBytes(21)", "data":{"hc":{}}},
+ {"name": "MwriteBytes0(22)", "data":{"hc":{}}},
+ {"name": "Mwrite(23)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pb(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2}}},
+ {"name": "Mwrite(24)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "subs":[
+  {"name": "Pb(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2}},
+  {"name": "Poff(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
+  {"name": "Plen(2)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
+ {"name": "MgetFilePointer(25)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "Mseek(26)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"methodAllowsInterrupts":1,"notNullMethod":1}, "sub":
+  {"name": "Ppos(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "Mseek0(27)", "data":{"hc":{}}},
+ {"name": "Mlength(28)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"methodAllowsInterrupts":1,"nonModifyingMethod":1,"notNullMethod":1}},
+ {"name": "Mlength0(29)", "data":{"hc":{}}},
+ {"name": "MsetLength(30)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"methodAllowsInterrupts":1,"notNullMethod":1}, "sub":
+  {"name": "PnewLength(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "MsetLength0(31)", "data":{"hc":{}}},
+ {"name": "Mclose(32)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"methodAllowsInterrupts":1,"notNullMethod":1}},
+ {"name": "MreadBoolean(33)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MreadByte(34)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MreadUnsignedByte(35)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MreadShort(36)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MreadUnsignedShort(37)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MreadChar(38)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MreadInt(39)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MreadLong(40)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MreadFloat(41)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MreadDouble(42)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MreadLine(43)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
+ {"name": "MreadUTF(44)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
+ {"name": "MwriteBoolean(45)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pv(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "MwriteByte(46)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pv(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "MwriteShort(47)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pv(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "MwriteChar(48)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pv(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "MwriteInt(49)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pv(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "MwriteLong(50)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pv(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "MwriteFloat(51)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pv(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "MwriteDouble(52)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pv(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
+ {"name": "MwriteBytes(53)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Ps(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "MwriteChars(54)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Ps(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "MwriteUTF(55)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
+  {"name": "Pstr(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "MinitIDs(56)", "data":{"hc":{}}}]},
+
 {"name": "Tjava.io.Reader", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true},"independentType":2}, "subs":[
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "C<init>(1)", "data":{"hc":{"0":"Tjava.lang.Object"}}, "sub":

@@ -38,7 +38,7 @@ public class TestJavaUtilFunction extends CommonTest {
         assertSame(INDEPENDENT, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
         assertSame(NO_VALUE, methodInfo.analysis().getOrDefault(IMMUTABLE_METHOD, MUTABLE));
 
-        ParameterInfo p0 = methodInfo.parameters().get(0);
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
         assertSame(INDEPENDENT_HC, p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT));
         assertSame(IMMUTABLE_HC, p0.analysis().getOrDefault(IMMUTABLE_PARAMETER, MUTABLE));
         assertSame(NULLABLE, p0.analysis().getOrDefault(NOT_NULL_PARAMETER, NULLABLE));
@@ -64,7 +64,7 @@ public class TestJavaUtilFunction extends CommonTest {
         assertSame(IMMUTABLE_HC, methodInfo.analysis().getOrDefault(IMMUTABLE_METHOD, MUTABLE));
         assertSame(NULLABLE, methodInfo.analysis().getOrDefault(NOT_NULL_METHOD, NULLABLE));
 
-        ParameterInfo p0 = methodInfo.parameters().get(0);
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
         assertSame(INDEPENDENT_HC, p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT));
         assertSame(IMMUTABLE_HC, p0.analysis().getOrDefault(IMMUTABLE_PARAMETER, MUTABLE));
         assertSame(NULLABLE, p0.analysis().getOrDefault(NOT_NULL_PARAMETER, NULLABLE));
@@ -90,7 +90,7 @@ public class TestJavaUtilFunction extends CommonTest {
         assertSame(IMMUTABLE, methodInfo.analysis().getOrDefault(IMMUTABLE_METHOD, MUTABLE));
         assertSame(NOT_NULL, methodInfo.analysis().getOrDefault(NOT_NULL_METHOD, NULLABLE));
 
-        ParameterInfo p0 = methodInfo.parameters().get(0);
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
         assertSame(INDEPENDENT_HC, p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT));
         assertSame(IMMUTABLE_HC, p0.analysis().getOrDefault(IMMUTABLE_PARAMETER, MUTABLE));
         assertSame(NULLABLE, p0.analysis().getOrDefault(NOT_NULL_PARAMETER, NULLABLE));
