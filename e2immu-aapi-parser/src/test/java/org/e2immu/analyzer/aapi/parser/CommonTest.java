@@ -52,7 +52,8 @@ public class CommonTest {
                         "jmod:java.desktop"),
                 List.of("../e2immu-aapi-archive/src/main/java/org/e2immu/analyzer/aapi/archive/v2"),
                 List.of());
-        ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser);
+        ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser,
+                true);
        ShallowAnalyzer.Result sr = shallowAnalyzer.go(annotatedApiParser.types());
 
         PrepAnalyzer prepAnalyzer = new PrepAnalyzer(annotatedApiParser.runtime());

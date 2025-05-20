@@ -80,7 +80,8 @@ public class TestParseAnalyzeWrite {
                 assertTrue(uri.endsWith("aapi/archive/v2/jdk/JavaLang.java"), "Have: " + uri);
             }
         }
-        ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser);
+        ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser,
+                true);
 
         List<Class<?>> extraClasses = new ArrayList<>();
         Collections.addAll(extraClasses,

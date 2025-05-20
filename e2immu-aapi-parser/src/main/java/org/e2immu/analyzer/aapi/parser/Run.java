@@ -63,7 +63,8 @@ public class Run {
                 classPath,
                 List.of(AAPI_DIR),
                 List.of(subDirIn));
-        ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser);
+        ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser,
+                true);
         ShallowAnalyzer.Result rs = shallowAnalyzer.go(annotatedApiParser.types());
         PrepAnalyzer prepAnalyzer = new PrepAnalyzer(annotatedApiParser.runtime());
         prepAnalyzer.initialize(annotatedApiParser.javaInspector().compiledTypesManager().typesLoaded());
