@@ -67,7 +67,7 @@ class DecoratorWithComments extends DecoratorImpl {
             ShallowAnalyzer.AnnotationOrigin origin = infoData.origin(ap.property());
             if (origin != ShallowAnalyzer.AnnotationOrigin.ANNOTATED &&
                 (explain || origin != ShallowAnalyzer.AnnotationOrigin.DEFAULT)) {
-                commentParts.add(ap.annotationExpression().print(simpleNames) + originSuffix(origin));
+                commentParts.add(ap.annotationExpression().print(simpleNames) + originSuffix(origin, translatedInfo));
             }
         }
         if (commentParts.isEmpty()) return Stream.of();
@@ -78,7 +78,7 @@ class DecoratorWithComments extends DecoratorImpl {
         return Stream.of(runtime.newSingleLineComment(comment));
     }
 
-    private static String originSuffix(ShallowAnalyzer.AnnotationOrigin origin) {
+    private static String originSuffix(ShallowAnalyzer.AnnotationOrigin origin, Info cause) {
         char code = switch (origin) {
             case ANNOTATED -> 'A';
             case FROM_FIELD -> 'F';
@@ -86,8 +86,8 @@ class DecoratorWithComments extends DecoratorImpl {
             case FROM_OWNER -> 'O';
             case FROM_OVERRIDE -> 'H';
             case FROM_TYPE -> 'T';
-            default ->{
-                throw new UnsupportedOperationException();
+            default -> {
+                throw new UnsupportedOperationException("Origin " + origin + " for " + cause);
             }
         };
         return "[" + code + "]";

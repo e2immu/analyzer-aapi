@@ -1,7 +1,7 @@
 [
 {"name": "Tjava.net.http.HttpClient", "data":{"annotatedApi":1,"containerType":1,"defaultsAnalyzer":1,"hc":{"E":true},"immutableType":2,"independentType":2}, "subs":[
  {"name": "SBuilder(0)", "data":{"annotatedApi":1,"containerType":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
-  {"name": "FNO_PROXY(0)", "data":{"defaultsAnalyzer":1,"finalField":1}},
+  {"name": "FNO_PROXY(0)", "data":{"finalField":1}},
   {"name": "McookieHandler(0)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.net.CookieHandler","1":"Tjava.net.http.HttpClient.Builder"},"hcsMethod":{"1":[[-1]]}}, "sub":
    {"name": "PcookieHandler(0)", "data":{"hcsParameter":{"0":[[-1]]},"unmodifiedParameter":1}}},
   {"name": "MconnectTimeout(1)", "data":{"annotatedApi":1,"commutableMethods":["","",""],"containerMethod":1,"defaultsAnalyzer":1,"fluentMethod":1,"hc":{"0":"Tjava.net.http.HttpClient.Builder"},"hcsMethod":{"0":[[-1]]},"notNullMethod":1}, "sub":
@@ -26,16 +26,16 @@
    {"name": "PlocalAddr(0)", "data":{"hcsParameter":{"0":[[-1]]},"unmodifiedParameter":1}}},
   {"name": "Mbuild(11)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.net.http.HttpClient"},"hcsMethod":{"0":[[-1]]},"immutableMethod":2,"independentMethod":1}}]},
  {"name": "SRedirect(1)", "data":{"defaultsAnalyzer":1,"hc":{}}, "subs":[
-  {"name": "FNEVER(0)", "data":{"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-  {"name": "FALWAYS(1)", "data":{"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-  {"name": "FNORMAL(2)", "data":{"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
+  {"name": "FNEVER(0)", "data":{"finalField":1,"notNullField":1}},
+  {"name": "FALWAYS(1)", "data":{"finalField":1,"notNullField":1}},
+  {"name": "FNORMAL(2)", "data":{"finalField":1,"notNullField":1}},
   {"name": "C<init>(0)", "data":{"hc":{}}},
   {"name": "Mvalues(0)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":1}},
   {"name": "MvalueOf(1)", "data":{"defaultsAnalyzer":1,"hc":{}}, "sub":
    {"name": "Pname(0)", "data":{"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}}]},
  {"name": "SVersion(2)", "data":{"defaultsAnalyzer":1,"hc":{}}, "subs":[
-  {"name": "FHTTP_1_1(0)", "data":{"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-  {"name": "FHTTP_2(1)", "data":{"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
+  {"name": "FHTTP_1_1(0)", "data":{"finalField":1,"notNullField":1}},
+  {"name": "FHTTP_2(1)", "data":{"finalField":1,"notNullField":1}},
   {"name": "C<init>(0)", "data":{"hc":{}}},
   {"name": "Mvalues(0)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":1}},
   {"name": "MvalueOf(1)", "data":{"defaultsAnalyzer":1,"hc":{}}, "sub":

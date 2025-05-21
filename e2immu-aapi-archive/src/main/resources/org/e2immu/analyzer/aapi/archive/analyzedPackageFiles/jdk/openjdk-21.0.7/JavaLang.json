@@ -34,9 +34,9 @@
  {"name": "Mclose(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}}},
 
 {"name": "Tjava.lang.Boolean", "data":{"annotatedApi":1,"containerType":1,"defaultsAnalyzer":1,"hc":{},"immutableType":3,"independentType":2}, "subs":[
- {"name": "FTRUE(0)", "data":{"annotatedApi":1,"containerField":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
- {"name": "FFALSE(1)", "data":{"annotatedApi":1,"containerField":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
- {"name": "FTYPE(2)", "data":{"annotatedApi":1,"containerField":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"unmodifiedField":1}},
+ {"name": "FTRUE(0)", "data":{"annotatedApi":1,"containerField":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
+ {"name": "FFALSE(1)", "data":{"annotatedApi":1,"containerField":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
+ {"name": "FTYPE(2)", "data":{"annotatedApi":1,"containerField":1,"finalField":1,"immutableField":3,"unmodifiedField":1}},
  {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Pvalue(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
  {"name": "C<init>(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
@@ -354,18 +354,18 @@
   {"name": "Pt(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}}},
 
 {"name": "Tjava.lang.Double", "data":{"annotatedApi":1,"containerType":1,"defaultsAnalyzer":1,"hc":{},"immutableType":3,"independentType":2}, "subs":[
- {"name": "FPOSITIVE_INFINITY(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FNEGATIVE_INFINITY(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FNaN(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FMAX_VALUE(3)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FMIN_NORMAL(4)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FMIN_VALUE(5)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FSIZE(6)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FPRECISION(7)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FMAX_EXPONENT(8)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FMIN_EXPONENT(9)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FBYTES(10)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FTYPE(11)", "data":{"annotatedApi":1,"containerField":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"unmodifiedField":1}},
+ {"name": "FPOSITIVE_INFINITY(0)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FNEGATIVE_INFINITY(1)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FNaN(2)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMAX_VALUE(3)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMIN_NORMAL(4)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMIN_VALUE(5)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FSIZE(6)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FPRECISION(7)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMAX_EXPONENT(8)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMIN_EXPONENT(9)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FBYTES(10)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FTYPE(11)", "data":{"annotatedApi":1,"containerField":1,"finalField":1,"immutableField":3,"unmodifiedField":1}},
  {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Pvalue(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
  {"name": "C<init>(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
@@ -479,18 +479,18 @@
   {"name": "Pcause(1)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
 
 {"name": "Tjava.lang.Float", "data":{"annotatedApi":1,"containerType":1,"defaultsAnalyzer":1,"hc":{},"immutableType":3,"independentType":2}, "subs":[
- {"name": "FPOSITIVE_INFINITY(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FNEGATIVE_INFINITY(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FNaN(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FMAX_VALUE(3)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FMIN_NORMAL(4)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FMIN_VALUE(5)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FSIZE(6)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FPRECISION(7)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FMAX_EXPONENT(8)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FMIN_EXPONENT(9)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FBYTES(10)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FTYPE(11)", "data":{"annotatedApi":1,"containerField":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"unmodifiedField":1}},
+ {"name": "FPOSITIVE_INFINITY(0)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FNEGATIVE_INFINITY(1)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FNaN(2)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMAX_VALUE(3)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMIN_NORMAL(4)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMIN_VALUE(5)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FSIZE(6)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FPRECISION(7)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMAX_EXPONENT(8)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMIN_EXPONENT(9)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FBYTES(10)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FTYPE(11)", "data":{"annotatedApi":1,"containerField":1,"finalField":1,"immutableField":3,"unmodifiedField":1}},
  {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Pvalue(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
  {"name": "C<init>(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
@@ -578,11 +578,11 @@
 {"name": "Tjava.lang.Integer", "data":{"annotatedApi":1,"containerType":1,"defaultsAnalyzer":1,"hc":{},"immutableType":3,"independentType":2}, "subs":[
  {"name": "SIntegerCache(0)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{}}}]},
- {"name": "FMIN_VALUE(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FMAX_VALUE(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FTYPE(2)", "data":{"annotatedApi":1,"containerField":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"unmodifiedField":1}},
- {"name": "FSIZE(7)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FBYTES(8)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMIN_VALUE(0)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMAX_VALUE(1)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FTYPE(2)", "data":{"annotatedApi":1,"containerField":1,"finalField":1,"immutableField":3,"unmodifiedField":1}},
+ {"name": "FSIZE(7)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FBYTES(8)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Pvalue(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
  {"name": "C<init>(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
@@ -725,11 +725,11 @@
 {"name": "Tjava.lang.Long", "data":{"annotatedApi":1,"containerType":1,"defaultsAnalyzer":1,"hc":{},"immutableType":3,"independentType":2}, "subs":[
  {"name": "SLongCache(0)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{}}}]},
- {"name": "FMIN_VALUE(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FMAX_VALUE(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FTYPE(2)", "data":{"annotatedApi":1,"containerField":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"unmodifiedField":1}},
- {"name": "FSIZE(4)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FBYTES(5)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMIN_VALUE(0)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMAX_VALUE(1)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FTYPE(2)", "data":{"annotatedApi":1,"containerField":1,"finalField":1,"immutableField":3,"unmodifiedField":1}},
+ {"name": "FSIZE(4)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FBYTES(5)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Pvalue(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
  {"name": "C<init>(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
@@ -866,9 +866,9 @@
 {"name": "Tjava.lang.Math", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableType":3,"independentType":2,"utilityClass":1}, "subs":[
  {"name": "SRandomNumberGeneratorHolder(0)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{}}}]},
- {"name": "FE(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FPI(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FTAU(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FE(0)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FPI(1)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FTAU(2)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "Msin(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}, "sub":
   {"name": "Pa(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
@@ -1208,7 +1208,7 @@
   {"name": "C<init>(0)", "data":{"hc":{}}},
   {"name": "Mcompare(0)", "data":{"hc":{}}},
   {"name": "MreadResolve(1)", "data":{"hc":{"0":"Tjava.lang.Object"},"hcsMethod":{"0":[[-1]]}}}]},
- {"name": "FCASE_INSENSITIVE_ORDER(8)", "data":{"annotatedApi":1,"containerField":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":2,"unmodifiedField":1}},
+ {"name": "FCASE_INSENSITIVE_ORDER(8)", "data":{"annotatedApi":1,"containerField":1,"finalField":1,"immutableField":2,"unmodifiedField":1}},
  {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}},
  {"name": "C<init>(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Poriginal(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
@@ -1639,13 +1639,13 @@
   {"name": "C<init>(0)", "data":{"hc":{}}}]},
  {"name": "SLogger(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true},"independentType":2}, "subs":[
   {"name": "SLevel(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
-   {"name": "FALL(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-   {"name": "FTRACE(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-   {"name": "FDEBUG(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-   {"name": "FINFO(3)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-   {"name": "FWARNING(4)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-   {"name": "FERROR(5)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-   {"name": "FOFF(6)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
+   {"name": "FALL(0)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+   {"name": "FTRACE(1)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+   {"name": "FDEBUG(2)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+   {"name": "FINFO(3)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+   {"name": "FWARNING(4)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+   {"name": "FERROR(5)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+   {"name": "FOFF(6)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
    {"name": "C<init>(0)", "data":{"hc":{}}},
    {"name": "Mvalues(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":1}},
    {"name": "MvalueOf(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "sub":
@@ -1699,9 +1699,9 @@
    {"name": "Pmodule(2)", "data":{"annotatedApi":1}}]},
   {"name": "MgetLoggerFinder(3)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.System.LoggerFinder"},"hcsMethod":{"0":[[-1]]}}},
   {"name": "MaccessProvider(4)", "data":{"hc":{"0":"Tjava.lang.System.LoggerFinder"},"hcsMethod":{"0":[[-1]]}}}]},
- {"name": "Fin(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"ignoreModificationsField":1,"independentField":2,"notNullField":1}},
- {"name": "Fout(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"ignoreModificationsField":1,"notNullField":1}},
- {"name": "Ferr(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"ignoreModificationsField":1,"notNullField":1}},
+ {"name": "Fin(0)", "data":{"annotatedApi":1,"finalField":1,"ignoreModificationsField":1,"independentField":2,"notNullField":1}},
+ {"name": "Fout(1)", "data":{"annotatedApi":1,"finalField":1,"ignoreModificationsField":1,"notNullField":1}},
+ {"name": "Ferr(2)", "data":{"annotatedApi":1,"finalField":1,"ignoreModificationsField":1,"notNullField":1}},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "MregisterNatives(0)", "data":{"hc":{}}},
  {"name": "MallowSecurityManager(1)", "data":{"hc":{}}},
@@ -1837,12 +1837,12 @@
    {"name": "Pgroup(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
    {"name": "Ptask(1)", "data":{"hcsParameter":{"1":[[-1]]}}}]}]},
  {"name": "SState(4)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
-  {"name": "FNEW(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-  {"name": "FRUNNABLE(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-  {"name": "FBLOCKED(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-  {"name": "FWAITING(3)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-  {"name": "FTIMED_WAITING(4)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-  {"name": "FTERMINATED(5)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
+  {"name": "FNEW(0)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+  {"name": "FRUNNABLE(1)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+  {"name": "FBLOCKED(2)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+  {"name": "FWAITING(3)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+  {"name": "FTIMED_WAITING(4)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+  {"name": "FTERMINATED(5)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
   {"name": "C<init>(0)", "data":{"hc":{}}},
   {"name": "Mvalues(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":1}},
   {"name": "MvalueOf(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "sub":
@@ -1857,9 +1857,9 @@
   {"name": "MuncaughtException(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Thread","1":"Tjava.lang.Throwable"},"independentMethod":2,"notNullMethod":1}, "subs":[
    {"name": "Pthread(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}},
    {"name": "Pthrowable(1)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}}]}},
- {"name": "FMIN_PRIORITY(14)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FNORM_PRIORITY(15)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
- {"name": "FMAX_PRIORITY(16)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMIN_PRIORITY(14)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FNORM_PRIORITY(15)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
+ {"name": "FMAX_PRIORITY(16)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.lang.ThreadGroup","1":"Tjava.lang.Runnable"}}, "subs":[
   {"name": "Pg(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
   {"name": "Ptask(3)", "data":{"hcsParameter":{"1":[[-1]]}}}]},

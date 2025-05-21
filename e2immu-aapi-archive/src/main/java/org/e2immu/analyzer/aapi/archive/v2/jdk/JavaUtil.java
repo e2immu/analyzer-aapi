@@ -14,6 +14,7 @@ import org.e2immu.annotation.ImmutableContainer;
 import org.e2immu.annotation.Independent;
 import org.e2immu.annotation.NotModified;
 import org.e2immu.annotation.NotNull;
+import org.e2immu.annotation.method.GetSet;
 import org.e2immu.annotation.type.UtilityClass;
 public class JavaUtil {
     public static final String PACKAGE_NAME = "java.util";
@@ -81,11 +82,11 @@ public class JavaUtil {
         boolean add(/*@Independent(hc=true)[H] @NotModified[O]*/ E e) { return false; }
 
         //override from java.util.List
-        //@Independent(hc=true)[H] @NotModified[H]
+        //@Independent(hc=true)[H] @NotModified[H] @GetSet("_synthetic_list")[H]
         E get(int i) { return null; }
 
         //override from java.util.List
-        //@Independent(hc=true)[H]
+        //@Independent(hc=true)[H] @GetSet("_synthetic_list")[H]
         E set(int index, /*@Independent(hc=true)[H] @NotModified[O]*/ E element) { return null; }
 
         //override from java.util.List
@@ -320,7 +321,7 @@ public class JavaUtil {
         <T> T [] toArray(/*@Independent[M] @NotModified[O]*/ T [] a) { return null; }
 
         //override from java.util.AbstractList, java.util.List
-        //@Independent(hc=true)[H] @NotModified[H]
+        //@Independent(hc=true)[H] @NotModified[H] @GetSet("_synthetic_list")[H]
         E get(int index) { return null; }
 
         //override from java.util.List, java.util.SequencedCollection
@@ -332,7 +333,7 @@ public class JavaUtil {
         E getLast() { return null; }
 
         //override from java.util.AbstractList, java.util.List
-        //@Independent(hc=true)[H]
+        //@Independent(hc=true)[H] @GetSet("_synthetic_list")[H]
         E set(int index, /*@Independent(hc=true)[H] @NotModified[O]*/ E element) { return null; }
 
         //override from java.util.AbstractCollection, java.util.AbstractList, java.util.Collection, java.util.List
@@ -403,20 +404,19 @@ public class JavaUtil {
 
         //override from java.lang.Iterable
         //@NotModified[H]
-        void forEach(/*@IgnoreModifications[T] @Independent[M] @NotModified[O] @NotNull[H]*/ Consumer<? super E> action) { }
+        void forEach(/*@IgnoreModifications[T] @Independent[M] @NotNull[H]*/ Consumer<? super E> action) { }
 
         //override from java.lang.Iterable, java.util.Collection, java.util.List
         //@Independent(hc=true)[H] @NotModified[H] @NotNull[H]
         Spliterator<E> spliterator() { return null; }
 
         //override from java.util.Collection
-        boolean removeIf(
-            /*@IgnoreModifications[T] @Independent(hc=true)[H] @NotModified[O]*/ Predicate<? super E> filter) {
+        boolean removeIf(/*@IgnoreModifications[T] @Independent(hc=true)[H]*/ Predicate<? super E> filter) {
             return false;
         }
 
         //override from java.util.List
-        void replaceAll(/*@IgnoreModifications[T] @NotModified[O]*/ UnaryOperator<E> operator) { }
+        void replaceAll(/*@IgnoreModifications[T]*/ UnaryOperator<E> operator) { }
 
         //override from java.util.List
         //frequency 1
@@ -1527,10 +1527,7 @@ public class JavaUtil {
         <T> T [] toArray(/*@Independent[M] @NotModified[O]*/ T [] t) { return null; }
 
         @NotModified
-        <T> T [] toArray(
-            /*@IgnoreModifications[T] @NotModified[O]*/ @Independent(hc = true) IntFunction<T []> generator) {
-            return null;
-        }
+        <T> T [] toArray(/*@IgnoreModifications[T]*/ @Independent(hc = true) IntFunction<T []> generator) { return null; }
 
         //frequency 2
         boolean add(/*@Independent(hc=true)[T] @NotModified[O]*/ E e) { return false; }
@@ -1547,8 +1544,7 @@ public class JavaUtil {
         boolean addAll(/*@NotModified[O]*/ @Independent(hc = true) Collection<? extends E> collection) { return false; }
         boolean removeAll(/*@NotModified[O]*/ @Independent(hc = true) Collection<?> collection) { return false; }
         //frequency 3
-        boolean removeIf(
-            /*@IgnoreModifications[T] @NotModified[O]*/ @Independent(hc = true) Predicate<? super E> filter) {
+        boolean removeIf(/*@IgnoreModifications[T]*/ @Independent(hc = true) Predicate<? super E> filter) {
             return false;
         }
 
@@ -1877,34 +1873,26 @@ public class JavaUtil {
 
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
         <U> Comparator<T> thenComparing(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Function<? super T, ? extends U> keyExtractor,
+            /*@IgnoreModifications[T] @Independent[M]*/ Function<? super T, ? extends U> keyExtractor,
             /*@Immutable(hc=true)[T] @Independent[M] @NotModified[O]*/ Comparator<? super U> keyComparator) {
             return null;
         }
 
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
         <U extends Comparable<? super U>> Comparator<T> thenComparing(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Function<? super T, ? extends U> keyExtractor) {
-            return null;
-        }
+            /*@IgnoreModifications[T] @Independent[M]*/ Function<? super T, ? extends U> keyExtractor) { return null; }
 
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
         Comparator<T> thenComparingInt(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ ToIntFunction<? super T> keyExtractor) {
-            return null;
-        }
+            /*@IgnoreModifications[T] @Independent[M]*/ ToIntFunction<? super T> keyExtractor) { return null; }
 
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
         Comparator<T> thenComparingLong(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ ToLongFunction<? super T> keyExtractor) {
-            return null;
-        }
+            /*@IgnoreModifications[T] @Independent[M]*/ ToLongFunction<? super T> keyExtractor) { return null; }
 
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
         Comparator<T> thenComparingDouble(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ ToDoubleFunction<? super T> keyExtractor) {
-            return null;
-        }
+            /*@IgnoreModifications[T] @Independent[M]*/ ToDoubleFunction<? super T> keyExtractor) { return null; }
 
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
         static <T extends Comparable<? super T>> Comparator<T> reverseOrder() { return null; }
@@ -1926,8 +1914,7 @@ public class JavaUtil {
 
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
         static <T, U> Comparator<T> comparing(
-            /*@IgnoreModifications[T] @Independent(hc=true)[T] @NotModified[O]*/ Function<? super T, ? extends U>
-                keyExtractor,
+            /*@IgnoreModifications[T] @Independent(hc=true)[T]*/ Function<? super T, ? extends U> keyExtractor,
             /*@Immutable(hc=true)[T] @Independent(hc=true)[T] @NotModified[O]*/ Comparator<? super U> keyComparator) {
             return null;
         }
@@ -1936,25 +1923,23 @@ public class JavaUtil {
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
 
         static <T, U extends Comparable<? super U>> Comparator<T> comparing(
-            /*@IgnoreModifications[T] @Independent(hc=true)[T] @NotModified[O]*/ Function<? super T, ? extends U>
-                keyExtractor) { return null; }
+            /*@IgnoreModifications[T] @Independent(hc=true)[T]*/ Function<? super T, ? extends U> keyExtractor) {
+            return null;
+        }
 
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
         static <T> Comparator<T> comparingInt(
-            /*@IgnoreModifications[T] @Independent(hc=true)[T] @NotModified[O]*/ ToIntFunction<? super T> keyExtractor) {
-            return null;
-        }
+            /*@IgnoreModifications[T] @Independent(hc=true)[T]*/ ToIntFunction<? super T> keyExtractor) { return null; }
 
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
         static <T> Comparator<T> comparingLong(
-            /*@IgnoreModifications[T] @Independent(hc=true)[T] @NotModified[O]*/ ToLongFunction<? super T> keyExtractor) {
-            return null;
-        }
+            /*@IgnoreModifications[T] @Independent(hc=true)[T]*/ ToLongFunction<? super T> keyExtractor) { return null; }
 
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
         static <T> Comparator<T> comparingDouble(
-            /*@IgnoreModifications[T] @Independent(hc=true)[T] @NotModified[O]*/ ToDoubleFunction<? super T>
-                keyExtractor) { return null; }
+            /*@IgnoreModifications[T] @Independent(hc=true)[T]*/ ToDoubleFunction<? super T> keyExtractor) {
+            return null;
+        }
     }
 
     //public class Date implements Serializable, Cloneable, Comparable<Date>
@@ -2117,25 +2102,21 @@ public class JavaUtil {
 
         V computeIfAbsent(
             /*@Independent(hc=true)[H] @NotModified[O]*/ K key,
-            /*@IgnoreModifications[T] @NotModified[O]*/ Function<? super K, ? extends V> mappingFunction) { return null; }
+            /*@IgnoreModifications[T]*/ Function<? super K, ? extends V> mappingFunction) { return null; }
 
         //override from java.util.Map
         //@Independent(hc=true)[H]
 
         V computeIfPresent(
             /*@Independent(hc=true)[H] @NotModified[O]*/ K key,
-            /*@IgnoreModifications[T] @NotModified[O]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) {
-            return null;
-        }
+            /*@IgnoreModifications[T]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) { return null; }
 
         //override from java.util.Map
         //@Independent(hc=true)[H]
 
         V compute(
             /*@Independent(hc=true)[H] @NotModified[O]*/ K key,
-            /*@IgnoreModifications[T] @NotModified[O]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) {
-            return null;
-        }
+            /*@IgnoreModifications[T]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) { return null; }
 
         //override from java.util.Map
         //@Independent(hc=true)[H]
@@ -2143,20 +2124,15 @@ public class JavaUtil {
         V merge(
             /*@Independent(hc=true)[H] @NotModified[O]*/ K key,
             /*@Independent(hc=true)[H] @NotModified[O]*/ V value,
-            /*@IgnoreModifications[T] @Independent(hc=true)[H] @NotModified[O]*/ BiFunction<
-                ? super V,
-                ? super V,
-                ? extends V> remappingFunction) { return null; }
+            /*@IgnoreModifications[T] @Independent(hc=true)[H]*/ BiFunction<? super V, ? super V, ? extends V>
+                remappingFunction) { return null; }
 
         //override from java.util.Map
         //@NotModified[H]
-
-        void forEach(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ BiConsumer<? super K, ? super V> action) { }
+        void forEach(/*@IgnoreModifications[T] @Independent[M]*/ BiConsumer<? super K, ? super V> action) { }
 
         //override from java.util.Map
-        void replaceAll(
-            /*@IgnoreModifications[T] @NotModified[O]*/ BiFunction<? super K, ? super V, ? extends V> function) { }
+        void replaceAll(/*@IgnoreModifications[T]*/ BiFunction<? super K, ? super V, ? extends V> function) { }
 
         //override from java.lang.Object, java.util.AbstractMap
         //@Immutable(hc=true)[T] @Independent(hc=true)[T]
@@ -2226,8 +2202,161 @@ public class JavaUtil {
         @Independent(hc = true)
         E next() { return null; }
         void remove() { }
-        void forEachRemaining(
-            /*@IgnoreModifications[T] @NotModified[O]*/ @Independent(hc = true) @NotNull Consumer<? super E> action) { }
+        void forEachRemaining(/*@IgnoreModifications[T]*/ @Independent(hc = true) @NotNull Consumer<? super E> action) { }
+    }
+
+    //public class LinkedList extends AbstractSequentialList<E> implements List<E>, Deque<E>, Cloneable, Serializable
+    class LinkedList$<E> {
+        LinkedList$() { }
+        LinkedList$(Collection<? extends E> c) { }
+        //override from java.util.Deque, java.util.List, java.util.SequencedCollection
+        //@Independent(hc=true)[H] @NotModified[H]
+        E getFirst() { return null; }
+
+        //override from java.util.Deque, java.util.List, java.util.SequencedCollection
+        //@Independent(hc=true)[H] @NotModified[H]
+        E getLast() { return null; }
+
+        //override from java.util.Deque, java.util.List, java.util.SequencedCollection
+        //@Independent(hc=true)[H]
+        E removeFirst() { return null; }
+
+        //override from java.util.Deque, java.util.List, java.util.SequencedCollection
+        //@Independent(hc=true)[H]
+        E removeLast() { return null; }
+
+        //override from java.util.Deque, java.util.List, java.util.SequencedCollection
+        void addFirst(/*@Independent(hc=true)[H] @NotModified[T]*/ E e) { }
+
+        //override from java.util.Deque, java.util.List, java.util.SequencedCollection
+        void addLast(/*@Independent(hc=true)[H] @NotModified[T]*/ E e) { }
+
+        //override from java.util.AbstractCollection, java.util.Collection, java.util.Deque, java.util.List
+        //@NotModified[H]
+        boolean contains(/*@Immutable(hc=true)[T] @Independent[M] @NotModified[T]*/ Object o) { return false; }
+
+        //override from java.util.AbstractCollection, java.util.Collection, java.util.Deque, java.util.List
+        //@NotModified[H]
+        int size() { return 0; }
+
+        //override from java.util.AbstractCollection, java.util.AbstractList, java.util.Collection, java.util.Deque, java.util.List, java.util.Queue
+        boolean add(/*@Independent(hc=true)[H] @NotModified[T]*/ E e) { return false; }
+
+        //override from java.util.AbstractCollection, java.util.Collection, java.util.Deque, java.util.List
+        boolean remove(/*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[T]*/ Object o) { return false; }
+
+        //override from java.util.AbstractCollection, java.util.Collection, java.util.Deque, java.util.List
+        boolean addAll(/*@Independent(hc=true)[H] @NotModified[H]*/ Collection<? extends E> c) { return false; }
+
+        //override from java.util.AbstractList, java.util.AbstractSequentialList, java.util.List
+        boolean addAll(int index, /*@NotModified[H]*/ Collection<? extends E> c) { return false; }
+
+        //override from java.util.AbstractCollection, java.util.AbstractList, java.util.Collection, java.util.List
+        void clear() { }
+
+        //override from java.util.AbstractList, java.util.AbstractSequentialList, java.util.List
+        //@Independent(hc=true)[H] @NotModified[H] @GetSet("_synthetic_list")[H]
+        E get(int index) { return null; }
+
+        //override from java.util.AbstractList, java.util.AbstractSequentialList, java.util.List
+        //@Independent(hc=true)[H] @GetSet("_synthetic_list")[H]
+        E set(int index, /*@Independent(hc=true)[H] @NotModified[T]*/ E element) { return null; }
+
+        //override from java.util.AbstractList, java.util.AbstractSequentialList, java.util.List
+        void add(int index, /*@Independent(hc=true)[H] @NotModified[T]*/ E element) { }
+
+        //override from java.util.AbstractList, java.util.AbstractSequentialList, java.util.List
+        //@Independent(hc=true)[H]
+        E remove(int index) { return null; }
+
+        //override from java.util.AbstractList, java.util.List
+        int indexOf(/*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[T]*/ Object o) { return 0; }
+
+        //override from java.util.AbstractList, java.util.List
+        int lastIndexOf(/*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[T]*/ Object o) { return 0; }
+
+        //override from java.util.Deque, java.util.Queue
+        //@Independent(hc=true)[H]
+        E peek() { return null; }
+
+        //override from java.util.Deque, java.util.Queue
+        //@Independent(hc=true)[H]
+        E element() { return null; }
+
+        //override from java.util.Deque, java.util.Queue
+        //@Independent(hc=true)[H]
+        E poll() { return null; }
+
+        //override from java.util.Deque, java.util.Queue
+        //@Independent(hc=true)[H]
+        E remove() { return null; }
+
+        //override from java.util.Deque, java.util.Queue
+        boolean offer(/*@Independent(hc=true)[H] @NotModified[T]*/ E e) { return false; }
+
+        //override from java.util.Deque
+        boolean offerFirst(/*@Independent(hc=true)[H] @NotModified[T]*/ E e) { return false; }
+
+        //override from java.util.Deque
+        boolean offerLast(/*@Independent(hc=true)[H] @NotModified[T]*/ E e) { return false; }
+
+        //override from java.util.Deque
+        //@Independent(hc=true)[H]
+        E peekFirst() { return null; }
+
+        //override from java.util.Deque
+        //@Independent(hc=true)[H]
+        E peekLast() { return null; }
+
+        //override from java.util.Deque
+        //@Independent(hc=true)[H]
+        E pollFirst() { return null; }
+
+        //override from java.util.Deque
+        //@Independent(hc=true)[H]
+        E pollLast() { return null; }
+
+        //override from java.util.Deque
+        void push(/*@Independent(hc=true)[H] @NotModified[T]*/ E e) { }
+
+        //override from java.util.Deque
+        //@Independent(hc=true)[H]
+        E pop() { return null; }
+
+        //override from java.util.Deque
+        boolean removeFirstOccurrence(/*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[T]*/ Object o) {
+            return false;
+        }
+
+        //override from java.util.Deque
+        boolean removeLastOccurrence(/*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[T]*/ Object o) {
+            return false;
+        }
+
+        //override from java.util.AbstractList, java.util.AbstractSequentialList, java.util.List
+        ListIterator<E> listIterator(int index) { return null; }
+
+        //override from java.util.Deque
+        Iterator<E> descendingIterator() { return null; }
+
+        //override from java.lang.Object
+        //@Immutable(hc=true)[T] @Independent(hc=true)[T]
+        protected Object clone() { return null; }
+
+        //override from java.util.AbstractCollection, java.util.Collection, java.util.List
+        //@NotModified[H]
+        Object [] toArray() { return null; }
+
+        //override from java.util.AbstractCollection, java.util.Collection, java.util.List
+        //@NotModified[H]
+        <T> T [] toArray(/*@Independent[M] @NotModified[H]*/ T [] a) { return null; }
+
+        //override from java.lang.Iterable, java.util.Collection, java.util.List
+        //@Independent(hc=true)[H] @NotModified[H] @NotNull[H]
+        Spliterator<E> spliterator() { return null; }
+
+        //override from java.util.Deque, java.util.List, java.util.SequencedCollection
+        LinkedList<E> reversed() { return null; }
     }
 
     //public interface List implements SequencedCollection<E>
@@ -2283,7 +2412,7 @@ public class JavaUtil {
 
         //override from java.util.Collection
         boolean retainAll(/*@Independent(hc=true)[H] @NotModified[O]*/ Collection<?> collection) { return false; }
-        void replaceAll(/*@IgnoreModifications[T] @NotModified[O]*/ UnaryOperator<E> operator) { }
+        void replaceAll(/*@IgnoreModifications[T]*/ UnaryOperator<E> operator) { }
         //frequency 4
         void sort(/*@Immutable(hc=true)[T] @NotModified[O]*/ @Independent(hc = true) Comparator<? super E> c) { }
 
@@ -2300,10 +2429,11 @@ public class JavaUtil {
         public int hashCode() { return 0; }
 
         //frequency 5
-        @Independent(hc = true) @NotModified
+        @Independent(hc = true) @NotModified @GetSet("_synthetic_list")
         E get(int i) { return null; }
 
         //@Independent(hc=true)[T]
+        @GetSet("_synthetic_list")
         E set(int i, /*@Independent(hc=true)[T] @NotModified[O]*/ E e) { return null; }
         void add(int i, /*@Independent(hc=true)[T] @NotModified[O]*/ E e) { }
         //@Independent(hc=true)[T]
@@ -2753,13 +2883,8 @@ public class JavaUtil {
 
         //frequency 1
         @NotModified
-
-        void forEach(
-            /*@IgnoreModifications[T] @NotModified[O]*/ @Independent(hc = true) BiConsumer<? super K, ? super V> action) { }
-
-        void replaceAll(
-            /*@IgnoreModifications[T] @NotModified[O]*/ BiFunction<? super K, ? super V, ? extends V> function) { }
-
+        void forEach(/*@IgnoreModifications[T]*/ @Independent(hc = true) BiConsumer<? super K, ? super V> action) { }
+        void replaceAll(/*@IgnoreModifications[T]*/ BiFunction<? super K, ? super V, ? extends V> function) { }
         //frequency 1
         //@Independent(hc=true)[T]
 
@@ -2784,21 +2909,17 @@ public class JavaUtil {
         //@Independent(hc=true)[T]
         V computeIfAbsent(
             /*@Independent(hc=true)[T] @NotModified[O]*/ K key,
-            /*@IgnoreModifications[T] @NotModified[O]*/ Function<? super K, ? extends V> mappingFunction) { return null; }
+            /*@IgnoreModifications[T]*/ Function<? super K, ? extends V> mappingFunction) { return null; }
 
         //@Independent(hc=true)[T]
         V computeIfPresent(
             /*@Independent(hc=true)[T] @NotModified[O]*/ K key,
-            /*@IgnoreModifications[T] @NotModified[O]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) {
-            return null;
-        }
+            /*@IgnoreModifications[T]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) { return null; }
 
         //@Independent(hc=true)[T]
         V compute(
             /*@Independent(hc=true)[T] @NotModified[O]*/ K key,
-            /*@IgnoreModifications[T] @NotModified[O]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) {
-            return null;
-        }
+            /*@IgnoreModifications[T]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) { return null; }
 
         //frequency 2
         //@Independent(hc=true)[T]
@@ -3115,14 +3236,14 @@ public class JavaUtil {
 
         static <T> T requireNonNullElseGet(
             /*@Independent[M] @NotModified[O]*/ T obj,
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Supplier<? extends T> supplier) { return null; }
+            /*@IgnoreModifications[T] @Independent[M]*/ Supplier<? extends T> supplier) { return null; }
 
         //@Independent[O] @NotModified[T]
         @Identity @NotNull
 
         static <T> T requireNonNull(
             /*@Independent[M] @NotModified[O]*/ T obj,
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Supplier<String> messageSupplier) { return null; }
+            /*@IgnoreModifications[T] @Independent[M]*/ Supplier<String> messageSupplier) { return null; }
 
         //@NotModified[T]
         static int checkIndex(int index, int length) { return 0; }
@@ -3175,27 +3296,23 @@ public class JavaUtil {
 
         //frequency 99
         //@NotModified[T]
-        void ifPresent(/*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Consumer<? super T> action) { }
+        void ifPresent(/*@IgnoreModifications[T] @Independent[M]*/ Consumer<? super T> action) { }
 
         //frequency 39
         //@NotModified[T]
 
         void ifPresentOrElse(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Consumer<? super T> action,
-            /*@Independent[M] @NotModified[O]*/ Runnable emptyAction) { }
+            /*@IgnoreModifications[T] @Independent[M]*/ Consumer<? super T> action,
+            /*@IgnoreModifications[T] @Independent[M]*/ Runnable emptyAction) { }
 
         //frequency 20
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
-
-        Optional<T> filter(/*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Predicate<? super T> predicate) {
-            return null;
-        }
+        Optional<T> filter(/*@IgnoreModifications[T] @Independent[M]*/ Predicate<? super T> predicate) { return null; }
 
         //frequency 211
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
 
-        <U> Optional<U> map(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Function<? super T, ? extends U> mapper) {
+        <U> Optional<U> map(/*@IgnoreModifications[T] @Independent[M]*/ Function<? super T, ? extends U> mapper) {
             return null;
         }
 
@@ -3203,14 +3320,14 @@ public class JavaUtil {
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
 
         <U> Optional<U> flatMap(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Function<
-                ? super T,
-                ? extends Optional<? extends U>> mapper) { return null; }
+            /*@IgnoreModifications[T] @Independent[M]*/ Function<? super T, ? extends Optional<? extends U>> mapper) {
+            return null;
+        }
 
         //@Immutable(hc=true)[T] @Independent(hc=true)[O] @NotModified[T]
-        Optional<T> or(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Supplier<? extends Optional<? extends T>>
-                supplier) { return null; }
+        Optional<T> or(/*@IgnoreModifications[T] @Independent[M]*/ Supplier<? extends Optional<? extends T>> supplier) {
+            return null;
+        }
 
         //frequency 3
         //@Independent(hc=true)[O] @NotModified[T]
@@ -3222,10 +3339,7 @@ public class JavaUtil {
 
         //frequency 16
         //@Independent(hc=true)[O] @NotModified[T]
-
-        T orElseGet(/*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Supplier<? extends T> supplier) {
-            return null;
-        }
+        T orElseGet(/*@IgnoreModifications[T] @Independent[M]*/ Supplier<? extends T> supplier) { return null; }
 
         //frequency 54
         //@Independent(hc=true)[O] @NotModified[T]
@@ -3235,9 +3349,7 @@ public class JavaUtil {
         //@Independent(hc=true)[O] @NotModified[T]
 
         <X extends Throwable> T orElseThrow(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Supplier<? extends X> exceptionSupplier) {
-            return null;
-        }
+            /*@IgnoreModifications[T] @Independent[M]*/ Supplier<? extends X> exceptionSupplier) { return null; }
 
         //override from java.lang.Object
         //@NotModified[T]
@@ -3271,12 +3383,12 @@ public class JavaUtil {
         boolean isEmpty() { return false; }
 
         //@NotModified[T]
-        void ifPresent(/*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ DoubleConsumer action) { }
+        void ifPresent(/*@IgnoreModifications[T] @Independent[M]*/ DoubleConsumer action) { }
 
         //@NotModified[T]
         void ifPresentOrElse(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ DoubleConsumer action,
-            /*@Independent[M] @NotModified[O]*/ Runnable emptyAction) { }
+            /*@IgnoreModifications[T] @Independent[M]*/ DoubleConsumer action,
+            /*@IgnoreModifications[T] @Independent[M]*/ Runnable emptyAction) { }
 
         //@Independent[O] @NotModified[T]
         DoubleStream stream() { return null; }
@@ -3286,18 +3398,14 @@ public class JavaUtil {
         double orElse(double other) { return 0.0; }
 
         //@NotModified[T]
-        double orElseGet(/*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ DoubleSupplier supplier) {
-            return 0.0;
-        }
+        double orElseGet(/*@IgnoreModifications[T] @Independent[M]*/ DoubleSupplier supplier) { return 0.0; }
 
         //@NotModified[T]
         double orElseThrow() { return 0.0; }
 
         //@NotModified[T]
         <X extends Throwable> double orElseThrow(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Supplier<? extends X> exceptionSupplier) {
-            return 0.0;
-        }
+            /*@IgnoreModifications[T] @Independent[M]*/ Supplier<? extends X> exceptionSupplier) { return 0.0; }
 
         //override from java.lang.Object
         //@NotModified[T]
@@ -3331,12 +3439,12 @@ public class JavaUtil {
         boolean isEmpty() { return false; }
 
         //@NotModified[T]
-        void ifPresent(/*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ IntConsumer action) { }
+        void ifPresent(/*@IgnoreModifications[T] @Independent[M]*/ IntConsumer action) { }
 
         //@NotModified[T]
         void ifPresentOrElse(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ IntConsumer action,
-            /*@Independent[M] @NotModified[O]*/ Runnable emptyAction) { }
+            /*@IgnoreModifications[T] @Independent[M]*/ IntConsumer action,
+            /*@IgnoreModifications[T] @Independent[M]*/ Runnable emptyAction) { }
 
         //@Independent[O] @NotModified[T]
         IntStream stream() { return null; }
@@ -3346,16 +3454,14 @@ public class JavaUtil {
         int orElse(int other) { return 0; }
 
         //@NotModified[T]
-        int orElseGet(/*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ IntSupplier supplier) { return 0; }
+        int orElseGet(/*@IgnoreModifications[T] @Independent[M]*/ IntSupplier supplier) { return 0; }
 
         //@NotModified[T]
         int orElseThrow() { return 0; }
 
         //@NotModified[T]
         <X extends Throwable> int orElseThrow(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ Supplier<? extends X> exceptionSupplier) {
-            return 0;
-        }
+            /*@IgnoreModifications[T] @Independent[M]*/ Supplier<? extends X> exceptionSupplier) { return 0; }
 
         //override from java.lang.Object
         //@NotModified[T]
@@ -3375,11 +3481,11 @@ public class JavaUtil {
         //frequency 3
         Random$() { }
         Random$(long seed) { }
-        static Random from(/*@NotModified[O]*/@NotModified RandomGenerator generator) { return null; }
+        static Random from(@NotModified RandomGenerator generator) { return null; }
         void setSeed(long seed) { }
         //override from java.util.random.RandomGenerator
         //override has frequency 1
-        void nextBytes(/*@NotModified[O]*/ byte [] bytes) { }
+        void nextBytes(byte [] bytes) { }
 
         //override from java.util.random.RandomGenerator
         int nextInt() { return 0; }
@@ -3774,25 +3880,21 @@ public class JavaUtil {
 
         V computeIfAbsent(
             /*@Independent(hc=true)[H] @NotModified[O]*/ K key,
-            /*@IgnoreModifications[T] @NotModified[O]*/ Function<? super K, ? extends V> mappingFunction) { return null; }
+            /*@IgnoreModifications[T]*/ Function<? super K, ? extends V> mappingFunction) { return null; }
 
         //override from java.util.Map
         //@Independent(hc=true)[H]
 
         V computeIfPresent(
             /*@Independent(hc=true)[H] @NotModified[O]*/ K key,
-            /*@IgnoreModifications[T] @NotModified[O]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) {
-            return null;
-        }
+            /*@IgnoreModifications[T]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) { return null; }
 
         //override from java.util.Map
         //@Independent(hc=true)[H]
 
         V compute(
             /*@Independent(hc=true)[H] @NotModified[O]*/ K key,
-            /*@IgnoreModifications[T] @NotModified[O]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) {
-            return null;
-        }
+            /*@IgnoreModifications[T]*/ BiFunction<? super K, ? super V, ? extends V> remappingFunction) { return null; }
 
         //override from java.util.Map
         //@Independent(hc=true)[H]
@@ -3800,10 +3902,8 @@ public class JavaUtil {
         V merge(
             /*@Independent(hc=true)[H] @NotModified[O]*/ K key,
             /*@Independent(hc=true)[H] @NotModified[O]*/ V value,
-            /*@IgnoreModifications[T] @Independent(hc=true)[H] @NotModified[O]*/ BiFunction<
-                ? super V,
-                ? super V,
-                ? extends V> remappingFunction) { return null; }
+            /*@IgnoreModifications[T] @Independent(hc=true)[H]*/ BiFunction<? super V, ? super V, ? extends V>
+                remappingFunction) { return null; }
 
         //override from java.util.AbstractMap, java.util.Map
         //@Independent(hc=true)[H]
@@ -3933,13 +4033,10 @@ public class JavaUtil {
 
         //override from java.util.Map
         //@NotModified[H]
-
-        void forEach(
-            /*@IgnoreModifications[T] @Independent[M] @NotModified[O]*/ BiConsumer<? super K, ? super V> action) { }
+        void forEach(/*@IgnoreModifications[T] @Independent[M]*/ BiConsumer<? super K, ? super V> action) { }
 
         //override from java.util.Map
-        void replaceAll(
-            /*@IgnoreModifications[T] @NotModified[O]*/ BiFunction<? super K, ? super V, ? extends V> function) { }
+        void replaceAll(/*@IgnoreModifications[T]*/ BiFunction<? super K, ? super V, ? extends V> function) { }
     }
 
     //public final class UUID implements Serializable, Comparable<UUID>
@@ -4058,11 +4155,11 @@ public class JavaUtil {
         <T> T [] toArray(/*@Independent[M] @NotModified[H]*/ T [] a) { return null; }
 
         //override from java.util.AbstractList, java.util.List
-        //@Independent(hc=true)[H] @NotModified[H]
+        //@Independent(hc=true)[H] @NotModified[H] @GetSet("_synthetic_list")[H]
         E get(int index) { return null; }
 
         //override from java.util.AbstractList, java.util.List
-        //@Independent(hc=true)[H]
+        //@Independent(hc=true)[H] @GetSet("_synthetic_list")[H]
         E set(int index, /*@Independent(hc=true)[H] @NotModified[T]*/ E element) { return null; }
 
         //override from java.util.AbstractCollection, java.util.AbstractList, java.util.Collection, java.util.List
@@ -4095,8 +4192,7 @@ public class JavaUtil {
         boolean retainAll(/*@Independent(hc=true)[H] @NotModified[H]*/ Collection<?> c) { return false; }
 
         //override from java.util.Collection
-        boolean removeIf(
-            /*@IgnoreModifications[T] @Independent(hc=true)[H] @NotModified[H]*/ Predicate<? super E> filter) {
+        boolean removeIf(/*@IgnoreModifications[T] @Independent(hc=true)[H]*/ Predicate<? super E> filter) {
             return false;
         }
 
@@ -4131,10 +4227,10 @@ public class JavaUtil {
 
         //override from java.lang.Iterable
         //@NotModified[H]
-        void forEach(/*@IgnoreModifications[T] @Independent[M] @NotModified[H] @NotNull[H]*/ Consumer<? super E> action) { }
+        void forEach(/*@IgnoreModifications[T] @Independent[M] @NotNull[H]*/ Consumer<? super E> action) { }
 
         //override from java.util.List
-        void replaceAll(/*@IgnoreModifications[T] @NotModified[H]*/ UnaryOperator<E> operator) { }
+        void replaceAll(/*@IgnoreModifications[T]*/ UnaryOperator<E> operator) { }
 
         //override from java.util.List
         void sort(/*@Immutable(hc=true)[T] @Independent(hc=true)[H] @NotModified[T]*/ Comparator<? super E> c) { }

@@ -85,7 +85,7 @@ public class TestParseAnalyzeWrite {
 
         List<Class<?>> extraClasses = new ArrayList<>();
         Collections.addAll(extraClasses,
-                TreeMap.class, SortedMap.class, NavigableMap.class, SequencedMap.class,
+                TreeMap.class, SortedMap.class, NavigableMap.class, SequencedMap.class, LinkedList.class,
                 ProcessHandle.class,
                 Readable.class, Reader.class, BufferedReader.class, RandomAccessFile.class,
                 IntFunction.class, BinaryOperator.class, BiConsumer.class, Predicate.class,

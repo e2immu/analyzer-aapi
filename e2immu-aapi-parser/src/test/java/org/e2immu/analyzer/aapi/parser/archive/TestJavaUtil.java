@@ -12,10 +12,10 @@ import org.e2immu.language.inspection.integration.ToolChain;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
-import java.util.random.RandomGenerator;
 import java.util.stream.Collectors;
 
 import static org.e2immu.analyzer.modification.prepwork.hcs.HiddenContentSelector.*;
+import static org.e2immu.analyzer.modification.prepwork.hcs.HiddenContentSelector.FieldValue;
 import static org.e2immu.analyzer.modification.prepwork.hct.HiddenContentTypes.HIDDEN_CONTENT_TYPES;
 import static org.e2immu.language.cst.impl.analysis.PropertyImpl.*;
 import static org.e2immu.language.cst.impl.analysis.ValueImpl.BoolImpl.FALSE;
@@ -259,9 +259,66 @@ public class TestJavaUtil extends CommonTest {
         assertTrue(get.overrides().isEmpty());
         assertSame(TRUE, get.analysis().getOrDefault(NON_MODIFYING_METHOD, FALSE));
 
-        // hard-coded at the moment
+        FieldValue getField = get.getSetField();
+        assertEquals("java.util.List._synthetic_list", getField.field().fullyQualifiedName());
+        assertFalse(getField.setter());
+    }
+
+
+    @Test
+    public void testListSet() {
+        TypeInfo typeInfo = compiledTypesManager().get(List.class);
+        MethodInfo set = typeInfo.findUniqueMethod("set", 2);
+        assertTrue(set.overrides().isEmpty());
+        assertSame(FALSE, set.analysis().getOrDefault(NON_MODIFYING_METHOD, FALSE));
+
+        FieldValue setField = set.getSetField();
+        assertEquals("java.util.List._synthetic_list", setField.field().fullyQualifiedName());
+        assertEquals(0, setField.parameterIndexOfIndex());
+        assertEquals(1, setField.parameterIndexOfValue());
+        assertTrue(setField.setter());
+    }
+
+
+    @Test
+    public void testArrayListGet() {
+        TypeInfo typeInfo = compiledTypesManager().get(ArrayList.class);
+        MethodInfo get = typeInfo.findUniqueMethod("get", 1);
+        assertFalse(get.overrides().isEmpty());
+        assertSame(TRUE, get.analysis().getOrDefault(NON_MODIFYING_METHOD, FALSE));
+
+        // inherited from AAPI
+        FieldValue getField = get.getSetField();
+        assertEquals("java.util.List._synthetic_list", getField.field().fullyQualifiedName());
+        assertFalse(getField.setter());
+    }
+
+    @Test
+    public void testArrayListSet() {
+        TypeInfo typeInfo = compiledTypesManager().get(ArrayList.class);
+        MethodInfo set = typeInfo.findUniqueMethod("set", 2);
+        assertFalse(set.overrides().isEmpty());
+        assertSame(FALSE, set.analysis().getOrDefault(NON_MODIFYING_METHOD, FALSE));
+
+        // inherited from AAPI
+        FieldValue setField = set.getSetField();
+        assertEquals("java.util.List._synthetic_list", setField.field().fullyQualifiedName());
+        assertEquals(0, setField.parameterIndexOfIndex());
+        assertEquals(1, setField.parameterIndexOfValue());
+        assertTrue(setField.setter());
+    }
+
+    @Test
+    public void testLinkedListGet() {
+        TypeInfo typeInfo = compiledTypesManager().get(LinkedList.class);
+        MethodInfo get = typeInfo.findUniqueMethod("get", 1);
+        assertFalse(get.overrides().isEmpty());
+        assertSame(TRUE, get.analysis().getOrDefault(NON_MODIFYING_METHOD, FALSE));
+
+        // inherited from AAPI
         assertEquals("java.util.List._synthetic_list", get.getSetField().field().fullyQualifiedName());
     }
+
 
     @Test
     public void testAbstractListGet() {
@@ -270,6 +327,8 @@ public class TestJavaUtil extends CommonTest {
         assertEquals("java.util.List.get(int)",
                 get.overrides().stream().map(Objects::toString).sorted().collect(Collectors.joining(",")));
         assertFalse(get.isModifying());
+        // inherited from AAPI
+        assertEquals("java.util.List._synthetic_list", get.getSetField().field().fullyQualifiedName());
     }
 
     // Vector implements List, but also extends AbstractList, AbstractCollection

@@ -170,8 +170,8 @@
   {"name": "MremoveUpdate(9)", "data":{"hc":{"0":"Tjavax.swing.event.DocumentEvent"}}, "sub":
    {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
  {"name": "SKeyBinding(7)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
-  {"name": "Fkey(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1}},
-  {"name": "FactionName(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
+  {"name": "Fkey(0)", "data":{"annotatedApi":1}},
+  {"name": "FactionName(1)", "data":{"annotatedApi":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
   {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjavax.swing.KeyStroke"},"independentMethod":2,"notNullMethod":1}, "subs":[
    {"name": "Pkey(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}},
    {"name": "PactionName(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]}]},
@@ -212,8 +212,8 @@
    {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
   {"name": "MmouseExited(11)", "data":{"hc":{"0":"Tjava.awt.event.MouseEvent"}}, "sub":
    {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
- {"name": "FFOCUS_ACCELERATOR_KEY(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
- {"name": "FDEFAULT_KEYMAP(32)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
+ {"name": "FFOCUS_ACCELERATOR_KEY(0)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
+ {"name": "FDEFAULT_KEYMAP(32)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
  {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}},
  {"name": "MgetUI(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjavax.swing.plaf.TextUI"},"hcsMethod":{"0":[[-1]]}}},
  {"name": "MsetUI(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjavax.swing.plaf.TextUI"},"independentMethod":2,"notNullMethod":1}, "sub":

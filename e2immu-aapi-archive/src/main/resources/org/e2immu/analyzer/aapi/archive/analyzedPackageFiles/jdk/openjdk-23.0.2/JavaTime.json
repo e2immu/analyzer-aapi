@@ -1,12 +1,12 @@
 [
 {"name": "Tjava.time.DayOfWeek", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
- {"name": "FMONDAY(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
- {"name": "FTUESDAY(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
- {"name": "FWEDNESDAY(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
- {"name": "FTHURSDAY(3)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
- {"name": "FFRIDAY(4)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
- {"name": "FSATURDAY(5)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
- {"name": "FSUNDAY(6)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
+ {"name": "FMONDAY(0)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+ {"name": "FTUESDAY(1)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+ {"name": "FWEDNESDAY(2)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+ {"name": "FTHURSDAY(3)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+ {"name": "FFRIDAY(4)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+ {"name": "FSATURDAY(5)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+ {"name": "FSUNDAY(6)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "Mvalues(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":1}},
  {"name": "MvalueOf(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "sub":
@@ -41,7 +41,7 @@
   {"name": "C<init>(0)", "data":{"hc":{}}}]},
  {"name": "SLazy(1)", "data":{"hc":{"E":true}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{}}}]},
- {"name": "FZERO(0)", "data":{"annotatedApi":1,"containerField":1,"defaultsAnalyzer":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
+ {"name": "FZERO(0)", "data":{"annotatedApi":1,"containerField":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "MofDays(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1}, "sub":
   {"name": "Pdays(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
@@ -167,9 +167,9 @@
   {"name": "Pin(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
 
 {"name": "Tjava.time.Instant", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
- {"name": "FEPOCH(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1}},
- {"name": "FMIN(3)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1}},
- {"name": "FMAX(4)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1}},
+ {"name": "FEPOCH(0)", "data":{"annotatedApi":1,"finalField":1}},
+ {"name": "FMIN(3)", "data":{"annotatedApi":1,"finalField":1}},
+ {"name": "FMAX(4)", "data":{"annotatedApi":1,"finalField":1}},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "Mnow(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}},
  {"name": "Mnow(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.time.Clock"}}, "sub":
@@ -265,9 +265,9 @@
   {"name": "Pin(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
 
 {"name": "Tjava.time.LocalDate", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
- {"name": "FMIN(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1}},
- {"name": "FMAX(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1}},
- {"name": "FEPOCH(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1}},
+ {"name": "FMIN(0)", "data":{"annotatedApi":1,"finalField":1}},
+ {"name": "FMAX(1)", "data":{"annotatedApi":1,"finalField":1}},
+ {"name": "FEPOCH(2)", "data":{"annotatedApi":1,"finalField":1}},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "Mnow(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}},
  {"name": "Mnow(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.time.ZoneId"}}, "sub":
@@ -425,8 +425,8 @@
   {"name": "Pin(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
 
 {"name": "Tjava.time.LocalDateTime", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
- {"name": "FMIN(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1}},
- {"name": "FMAX(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1}},
+ {"name": "FMIN(0)", "data":{"annotatedApi":1,"finalField":1}},
+ {"name": "FMAX(1)", "data":{"annotatedApi":1,"finalField":1}},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "Mnow(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}},
  {"name": "Mnow(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.time.ZoneId"}}, "sub":
@@ -616,7 +616,7 @@
   {"name": "Pin(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
 
 {"name": "Tjava.time.ZoneId", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
- {"name": "FSHORT_IDS(0)", "data":{"annotatedApi":1,"containerField":1,"defaultsAnalyzer":1,"finalField":1}},
+ {"name": "FSHORT_IDS(0)", "data":{"annotatedApi":1,"containerField":1,"finalField":1}},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "MsystemDefault(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.time.ZoneId"},"hcsMethod":{"0":[[-1]]}}},
  {"name": "MgetAvailableZoneIds(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.Set"},"hcsMethod":{"0":[[-1]]},"independentMethod":2}},

@@ -1523,10 +1523,10 @@
 
 {"name": "Tjava.util.concurrent.Future", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"PV:0","E":true,"M":1}}, "subs":[
  {"name": "SState(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
-  {"name": "FRUNNING(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-  {"name": "FSUCCESS(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-  {"name": "FFAILED(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
-  {"name": "FCANCELLED(3)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"finalField":1,"notNullField":1}},
+  {"name": "FRUNNING(0)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+  {"name": "FSUCCESS(1)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+  {"name": "FFAILED(2)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
+  {"name": "FCANCELLED(3)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
   {"name": "C<init>(0)", "data":{"hc":{}}},
   {"name": "Mvalues(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":1}},
   {"name": "MvalueOf(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "sub":
