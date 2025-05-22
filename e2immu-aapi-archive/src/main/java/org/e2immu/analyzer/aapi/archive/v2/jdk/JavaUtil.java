@@ -7,13 +7,8 @@ import java.util.*;
 import java.util.function.*;
 import java.util.random.RandomGenerator;
 import java.util.stream.*;
-import org.e2immu.annotation.Container;
-import org.e2immu.annotation.Identity;
-import org.e2immu.annotation.Immutable;
-import org.e2immu.annotation.ImmutableContainer;
-import org.e2immu.annotation.Independent;
-import org.e2immu.annotation.NotModified;
-import org.e2immu.annotation.NotNull;
+
+import org.e2immu.annotation.*;
 import org.e2immu.annotation.method.GetSet;
 import org.e2immu.annotation.type.UtilityClass;
 public class JavaUtil {
@@ -2478,95 +2473,101 @@ public class JavaUtil {
         List<E> reversed() { return null; }
 
         //frequency 10
-        @NotModified
+        @ImmutableContainer @NotNull(content = true) @NotModified
         static <E> List<E> of() { return null; }
 
         //frequency 25
-        @NotModified
-        static <E> List<E> of(/*@Independent(hc=true)[T] @NotModified[O]*/ E e1) { return null; }
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
+        static <E> List<E> of(/*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e1) { return null; }
 
         //frequency 4
-        @NotModified
-
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <E> List<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e2) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <E> List<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e3) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <E> List<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e4) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <E> List<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e5) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <E> List<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e6) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e5,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e6) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <E> List<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e6,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e7) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e5,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e6,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e7) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <E> List<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e6,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e7,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e8) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e5,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e6,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e7,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e8) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <E> List<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e6,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e7,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e8,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e9) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e5,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e6,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e7,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e8,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e9) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <E> List<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e6,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e7,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e8,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e9,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e10) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e5,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e6,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e7,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e8,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e9,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @NotNull E e10) { return null; }
 
         //frequency 1
-        @NotModified
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <E> List<E> of(/*@NotModified[O]*/ E ... elements) { return null; }
 
         //frequency 6
-        @NotModified
-
+        @ImmutableContainer(hc = true) @NotNull @NotModified
         static <E> List<E> copyOf(/*@NotModified[O]*/ @Independent(hc = true) Collection<? extends E> coll) {
             return null;
         }
@@ -2933,20 +2934,24 @@ public class JavaUtil {
                 ? extends V> remappingFunction) { return null; }
 
         //frequency 2
+        @ImmutableContainer @NotNull @NotModified
         static <K, V> Map<K, V> of() { return null; }
 
         //frequency 21
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <K, V> Map<K, V> of(
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k1,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v1) { return null; }
 
         //frequency 6
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <K, V> Map<K, V> of(
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k1,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v1,
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k2,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v2) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <K, V> Map<K, V> of(
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k1,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v1,
@@ -2955,6 +2960,7 @@ public class JavaUtil {
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k3,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v3) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <K, V> Map<K, V> of(
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k1,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v1,
@@ -2965,6 +2971,7 @@ public class JavaUtil {
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k4,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v4) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <K, V> Map<K, V> of(
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k1,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v1,
@@ -2977,6 +2984,7 @@ public class JavaUtil {
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k5,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v5) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <K, V> Map<K, V> of(
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k1,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v1,
@@ -2991,6 +2999,7 @@ public class JavaUtil {
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k6,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v6) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <K, V> Map<K, V> of(
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k1,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v1,
@@ -3007,6 +3016,7 @@ public class JavaUtil {
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k7,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v7) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <K, V> Map<K, V> of(
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k1,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v1,
@@ -3025,6 +3035,7 @@ public class JavaUtil {
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k8,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v8) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <K, V> Map<K, V> of(
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k1,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v1,
@@ -3045,6 +3056,7 @@ public class JavaUtil {
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k9,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v9) { return null; }
 
+        @ImmutableContainer(hc = true) @NotNull(content = true) @NotModified
         static <K, V> Map<K, V> of(
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k1,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v1,
@@ -3071,13 +3083,13 @@ public class JavaUtil {
             return null;
         }
 
+        @NotNull @NotModified @Independent
         static <K, V> Map.Entry<K, V> entry(
             /*@Independent(hc=true)[T] @NotModified[O]*/ K k,
             /*@Independent(hc=true)[T] @NotModified[O]*/ V v) { return null; }
 
         //@Independent(hc=true)[T]
-        @Immutable(hc = true) @NotNull
-
+        @Immutable(hc = true) @NotNull @NotModified
         static <K, V> Map<K, V> copyOf(
             /*@NotModified[O]*/ @Independent(hc = true) @NotNull Map<? extends K, ? extends V> map) { return null; }
     }
@@ -3670,93 +3682,100 @@ public class JavaUtil {
 
         //frequency 1
         @NotModified
+        @ImmutableContainer @NotNull
         static <E> Set<E> of() { return null; }
 
         //frequency 55
-        @NotModified
+        @NotModified @ImmutableContainer(hc = true) @NotNull(content = true)
         static <E> Set<E> of(/*@Independent(hc=true)[T] @NotModified[O]*/ E e1) { return null; }
 
         //frequency 14
-        @NotModified
-
+        @NotModified @ImmutableContainer(hc = true) @NotNull(content = true)
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e2) { return null; }
 
         //frequency 1
-        @NotModified
-
+        @NotModified @ImmutableContainer(hc = true) @NotNull(content = true)
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e3) { return null; }
 
+        @NotModified @ImmutableContainer(hc = true) @NotNull(content = true)
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e4) { return null; }
 
+        @NotModified @ImmutableContainer(hc = true) @NotNull(content = true)
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e5) { return null; }
 
+        @NotModified @ImmutableContainer(hc = true) @NotNull(content = true)
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e6) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e5,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e6) { return null; }
 
+        @NotModified @ImmutableContainer(hc = true) @NotNull(content = true)
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e6,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e7) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e5,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e6,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e7) { return null; }
 
+        @NotModified @ImmutableContainer(hc = true) @NotNull(content = true)
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e6,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e7,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e8) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e5,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e6,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e7,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e8) { return null; }
 
+        @NotModified @ImmutableContainer(hc = true) @NotNull(content = true)
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e6,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e7,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e8,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e9) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e5,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e6,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e7,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e8,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e9) { return null; }
 
+        @NotModified @ImmutableContainer(hc = true) @NotNull(content = true)
         static <E> Set<E> of(
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e1,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e2,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e3,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e4,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e5,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e6,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e7,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e8,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e9,
-            /*@Independent(hc=true)[T] @NotModified[O]*/ E e10) { return null; }
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e1,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e2,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e3,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e4,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e5,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e6,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e7,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e8,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e9,
+            /*@Independent(hc=true)[T] @NotModified[O]*/ @Commutable @NotNull E e10) { return null; }
 
         //frequency 5
-        @NotModified
+        @NotModified @ImmutableContainer(hc = true) @NotNull(content = true)
         static <E> Set<E> of(/*@NotModified[O]*/ E ... elements) { return null; }
+        @NotModified @ImmutableContainer(hc = true) @NotNull
         static <E> Set<E> copyOf(/*@NotModified[O]*/ Collection<? extends E> coll) { return null; }
     }
 
