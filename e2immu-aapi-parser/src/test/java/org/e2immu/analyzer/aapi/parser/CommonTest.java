@@ -20,6 +20,7 @@ import java.util.List;
 import static org.e2immu.language.cst.impl.analysis.PropertyImpl.*;
 import static org.e2immu.language.cst.impl.analysis.ValueImpl.ImmutableImpl.MUTABLE;
 import static org.e2immu.language.cst.impl.analysis.ValueImpl.IndependentImpl.DEPENDENT;
+import static org.e2immu.language.inspection.integration.JavaInspectorImpl.JAR_WITH_PATH_PREFIX;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -48,6 +49,8 @@ public class CommonTest {
         annotatedApiParser.initialize(null,
                 List.of(JavaInspectorImpl.JAR_WITH_PATH_PREFIX + "org/slf4j",
                         JavaInspectorImpl.E2IMMU_SUPPORT,
+                        JAR_WITH_PATH_PREFIX + "org/junit/jupiter/api",
+                        JAR_WITH_PATH_PREFIX + "org/opentest4j",
                         "jmod:java.datatransfer",
                         "jmod:java.desktop"),
                 List.of("../e2immu-aapi-archive/src/main/java/org/e2immu/analyzer/aapi/archive/v2"),
