@@ -34,11 +34,10 @@ public class TestJavaUtilStream extends CommonTest {
     public void testStream() {
         TypeInfo typeInfo = compiledTypesManager().get(Stream.class);
         assertSame(MUTABLE, typeInfo.analysis().getOrDefault(IMMUTABLE_TYPE, MUTABLE));
-        assertSame(DEPENDENT, typeInfo.analysis().getOrDefault(INDEPENDENT_TYPE, DEPENDENT));
+        assertSame(INDEPENDENT_HC, typeInfo.analysis().getOrDefault(INDEPENDENT_TYPE, DEPENDENT));
         assertSame(TRUE, typeInfo.analysis().getOrDefault(CONTAINER_TYPE, FALSE));
         assertFalse(typeInfo.isFunctionalInterface());
     }
-
 
     @Test
     public void testStreamMap() {
@@ -46,10 +45,12 @@ public class TestJavaUtilStream extends CommonTest {
         MethodInfo methodInfo = typeInfo.findUniqueMethod("map", 1);
         assertFalse(methodInfo.allowsInterrupts());
         assertTrue(methodInfo.isModifying());
-        assertSame(DEPENDENT, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
+        assertSame(INDEPENDENT_HC, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
+        assertFalse(methodInfo.isFactoryMethod());
+        assertSame(TRUE, methodInfo.analysis().getOrDefault(FINALIZER_METHOD, FALSE));
 
         ParameterInfo p0 = methodInfo.parameters().getFirst();
-        //assertSame(INDEPENDENT, p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT));
+        assertSame(INDEPENDENT_HC, p0.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT));
         assertSame(MUTABLE, p0.analysis().getOrDefault(IMMUTABLE_PARAMETER, MUTABLE));
         assertSame(NOT_NULL, p0.analysis().getOrDefault(NOT_NULL_PARAMETER, NULLABLE));
         assertTrue(p0.isIgnoreModifications());
@@ -105,7 +106,7 @@ public class TestJavaUtilStream extends CommonTest {
         assertTrue(methodInfo.isModifying());
         assertSame(NOT_NULL, methodInfo.analysis().getOrDefault(NOT_NULL_METHOD, NULLABLE));
         assertSame(MUTABLE, methodInfo.analysis().getOrDefault(IMMUTABLE_METHOD, MUTABLE));
-        assertSame(DEPENDENT, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
+        assertSame(INDEPENDENT_HC, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
     }
 
 

@@ -575,6 +575,7 @@ public class JavaUtilStream {
 
     //public interface Stream implements BaseStream<T,Stream<T>>
     @Container
+    @Independent(hc = true)
     class Stream$<T> {
         //public interface Builder implements Consumer<T>
         class Builder<T> {

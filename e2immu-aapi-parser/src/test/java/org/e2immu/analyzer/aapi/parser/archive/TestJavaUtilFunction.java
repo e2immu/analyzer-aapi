@@ -81,6 +81,15 @@ public class TestJavaUtilFunction extends CommonTest {
     }
 
     @Test
+    public void testSupplierGet() {
+        TypeInfo typeInfo = compiledTypesManager().get(Supplier.class);
+        MethodInfo methodInfo = typeInfo.findUniqueMethod("get", 0);
+        assertFalse(methodInfo.allowsInterrupts());
+        assertTrue(methodInfo.isModifying());
+        assertSame(INDEPENDENT_HC, methodInfo.analysis().getOrDefault(INDEPENDENT_METHOD, DEPENDENT));
+    }
+
+    @Test
     public void testPredicateTest() {
         TypeInfo typeInfo = compiledTypesManager().get(Predicate.class);
         MethodInfo methodInfo = typeInfo.findUniqueMethod("test", 1);
