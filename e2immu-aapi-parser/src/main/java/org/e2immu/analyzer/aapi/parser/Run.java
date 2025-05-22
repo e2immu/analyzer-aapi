@@ -47,7 +47,7 @@ public class Run {
         }
         ToolChain.JRE jre = ToolChain.currentJre();
         for (String lib : new String[]{"e2immu", "log", "test"}) {
-            messages.addAll(run.go(lib, "libs/" + lib, jre));
+            messages.addAll(run.go("libs." + lib, "libs/" + lib, jre));
         }
         return messages;
     }

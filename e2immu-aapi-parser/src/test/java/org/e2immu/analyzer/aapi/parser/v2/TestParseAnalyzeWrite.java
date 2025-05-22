@@ -14,8 +14,12 @@ import org.e2immu.language.inspection.integration.JavaInspectorImpl;
 import org.e2immu.language.inspection.integration.ToolChain;
 import org.e2immu.language.inspection.resource.InputConfigurationImpl;
 import org.e2immu.util.internal.util.Trie;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
+import org.junit.jupiter.api.function.ThrowingSupplier;
+import org.slf4j.ILoggerFactory;
 import org.slf4j.LoggerFactory;
 
 import javax.swing.*;
@@ -62,6 +66,7 @@ public class TestParseAnalyzeWrite {
         annotatedApiParser.initialize(new InputConfigurationImpl.Builder()
                         .addClassPath(InputConfigurationImpl.GRADLE_DEFAULT)
                         .addClassPath(ToolChain.CLASSPATH_SLF4J_LOGBACK)
+                        .addClassPath(ToolChain.CLASSPATH_JUNIT)
                         .addClassPath(JavaInspectorImpl.E2IMMU_SUPPORT)
                         .addSources("../e2immu-aapi-archive/src/main/java")
                         .addRestrictSourceToPackages(JDK_PACKAGE).build(),
@@ -97,7 +102,9 @@ public class TestParseAnalyzeWrite {
                 Container.class, Component.class, Color.class, Graphics.class,
                 HttpRequest.class,  HttpRequest.Builder.class, URI.class,
                 DefaultComboBoxModel.class, JLabel.class, JComboBox.class, JTable.class, AbstractButton.class,
-                TableColumn.class, JTextComponent.class);
+                TableColumn.class, JTextComponent.class,
+                org.slf4j.Logger.class, LoggerFactory.class, ILoggerFactory.class,
+                Assertions.class, ThrowingSupplier.class, Executable.class);
         Stream<TypeInfo> extra = extraClasses.stream()
                 .map(c -> annotatedApiParser.javaInspector().compiledTypesManager().getOrLoad(c));
         List<TypeInfo> typesToAnalyze = Stream.concat(annotatedApiParser.types().stream(), extra).distinct().toList();

@@ -30,12 +30,14 @@ java {
 
 val slf4jVersion = project.findProperty("slf4jVersion") as String
 val logbackClassicVersion = project.findProperty("logbackClassicVersion") as String
+val jupiterApiVersion = project.findProperty("jupiterApiVersion") as String
 
 dependencies {
     api("org.e2immu:e2immu-external-support:$version")
 
     implementation("org.slf4j:slf4j-api:$slf4jVersion")
     implementation("ch.qos.logback:logback-classic:$logbackClassicVersion")
+    implementation("org.junit.jupiter:junit-jupiter-api:$jupiterApiVersion")
 }
 
 publishing {
