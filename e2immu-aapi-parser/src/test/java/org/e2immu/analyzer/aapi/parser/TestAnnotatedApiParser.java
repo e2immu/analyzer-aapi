@@ -33,7 +33,7 @@ public class TestAnnotatedApiParser {
                 List.of("example."));
         List<TypeInfo> types = annotatedApiParser.typesParsed();
         assertEquals(2, types.size());
-        TypeInfo t1 = types.get(0);
+        TypeInfo t1 = types.getFirst();
         assertEquals("org.e2immu.analyzer.aapi.parser.example.popular.OrgSlf4J", t1.fullyQualifiedName());
         String uri = t1.compilationUnitOrEnclosingType().getLeft().uri().toString();
         assertTrue(uri.endsWith("example/popular/OrgSlf4J.java"), "Have: "+uri);
@@ -45,13 +45,13 @@ public class TestAnnotatedApiParser {
         TypeInfo charInfo = runtime.charTypeInfo();
         MethodInfo charConstructor = string.constructors().stream()
                 .filter(c -> c.parameters().size() == 1 &&
-                             c.parameters().get(0).parameterizedType().typeInfo() == charInfo)
+                             c.parameters().getFirst().parameterizedType().typeInfo() == charInfo)
                 .findFirst().orElseThrow();
         assertEquals("java.lang.String.<init>(char[])", charConstructor.fullyQualifiedName());
         // the annotations have not been copied, they're in a map!!
         assertEquals(0, charConstructor.annotations().size());
         List<AnnotationExpression> charInfoAnnots = annotatedApiParser.annotations(charConstructor);
         assertEquals(1, charInfoAnnots.size());
-        assertEquals("Independent", charInfoAnnots.get(0).typeInfo().simpleName());
+        assertEquals("Independent", charInfoAnnots.getFirst().typeInfo().simpleName());
     }
 }
