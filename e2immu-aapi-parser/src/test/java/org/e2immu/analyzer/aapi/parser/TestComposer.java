@@ -4,6 +4,7 @@ package org.e2immu.analyzer.aapi.parser;
 import ch.qos.logback.classic.Level;
 import org.e2immu.analyzer.modification.io.DecoratorImpl;
 import org.e2immu.language.cst.api.element.Comment;
+import org.e2immu.language.cst.api.element.Element;
 import org.e2immu.language.cst.api.info.Info;
 import org.e2immu.language.cst.api.info.MethodInfo;
 import org.e2immu.language.cst.api.info.TypeInfo;
@@ -65,7 +66,7 @@ public class TestComposer {
                     .forEach(File::delete);
         }
 
-        Map<Info, Info> dollarMap = composer.translateFromDollarToReal();
+        Map<Element, Element> dollarMap = composer.translateFromDollarToReal();
         composer.write(apiTypes, TEST_DIR, new DecoratorImpl(javaInspector.runtime(), dollarMap));
 
         String ju = Files.readString(new File(TEST_DIR, "org/e2immu/testannotatedapi/JavaUtil.java").toPath());
@@ -416,7 +417,7 @@ public class TestComposer {
         }
 
         @Override
-        public List<Comment> comments(Info info) {
+        public List<Comment> comments(Element info) {
             List<Comment> comments = super.comments(info);
             Integer frequency = info instanceof MethodInfo mi ? methodCallFrequencies.get(mi) : null;
             if (frequency != null) {

@@ -1016,7 +1016,7 @@ public class JavaUtil {
         static String toString(/*@Independent[M]*/ @NotModified Object [] a) { return null; }
 
         //@NotModified[T]
-        static String deepToString(/*@Independent[M]*/ Object [] a) { return null; }
+        static String deepToString(/*@Independent[M]*/ @NotModified Object [] a) { return null; }
 
         //@NotModified[T]
         static <T> void setAll(

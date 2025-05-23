@@ -17,6 +17,7 @@ package org.e2immu.analyzer.aapi.parser;
 
 import org.e2immu.language.cst.api.element.Comment;
 import org.e2immu.language.cst.api.element.CompilationUnit;
+import org.e2immu.language.cst.api.element.Element;
 import org.e2immu.language.cst.api.element.SourceSet;
 import org.e2immu.language.cst.api.expression.Expression;
 import org.e2immu.language.cst.api.info.*;
@@ -79,7 +80,7 @@ public class Composer {
     private final JavaInspector javaInspector;
     private final Function<SourceSet, String> destinationPackage;
     private final Predicate<Info> predicate;
-    private final Map<Info, Info> translateFromDollarToReal = new HashMap<>();
+    private final Map<Element, Element> translateFromDollarToReal = new HashMap<>();
     private final ImportComputer importComputer;
 
     public Composer(JavaInspector javaInspector,
@@ -298,10 +299,12 @@ public class Composer {
                 : runtime.newTranslationMapBuilder(parentTm);
         List<TypeParameter> newTypeParameters = new ArrayList<>();
         for (TypeParameter tp : typeToCopy.typeParameters()) {
-            TypeParameter newTp = runtime.newTypeParameter(tp.getIndex(), tp.simpleName(), typeInfo);
+            TypeParameter newTp = runtime.newTypeParameter(tp.comments(), tp.source(), tp.annotations(),
+                    tp.getIndex(), tp.simpleName(), typeInfo);
             typeInfo.builder().addOrSetTypeParameter(newTp);
             tmb.put(tp, newTp);
             newTypeParameters.add(newTp);
+            translateFromDollarToReal.put(newTp, tp);
         }
         TranslationMap tm = tmb.build();
         int i = 0;
@@ -316,7 +319,7 @@ public class Composer {
         return new TypeTm(typeInfo, tm);
     }
 
-    public Map<Info, Info> translateFromDollarToReal() {
+    public Map<Element, Element> translateFromDollarToReal() {
         return translateFromDollarToReal;
     }
 

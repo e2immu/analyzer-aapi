@@ -5,6 +5,7 @@ import org.e2immu.analyzer.modification.common.defaults.ShallowAnalyzer;
 import org.e2immu.analyzer.modification.io.DecoratorImpl;
 import org.e2immu.language.cst.api.analysis.Property;
 import org.e2immu.language.cst.api.element.Comment;
+import org.e2immu.language.cst.api.element.Element;
 import org.e2immu.language.cst.api.expression.AnnotationExpression;
 import org.e2immu.language.cst.api.info.Info;
 import org.e2immu.language.cst.api.info.MethodInfo;
@@ -24,15 +25,15 @@ class DecoratorWithComments extends DecoratorImpl {
     private static final Logger LOGGER = LoggerFactory.getLogger(DecoratorWithComments.class);
 
     private final org.e2immu.language.cst.api.runtime.Runtime runtime;
-    private final Map<Info, Info> translationMap;
-    private final Function<Info, AnnotatedApiParser.Data> dataProvider;
-    private final Function<Info, ShallowAnalyzer.InfoData> infoDataProvider;
+    private final Map<Element, Element> translationMap;
+    private final Function<Element, AnnotatedApiParser.Data> dataProvider;
+    private final Function<Element, ShallowAnalyzer.InfoData> infoDataProvider;
     private final Qualification simpleNames;
 
     public DecoratorWithComments(Runtime runtime,
-                                 Map<Info, Info> translationMap,
-                                 Function<Info, ShallowAnalyzer.InfoData> infoDataProvider,
-                                 Function<Info, AnnotatedApiParser.Data> dataProvider) {
+                                 Map<Element, Element> translationMap,
+                                 Function<Element, ShallowAnalyzer.InfoData> infoDataProvider,
+                                 Function<Element, AnnotatedApiParser.Data> dataProvider) {
         super(runtime, translationMap);
         this.translationMap = translationMap;
         this.runtime = runtime;
@@ -42,22 +43,22 @@ class DecoratorWithComments extends DecoratorImpl {
     }
 
     @Override
-    public List<AnnotationExpression> annotations(Info infoIn) {
+    public List<AnnotationExpression> annotations(Element infoIn) {
         return annotationAndProperties(infoIn).stream()
                 .filter(ap -> acceptAnnotation(ap.property(), infoIn))
                 .map(AnnotationProperty::annotationExpression)
                 .toList();
     }
 
-    private boolean acceptAnnotation(Property property, Info infoIn) {
-        Info translatedInfo = translationMap == null ? infoIn : translationMap.getOrDefault(infoIn, infoIn);
+    private boolean acceptAnnotation(Property property, Element infoIn) {
+        Element translatedInfo = translationMap == null ? infoIn : translationMap.getOrDefault(infoIn, infoIn);
         ShallowAnalyzer.InfoData infoData = infoDataProvider.apply(translatedInfo);
         if (infoData == null) return true;
         ShallowAnalyzer.AnnotationOrigin ao = infoData.origin(property);
         return ao == ShallowAnalyzer.AnnotationOrigin.ANNOTATED;
     }
 
-    private Stream<Comment> annotationsInComments(Info translatedInfo) {
+    private Stream<Comment> annotationsInComments(Element translatedInfo) {
         ShallowAnalyzer.InfoData infoData = infoDataProvider.apply(translatedInfo);
         if (infoData == null) return Stream.of();
         AnnotatedApiParser.Data data = dataProvider.apply(translatedInfo);
@@ -78,7 +79,7 @@ class DecoratorWithComments extends DecoratorImpl {
         return Stream.of(runtime.newSingleLineComment(comment));
     }
 
-    private static String originSuffix(ShallowAnalyzer.AnnotationOrigin origin, Info cause) {
+    private static String originSuffix(ShallowAnalyzer.AnnotationOrigin origin, Element cause) {
         char code = switch (origin) {
             case ANNOTATED -> 'A';
             case FROM_FIELD -> 'F';
@@ -94,8 +95,8 @@ class DecoratorWithComments extends DecoratorImpl {
     }
 
     @Override
-    public List<Comment> comments(Info infoIn) {
-        Info translatedInfo = translationMap == null ? infoIn : translationMap.getOrDefault(infoIn, infoIn);
+    public List<Comment> comments(Element infoIn) {
+        Element translatedInfo = translationMap == null ? infoIn : translationMap.getOrDefault(infoIn, infoIn);
         AnnotatedApiParser.Data data = dataProvider.apply(translatedInfo);
         List<Comment> comments = data == null ? List.of() : data.comments();
         Stream<Comment> annotationStream = annotationsInComments(translatedInfo);

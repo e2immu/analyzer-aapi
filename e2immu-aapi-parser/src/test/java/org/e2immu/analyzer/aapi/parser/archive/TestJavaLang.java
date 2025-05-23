@@ -7,6 +7,7 @@ import org.e2immu.language.cst.api.info.FieldInfo;
 import org.e2immu.language.cst.api.info.MethodInfo;
 import org.e2immu.language.cst.api.info.ParameterInfo;
 import org.e2immu.language.cst.api.info.TypeInfo;
+import org.e2immu.language.cst.api.type.TypeParameter;
 import org.junit.jupiter.api.Test;
 
 import java.io.Serializable;
@@ -132,6 +133,8 @@ public class TestJavaLang extends CommonTest {
     public void testClass() {
         TypeInfo typeInfo = compiledTypesManager().get(Class.class);
         testImmutableContainer(typeInfo, false, false);
+        TypeParameter tp = typeInfo.typeParameters().getFirst();
+        assertSame(INDEPENDENT, tp.analysis().getOrDefault(INDEPENDENT_TYPE_PARAMETER, DEPENDENT));
     }
 
     //AnnotatedType[] getAnnotatedInterfaces()

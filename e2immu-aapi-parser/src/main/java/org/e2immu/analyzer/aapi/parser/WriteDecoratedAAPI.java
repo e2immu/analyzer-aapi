@@ -1,6 +1,7 @@
 package org.e2immu.analyzer.aapi.parser;
 
 import org.e2immu.analyzer.modification.common.defaults.ShallowAnalyzer;
+import org.e2immu.language.cst.api.element.Element;
 import org.e2immu.language.cst.api.info.Info;
 import org.e2immu.language.cst.api.info.TypeInfo;
 import org.e2immu.language.inspection.api.integration.JavaInspector;
@@ -20,12 +21,12 @@ import java.util.stream.Collectors;
 public class WriteDecoratedAAPI {
     private static final Logger LOGGER = LoggerFactory.getLogger(WriteDecoratedAAPI.class);
     private final JavaInspector javaInspector;
-    private final Function<Info, AnnotatedApiParser.Data> dataProvider;
-    private final Function<Info, ShallowAnalyzer.InfoData> infoDataProvider;
+    private final Function<Element, AnnotatedApiParser.Data> dataProvider;
+    private final Function<Element, ShallowAnalyzer.InfoData> infoDataProvider;
 
     public WriteDecoratedAAPI(JavaInspector javaInspector,
-                              Function<Info, AnnotatedApiParser.Data> dataProvider,
-                              Function<Info, ShallowAnalyzer.InfoData> infoDataProvider) {
+                              Function<Element, AnnotatedApiParser.Data> dataProvider,
+                              Function<Element, ShallowAnalyzer.InfoData> infoDataProvider) {
         this.javaInspector = javaInspector;
         this.dataProvider = dataProvider;
         this.infoDataProvider = infoDataProvider;
@@ -56,7 +57,7 @@ public class WriteDecoratedAAPI {
         Composer composer = new Composer(javaInspector, set -> destinationPackage, w -> true);
         Collection<TypeInfo> apiTypes = composer.compose(list);
 
-        Map<Info, Info> dollarMap = composer.translateFromDollarToReal();
+        Map<Element, Element> dollarMap = composer.translateFromDollarToReal();
         composer.write(apiTypes, directory, new DecoratorWithComments(javaInspector.runtime(), dollarMap,
                 infoDataProvider, dataProvider));
 

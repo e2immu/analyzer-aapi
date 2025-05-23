@@ -6,6 +6,7 @@ import org.e2immu.analyzer.modification.common.defaults.ShallowAnalyzer;
 import org.e2immu.analyzer.modification.io.WriteAnalysis;
 import org.e2immu.analyzer.modification.prepwork.PrepAnalyzer;
 import org.e2immu.language.cst.api.analysis.Message;
+import org.e2immu.language.cst.api.element.Element;
 import org.e2immu.language.cst.api.info.Info;
 import org.e2immu.language.cst.api.info.TypeInfo;
 import org.e2immu.language.cst.impl.analysis.PropertyImpl;
@@ -69,10 +70,10 @@ public class Run {
         PrepAnalyzer prepAnalyzer = new PrepAnalyzer(annotatedApiParser.runtime());
         prepAnalyzer.initialize(annotatedApiParser.javaInspector().compiledTypesManager().typesLoaded());
 
-        Set<Info> infos = annotatedApiParser.infos();
-        LOGGER.info("Parsed and analyzed {} types; {} info objects", annotatedApiParser.types().size(), infos.size());
-        infos.forEach(i -> {
-            if (!i.analysis().haveAnalyzedValueFor(PropertyImpl.ANNOTATED_API)) {
+        Set<Element> hasAnnotations = annotatedApiParser.infos();
+        LOGGER.info("Parsed and analyzed {} types; {} info objects", annotatedApiParser.types().size(), hasAnnotations.size());
+        hasAnnotations.forEach(ha -> {
+            if (ha instanceof Info i && !i.analysis().haveAnalyzedValueFor(PropertyImpl.ANNOTATED_API)) {
                 i.analysis().set(PropertyImpl.ANNOTATED_API, ValueImpl.BoolImpl.TRUE);
             }
         });
@@ -92,7 +93,9 @@ public class Run {
                 annotatedApiParser::data, i -> rs.dataMap().get(i));
         File decorated = new File("build/decorated");
         File subDirDeco = new File(decorated, subDirOut);
-        subDirDeco.mkdirs();
+        if (subDirDeco.mkdirs()) {
+            LOGGER.info("Created directory {}", subDirDeco);
+        }
         writeDecoratedAAPI.write(subDirDeco.getAbsolutePath(), trie, "org.e2immu");
         return rs.messages();
     }

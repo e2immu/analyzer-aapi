@@ -74,6 +74,15 @@ public class TestJavaUtil extends CommonTest {
         assertFalse(add1.isModified());
     }
 
+    @Test
+    public void testArraysDeepToString() {
+        TypeInfo typeInfo = compiledTypesManager().get(Arrays.class);
+        MethodInfo methodInfo = typeInfo.findUniqueMethod("deepToString", 1);
+        assertFalse(methodInfo.isModifying());
+
+        ParameterInfo add0 = methodInfo.parameters().getFirst();
+        assertFalse(add0.isModified());
+    }
 
     @Test
     public void testCollection() {

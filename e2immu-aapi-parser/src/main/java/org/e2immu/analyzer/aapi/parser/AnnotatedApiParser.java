@@ -3,11 +3,13 @@ package org.e2immu.analyzer.aapi.parser;
 import org.e2immu.analyzer.modification.common.defaults.AnnotationProvider;
 import org.e2immu.analyzer.modification.io.LoadAnalyzedPackageFiles;
 import org.e2immu.language.cst.api.element.Comment;
+import org.e2immu.language.cst.api.element.Element;
 import org.e2immu.language.cst.api.expression.AnnotationExpression;
 import org.e2immu.language.cst.api.expression.StringConstant;
 import org.e2immu.language.cst.api.info.*;
 import org.e2immu.language.cst.api.runtime.Runtime;
 import org.e2immu.language.cst.api.type.ParameterizedType;
+import org.e2immu.language.cst.api.type.TypeParameter;
 import org.e2immu.language.cst.impl.element.MultiLineComment;
 import org.e2immu.language.cst.impl.element.SingleLineComment;
 import org.e2immu.language.inspection.api.integration.JavaInspector;
@@ -34,7 +36,7 @@ public class AnnotatedApiParser implements AnnotationProvider {
     }
 
     private final List<TypeInfo> typesParsed = new ArrayList<>();
-    private final Map<Info, Data> infoMap = new LinkedHashMap<>();
+    private final Map<Element, Data> infoMap = new LinkedHashMap<>();
     private final JavaInspector javaInspector;
     private int warnings;
     private int annotatedTypes;
@@ -111,7 +113,7 @@ public class AnnotatedApiParser implements AnnotationProvider {
     private static final Pattern FREQ_PATTERN = Pattern.compile("^\\s*frequency (\\d+)");
     private static final Pattern FREQ_OVERRIDE_PATTERN = Pattern.compile("^\\s*override.+frequency (\\d+)");
 
-    private Data makeData(Info info) {
+    private Data makeData(Element info) {
         boolean explainAnnotationInComment = false;
         Integer freq = null;
         Integer overrideHasFreq = null;
@@ -147,7 +149,7 @@ public class AnnotatedApiParser implements AnnotationProvider {
         return new Data(info.annotations(), commentsToKeep, explainAnnotationInComment, freq, overrideHasFreq);
     }
 
-    private static String acceptComment(Comment comment, Info owner) {
+    private static String acceptComment(Comment comment, Element owner) {
         if (owner instanceof ParameterInfo && comment instanceof MultiLineComment mlc) return mlc.comment();
         if (comment instanceof SingleLineComment slc) return slc.comment();
         return null;
@@ -155,6 +157,10 @@ public class AnnotatedApiParser implements AnnotationProvider {
 
     private void transferAnnotations(TypeInfo sourceType, TypeInfo targetType) {
         Data typeData = makeData(sourceType);
+        for (TypeParameter typeParameter : sourceType.typeParameters()) {
+            TypeParameter targetTypeParameter = targetType.typeParameters().get(typeParameter.getIndex());
+            infoMap.put(targetTypeParameter, makeData(typeParameter));
+        }
         annotations += sourceType.annotations().size();
         infoMap.put(targetType, typeData);
 
@@ -168,6 +174,7 @@ public class AnnotatedApiParser implements AnnotationProvider {
                         subType.simpleName(), targetType);
             }
         }
+        // TODO: for now, we don't accept/recognize annotations on method, constructor type parameters
         for (MethodInfo sourceMethod : sourceType.methods()) {
             if (!sourceMethod.isSynthetic()) {
                 MethodInfo targetMethod = findTargetMethod(targetType, sourceMethod);
@@ -276,8 +283,8 @@ public class AnnotatedApiParser implements AnnotationProvider {
     }
 
     @Override
-    public List<AnnotationExpression> annotations(Info info) {
-        Data data = infoMap.get(info);
+    public List<AnnotationExpression> annotations(Element element) {
+        Data data = infoMap.get(element);
         if (data != null) return data.annotations;
         return List.of();
     }
@@ -290,7 +297,7 @@ public class AnnotatedApiParser implements AnnotationProvider {
         return infoMap.keySet().stream().filter(i -> i instanceof TypeInfo).map(t -> (TypeInfo) t).toList();
     }
 
-    public Set<Info> infos() {
+    public Set<Element> infos() {
         return infoMap.keySet();
     }
 
@@ -302,7 +309,7 @@ public class AnnotatedApiParser implements AnnotationProvider {
         return typesParsed;
     }
 
-    public Data data(Info info) {
+    public Data data(Element info) {
         return infoMap.get(info);
     }
 }

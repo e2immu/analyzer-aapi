@@ -173,7 +173,7 @@ public class JavaLang {
 
     //public final class Class implements Serializable, GenericDeclaration, Type, AnnotatedElement, TypeDescriptor.OfField<Class<?>>, Constable
     @ImmutableContainer
-    class Class$<T> {
+    class Class$<@Independent T> {
         //override from java.lang.Object
         //@NotModified[T] @NotNull[H]
         public String toString() { return null; }

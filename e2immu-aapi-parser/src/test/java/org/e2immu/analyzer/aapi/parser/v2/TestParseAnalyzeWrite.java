@@ -9,6 +9,7 @@ import org.e2immu.analyzer.modification.common.defaults.ShallowAnalyzer;
 import org.e2immu.language.cst.api.info.MethodInfo;
 import org.e2immu.language.cst.api.info.ParameterInfo;
 import org.e2immu.language.cst.api.info.TypeInfo;
+import org.e2immu.language.cst.api.type.TypeParameter;
 import org.e2immu.language.cst.impl.analysis.ValueImpl;
 import org.e2immu.language.inspection.integration.JavaInspectorImpl;
 import org.e2immu.language.inspection.integration.ToolChain;
@@ -100,7 +101,7 @@ public class TestParseAnalyzeWrite {
                 SecureRandom.class, MessageDigest.class, RandomGenerator.class, Guard.class, PrivilegedAction.class,
                 ZipOutputStream.class,
                 Container.class, Component.class, Color.class, Graphics.class,
-                HttpRequest.class,  HttpRequest.Builder.class, URI.class,
+                HttpRequest.class, HttpRequest.Builder.class, URI.class,
                 DefaultComboBoxModel.class, JLabel.class, JComboBox.class, JTable.class, AbstractButton.class,
                 TableColumn.class, JTextComponent.class,
                 org.slf4j.Logger.class, LoggerFactory.class, ILoggerFactory.class,

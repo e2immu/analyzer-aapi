@@ -1,6 +1,6 @@
 [
 {"name": "Tjava.time.chrono.ChronoLocalDate", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.time.chrono.ChronoLocalDate","E":true,"M":1}}, "subs":[
- {"name": "MtimeLineOrder(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.Comparator","M":1},"hcsMethod":{"0":[[0]],"1":[[-1]]},"immutableMethod":2,"independentMethod":2}},
+ {"name": "MtimeLineOrder(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.Comparator","M":1},"hcsMethod":{"0":[[0]],"1":[[-1]]},"independentMethod":2}},
  {"name": "Mfrom(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.time.temporal.TemporalAccessor","M":1},"hcsMethod":{"0":[[-1]]}}, "sub":
   {"name": "Ptemporal(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}}},
  {"name": "MgetChronology(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.time.chrono.Chronology","M":1},"hcsMethod":{"1":[[-1]]}}},
@@ -55,7 +55,7 @@
  {"name": "MtoString(28)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}}]},
 
 {"name": "Tjava.time.chrono.ChronoLocalDateTime", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"PD:0","1":"Tjava.time.chrono.ChronoLocalDateTime","E":true,"M":2}}, "subs":[
- {"name": "MtimeLineOrder(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.Comparator","3":"Tjava.lang.Object","M":2},"hcsMethod":{"2":[[-1]]},"immutableMethod":2,"independentMethod":2}},
+ {"name": "MtimeLineOrder(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.Comparator","3":"Tjava.lang.Object","M":2},"hcsMethod":{"2":[[-1]]},"independentMethod":2}},
  {"name": "Mfrom(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.time.temporal.TemporalAccessor","3":"Tjava.lang.Object","M":2},"hcsMethod":{"1":[[-1]]}}, "sub":
   {"name": "Ptemporal(0)", "data":{"annotatedApi":1,"hcsParameter":{"2":[[-1]]}}}},
  {"name": "MgetChronology(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.time.chrono.Chronology","M":2},"hcsMethod":{"2":[[-1]]}}},
@@ -106,7 +106,7 @@
  {"name": "MtoString(25)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":2},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}}]},
 
 {"name": "Tjava.time.chrono.ChronoZonedDateTime", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"PD:0","1":"Tjava.time.chrono.ChronoZonedDateTime","E":true,"M":2}}, "subs":[
- {"name": "MtimeLineOrder(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.Comparator","3":"Tjava.lang.Object","M":2},"hcsMethod":{"2":[[-1]]},"immutableMethod":2,"independentMethod":2}},
+ {"name": "MtimeLineOrder(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.util.Comparator","3":"Tjava.lang.Object","M":2},"hcsMethod":{"2":[[-1]]},"independentMethod":2}},
  {"name": "Mfrom(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.time.temporal.TemporalAccessor","3":"Tjava.lang.Object","M":2},"hcsMethod":{"1":[[-1]]}}, "sub":
   {"name": "Ptemporal(0)", "data":{"annotatedApi":1,"hcsParameter":{"2":[[-1]]}}}},
  {"name": "Mrange(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"2":"Tjava.time.temporal.TemporalField","M":2}}, "sub":
