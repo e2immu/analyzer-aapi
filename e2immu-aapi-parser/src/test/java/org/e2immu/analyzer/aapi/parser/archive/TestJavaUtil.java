@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 
 import static org.e2immu.analyzer.modification.prepwork.hcs.HiddenContentSelector.*;
 import static org.e2immu.analyzer.modification.prepwork.hcs.HiddenContentSelector.FieldValue;
+import static org.e2immu.analyzer.modification.prepwork.hcs.HiddenContentSelector.Independent;
 import static org.e2immu.analyzer.modification.prepwork.hct.HiddenContentTypes.HIDDEN_CONTENT_TYPES;
 import static org.e2immu.language.cst.impl.analysis.PropertyImpl.*;
 import static org.e2immu.language.cst.impl.analysis.ValueImpl.BoolImpl.FALSE;
@@ -286,6 +287,19 @@ public class TestJavaUtil extends CommonTest {
         assertEquals(0, setField.parameterIndexOfIndex());
         assertEquals(1, setField.parameterIndexOfValue());
         assertTrue(setField.setter());
+    }
+
+    @Test
+    public void testListOf() {
+        TypeInfo typeInfo = compiledTypesManager().get(List.class);
+        MethodInfo of = typeInfo.methods().stream()
+                .filter(m -> "of".equals(m.name()) && 1 == m.parameters().size() && 0 == m.parameters().getFirst().parameterizedType().arrays())
+                .findFirst().orElseThrow();
+        assertTrue(of.overrides().isEmpty());
+        assertTrue(of.isNonModifying());
+        ParameterInfo e = of.parameters().getFirst();
+        Independent independent = e.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT);
+        assertEquals(1, independent.linkToParametersReturnValue().get(-1));
     }
 
 
