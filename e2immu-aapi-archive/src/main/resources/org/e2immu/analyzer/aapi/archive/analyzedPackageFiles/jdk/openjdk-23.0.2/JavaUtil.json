@@ -3424,7 +3424,7 @@
    {"name": "Pout(0)", "data":{"hcsParameter":{"1":[[-1]]}}}}]},
  {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"hcsMethod":{"0":[[0]]},"independentMethod":2,"notNullMethod":1}},
  {"name": "C<init>(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.Collection","M":1},"hcsMethod":{"0":[[0]]},"independentMethod":2,"notNullMethod":1}, "sub":
-  {"name": "Pc(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[0]],"1":[[-1]]}}}},
+  {"name": "Pc(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[0]],"1":[[-1]]},"independentParameter":1,"unmodifiedParameter":1}}},
  {"name": "MlinkFirst(0)", "data":{"hc":{"M":1}}, "sub":
   {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
  {"name": "MlinkLast(1)", "data":{"hc":{"M":1}}, "sub":

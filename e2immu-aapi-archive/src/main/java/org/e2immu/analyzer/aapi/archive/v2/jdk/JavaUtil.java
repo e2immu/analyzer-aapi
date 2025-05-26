@@ -2203,7 +2203,7 @@ public class JavaUtil {
     //public class LinkedList extends AbstractSequentialList<E> implements List<E>, Deque<E>, Cloneable, Serializable
     class LinkedList$<E> {
         LinkedList$() { }
-        LinkedList$(Collection<? extends E> c) { }
+        LinkedList$(@Independent(hc = true) @NotModified Collection<? extends E> c) { }
         //override from java.util.Deque, java.util.List, java.util.SequencedCollection
         //@Independent(hc=true)[H] @NotModified[H]
         E getFirst() { return null; }

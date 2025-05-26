@@ -344,6 +344,15 @@ public class TestJavaUtil extends CommonTest {
 
 
     @Test
+    public void testLinkedListConstructor() {
+        TypeInfo typeInfo = compiledTypesManager().get(LinkedList.class);
+        MethodInfo constructor = typeInfo.findConstructor(compiledTypesManager().get(Collection.class));
+        assertTrue(constructor.overrides().isEmpty());
+        ParameterInfo p0 = constructor.parameters().getFirst();
+        assertSame(TRUE, p0.analysis().getOrDefault(UNMODIFIED_PARAMETER, FALSE));
+    }
+
+    @Test
     public void testAbstractListGet() {
         TypeInfo typeInfo = compiledTypesManager().get(AbstractList.class);
         MethodInfo get = typeInfo.findUniqueMethod("get", 1);
