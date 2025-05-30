@@ -312,7 +312,7 @@
  {"name": "Mmap(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.function.IntUnaryOperator","M":1},"hcsMethod":{"0":[[-1]]}}, "sub":
   {"name": "PintUnaryOperator(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1}}},
  {"name": "MmapToObj(2)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"1":"PU:1","2":"Tjava.util.function.IntFunction","3":"Tjava.util.stream.Stream","M":1},"hcsMethod":{"1":[[0]],"3":[[-1]]}}, "sub":
-  {"name": "PintFunction(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[0]],"2":[[-1]]},"ignoreModsParameter":1}}},
+  {"name": "PintFunction(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[0]],"2":[[-1]]},"ignoreModsParameter":1,"independentParameter":[1,{"-1":1}]}}},
  {"name": "MmapToLong(3)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.function.IntToLongFunction","2":"Tjava.util.stream.LongStream","M":1},"hcsMethod":{"2":[[-1]]}}, "sub":
   {"name": "PintToLongFunction(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]},"ignoreModsParameter":1}}},
  {"name": "MmapToDouble(4)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.function.IntToDoubleFunction","2":"Tjava.util.stream.DoubleStream","M":1},"hcsMethod":{"2":[[-1]]}}, "sub":

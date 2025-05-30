@@ -414,7 +414,7 @@ public class JavaUtilStream {
         IntStream filter(/*@IgnoreModifications[T]*/ IntPredicate intPredicate) { return null; }
         IntStream map(/*@IgnoreModifications[T]*/ IntUnaryOperator intUnaryOperator) { return null; }
         //frequency 1
-        <U> Stream<U> mapToObj(/*@IgnoreModifications[T]*/ IntFunction<? extends U> intFunction) { return null; }
+        <U> Stream<U> mapToObj(/*@IgnoreModifications[T]*/@Independent(hcReturnValue = true) IntFunction<? extends U> intFunction) { return null; }
         LongStream mapToLong(/*@IgnoreModifications[T]*/ IntToLongFunction intToLongFunction) { return null; }
         DoubleStream mapToDouble(/*@IgnoreModifications[T]*/ IntToDoubleFunction intToDoubleFunction) { return null; }
         IntStream flatMap(/*@IgnoreModifications[T]*/ IntFunction<? extends IntStream> intFunction) { return null; }
