@@ -1,17 +1,17 @@
 [
-{"name": "Tjava.net.InetAddress", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
- {"name": "SAddresses(0)", "data":{"hc":{"E":true}}, "sub":
-  {"name": "Mget(0)", "data":{"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[0]]}}}},
+{"name": "Tjava.net.InetAddress", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.net.InetAddress","E":true,"M":1}}, "subs":[
+ {"name": "SAddresses(0)", "data":{"hc":{"0":"Tjava.net.InetAddress.Addresses","E":true,"M":1}}, "sub":
+  {"name": "Mget(0)", "data":{"hc":{"1":"Tjava.net.InetAddress","M":1},"hcsMethod":{"1":[[1]]}}}},
  {"name": "SCachedLocalHost(1)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.net.InetAddress"}}, "subs":[
    {"name": "Paddr(1)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
- {"name": "SCachedLookup(2)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.net.InetAddress"}}, "subs":[
-   {"name": "PinetAddresses(1)", "data":{"hcsParameter":{"0":[[0]]}}}]},
-  {"name": "Mget(0)", "data":{"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[0]]}}},
-  {"name": "McompareTo(1)", "data":{"hc":{"0":"Tjava.net.InetAddress.CachedLookup"}}, "sub":
+ {"name": "SCachedLookup(2)", "data":{"hc":{"0":"Tjava.net.InetAddress.CachedLookup","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"1":"Tjava.net.InetAddress","M":1},"hcsMethod":{"0":[[-1]]}}, "subs":[
+   {"name": "PinetAddresses(1)", "data":{"hcsParameter":{"1":[[1]]}}}]},
+  {"name": "Mget(0)", "data":{"hc":{"1":"Tjava.net.InetAddress","M":1},"hcsMethod":{"1":[[1]]}}},
+  {"name": "McompareTo(1)", "data":{"hc":{"M":1}}, "sub":
    {"name": "Pother(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MtryRemoveExpiredAddress(2)", "data":{"hc":{}}}]},
+  {"name": "MtryRemoveExpiredAddress(2)", "data":{"hc":{"M":1}}}]},
  {"name": "SHostsFileResolver(3)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{}}},
   {"name": "MlookupByAddress(0)", "data":{"hc":{}}},
@@ -21,14 +21,14 @@
   {"name": "MremoveComments(3)", "data":{"hc":{}}},
   {"name": "McreateAddressByteArray(4)", "data":{"hc":{}}},
   {"name": "MextractHostAddr(5)", "data":{"hc":{}}}]},
- {"name": "SInetAddressHolder(4)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "C<init>(1)", "data":{"hc":{}}},
-  {"name": "Minit(0)", "data":{"hc":{}}},
-  {"name": "MgetHostName(1)", "data":{"hc":{}}},
-  {"name": "MgetOriginalHostName(2)", "data":{"hc":{}}},
-  {"name": "MgetAddress(3)", "data":{"hc":{}}},
-  {"name": "MgetFamily(4)", "data":{"hc":{}}}]},
+ {"name": "SInetAddressHolder(4)", "data":{"hc":{"0":"Tjava.net.InetAddress.InetAddressHolder","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "C<init>(1)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "Minit(0)", "data":{"hc":{"M":1}}},
+  {"name": "MgetHostName(1)", "data":{"hc":{"M":1}}},
+  {"name": "MgetOriginalHostName(2)", "data":{"hc":{"M":1}}},
+  {"name": "MgetAddress(3)", "data":{"hc":{"M":1}}},
+  {"name": "MgetFamily(4)", "data":{"hc":{"M":1}}}]},
  {"name": "SNameServiceAddresses(5)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{}}},
   {"name": "Mget(0)", "data":{"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[0]]}}}]},
@@ -41,98 +41,98 @@
    {"name": "PinetAddresses(1)", "data":{"hcsParameter":{"0":[[0]]}}}]},
   {"name": "Mget(0)", "data":{"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[0]]}}},
   {"name": "MtryRemoveExpiredAddress(1)", "data":{"hc":{}}}]},
- {"name": "C<init>(0)", "data":{"hc":{}}},
- {"name": "Mholder(0)", "data":{"hc":{"0":"Tjava.net.InetAddress.InetAddressHolder"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MinitializePlatformLookupPolicy(1)", "data":{"hc":{}}},
- {"name": "MsystemAddressesOrder(2)", "data":{"hc":{}}},
- {"name": "Mipv4AddressesFirst(3)", "data":{"hc":{}}},
- {"name": "Mipv6AddressesFirst(4)", "data":{"hc":{}}},
- {"name": "MisIPv4Available(5)", "data":{"hc":{}}},
- {"name": "MisIPv6Supported(6)", "data":{"hc":{}}},
- {"name": "Mresolver(7)", "data":{"hc":{"0":"Tjava.net.spi.InetAddressResolver"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MloadResolver(8)", "data":{"hc":{"0":"Tjava.net.spi.InetAddressResolver"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MbuiltinConfiguration(9)", "data":{"hc":{"0":"Tjava.net.spi.InetAddressResolverProvider.Configuration"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MreadResolve(10)", "data":{"hc":{"0":"Tjava.lang.Object"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MisMulticastAddress(11)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisAnyLocalAddress(12)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisLoopbackAddress(13)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisLinkLocalAddress(14)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisSiteLocalAddress(15)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisMCGlobal(16)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisMCNodeLocal(17)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisMCLinkLocal(18)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisMCSiteLocal(19)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisMCOrgLocal(20)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MisReachable(21)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+ {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "Mholder(0)", "data":{"hc":{"1":"Tjava.net.InetAddress.InetAddressHolder","M":1},"hcsMethod":{"1":[[-1]]}}},
+ {"name": "MinitializePlatformLookupPolicy(1)", "data":{"hc":{"M":1}}},
+ {"name": "MsystemAddressesOrder(2)", "data":{"hc":{"M":1}}},
+ {"name": "Mipv4AddressesFirst(3)", "data":{"hc":{"M":1}}},
+ {"name": "Mipv6AddressesFirst(4)", "data":{"hc":{"M":1}}},
+ {"name": "MisIPv4Available(5)", "data":{"hc":{"M":1}}},
+ {"name": "MisIPv6Supported(6)", "data":{"hc":{"M":1}}},
+ {"name": "Mresolver(7)", "data":{"hc":{"1":"Tjava.net.spi.InetAddressResolver","M":1},"hcsMethod":{"1":[[-1]]}}},
+ {"name": "MloadResolver(8)", "data":{"hc":{"1":"Tjava.net.spi.InetAddressResolver","M":1},"hcsMethod":{"1":[[-1]]}}},
+ {"name": "MbuiltinConfiguration(9)", "data":{"hc":{"1":"Tjava.net.spi.InetAddressResolverProvider.Configuration","M":1},"hcsMethod":{"1":[[-1]]}}},
+ {"name": "MreadResolve(10)", "data":{"hc":{"1":"Tjava.lang.Object","M":1},"hcsMethod":{"1":[[-1]]}}},
+ {"name": "MisMulticastAddress(11)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MisAnyLocalAddress(12)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MisLoopbackAddress(13)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MisLinkLocalAddress(14)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MisSiteLocalAddress(15)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MisMCGlobal(16)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MisMCNodeLocal(17)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MisMCLinkLocal(18)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MisMCSiteLocal(19)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MisMCOrgLocal(20)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MisReachable(21)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Ptimeout(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
- {"name": "MisReachable(22)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "subs":[
+ {"name": "MisReachable(22)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "subs":[
   {"name": "Pnetif(0)", "data":{"annotatedApi":1}},
   {"name": "Pttl(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}},
   {"name": "Ptimeout(2)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}]},
- {"name": "MgetHostName(23)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "MgetHostName(24)", "data":{"hc":{}}},
- {"name": "MgetCanonicalHostName(25)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "MgetHostFromNameService(26)", "data":{"hc":{"0":"Tjava.net.InetAddress"}}, "subs":[
+ {"name": "MgetHostName(23)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2}},
+ {"name": "MgetHostName(24)", "data":{"hc":{"M":1}}},
+ {"name": "MgetCanonicalHostName(25)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2}},
+ {"name": "MgetHostFromNameService(26)", "data":{"hc":{"M":1}}, "subs":[
   {"name": "Paddr(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
- {"name": "MgetAddress(27)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":1}},
- {"name": "MgetHostAddress(28)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "MhashCode(29)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}},
- {"name": "Mequals(30)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Object"},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}, "sub":
-  {"name": "Pobj(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MtoString(31)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}},
- {"name": "McreateBuiltinInetAddressResolver(32)", "data":{"hc":{"0":"Tjava.net.spi.InetAddressResolver"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MgetByAddress(33)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[-1]]}}, "subs":[
+ {"name": "MgetAddress(27)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":1}},
+ {"name": "MgetHostAddress(28)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2}},
+ {"name": "MhashCode(29)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}},
+ {"name": "Mequals(30)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.lang.Object","M":1},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}, "sub":
+  {"name": "Pobj(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"immutableParameter":2,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "MtoString(31)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}},
+ {"name": "McreateBuiltinInetAddressResolver(32)", "data":{"hc":{"1":"Tjava.net.spi.InetAddressResolver","M":1},"hcsMethod":{"1":[[-1]]}}},
+ {"name": "MgetByAddress(33)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}, "subs":[
   {"name": "Phost(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Paddr(1)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1}}]},
- {"name": "MgetByName(34)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[-1]]}}, "sub":
+ {"name": "MgetByName(34)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}, "sub":
   {"name": "Phost(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MgetAllByName(35)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[0]]},"immutableMethod":1}, "sub":
+ {"name": "MgetAllByName(35)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"hcsMethod":{"0":[[-1]]},"immutableMethod":1}, "sub":
   {"name": "Phost(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MinvalidIPv6LiteralException(36)", "data":{"hc":{"0":"Tjava.net.UnknownHostException"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MgetLoopbackAddress(37)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MgetAllByName0(38)", "data":{"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[0]]}}},
- {"name": "MofLiteral(39)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[-1]]}}, "sub":
+ {"name": "MinvalidIPv6LiteralException(36)", "data":{"hc":{"1":"Tjava.net.UnknownHostException","M":1},"hcsMethod":{"1":[[-1]]}}},
+ {"name": "MgetLoopbackAddress(37)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "MgetAllByName0(38)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "MofLiteral(39)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}, "sub":
   {"name": "PipAddressLiteral(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MgetAllByName0(40)", "data":{"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[0]]}}},
- {"name": "MgetAddressesFromNameService(41)", "data":{"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[0]]}}},
- {"name": "MgetByAddress(42)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[-1]]}}, "sub":
+ {"name": "MgetAllByName0(40)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "MgetAddressesFromNameService(41)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "MgetByAddress(42)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}, "sub":
   {"name": "Paddr(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1}}},
- {"name": "MgetLocalHost(43)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "Minit(44)", "data":{"hc":{}}},
- {"name": "ManyLocalAddress(45)", "data":{"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MreadObject(46)", "data":{"hc":{"0":"Tjava.io.ObjectInputStream"}}, "sub":
-  {"name": "Ps(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
- {"name": "MwriteObject(47)", "data":{"hc":{"0":"Tjava.io.ObjectOutputStream"}}, "sub":
-  {"name": "Ps(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
- {"name": "Mvalidate(48)", "data":{"hc":{}}}]},
+ {"name": "MgetLocalHost(43)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "Minit(44)", "data":{"hc":{"M":1}}},
+ {"name": "ManyLocalAddress(45)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "MreadObject(46)", "data":{"hc":{"1":"Tjava.io.ObjectInputStream","M":1}}, "sub":
+  {"name": "Ps(0)", "data":{"hcsParameter":{"1":[[-1]]}}}},
+ {"name": "MwriteObject(47)", "data":{"hc":{"1":"Tjava.io.ObjectOutputStream","M":1}}, "sub":
+  {"name": "Ps(0)", "data":{"hcsParameter":{"1":[[-1]]}}}},
+ {"name": "Mvalidate(48)", "data":{"hc":{"M":1}}}]},
 
 {"name": "Tjava.net.URI", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
- {"name": "SParser(0)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mfail(0)", "data":{"hc":{}}},
-  {"name": "Mfail(1)", "data":{"hc":{}}},
-  {"name": "MfailExpecting(2)", "data":{"hc":{}}},
-  {"name": "Mat(3)", "data":{"hc":{}}},
-  {"name": "Mat(4)", "data":{"hc":{}}},
-  {"name": "Mscan(5)", "data":{"hc":{}}},
-  {"name": "Mscan(6)", "data":{"hc":{}}},
-  {"name": "Mscan(7)", "data":{"hc":{}}},
-  {"name": "MscanEscape(8)", "data":{"hc":{}}},
-  {"name": "Mscan(9)", "data":{"hc":{}}},
-  {"name": "McheckChars(10)", "data":{"hc":{}}},
-  {"name": "McheckChar(11)", "data":{"hc":{}}},
-  {"name": "Mparse(12)", "data":{"hc":{}}},
-  {"name": "MparseHierarchical(13)", "data":{"hc":{}}},
-  {"name": "MparseAuthority(14)", "data":{"hc":{}}},
-  {"name": "MparseServer(15)", "data":{"hc":{}}},
-  {"name": "MscanByte(16)", "data":{"hc":{}}},
-  {"name": "MscanIPv4Address(17)", "data":{"hc":{}}},
-  {"name": "MtakeIPv4Address(18)", "data":{"hc":{}}},
-  {"name": "MparseIPv4Address(19)", "data":{"hc":{}}},
-  {"name": "MparseHostname(20)", "data":{"hc":{}}},
-  {"name": "MparseIPv6Reference(21)", "data":{"hc":{}}},
-  {"name": "MscanHexPost(22)", "data":{"hc":{}}},
-  {"name": "MscanHexSeq(23)", "data":{"hc":{}}}]},
+ {"name": "SParser(0)", "data":{"hc":{"0":"Tjava.net.URI.Parser","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "Mfail(0)", "data":{"hc":{"M":1}}},
+  {"name": "Mfail(1)", "data":{"hc":{"M":1}}},
+  {"name": "MfailExpecting(2)", "data":{"hc":{"M":1}}},
+  {"name": "Mat(3)", "data":{"hc":{"M":1}}},
+  {"name": "Mat(4)", "data":{"hc":{"M":1}}},
+  {"name": "Mscan(5)", "data":{"hc":{"M":1}}},
+  {"name": "Mscan(6)", "data":{"hc":{"M":1}}},
+  {"name": "Mscan(7)", "data":{"hc":{"M":1}}},
+  {"name": "MscanEscape(8)", "data":{"hc":{"M":1}}},
+  {"name": "Mscan(9)", "data":{"hc":{"M":1}}},
+  {"name": "McheckChars(10)", "data":{"hc":{"M":1}}},
+  {"name": "McheckChar(11)", "data":{"hc":{"M":1}}},
+  {"name": "Mparse(12)", "data":{"hc":{"M":1}}},
+  {"name": "MparseHierarchical(13)", "data":{"hc":{"M":1}}},
+  {"name": "MparseAuthority(14)", "data":{"hc":{"M":1}}},
+  {"name": "MparseServer(15)", "data":{"hc":{"M":1}}},
+  {"name": "MscanByte(16)", "data":{"hc":{"M":1}}},
+  {"name": "MscanIPv4Address(17)", "data":{"hc":{"M":1}}},
+  {"name": "MtakeIPv4Address(18)", "data":{"hc":{"M":1}}},
+  {"name": "MparseIPv4Address(19)", "data":{"hc":{"M":1}}},
+  {"name": "MparseHostname(20)", "data":{"hc":{"M":1}}},
+  {"name": "MparseIPv6Reference(21)", "data":{"hc":{"M":1}}},
+  {"name": "MscanHexPost(22)", "data":{"hc":{"M":1}}},
+  {"name": "MscanHexSeq(23)", "data":{"hc":{"M":1}}}]},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "C<init>(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Pstr(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
@@ -238,11 +238,11 @@
  {"name": "Mdecode(66)", "data":{"hc":{}}}]},
 
 {"name": "Tjava.net.URL", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
- {"name": "SDefaultFactory(0)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "McreateURLStreamHandler(0)", "data":{"hc":{"0":"Tjava.net.URLStreamHandler"},"hcsMethod":{"0":[[-1]]}}}]},
- {"name": "SThreadTrackHolder(1)", "data":{"hc":{"E":true}}, "sub":
-  {"name": "C<init>(0)", "data":{"hc":{}}}},
+ {"name": "SDefaultFactory(0)", "data":{"hc":{"0":"Tjava.net.URL.DefaultFactory","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "McreateURLStreamHandler(0)", "data":{"hc":{"1":"Tjava.net.URLStreamHandler","M":1},"hcsMethod":{"1":[[-1]]}}}]},
+ {"name": "SThreadTrackHolder(1)", "data":{"hc":{"0":"Tjava.net.URL.ThreadTrackHolder","E":true,"M":1}}, "sub":
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}}},
  {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "subs":[
   {"name": "Pprotocol(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Phost(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
@@ -325,29 +325,29 @@
  {"name": "MresetState(42)", "data":{"hc":{}}},
  {"name": "MsetSerializedHashCode(43)", "data":{"hc":{}}}]},
 
-{"name": "Tjava.net.URLDecoder", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
- {"name": "C<init>(0)", "data":{"hc":{}}},
- {"name": "Mdecode(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
+{"name": "Tjava.net.URLDecoder", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.net.URLDecoder","E":true,"M":1}}, "subs":[
+ {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "Mdecode(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2}, "sub":
   {"name": "Ps(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "Mdecode(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "subs":[
+ {"name": "Mdecode(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2}, "subs":[
   {"name": "Ps(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Penc(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
- {"name": "Mdecode(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.nio.charset.Charset"},"immutableMethod":3,"independentMethod":2}, "subs":[
+ {"name": "Mdecode(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.nio.charset.Charset","M":1},"immutableMethod":3,"independentMethod":2}, "subs":[
   {"name": "Ps(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
-  {"name": "Pcharset(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}}]}]},
+  {"name": "Pcharset(1)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}}]}]},
 
-{"name": "Tjava.net.URLEncoder", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
- {"name": "C<init>(0)", "data":{"hc":{}}},
- {"name": "Mencode(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
+{"name": "Tjava.net.URLEncoder", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.net.URLEncoder","E":true,"M":1}}, "subs":[
+ {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "Mencode(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2}, "sub":
   {"name": "Ps(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "Mencode(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "subs":[
+ {"name": "Mencode(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2}, "subs":[
   {"name": "Ps(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Penc(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]},
- {"name": "Mencode(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.nio.charset.Charset"},"immutableMethod":3,"independentMethod":2}, "subs":[
+ {"name": "Mencode(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.nio.charset.Charset","M":1},"immutableMethod":3,"independentMethod":2}, "subs":[
   {"name": "Ps(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
-  {"name": "Pcharset(1)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}}]},
- {"name": "MflushToStringBuilder(3)", "data":{"hc":{"0":"Tjava.nio.charset.CharsetEncoder","1":"Tjava.nio.CharBuffer","2":"Tjava.nio.ByteBuffer"}}, "subs":[
-  {"name": "Pce(1)", "data":{"hcsParameter":{"0":[[-1]]}}},
-  {"name": "Pcb(2)", "data":{"hcsParameter":{"1":[[-1]]}}},
-  {"name": "Pbb(3)", "data":{"hcsParameter":{"2":[[-1]]}}}]}]}
+  {"name": "Pcharset(1)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}}]},
+ {"name": "MflushToStringBuilder(3)", "data":{"hc":{"1":"Tjava.nio.charset.CharsetEncoder","2":"Tjava.nio.CharBuffer","3":"Tjava.nio.ByteBuffer","M":1}}, "subs":[
+  {"name": "Pce(1)", "data":{"hcsParameter":{"1":[[-1]]}}},
+  {"name": "Pcb(2)", "data":{"hcsParameter":{"2":[[-1]]}}},
+  {"name": "Pbb(3)", "data":{"hcsParameter":{"3":[[-1]]}}}]}]}
 ]

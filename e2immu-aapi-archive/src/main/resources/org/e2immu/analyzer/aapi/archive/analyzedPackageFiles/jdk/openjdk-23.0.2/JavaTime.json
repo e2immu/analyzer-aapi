@@ -37,10 +37,10 @@
   {"name": "Ptemporal(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}}}]},
 
 {"name": "Tjava.time.Duration", "data":{"annotatedApi":1,"containerType":1,"defaultsAnalyzer":1,"hc":{},"immutableType":3,"independentType":2}, "subs":[
- {"name": "SDurationUnits(0)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}}]},
- {"name": "SLazy(1)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}}]},
+ {"name": "SDurationUnits(0)", "data":{"hc":{"0":"Tjava.time.Duration.DurationUnits","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}}]},
+ {"name": "SLazy(1)", "data":{"hc":{"0":"Tjava.time.Duration.Lazy","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}}]},
  {"name": "FZERO(0)", "data":{"annotatedApi":1,"containerField":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "MofDays(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1}, "sub":
@@ -615,40 +615,40 @@
  {"name": "MreadExternal(82)", "data":{"hc":{"0":"Tjava.io.DataInput"}}, "sub":
   {"name": "Pin(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
 
-{"name": "Tjava.time.ZoneId", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
+{"name": "Tjava.time.ZoneId", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.time.ZoneId","E":true,"M":1}}, "subs":[
  {"name": "FSHORT_IDS(0)", "data":{"annotatedApi":1,"containerField":1,"finalField":1}},
- {"name": "C<init>(0)", "data":{"hc":{}}},
- {"name": "MsystemDefault(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.time.ZoneId"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MgetAvailableZoneIds(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.Set"},"hcsMethod":{"0":[[-1]]},"independentMethod":2}},
- {"name": "Mof(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.Map","1":"Tjava.time.ZoneId"},"hcsMethod":{"1":[[-1]]}}, "subs":[
+ {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "MsystemDefault(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "MgetAvailableZoneIds(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.Set","M":1},"hcsMethod":{"1":[[-1]]},"independentMethod":2}},
+ {"name": "Mof(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.Map","M":1},"hcsMethod":{"0":[[-1]]}}, "subs":[
   {"name": "PzoneId(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
-  {"name": "PaliasMap(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]}}}]},
- {"name": "Mof(3)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.time.ZoneId"},"hcsMethod":{"0":[[-1]]}}, "sub":
+  {"name": "PaliasMap(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]}}}]},
+ {"name": "Mof(3)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}, "sub":
   {"name": "PzoneId(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MofOffset(4)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.time.ZoneId"},"hcsMethod":{"0":[[-1]]}}, "subs":[
+ {"name": "MofOffset(4)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}, "subs":[
   {"name": "Pprefix(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Poffset(1)", "data":{"annotatedApi":1}}]},
- {"name": "Mof(5)", "data":{"hc":{"0":"Tjava.time.ZoneId"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MofWithPrefix(6)", "data":{"hc":{"0":"Tjava.time.ZoneId"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "Mfrom(7)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.time.temporal.TemporalAccessor","1":"Tjava.time.ZoneId"},"hcsMethod":{"1":[[-1]]}}, "sub":
-  {"name": "Ptemporal(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}}},
- {"name": "MgetId(8)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "MgetDisplayName(9)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "subs":[
+ {"name": "Mof(5)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "MofWithPrefix(6)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "Mfrom(7)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.time.temporal.TemporalAccessor","M":1},"hcsMethod":{"0":[[-1]]}}, "sub":
+  {"name": "Ptemporal(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}}},
+ {"name": "MgetId(8)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2}},
+ {"name": "MgetDisplayName(9)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2}, "subs":[
   {"name": "Pstyle(0)", "data":{"annotatedApi":1}},
   {"name": "Plocale(1)", "data":{"annotatedApi":1}}]},
- {"name": "MtoTemporal(10)", "data":{"hc":{"0":"Tjava.time.temporal.TemporalAccessor"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MgetRules(11)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}},
- {"name": "Mnormalized(12)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.time.ZoneId"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MgetOffset(13)", "data":{"hc":{}}},
- {"name": "Mequals(14)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Object"},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}, "sub":
-  {"name": "Pobj(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MhashCode(15)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}},
- {"name": "MreadObject(16)", "data":{"hc":{"0":"Tjava.io.ObjectInputStream"}}, "sub":
-  {"name": "Ps(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
- {"name": "MtoString(17)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}},
- {"name": "MwriteReplace(18)", "data":{"hc":{"0":"Tjava.lang.Object"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "Mwrite(19)", "data":{"hc":{"0":"Tjava.io.DataOutput"}}, "sub":
-  {"name": "PdataOutput(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
+ {"name": "MtoTemporal(10)", "data":{"hc":{"1":"Tjava.time.temporal.TemporalAccessor","M":1},"hcsMethod":{"1":[[-1]]}}},
+ {"name": "MgetRules(11)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1}}},
+ {"name": "Mnormalized(12)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+ {"name": "MgetOffset(13)", "data":{"hc":{"M":1}}},
+ {"name": "Mequals(14)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.lang.Object","M":1},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}, "sub":
+  {"name": "Pobj(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[-1]]},"immutableParameter":2,"independentParameter":2,"unmodifiedParameter":1}}},
+ {"name": "MhashCode(15)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}},
+ {"name": "MreadObject(16)", "data":{"hc":{"1":"Tjava.io.ObjectInputStream","M":1}}, "sub":
+  {"name": "Ps(0)", "data":{"hcsParameter":{"1":[[-1]]}}}},
+ {"name": "MtoString(17)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}},
+ {"name": "MwriteReplace(18)", "data":{"hc":{"1":"Tjava.lang.Object","M":1},"hcsMethod":{"1":[[-1]]}}},
+ {"name": "Mwrite(19)", "data":{"hc":{"1":"Tjava.io.DataOutput","M":1}}, "sub":
+  {"name": "PdataOutput(0)", "data":{"hcsParameter":{"1":[[-1]]}}}}]},
 
 {"name": "Tjava.time.ZonedDateTime", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.time.ZoneId"}}, "subs":[

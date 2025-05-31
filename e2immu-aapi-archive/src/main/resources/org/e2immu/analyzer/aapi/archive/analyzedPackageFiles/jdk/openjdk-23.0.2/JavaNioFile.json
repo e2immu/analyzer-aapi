@@ -1,13 +1,13 @@
 [
 {"name": "Tjava.nio.file.Files", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
- {"name": "SAcceptAllFilter(0)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Maccept(0)", "data":{"hc":{"0":"Tjava.nio.file.Path"}}, "sub":
-   {"name": "Pentry(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
- {"name": "SFileTypeDetectors(1)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "McreateDefaultFileTypeDetector(0)", "data":{"hc":{"0":"Tjava.nio.file.spi.FileTypeDetector"},"hcsMethod":{"0":[[-1]]}}},
-  {"name": "MloadInstalledDetectors(1)", "data":{"hc":{"0":"Tjava.util.List","1":"Tjava.nio.file.spi.FileTypeDetector"},"hcsMethod":{"0":[[-1]],"1":[[0]]}}}]},
+ {"name": "SAcceptAllFilter(0)", "data":{"hc":{"0":"Tjava.nio.file.Files.AcceptAllFilter","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "Maccept(0)", "data":{"hc":{"1":"Tjava.nio.file.Path","M":1}}, "sub":
+   {"name": "Pentry(0)", "data":{"hcsParameter":{"1":[[-1]]}}}}]},
+ {"name": "SFileTypeDetectors(1)", "data":{"hc":{"0":"Tjava.nio.file.Files.FileTypeDetectors","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "McreateDefaultFileTypeDetector(0)", "data":{"hc":{"1":"Tjava.nio.file.spi.FileTypeDetector","M":1},"hcsMethod":{"1":[[-1]]}}},
+  {"name": "MloadInstalledDetectors(1)", "data":{"hc":{"1":"Tjava.util.List","2":"Tjava.nio.file.spi.FileTypeDetector","M":1},"hcsMethod":{"1":[[-1]],"2":[[0]]}}}]},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "Mprovider(0)", "data":{"hc":{"0":"Tjava.nio.file.Path","1":"Tjava.nio.file.spi.FileSystemProvider"},"hcsMethod":{"1":[[-1]]}}, "sub":
   {"name": "Ppath(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
@@ -309,12 +309,12 @@
  {"name": "MhashCode(31)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}},
  {"name": "MtoString(32)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}}]},
 
-{"name": "Tjava.nio.file.Watchable", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
- {"name": "Mregister(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.nio.file.WatchService","1":"Tjava.nio.file.WatchEvent.Kind","2":"Tjava.lang.Object","3":"Tjava.nio.file.WatchEvent.Modifier","4":"Tjava.nio.file.WatchKey"},"hcsMethod":{"4":[[-1]]}}, "subs":[
-  {"name": "PwatchService(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}},
-  {"name": "Pkind(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[1]]},"immutableParameter":1}},
-  {"name": "Pmodifier(2)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"3":[[3]]},"immutableParameter":1}}]},
- {"name": "Mregister(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.nio.file.WatchService","1":"Tjava.nio.file.WatchEvent.Kind","2":"Tjava.lang.Object","3":"Tjava.nio.file.WatchKey"},"hcsMethod":{"3":[[-1]]}}, "subs":[
-  {"name": "PwatchService(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}},
-  {"name": "Pkind(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"1":[[1]]},"immutableParameter":1}}]}]}
+{"name": "Tjava.nio.file.Watchable", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.nio.file.Watchable","E":true,"M":1}}, "subs":[
+ {"name": "Mregister(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.nio.file.WatchService","2":"Tjava.nio.file.WatchEvent.Kind","3":"Tjava.lang.Object","4":"Tjava.nio.file.WatchEvent.Modifier","5":"Tjava.nio.file.WatchKey","M":1},"hcsMethod":{"5":[[-1]]}}, "subs":[
+  {"name": "PwatchService(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}},
+  {"name": "Pkind(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"2":[[2]]},"immutableParameter":1}},
+  {"name": "Pmodifier(2)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"4":[[4]]},"immutableParameter":1}}]},
+ {"name": "Mregister(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.nio.file.WatchService","2":"Tjava.nio.file.WatchEvent.Kind","3":"Tjava.lang.Object","4":"Tjava.nio.file.WatchKey","M":1},"hcsMethod":{"4":[[-1]]}}, "subs":[
+  {"name": "PwatchService(0)", "data":{"annotatedApi":1,"hcsParameter":{"1":[[-1]]}}},
+  {"name": "Pkind(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"2":[[2]]},"immutableParameter":1}}]}]}
 ]

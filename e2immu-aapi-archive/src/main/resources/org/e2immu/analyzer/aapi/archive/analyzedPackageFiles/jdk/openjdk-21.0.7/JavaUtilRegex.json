@@ -1,40 +1,40 @@
 [
-{"name": "Tjava.util.regex.MatchResult", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
- {"name": "Mstart(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "Mstart(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+{"name": "Tjava.util.regex.MatchResult", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.regex.MatchResult","E":true,"M":1}}, "subs":[
+ {"name": "Mstart(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "Mstart(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Pi(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
- {"name": "Mstart(2)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+ {"name": "Mstart(2)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Pname(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "Mend(3)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "Mend(4)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+ {"name": "Mend(3)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "Mend(4)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Pi(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
- {"name": "Mend(5)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
+ {"name": "Mend(5)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Pname(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "Mgroup(6)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}},
- {"name": "Mgroup(7)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
+ {"name": "Mgroup(6)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2}},
+ {"name": "Mgroup(7)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2}, "sub":
   {"name": "Pi(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
- {"name": "Mgroup(8)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2}, "sub":
+ {"name": "Mgroup(8)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2}, "sub":
   {"name": "Pname(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
- {"name": "MgroupCount(9)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
- {"name": "MnamedGroups(10)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.Map"},"hcsMethod":{"0":[[-1]]}}},
- {"name": "MgroupNumber(11)", "data":{"hc":{}}},
- {"name": "MhasMatch(12)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}}]},
+ {"name": "MgroupCount(9)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
+ {"name": "MnamedGroups(10)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.Map","M":1},"hcsMethod":{"1":[[-1]]}}},
+ {"name": "MgroupNumber(11)", "data":{"hc":{"M":1}}},
+ {"name": "MhasMatch(12)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"M":1},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}}]},
 
 {"name": "Tjava.util.regex.Matcher", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
- {"name": "SImmutableMatchResult(0)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.Map"}}, "subs":[
-   {"name": "PnamedGroups(5)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Mstart(0)", "data":{"hc":{}}},
-  {"name": "Mstart(1)", "data":{"hc":{}}},
-  {"name": "Mend(2)", "data":{"hc":{}}},
-  {"name": "Mend(3)", "data":{"hc":{}}},
-  {"name": "MgroupCount(4)", "data":{"hc":{}}},
-  {"name": "Mgroup(5)", "data":{"hc":{}}},
-  {"name": "Mgroup(6)", "data":{"hc":{}}},
-  {"name": "MnamedGroups(7)", "data":{"hc":{"0":"Tjava.util.Map"},"hcsMethod":{"0":[[-1]]}}},
-  {"name": "MhasMatch(8)", "data":{"hc":{}}},
-  {"name": "McheckGroup(9)", "data":{"hc":{}}},
-  {"name": "McheckMatch(10)", "data":{"hc":{}}}]},
+ {"name": "SImmutableMatchResult(0)", "data":{"hc":{"0":"Tjava.util.regex.Matcher.ImmutableMatchResult","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"1":"Tjava.util.Map","M":1},"hcsMethod":{"0":[[-1]]}}, "subs":[
+   {"name": "PnamedGroups(5)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "Mstart(0)", "data":{"hc":{"M":1}}},
+  {"name": "Mstart(1)", "data":{"hc":{"M":1}}},
+  {"name": "Mend(2)", "data":{"hc":{"M":1}}},
+  {"name": "Mend(3)", "data":{"hc":{"M":1}}},
+  {"name": "MgroupCount(4)", "data":{"hc":{"M":1}}},
+  {"name": "Mgroup(5)", "data":{"hc":{"M":1}}},
+  {"name": "Mgroup(6)", "data":{"hc":{"M":1}}},
+  {"name": "MnamedGroups(7)", "data":{"hc":{"1":"Tjava.util.Map","M":1},"hcsMethod":{"1":[[-1]]}}},
+  {"name": "MhasMatch(8)", "data":{"hc":{"M":1}}},
+  {"name": "McheckGroup(9)", "data":{"hc":{"M":1}}},
+  {"name": "McheckMatch(10)", "data":{"hc":{"M":1}}}]},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "C<init>(1)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
   {"name": "Ptext(1)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
@@ -117,20 +117,20 @@
  {"name": "MhasMatch(51)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}}]},
 
 {"name": "Tjava.util.regex.Pattern", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
- {"name": "SBackRef(0)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Mstudy(1)", "data":{"hc":{}}}]},
+ {"name": "SBackRef(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.BackRef","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "Mstudy(1)", "data":{"hc":{"M":1}}}]},
  {"name": "SBegin(1)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{}}},
   {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
    {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
- {"name": "SBehind(2)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Node"}}, "subs":[
-   {"name": "Pcond(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
+ {"name": "SBehind(2)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Behind","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"1":"Tjava.util.regex.Pattern.Node","M":1},"hcsMethod":{"0":[[-1]]}}, "subs":[
+   {"name": "Pcond(0)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]}]},
  {"name": "SBehindS(3)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Node"}}, "subs":[
    {"name": "Pcond(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
@@ -140,32 +140,32 @@
   {"name": "C<init>(0)", "data":{"hc":{}}},
   {"name": "Madd(0)", "data":{"hc":{}}},
   {"name": "Mis(1)", "data":{"hc":{}}}]},
- {"name": "SBmpCharPredicate(5)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "Mand(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharPredicate"},"hcsMethod":{"0":[[-1]]}}, "sub":
-   {"name": "Pp(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Munion(1)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharPredicate"},"hcsMethod":{"0":[[-1]]}}, "sub":
-   {"name": "Pp(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Munion(2)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharPredicate"},"hcsMethod":{"0":[[-1]]}}, "subs":[
-   {"name": "Pp1(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
-   {"name": "Pp2(1)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
- {"name": "SBmpCharProperty(6)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.BmpCharPredicate"}}, "sub":
-   {"name": "Ppredicate(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
+ {"name": "SBmpCharPredicate(5)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.BmpCharPredicate","E":true,"M":1}}, "subs":[
+  {"name": "Mand(0)", "data":{"hc":{"1":"Tjava.util.regex.Pattern.CharPredicate","M":1},"hcsMethod":{"1":[[-1]]}}, "sub":
+   {"name": "Pp(0)", "data":{"hcsParameter":{"1":[[-1]]}}}},
+  {"name": "Munion(1)", "data":{"hc":{"1":"Tjava.util.regex.Pattern.CharPredicate","M":1},"hcsMethod":{"1":[[-1]]}}, "sub":
+   {"name": "Pp(0)", "data":{"hcsParameter":{"1":[[-1]]}}}},
+  {"name": "Munion(2)", "data":{"hc":{"1":"Tjava.util.regex.Pattern.CharPredicate","M":1},"hcsMethod":{"1":[[-1]]}}, "subs":[
+   {"name": "Pp1(0)", "data":{"hcsParameter":{"1":[[-1]]}}},
+   {"name": "Pp2(1)", "data":{"hcsParameter":{"1":[[-1]]}}}]}]},
+ {"name": "SBmpCharProperty(6)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.BmpCharProperty","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"1":"Tjava.util.regex.Pattern.BmpCharPredicate","M":1},"hcsMethod":{"0":[[-1]]}}, "sub":
+   {"name": "Ppredicate(0)", "data":{"hcsParameter":{"1":[[-1]]}}}},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]}]},
  {"name": "SBmpCharPropertyGreedy(7)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.BmpCharProperty"}}, "subs":[
    {"name": "Pbcp(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
   {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
    {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
- {"name": "SBnM(8)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Node"}}, "subs":[
-   {"name": "Pnext(3)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Moptimize(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Node"},"hcsMethod":{"0":[[-1]]}}, "sub":
-   {"name": "Pnode(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Mmatch(1)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Mstudy(2)", "data":{"hc":{}}}]},
+ {"name": "SBnM(8)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.BnM","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"1":"Tjava.util.regex.Pattern.Node","M":1},"hcsMethod":{"0":[[-1]]}}, "subs":[
+   {"name": "Pnext(3)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "Moptimize(0)", "data":{"hc":{"1":"Tjava.util.regex.Pattern.Node","M":1},"hcsMethod":{"1":[[-1]]}}, "sub":
+   {"name": "Pnode(0)", "data":{"hcsParameter":{"1":[[-1]]}}}},
+  {"name": "Mmatch(1)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "Mstudy(2)", "data":{"hc":{"M":1}}}]},
  {"name": "SBnMS(9)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Node"}}, "subs":[
    {"name": "Pnext(3)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
@@ -193,37 +193,37 @@
   {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
    {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
   {"name": "Mstudy(1)", "data":{"hc":{}}}]},
- {"name": "SCIBackRef(13)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Mstudy(1)", "data":{"hc":{}}}]},
+ {"name": "SCIBackRef(13)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CIBackRef","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "Mstudy(1)", "data":{"hc":{"M":1}}}]},
  {"name": "SCaret(14)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{}}},
   {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
    {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
- {"name": "SCharPredicate(15)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "Mis(0)", "data":{"hc":{}}},
-  {"name": "Mand(1)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharPredicate"},"hcsMethod":{"0":[[-1]]}}, "sub":
+ {"name": "SCharPredicate(15)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharPredicate","E":true,"M":1}}, "subs":[
+  {"name": "Mis(0)", "data":{"hc":{"M":1}}},
+  {"name": "Mand(1)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}, "sub":
    {"name": "Pp(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Munion(2)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharPredicate"},"hcsMethod":{"0":[[-1]]}}, "sub":
+  {"name": "Munion(2)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}, "sub":
    {"name": "Pp(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Munion(3)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharPredicate"},"hcsMethod":{"0":[[-1]]}}, "subs":[
+  {"name": "Munion(3)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}, "subs":[
    {"name": "Pp1(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
    {"name": "Pp2(1)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Mnegate(4)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharPredicate"},"hcsMethod":{"0":[[-1]]}}}]},
- {"name": "SCharProperty(16)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharPredicate"}}, "sub":
-   {"name": "Ppredicate(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Mstudy(1)", "data":{"hc":{}}}]},
- {"name": "SCharPropertyGreedy(17)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharProperty"}}, "subs":[
-   {"name": "Pcp(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Mstudy(1)", "data":{"hc":{}}}]},
+  {"name": "Mnegate(4)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}}]},
+ {"name": "SCharProperty(16)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharProperty","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"1":"Tjava.util.regex.Pattern.CharPredicate","M":1},"hcsMethod":{"0":[[-1]]}}, "sub":
+   {"name": "Ppredicate(0)", "data":{"hcsParameter":{"1":[[-1]]}}}},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "Mstudy(1)", "data":{"hc":{"M":1}}}]},
+ {"name": "SCharPropertyGreedy(17)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharPropertyGreedy","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"1":"Tjava.util.regex.Pattern.CharProperty","M":1},"hcsMethod":{"0":[[-1]]}}, "subs":[
+   {"name": "Pcp(0)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "Mstudy(1)", "data":{"hc":{"M":1}}}]},
  {"name": "SCurly(18)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Node"}}, "subs":[
    {"name": "Pnode(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
@@ -251,10 +251,10 @@
   {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
    {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
   {"name": "Mstudy(1)", "data":{"hc":{}}}]},
- {"name": "SGraphemeBound(22)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
+ {"name": "SGraphemeBound(22)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.GraphemeBound","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]}]},
  {"name": "SGroupCurly(23)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Node"}}, "subs":[
    {"name": "Pnode(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
@@ -279,10 +279,10 @@
   {"name": "C<init>(0)", "data":{"hc":{}}},
   {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
    {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
- {"name": "SLastNode(27)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
+ {"name": "SLastNode(27)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.LastNode","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]}]},
  {"name": "SLazyLoop(28)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{}}},
   {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
@@ -295,38 +295,38 @@
   {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
    {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
   {"name": "Mstudy(1)", "data":{"hc":{}}}]},
- {"name": "SLookBehindEndNode(30)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
- {"name": "SLoop(31)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "MmatchInit(1)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Mstudy(2)", "data":{"hc":{}}}]},
- {"name": "SNFCCharProperty(32)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.CharPredicate"}}, "sub":
-   {"name": "Ppredicate(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Mstudy(1)", "data":{"hc":{}}}]},
+ {"name": "SLookBehindEndNode(30)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.LookBehindEndNode","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]}]},
+ {"name": "SLoop(31)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Loop","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "MmatchInit(1)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "Mstudy(2)", "data":{"hc":{"M":1}}}]},
+ {"name": "SNFCCharProperty(32)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.NFCCharProperty","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"1":"Tjava.util.regex.Pattern.CharPredicate","M":1},"hcsMethod":{"0":[[-1]]}}, "sub":
+   {"name": "Ppredicate(0)", "data":{"hcsParameter":{"1":[[-1]]}}}},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "Mstudy(1)", "data":{"hc":{"M":1}}}]},
  {"name": "SNeg(33)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Node"}}, "sub":
    {"name": "Pcond(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
   {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
    {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
- {"name": "SNode(34)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Mstudy(1)", "data":{"hc":{}}}]},
- {"name": "SNotBehind(35)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Node"}}, "subs":[
-   {"name": "Pcond(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
+ {"name": "SNode(34)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Node","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "Mstudy(1)", "data":{"hc":{"M":1}}}]},
+ {"name": "SNotBehind(35)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.NotBehind","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"1":"Tjava.util.regex.Pattern.Node","M":1},"hcsMethod":{"0":[[-1]]}}, "subs":[
+   {"name": "Pcond(0)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]}]},
  {"name": "SNotBehindS(36)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Node"}}, "subs":[
    {"name": "Pcond(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
@@ -353,22 +353,22 @@
   {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
    {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
   {"name": "Mstudy(1)", "data":{"hc":{}}}]},
- {"name": "SSlice(41)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
- {"name": "SSliceI(42)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
- {"name": "SSliceIS(43)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "MtoLower(0)", "data":{"hc":{}}},
-  {"name": "Mmatch(1)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
- {"name": "SSliceNode(44)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mstudy(0)", "data":{"hc":{}}}]},
+ {"name": "SSlice(41)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Slice","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]}]},
+ {"name": "SSliceI(42)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.SliceI","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]}]},
+ {"name": "SSliceIS(43)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.SliceIS","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "MtoLower(0)", "data":{"hc":{"M":1}}},
+  {"name": "Mmatch(1)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]}]},
+ {"name": "SSliceNode(44)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.SliceNode","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "Mstudy(0)", "data":{"hc":{"M":1}}}]},
  {"name": "SSliceS(45)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{}}},
   {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
@@ -380,12 +380,12 @@
  {"name": "SSliceUS(47)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{}}},
   {"name": "MtoLower(0)", "data":{"hc":{}}}]},
- {"name": "SStart(48)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Node"}}, "sub":
-   {"name": "Pnode(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Mstudy(1)", "data":{"hc":{}}}]},
+ {"name": "SStart(48)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Start","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"1":"Tjava.util.regex.Pattern.Node","M":1},"hcsMethod":{"0":[[-1]]}}, "sub":
+   {"name": "Pnode(0)", "data":{"hcsParameter":{"1":[[-1]]}}}},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "Mstudy(1)", "data":{"hc":{"M":1}}}]},
  {"name": "SStartS(49)", "data":{"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.Node"}}, "sub":
    {"name": "Pnode(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
@@ -403,11 +403,11 @@
   {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
    {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
   {"name": "Mstudy(1)", "data":{"hc":{}}}]},
- {"name": "SXGrapheme(53)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mmatch(0)", "data":{"hc":{"0":"Tjava.lang.CharSequence"}}, "subs":[
-   {"name": "Pseq(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "Mstudy(1)", "data":{"hc":{}}}]},
+ {"name": "SXGrapheme(53)", "data":{"hc":{"0":"Tjava.util.regex.Pattern.XGrapheme","E":true,"M":1}}, "subs":[
+  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[-1]]}}},
+  {"name": "Mmatch(0)", "data":{"hc":{"1":"Tjava.lang.CharSequence","M":1}}, "subs":[
+   {"name": "Pseq(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
+  {"name": "Mstudy(1)", "data":{"hc":{"M":1}}}]},
  {"name": "FUNIX_LINES(0)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "FCASE_INSENSITIVE(1)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "FCOMMENTS(2)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
