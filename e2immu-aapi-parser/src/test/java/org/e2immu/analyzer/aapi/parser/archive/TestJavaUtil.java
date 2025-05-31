@@ -52,9 +52,9 @@ public class TestJavaUtil extends CommonTest {
         assertEquals("0=E - 1=Collection", methodHct.detailedSortedTypes());
         assertEquals("ArrayList:E - <init>:Collection", methodHct.toString());
 
-        ParameterInfo p0 = methodInfo.parameters().get(0);
+        ParameterInfo p0 = methodInfo.parameters().getFirst();
         HiddenContentSelector paramHcs = p0.analysis().getOrDefault(HCS_PARAMETER, HiddenContentSelector.NONE);
-        assertEquals("0=0,1=*", paramHcs.detailed());
+        assertEquals("0=0,1=*", paramHcs.toString());
     }
 
 
@@ -193,13 +193,13 @@ public class TestJavaUtil extends CommonTest {
         Map<Integer, Integer> map = independent0.linkToParametersReturnValue();
         assertEquals(1, map.size());
         assertEquals(1, map.get(1)); // links at HC level (1) to parameter with index 1
-        assertEquals("0=0,1=*", p0.analysis().getOrDefault(HCS_PARAMETER, HiddenContentSelector.NONE).detailed());
+        assertEquals("0=0,1=*", p0.analysis().getOrDefault(HCS_PARAMETER, NONE).toString());
 
         ParameterInfo p1 = addAll.parameters().get(1);
         assertTrue(p1.analysis().getOrDefault(UNMODIFIED_PARAMETER, FALSE).isTrue());
         Value.Independent independent1 = p1.analysis().getOrDefault(INDEPENDENT_PARAMETER, DEPENDENT);
         assertTrue(independent1.linkToParametersReturnValue().isEmpty());
-        assertEquals("0=0", p1.analysis().getOrDefault(HCS_PARAMETER, HiddenContentSelector.NONE).detailed());
+        assertEquals("0=0", p1.analysis().getOrDefault(HCS_PARAMETER, NONE).toString());
     }
 
     @Test
@@ -610,7 +610,7 @@ public class TestJavaUtil extends CommonTest {
 
         assertEquals("Iterator:E - next:", methodInfo.analysis()
                 .getOrDefault(HIDDEN_CONTENT_TYPES, HiddenContentTypes.NO_VALUE).toString());
-        assertEquals("*", methodInfo.analysis().getOrDefault(HCS_METHOD, NONE).toString());
+        assertEquals("0=*", methodInfo.analysis().getOrDefault(HCS_METHOD, NONE).toString());
     }
 
     @Test
