@@ -170,7 +170,7 @@ public class Composer {
     private Comment addCommentLine(MethodInfo methodInfo) {
         String shortString = "override from " + methodInfo.overrides()
                 .stream().map(mi -> mi.typeInfo().fullyQualifiedName()).sorted().collect(Collectors.joining(", "));
-        return runtime.newSingleLineComment(shortString);
+        return runtime.newSingleLineComment(null, shortString);
     }
 
     private Comment addCommentLine(TypeInfo typeInfo) {
@@ -185,7 +185,7 @@ public class Composer {
                 .map(i -> i.print(runtime.qualificationQualifyFromPrimaryType(), false, runtime.diamondShowAll()).toString())
                 .collect(Collectors.joining(", "));
         String shortString = access + type + typeInfo.simpleName() + extendString + implementString;
-        return runtime.newSingleLineComment(shortString);
+        return runtime.newSingleLineComment(null, shortString);
     }
 
     private boolean acceptTypeOrAnySubType(TypeInfo typeInfo) {

@@ -74,9 +74,9 @@ class DecoratorWithComments extends DecoratorImpl {
         if (commentParts.isEmpty()) return Stream.of();
         String comment = String.join(" ", commentParts);
         if (translatedInfo instanceof ParameterInfo) {
-            return Stream.of(runtime.newMultilineComment(comment));
+            return Stream.of(runtime.newMultilineComment(null, comment));
         }
-        return Stream.of(runtime.newSingleLineComment(comment));
+        return Stream.of(runtime.newSingleLineComment(null, comment));
     }
 
     private static String originSuffix(ShallowAnalyzer.AnnotationOrigin origin, Element cause) {
@@ -104,11 +104,11 @@ class DecoratorWithComments extends DecoratorImpl {
             Integer frequency = data != null ? data.frequency() : null;
             Comment comment;
             if (frequency != null) {
-                comment = runtime.newSingleLineComment("frequency " + frequency);
+                comment = runtime.newSingleLineComment(null, "frequency " + frequency);
             } else {
                 Integer overrideFrequency = data != null ? data.overrideHasFrequency() : null;
                 if (overrideFrequency != null) {
-                    comment = runtime.newSingleLineComment("override has frequency " + overrideFrequency);
+                    comment = runtime.newSingleLineComment(null, "override has frequency " + overrideFrequency);
                 } else {
                     comment = null;
                 }

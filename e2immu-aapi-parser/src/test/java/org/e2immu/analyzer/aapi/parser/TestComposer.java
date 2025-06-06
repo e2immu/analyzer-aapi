@@ -5,7 +5,6 @@ import ch.qos.logback.classic.Level;
 import org.e2immu.analyzer.modification.io.DecoratorImpl;
 import org.e2immu.language.cst.api.element.Comment;
 import org.e2immu.language.cst.api.element.Element;
-import org.e2immu.language.cst.api.info.Info;
 import org.e2immu.language.cst.api.info.MethodInfo;
 import org.e2immu.language.cst.api.info.TypeInfo;
 import org.e2immu.language.cst.api.runtime.Runtime;
@@ -346,10 +345,10 @@ public class TestComposer {
                         class AuthorizedUrl {
                             //public final class AuthorizedUrlVariable
                             class AuthorizedUrlVariable { }
-
+                
                             //frequency 1
                             AuthorizeHttpRequestsConfigurer<Object> . AuthorizedUrl not() { return null; }
-
+                
                             AuthorizeHttpRequestsConfigurer<Object> . AuthorizationManagerRequestMatcherRegistry permitAll() {
                                 return null;
                             }
@@ -421,7 +420,7 @@ public class TestComposer {
             List<Comment> comments = super.comments(info);
             Integer frequency = info instanceof MethodInfo mi ? methodCallFrequencies.get(mi) : null;
             if (frequency != null) {
-                Comment comment = runtime.newSingleLineComment("frequency " + frequency);
+                Comment comment = runtime.newSingleLineComment(null, "frequency " + frequency);
                 return Stream.concat(Stream.of(comment), comments.stream()).toList();
             }
             return comments;
