@@ -116,24 +116,24 @@
 {"name": "Tjava.awt.Component", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
  {"name": "SAWTTreeLock(0)", "data":{"hc":{"E":true}}, "sub":
   {"name": "C<init>(0)", "data":{"hc":{}}}},
- {"name": "SAccessibleAWTComponent(1)", "data":{"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
-  {"name": "SAccessibleAWTComponentHandler(0)", "data":{"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
+ {"name": "SAccessibleAWTComponent(1)", "data":{"hc":{"E":true}}, "subs":[
+  {"name": "SAccessibleAWTComponentHandler(0)", "data":{"hc":{"E":true}}, "subs":[
    {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.awt.Component.AccessibleAWTComponent"}}, "sub":
     {"name": "Pthis$1(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-   {"name": "McomponentHidden(0)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.event.ComponentEvent"},"independentMethod":2,"notNullMethod":1}, "sub":
+   {"name": "McomponentHidden(0)", "data":{"hc":{"0":"Tjava.awt.event.ComponentEvent"}}, "sub":
     {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-   {"name": "McomponentShown(1)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.event.ComponentEvent"},"independentMethod":2,"notNullMethod":1}, "sub":
+   {"name": "McomponentShown(1)", "data":{"hc":{"0":"Tjava.awt.event.ComponentEvent"}}, "sub":
     {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-   {"name": "McomponentMoved(2)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.event.ComponentEvent"},"independentMethod":2,"notNullMethod":1}, "sub":
+   {"name": "McomponentMoved(2)", "data":{"hc":{"0":"Tjava.awt.event.ComponentEvent"}}, "sub":
     {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-   {"name": "McomponentResized(3)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.event.ComponentEvent"},"independentMethod":2,"notNullMethod":1}, "sub":
+   {"name": "McomponentResized(3)", "data":{"hc":{"0":"Tjava.awt.event.ComponentEvent"}}, "sub":
     {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
-  {"name": "SAccessibleAWTFocusHandler(1)", "data":{"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
+  {"name": "SAccessibleAWTFocusHandler(1)", "data":{"hc":{"E":true}}, "subs":[
    {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.awt.Component.AccessibleAWTComponent"}}, "sub":
     {"name": "Pthis$1(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-   {"name": "MfocusGained(0)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.event.FocusEvent"},"independentMethod":2,"notNullMethod":1}, "sub":
+   {"name": "MfocusGained(0)", "data":{"hc":{"0":"Tjava.awt.event.FocusEvent"}}, "sub":
     {"name": "Pevent(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-   {"name": "MfocusLost(1)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.event.FocusEvent"},"independentMethod":2,"notNullMethod":1}, "sub":
+   {"name": "MfocusLost(1)", "data":{"hc":{"0":"Tjava.awt.event.FocusEvent"}}, "sub":
     {"name": "Pevent(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
   {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.awt.Component"}}, "sub":
    {"name": "Pthis$0(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
@@ -835,13 +835,13 @@
  {"name": "MupdateZOrder(334)", "data":{"hc":{}}}]},
 
 {"name": "Tjava.awt.Container", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
- {"name": "SAccessibleAWTContainer(0)", "data":{"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
-  {"name": "SAccessibleContainerHandler(0)", "data":{"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
+ {"name": "SAccessibleAWTContainer(0)", "data":{"hc":{"E":true}}, "subs":[
+  {"name": "SAccessibleContainerHandler(0)", "data":{"hc":{"E":true}}, "subs":[
    {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.awt.Container.AccessibleAWTContainer"}}, "sub":
     {"name": "Pthis$1(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-   {"name": "McomponentAdded(0)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.event.ContainerEvent"},"independentMethod":2,"notNullMethod":1}, "sub":
+   {"name": "McomponentAdded(0)", "data":{"hc":{"0":"Tjava.awt.event.ContainerEvent"}}, "sub":
     {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-   {"name": "McomponentRemoved(1)", "data":{"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.awt.event.ContainerEvent"},"independentMethod":2,"notNullMethod":1}, "sub":
+   {"name": "McomponentRemoved(1)", "data":{"hc":{"0":"Tjava.awt.event.ContainerEvent"}}, "sub":
     {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
   {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.awt.Container"}}, "sub":
    {"name": "Pthis$0(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
