@@ -38,23 +38,34 @@ public class Run {
         new Run().go();
     }
 
+    private final RunVisitor runVisitor;
+
+    public Run() {
+        this(null);
+    }
+
+    public Run(RunVisitor runVisitor) {
+        this.runVisitor = runVisitor;
+    }
+
     public List<Message> go() throws IOException {
-        Run run = new Run();
         List<Message> messages = new ArrayList<>();
         for (ToolChain.JRE jre : ToolChain.JRES) {
             if ("Homebrew".equals(jre.vendor()) && 21 <= jre.mainVersion()) {
-                messages.addAll(run.go("jdk", "jdk/openjdk-" + jre.platformVersion(), jre));
+                messages.addAll(go("jdk", "jdk/openjdk-" + jre.platformVersion(), jre));
             }
         }
         ToolChain.JRE jre = ToolChain.currentJre();
         for (String lib : new String[]{"e2immu", "log", "test"}) {
-            messages.addAll(run.go("libs." + lib, "libs/" + lib, jre));
+            messages.addAll(go("libs." + lib, "libs/" + lib, jre));
         }
         return messages;
     }
 
     public List<Message> go(String subDirIn, String subDirOut, ToolChain.JRE jre) throws IOException {
         LOGGER.info("I'm at {}; going for {}, {}", new File(".").getAbsolutePath(), subDirIn, jre.shortName());
+        if (runVisitor != null) runVisitor.setContext(subDirIn, subDirOut, jre);
+
         AnnotatedApiParser annotatedApiParser = new AnnotatedApiParser();
         List<String> classPath = new ArrayList<>();
         Collections.addAll(classPath, ToolChain.CLASSPATH_JUNIT);
@@ -64,14 +75,16 @@ public class Run {
                 classPath,
                 List.of(AAPI_DIR),
                 List.of(subDirIn));
+
         ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser,
-                true);
+                true, runVisitor == null ? null : runVisitor.debugVisitor());
         ShallowAnalyzer.Result rs = shallowAnalyzer.go(annotatedApiParser.types());
         PrepAnalyzer prepAnalyzer = new PrepAnalyzer(annotatedApiParser.runtime());
         prepAnalyzer.initialize(annotatedApiParser.javaInspector().compiledTypesManager().typesLoaded());
 
         Set<Element> hasAnnotations = annotatedApiParser.infos();
-        LOGGER.info("Parsed and analyzed {} types; {} info objects", annotatedApiParser.types().size(), hasAnnotations.size());
+        LOGGER.info("Parsed and analyzed {} types; {} info objects", annotatedApiParser.types().size(),
+                hasAnnotations.size());
         hasAnnotations.forEach(ha -> {
             if (ha instanceof Info i && !i.analysis().haveAnalyzedValueFor(PropertyImpl.ANNOTATED_API)) {
                 i.analysis().set(PropertyImpl.ANNOTATED_API, ValueImpl.BoolImpl.TRUE);
