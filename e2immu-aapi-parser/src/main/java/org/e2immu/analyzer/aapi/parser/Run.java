@@ -18,10 +18,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Run {
     private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(Run.class);
@@ -75,7 +72,9 @@ public class Run {
                 classPath,
                 List.of(AAPI_DIR),
                 List.of(subDirIn));
-
+        if (runVisitor != null) {
+            runVisitor.afterAnnotatedApiParsing(annotatedApiParser.javaInspector());
+        }
         ShallowAnalyzer shallowAnalyzer = new ShallowAnalyzer(annotatedApiParser.runtime(), annotatedApiParser,
                 true, runVisitor == null ? null : runVisitor.debugVisitor());
         ShallowAnalyzer.Result rs = shallowAnalyzer.go(annotatedApiParser.types());
@@ -91,7 +90,9 @@ public class Run {
             }
         });
 
-        WriteAnalysis wa = new WriteAnalysis(annotatedApiParser.runtime());
+        Set<TypeInfo> writeOut = new HashSet<>(annotatedApiParser.types());
+        if (runVisitor != null) runVisitor.writeAnalysis(writeOut);
+        WriteAnalysis wa = new WriteAnalysis(annotatedApiParser.runtime(), writeOut::contains);
         Trie<TypeInfo> trie = new Trie<>();
         for (TypeInfo ti : annotatedApiParser.types()) {
             if (ti.isPrimaryType()) {

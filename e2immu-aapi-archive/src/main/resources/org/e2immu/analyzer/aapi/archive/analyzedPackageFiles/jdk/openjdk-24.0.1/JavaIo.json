@@ -111,16 +111,6 @@
  {"name": "Mclose(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"methodAllowsInterrupts":1,"notNullMethod":1}}},
 
 {"name": "Tjava.io.File", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true},"independentType":2}, "subs":[
- {"name": "SPathStatus(0)", "data":{"hc":{}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mvalues(0)", "data":{"hc":{}}},
-  {"name": "MvalueOf(1)", "data":{"hc":{}}}]},
- {"name": "STempDirectory(1)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mlocation(0)", "data":{"hc":{"0":"Tjava.io.File"},"hcsMethod":{"0":[[-1]]}}},
-  {"name": "MshortenSubName(1)", "data":{"hc":{}}},
-  {"name": "MgenerateFile(2)", "data":{"hc":{"0":"Tjava.io.File"},"hcsMethod":{"0":[[-1]]}}, "subs":[
-   {"name": "Pdir(2)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
  {"name": "FseparatorChar(4)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "Fseparator(5)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
  {"name": "FpathSeparatorChar(6)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},

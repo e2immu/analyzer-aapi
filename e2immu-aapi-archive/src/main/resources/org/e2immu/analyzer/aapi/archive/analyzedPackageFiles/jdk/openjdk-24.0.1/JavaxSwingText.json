@@ -1,9 +1,6 @@
 [
 {"name": "Tjavax.swing.text.JTextComponent", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
  {"name": "SAccessibleJTextComponent(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
-  {"name": "SIndexedSegment(0)", "data":{"hc":{"E":true}}, "subs":[
-   {"name": "C<init>(0)", "data":{"hc":{"0":"Tjavax.swing.text.JTextComponent.AccessibleJTextComponent"}}, "sub":
-    {"name": "PaccessibleJTextComponent(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
   {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjavax.swing.text.JTextComponent"},"independentMethod":2,"notNullMethod":1}, "sub":
    {"name": "Pthis$0(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}}},
   {"name": "McaretUpdate(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjavax.swing.event.CaretEvent"},"independentMethod":2,"notNullMethod":1}, "sub":
@@ -90,128 +87,18 @@
    {"name": "Pi(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}},
   {"name": "MdoAccessibleAction(42)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}, "sub":
    {"name": "Pi(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"notNullParameter":1,"unmodifiedParameter":1}}}]},
- {"name": "SComposedTextCaret(1)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjavax.swing.text.JTextComponent"}}, "sub":
-   {"name": "Pthis$0(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Minstall(0)", "data":{"hc":{"0":"Tjavax.swing.text.JTextComponent"}}, "sub":
-   {"name": "Pc(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Mpaint(1)", "data":{"hc":{"0":"Tjava.awt.Graphics"}}, "sub":
-   {"name": "Pg(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MpositionCaret(2)", "data":{"hc":{"0":"Tjava.awt.event.MouseEvent"}}, "sub":
-   {"name": "Pme(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
- {"name": "SDefaultKeymap(2)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjavax.swing.text.Keymap"}}, "subs":[
-   {"name": "Pparent(1)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
-  {"name": "MgetDefaultAction(0)", "data":{"hc":{"0":"Tjavax.swing.Action"},"hcsMethod":{"0":[[-1]]}}},
-  {"name": "MsetDefaultAction(1)", "data":{"hc":{"0":"Tjavax.swing.Action"}}, "sub":
-   {"name": "Pa(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MgetName(2)", "data":{"hc":{}}},
-  {"name": "MgetAction(3)", "data":{"hc":{"0":"Tjavax.swing.KeyStroke","1":"Tjavax.swing.Action"},"hcsMethod":{"1":[[-1]]}}, "sub":
-   {"name": "Pkey(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MgetBoundKeyStrokes(4)", "data":{"hc":{"0":"Tjavax.swing.KeyStroke"},"hcsMethod":{"0":[[0]]}}},
-  {"name": "MgetBoundActions(5)", "data":{"hc":{"0":"Tjavax.swing.Action"},"hcsMethod":{"0":[[0]]}}},
-  {"name": "MgetKeyStrokesForAction(6)", "data":{"hc":{"0":"Tjavax.swing.Action","1":"Tjavax.swing.KeyStroke"},"hcsMethod":{"1":[[1]]}}, "sub":
-   {"name": "Pa(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MisLocallyDefined(7)", "data":{"hc":{"0":"Tjavax.swing.KeyStroke"}}, "sub":
-   {"name": "Pkey(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MaddActionForKeyStroke(8)", "data":{"hc":{"0":"Tjavax.swing.KeyStroke","1":"Tjavax.swing.Action"}}, "subs":[
-   {"name": "Pkey(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
-   {"name": "Pa(1)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
-  {"name": "MremoveKeyStrokeBinding(9)", "data":{"hc":{"0":"Tjavax.swing.KeyStroke"}}, "sub":
-   {"name": "Pkey(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MremoveBindings(10)", "data":{"hc":{}}},
-  {"name": "MgetResolveParent(11)", "data":{"hc":{"0":"Tjavax.swing.text.Keymap"},"hcsMethod":{"0":[[-1]]}}},
-  {"name": "MsetResolveParent(12)", "data":{"hc":{"0":"Tjavax.swing.text.Keymap"}}, "sub":
-   {"name": "Pparent(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MtoString(13)", "data":{"hc":{}}}]},
- {"name": "SDefaultTransferHandler(3)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "MexportToClipboard(0)", "data":{"hc":{"0":"Tjavax.swing.JComponent","1":"Tjava.awt.datatransfer.Clipboard"}}, "subs":[
-   {"name": "Pcomp(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
-   {"name": "Pclipboard(1)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
-  {"name": "MimportData(1)", "data":{"hc":{"0":"Tjavax.swing.JComponent","1":"Tjava.awt.datatransfer.Transferable"}}, "subs":[
-   {"name": "Pcomp(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
-   {"name": "Pt(1)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
-  {"name": "McanImport(2)", "data":{"hc":{"0":"Tjavax.swing.JComponent","1":"Tjava.awt.datatransfer.DataFlavor"}}, "subs":[
-   {"name": "Pcomp(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
-   {"name": "PtransferFlavors(1)", "data":{"hcsParameter":{"1":[[1]]}}}]},
-  {"name": "MgetSourceActions(3)", "data":{"hc":{"0":"Tjavax.swing.JComponent"}}, "sub":
-   {"name": "Pc(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MgetFlavor(4)", "data":{"hc":{"0":"Tjava.awt.datatransfer.DataFlavor"},"hcsMethod":{"0":[[-1]]}}, "sub":
-   {"name": "Pflavors(0)", "data":{"hcsParameter":{"0":[[0]]}}}}]},
- {"name": "SDoSetCaretPosition(4)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjavax.swing.text.JTextComponent","1":"Tjavax.swing.text.Position"}}, "subs":[
-   {"name": "Phost(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
-   {"name": "PnewPos(1)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
-  {"name": "Mrun(0)", "data":{"hc":{}}}]},
  {"name": "SDropLocation(5)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
   {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.awt.Point"}}, "subs":[
    {"name": "Pp(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
   {"name": "MgetIndex(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"notNullMethod":1}},
   {"name": "MgetBias(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}},
   {"name": "MtoString(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":3,"independentMethod":2,"nonModifyingMethod":1,"notNullMethod":1}}]},
- {"name": "SInputMethodRequestsHandler(6)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjavax.swing.text.JTextComponent"}}, "sub":
-   {"name": "Pthis$0(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "McancelLatestCommittedText(0)", "data":{"hc":{"0":"Tjava.text.AttributedCharacterIterator.Attribute","1":"Tjava.text.AttributedCharacterIterator"},"hcsMethod":{"1":[[-1]]}}, "sub":
-   {"name": "Pattributes(0)", "data":{"hcsParameter":{"0":[[0]]}}}},
-  {"name": "MgetCommittedText(1)", "data":{"hc":{"0":"Tjava.text.AttributedCharacterIterator.Attribute","1":"Tjava.text.AttributedCharacterIterator"},"hcsMethod":{"1":[[-1]]}}, "subs":[
-   {"name": "Pattributes(2)", "data":{"hcsParameter":{"0":[[0]]}}}]},
-  {"name": "MgetCommittedTextLength(2)", "data":{"hc":{}}},
-  {"name": "MgetInsertPositionOffset(3)", "data":{"hc":{}}},
-  {"name": "MgetLocationOffset(4)", "data":{"hc":{}}},
-  {"name": "MgetTextLocation(5)", "data":{"hc":{"0":"Tjava.awt.Rectangle"},"hcsMethod":{"0":[[-1]]}}},
-  {"name": "MgetSelectedText(6)", "data":{"hc":{"0":"Tjava.text.AttributedCharacterIterator.Attribute","1":"Tjava.text.AttributedCharacterIterator"},"hcsMethod":{"1":[[-1]]}}, "sub":
-   {"name": "Pattributes(0)", "data":{"hcsParameter":{"0":[[0]]}}}},
-  {"name": "MchangedUpdate(7)", "data":{"hc":{"0":"Tjavax.swing.event.DocumentEvent"}}, "sub":
-   {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MinsertUpdate(8)", "data":{"hc":{"0":"Tjavax.swing.event.DocumentEvent"}}, "sub":
-   {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MremoveUpdate(9)", "data":{"hc":{"0":"Tjavax.swing.event.DocumentEvent"}}, "sub":
-   {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
  {"name": "SKeyBinding(7)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
   {"name": "Fkey(0)", "data":{"annotatedApi":1}},
   {"name": "FactionName(1)", "data":{"annotatedApi":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
   {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjavax.swing.KeyStroke"},"independentMethod":2,"notNullMethod":1}, "subs":[
    {"name": "Pkey(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}},
    {"name": "PactionName(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}]}]},
- {"name": "SKeymapActionMap(8)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjavax.swing.text.Keymap"}}, "sub":
-   {"name": "Pkeymap(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Mkeys(0)", "data":{"hc":{"0":"Tjava.lang.Object"},"hcsMethod":{"0":[[0]]}}},
-  {"name": "Msize(1)", "data":{"hc":{}}},
-  {"name": "Mget(2)", "data":{"hc":{"0":"Tjava.lang.Object","1":"Tjavax.swing.Action"},"hcsMethod":{"1":[[-1]]}}, "sub":
-   {"name": "Pkey(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
- {"name": "SKeymapWrapper(9)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjavax.swing.text.Keymap"}}, "sub":
-   {"name": "Pkeymap(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Mkeys(0)", "data":{"hc":{"0":"Tjavax.swing.KeyStroke"},"hcsMethod":{"0":[[0]]}}},
-  {"name": "Msize(1)", "data":{"hc":{}}},
-  {"name": "Mget(2)", "data":{"hc":{"0":"Tjavax.swing.KeyStroke","1":"Tjava.lang.Object"},"hcsMethod":{"1":[[-1]]}}, "sub":
-   {"name": "PkeyStroke(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
- {"name": "SMutableCaretEvent(10)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjavax.swing.text.JTextComponent"}}, "sub":
-   {"name": "Pc(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Mfire(0)", "data":{"hc":{}}},
-  {"name": "MtoString(1)", "data":{"hc":{}}},
-  {"name": "MgetDot(2)", "data":{"hc":{}}},
-  {"name": "MgetMark(3)", "data":{"hc":{}}},
-  {"name": "MstateChanged(4)", "data":{"hc":{"0":"Tjavax.swing.event.ChangeEvent"}}, "sub":
-   {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MfocusGained(5)", "data":{"hc":{"0":"Tjava.awt.event.FocusEvent"}}, "sub":
-   {"name": "Pfe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MfocusLost(6)", "data":{"hc":{"0":"Tjava.awt.event.FocusEvent"}}, "sub":
-   {"name": "Pfe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MmousePressed(7)", "data":{"hc":{"0":"Tjava.awt.event.MouseEvent"}}, "sub":
-   {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MmouseReleased(8)", "data":{"hc":{"0":"Tjava.awt.event.MouseEvent"}}, "sub":
-   {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MmouseClicked(9)", "data":{"hc":{"0":"Tjava.awt.event.MouseEvent"}}, "sub":
-   {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MmouseEntered(10)", "data":{"hc":{"0":"Tjava.awt.event.MouseEvent"}}, "sub":
-   {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MmouseExited(11)", "data":{"hc":{"0":"Tjava.awt.event.MouseEvent"}}, "sub":
-   {"name": "Pe(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
  {"name": "FFOCUS_ACCELERATOR_KEY(0)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
  {"name": "FDEFAULT_KEYMAP(32)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
  {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}},

@@ -1,8 +1,5 @@
 [
 {"name": "Tjava.util.zip.ZipOutputStream", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
- {"name": "SXEntry(0)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.zip.ZipEntry"}}, "subs":[
-   {"name": "Pentry(0)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
  {"name": "FSTORED(12)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "FDEFLATED(13)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.io.OutputStream"},"independentMethod":2,"notNullMethod":1}, "sub":

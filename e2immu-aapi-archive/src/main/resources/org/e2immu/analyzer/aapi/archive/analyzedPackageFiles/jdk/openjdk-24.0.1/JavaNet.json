@@ -1,46 +1,5 @@
 [
 {"name": "Tjava.net.InetAddress", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
- {"name": "SAddresses(0)", "data":{"hc":{"E":true}}, "sub":
-  {"name": "Mget(0)", "data":{"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[0]]}}}},
- {"name": "SCachedLocalHost(1)", "data":{"hc":{}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.net.InetAddress"}}, "subs":[
-   {"name": "Paddr(1)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
- {"name": "SCachedLookup(2)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.net.InetAddress"}}, "subs":[
-   {"name": "PinetAddresses(1)", "data":{"hcsParameter":{"0":[[0]]}}}]},
-  {"name": "Mget(0)", "data":{"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[0]]}}},
-  {"name": "McompareTo(1)", "data":{"hc":{"0":"Tjava.net.InetAddress.CachedLookup"}}, "sub":
-   {"name": "Pother(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MtryRemoveExpiredAddress(2)", "data":{"hc":{}}}]},
- {"name": "SHostsFileResolver(3)", "data":{"hc":{}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "MlookupByAddress(0)", "data":{"hc":{}}},
-  {"name": "MlookupByName(1)", "data":{"hc":{"0":"Tjava.util.stream.Stream","1":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[-1]],"1":[[0]]}}},
-  {"name": "McheckResultsList(2)", "data":{"hc":{"0":"Tjava.util.List","1":"Tjava.net.InetAddress"}}, "subs":[
-   {"name": "PaddressesList(0)", "data":{"hcsParameter":{"0":[[-1]],"1":[[0]]}}}]},
-  {"name": "MremoveComments(3)", "data":{"hc":{}}},
-  {"name": "McreateAddressByteArray(4)", "data":{"hc":{}}},
-  {"name": "MextractHostAddr(5)", "data":{"hc":{}}}]},
- {"name": "SInetAddressHolder(4)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "C<init>(1)", "data":{"hc":{}}},
-  {"name": "Minit(0)", "data":{"hc":{}}},
-  {"name": "MgetHostName(1)", "data":{"hc":{}}},
-  {"name": "MgetOriginalHostName(2)", "data":{"hc":{}}},
-  {"name": "MgetAddress(3)", "data":{"hc":{}}},
-  {"name": "MgetFamily(4)", "data":{"hc":{}}}]},
- {"name": "SNameServiceAddresses(5)", "data":{"hc":{}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mget(0)", "data":{"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[0]]}}}]},
- {"name": "SPlatformResolver(6)", "data":{"hc":{}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "MlookupByName(0)", "data":{"hc":{"0":"Tjava.util.stream.Stream","1":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[-1]],"1":[[0]]}}},
-  {"name": "MlookupByAddress(1)", "data":{"hc":{}}}]},
- {"name": "SValidCachedLookup(7)", "data":{"hc":{}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.net.InetAddress"}}, "subs":[
-   {"name": "PinetAddresses(1)", "data":{"hcsParameter":{"0":[[0]]}}}]},
-  {"name": "Mget(0)", "data":{"hc":{"0":"Tjava.net.InetAddress"},"hcsMethod":{"0":[[0]]}}},
-  {"name": "MtryRemoveExpiredAddress(1)", "data":{"hc":{}}}]},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "Mholder(0)", "data":{"hc":{"0":"Tjava.net.InetAddress.InetAddressHolder"},"hcsMethod":{"0":[[-1]]}}},
  {"name": "MinitializePlatformLookupPolicy(1)", "data":{"hc":{}}},
@@ -106,32 +65,6 @@
  {"name": "Mvalidate(47)", "data":{"hc":{}}}]},
 
 {"name": "Tjava.net.URI", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
- {"name": "SParser(0)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mfail(0)", "data":{"hc":{}}},
-  {"name": "Mfail(1)", "data":{"hc":{}}},
-  {"name": "MfailExpecting(2)", "data":{"hc":{}}},
-  {"name": "Mat(3)", "data":{"hc":{}}},
-  {"name": "Mat(4)", "data":{"hc":{}}},
-  {"name": "Mscan(5)", "data":{"hc":{}}},
-  {"name": "Mscan(6)", "data":{"hc":{}}},
-  {"name": "Mscan(7)", "data":{"hc":{}}},
-  {"name": "MscanEscape(8)", "data":{"hc":{}}},
-  {"name": "Mscan(9)", "data":{"hc":{}}},
-  {"name": "McheckChars(10)", "data":{"hc":{}}},
-  {"name": "McheckChar(11)", "data":{"hc":{}}},
-  {"name": "Mparse(12)", "data":{"hc":{}}},
-  {"name": "MparseHierarchical(13)", "data":{"hc":{}}},
-  {"name": "MparseAuthority(14)", "data":{"hc":{}}},
-  {"name": "MparseServer(15)", "data":{"hc":{}}},
-  {"name": "MscanByte(16)", "data":{"hc":{}}},
-  {"name": "MscanIPv4Address(17)", "data":{"hc":{}}},
-  {"name": "MtakeIPv4Address(18)", "data":{"hc":{}}},
-  {"name": "MparseIPv4Address(19)", "data":{"hc":{}}},
-  {"name": "MparseHostname(20)", "data":{"hc":{}}},
-  {"name": "MparseIPv6Reference(21)", "data":{"hc":{}}},
-  {"name": "MscanHexPost(22)", "data":{"hc":{}}},
-  {"name": "MscanHexSeq(23)", "data":{"hc":{}}}]},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "C<init>(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Pstr(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},
@@ -237,11 +170,6 @@
  {"name": "Mdecode(66)", "data":{"hc":{}}}]},
 
 {"name": "Tjava.net.URL", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
- {"name": "SDefaultFactory(0)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "McreateURLStreamHandler(0)", "data":{"hc":{"0":"Tjava.net.URLStreamHandler"},"hcsMethod":{"0":[[-1]]}}}]},
- {"name": "SThreadTrackHolder(1)", "data":{"hc":{"E":true}}, "sub":
-  {"name": "C<init>(0)", "data":{"hc":{}}}},
  {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "subs":[
   {"name": "Pprotocol(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},
   {"name": "Phost(1)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}},

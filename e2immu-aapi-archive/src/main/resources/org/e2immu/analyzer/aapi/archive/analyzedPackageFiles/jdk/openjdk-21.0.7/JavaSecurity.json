@@ -1,27 +1,5 @@
 [
 {"name": "Tjava.security.MessageDigest", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true},"independentType":2}, "subs":[
- {"name": "SDelegate(0)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "SCloneableDelegate(0)", "data":{"hc":{}}, "sub":
-   {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.security.MessageDigestSpi","1":"Tjava.security.Provider"}}, "subs":[
-    {"name": "PdigestSpi(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
-    {"name": "Pp(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]}},
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.security.MessageDigestSpi","1":"Tjava.security.Provider"}}, "subs":[
-   {"name": "PdigestSpi(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
-   {"name": "Pp(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
-  {"name": "Mof(0)", "data":{"hc":{"0":"Tjava.security.MessageDigestSpi","1":"Tjava.security.Provider","2":"Tjava.security.MessageDigest.Delegate"},"hcsMethod":{"2":[[-1]]}}, "subs":[
-   {"name": "PdigestSpi(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
-   {"name": "Pp(2)", "data":{"hcsParameter":{"1":[[-1]]}}}]},
-  {"name": "Mclone(1)", "data":{"hc":{"0":"Tjava.lang.Object"},"hcsMethod":{"0":[[-1]]}}},
-  {"name": "MengineGetDigestLength(2)", "data":{"hc":{}}},
-  {"name": "MengineUpdate(3)", "data":{"hc":{}}},
-  {"name": "MengineUpdate(4)", "data":{"hc":{}}},
-  {"name": "MengineUpdate(5)", "data":{"hc":{"0":"Tjava.nio.ByteBuffer"}}, "sub":
-   {"name": "Pinput(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MengineUpdate(6)", "data":{"hc":{"0":"Tjavax.crypto.SecretKey"}}, "sub":
-   {"name": "Pkey(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "MengineDigest(7)", "data":{"hc":{}}},
-  {"name": "MengineDigest(8)", "data":{"hc":{}}},
-  {"name": "MengineReset(9)", "data":{"hc":{}}}]},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "C<init>(1)", "data":{"hc":{"0":"Tjava.security.Provider"}}, "subs":[
   {"name": "Pp(1)", "data":{"hcsParameter":{"0":[[-1]]}}}]},
@@ -71,8 +49,6 @@
   {"name": "Psubject(0)", "data":{"annotatedApi":1}}}]},
 
 {"name": "Tjava.security.SecureRandom", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true},"independentType":2}, "subs":[
- {"name": "SStrongPatternHolder(0)", "data":{"hc":{}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}}]},
  {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}},
  {"name": "C<init>(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Pseed(0)", "data":{"annotatedApi":1,"containerParameter":1,"immutableParameter":1,"independentParameter":2,"unmodifiedParameter":1}}},

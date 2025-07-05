@@ -90,39 +90,6 @@
   {"name": "Pcs2(1)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"immutableParameter":2,"independentParameter":2,"unmodifiedParameter":1}}]}]},
 
 {"name": "Tjava.lang.Class", "data":{"annotatedApi":1,"containerType":1,"defaultsAnalyzer":1,"hc":{"0":"PT:0","M":1},"immutableType":3,"immutableTypeDeterminedByParameters":1,"independentType":2}, "subs":[
- {"name": "SAnnotationData(0)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.util.Map","1":"Tjava.lang.Class","2":"Tjava.lang.annotation.Annotation"}}, "subs":[
-   {"name": "Pannotations(0)", "data":{"hcsParameter":{"0":[[-1]],"2":[[0,0],[1]]}}},
-   {"name": "PdeclaredAnnotations(1)", "data":{"hcsParameter":{"0":[[-1]],"2":[[0,0],[1]]}}}]}]},
- {"name": "SAtomic(1)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "McasReflectionData(0)", "data":{"hc":{"0":"PT:0","1":"Tjava.lang.Class","2":"Tjava.lang.Object","3":"Tjava.lang.ref.SoftReference","4":"Tjava.lang.Class.ReflectionData"}}, "subs":[
-   {"name": "Pclazz(0)", "data":{"hcsParameter":{"1":[[-1]]}}},
-   {"name": "PoldData(1)", "data":{"hcsParameter":{"0":[[0,0]],"3":[[-1]]}}},
-   {"name": "PnewData(2)", "data":{"hcsParameter":{"0":[[0,0]],"3":[[-1]]}}}]},
-  {"name": "McasAnnotationType(1)", "data":{"hc":{"0":"Tjava.lang.Class","1":"Tjava.lang.Object","2":"Tsun.reflect.annotation.AnnotationType"}}, "subs":[
-   {"name": "Pclazz(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
-   {"name": "PoldType(1)", "data":{"hcsParameter":{"2":[[-1]]}}},
-   {"name": "PnewType(2)", "data":{"hcsParameter":{"2":[[-1]]}}}]},
-  {"name": "McasAnnotationData(2)", "data":{"hc":{"0":"Tjava.lang.Class","1":"Tjava.lang.Object","2":"Tjava.lang.Class.AnnotationData"}}, "subs":[
-   {"name": "Pclazz(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
-   {"name": "PoldData(1)", "data":{"hcsParameter":{"2":[[-1]]}}},
-   {"name": "PnewData(2)", "data":{"hcsParameter":{"2":[[-1]]}}}]}]},
- {"name": "SEnclosingMethodInfo(2)", "data":{"hc":{}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.lang.Object"}}, "sub":
-   {"name": "PenclosingInfo(0)", "data":{"hcsParameter":{"0":[[0]]}}}},
-  {"name": "Mvalidate(0)", "data":{"hc":{"0":"Tjava.lang.Object"}}, "sub":
-   {"name": "PenclosingInfo(0)", "data":{"hcsParameter":{"0":[[0]]}}}},
-  {"name": "MisPartial(1)", "data":{"hc":{}}},
-  {"name": "MisConstructor(2)", "data":{"hc":{}}},
-  {"name": "MisMethod(3)", "data":{"hc":{}}},
-  {"name": "MgetEnclosingClass(4)", "data":{"hc":{"0":"Tjava.lang.Class","1":"Tjava.lang.Object"},"hcsMethod":{"0":[[-1]]}}},
-  {"name": "MgetName(5)", "data":{"hc":{}}},
-  {"name": "MgetDescriptor(6)", "data":{"hc":{}}}]},
- {"name": "SHolder(3)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}}]},
- {"name": "SReflectionData(4)", "data":{"hc":{"0":"PT:0","E":true,"M":1}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"M":1},"hcsMethod":{"0":[[0]]}}}]},
  {"name": "C<init>(0)", "data":{"hc":{"1":"Tjava.lang.ClassLoader","2":"Tjava.lang.Class","3":"Tjava.lang.Object","M":1},"hcsMethod":{"0":[[0]]}}, "subs":[
   {"name": "Ploader(0)", "data":{"hcsParameter":{"1":[[-1]]}}},
   {"name": "ParrayComponentType(1)", "data":{"hcsParameter":{"2":[[-1]]}}}]},
@@ -571,8 +538,6 @@
   {"name": "Pcause(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}}}]},
 
 {"name": "Tjava.lang.Integer", "data":{"annotatedApi":1,"containerType":1,"defaultsAnalyzer":1,"hc":{},"immutableType":3,"independentType":2}, "subs":[
- {"name": "SIntegerCache(0)", "data":{"hc":{}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}}]},
  {"name": "FMIN_VALUE(0)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "FMAX_VALUE(1)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "FTYPE(2)", "data":{"annotatedApi":1,"containerField":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
@@ -716,8 +681,6 @@
  {"name": "Mspliterator(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"1":"Tjava.util.Spliterator","M":1},"hcsMethod":{"0":[[0]],"1":[[-1]]},"independentMethod":1,"nonModifyingMethod":1,"notNullMethod":1}}]},
 
 {"name": "Tjava.lang.Long", "data":{"annotatedApi":1,"containerType":1,"defaultsAnalyzer":1,"hc":{},"immutableType":3,"independentType":2}, "subs":[
- {"name": "SLongCache(0)", "data":{"hc":{}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}}]},
  {"name": "FMIN_VALUE(0)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "FMAX_VALUE(1)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "FTYPE(2)", "data":{"annotatedApi":1,"containerField":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
@@ -854,8 +817,6 @@
   {"name": "Plookup(0)", "data":{"annotatedApi":1,"independentParameter":2,"unmodifiedParameter":1}}}]},
 
 {"name": "Tjava.lang.Math", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableType":3,"independentType":2,"utilityClass":1}, "subs":[
- {"name": "SRandomNumberGeneratorHolder(0)", "data":{"hc":{}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}}]},
  {"name": "FE(0)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "FPI(1)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
  {"name": "FTAU(2)", "data":{"annotatedApi":1,"finalField":1,"immutableField":3,"independentField":2,"notNullField":1,"unmodifiedField":1}},
@@ -1195,10 +1156,6 @@
   {"name": "Pcause(1)", "data":{"hcsParameter":{"0":[[-1]]}}}]}]},
 
 {"name": "Tjava.lang.String", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"immutableType":3,"independentType":2}, "subs":[
- {"name": "SCaseInsensitiveComparator(0)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mcompare(0)", "data":{"hc":{}}},
-  {"name": "MreadResolve(1)", "data":{"hc":{"0":"Tjava.lang.Object"},"hcsMethod":{"0":[[-1]]}}}]},
  {"name": "FCASE_INSENSITIVE_ORDER(8)", "data":{"annotatedApi":1,"containerField":1,"finalField":1,"immutableField":3,"independentField":2,"unmodifiedField":1}},
  {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}},
  {"name": "C<init>(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
@@ -1631,11 +1588,6 @@
   {"name": "Ps(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
 
 {"name": "Tjava.lang.System", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{},"independentType":2}, "subs":[
- {"name": "SIn(0)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mread(0)", "data":{"hc":{}}},
-  {"name": "Mread(1)", "data":{"hc":{}}},
-  {"name": "Mread(2)", "data":{"hc":{}}}]},
  {"name": "SLogger(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true},"independentType":2}, "subs":[
   {"name": "SLevel(0)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
    {"name": "FALL(0)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
@@ -1696,11 +1648,6 @@
    {"name": "Pmodule(2)", "data":{"annotatedApi":1}}]},
   {"name": "MgetLoggerFinder(2)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.System.LoggerFinder"},"hcsMethod":{"0":[[-1]]}}},
   {"name": "MaccessProvider(3)", "data":{"hc":{"0":"Tjava.lang.System.LoggerFinder"},"hcsMethod":{"0":[[-1]]}}}]},
- {"name": "SOut(3)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mwrite(0)", "data":{"hc":{}}},
-  {"name": "Mwrite(1)", "data":{"hc":{}}},
-  {"name": "Mwrite(2)", "data":{"hc":{}}}]},
  {"name": "Fin(0)", "data":{"annotatedApi":1,"finalField":1,"ignoreModificationsField":1,"independentField":2,"notNullField":1}},
  {"name": "Fout(1)", "data":{"annotatedApi":1,"finalField":1,"ignoreModificationsField":1,"notNullField":1}},
  {"name": "Ferr(2)", "data":{"annotatedApi":1,"finalField":1,"ignoreModificationsField":1,"notNullField":1}},
@@ -1822,12 +1769,6 @@
   {"name": "Mstart(5)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Runnable","1":"Tjava.lang.Thread"},"hcsMethod":{"1":[[-1]]}}, "sub":
    {"name": "Prunnable(0)", "data":{"annotatedApi":1,"containerParameter":1,"hcsParameter":{"0":[[-1]]},"ignoreModsParameter":1}}},
   {"name": "Mfactory(6)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.util.concurrent.ThreadFactory"},"hcsMethod":{"0":[[-1]]}}}]},
- {"name": "SConstants(1)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}}]},
- {"name": "SFieldHolder(2)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.lang.ThreadGroup","1":"Tjava.lang.Runnable"}}, "subs":[
-   {"name": "Pgroup(0)", "data":{"hcsParameter":{"0":[[-1]]}}},
-   {"name": "Ptask(1)", "data":{"hcsParameter":{"1":[[-1]]}}}]}]},
  {"name": "SState(3)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
   {"name": "FNEW(0)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
   {"name": "FRUNNABLE(1)", "data":{"annotatedApi":1,"finalField":1,"notNullField":1}},
@@ -1839,12 +1780,6 @@
   {"name": "Mvalues(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"immutableMethod":1}},
   {"name": "MvalueOf(1)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "sub":
    {"name": "Pname(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}}]},
- {"name": "SThreadIdentifiers(4)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mnext(0)", "data":{"hc":{}}}]},
- {"name": "SThreadNumbering(5)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mnext(0)", "data":{"hc":{}}}]},
  {"name": "SUncaughtExceptionHandler(6)", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "sub":
   {"name": "MuncaughtException(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{"0":"Tjava.lang.Thread","1":"Tjava.lang.Throwable"},"independentMethod":2,"notNullMethod":1}, "subs":[
    {"name": "Pthread(0)", "data":{"annotatedApi":1,"hcsParameter":{"0":[[-1]]}}},
@@ -2001,25 +1936,6 @@
  {"name": "MgetNextThreadIdOffset(86)", "data":{"hc":{}}}]},
 
 {"name": "Tjava.lang.Throwable", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{"E":true}}, "subs":[
- {"name": "SPrintStreamOrWriter(0)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Mlock(0)", "data":{"hc":{"0":"Tjava.lang.Object"},"hcsMethod":{"0":[[-1]]}}},
-  {"name": "Mprintln(1)", "data":{"hc":{"0":"Tjava.lang.Object"}}, "sub":
-   {"name": "Pobject(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
- {"name": "SSentinelHolder(1)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}}]},
- {"name": "SWrappedPrintStream(2)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.io.PrintStream"}}, "sub":
-   {"name": "PprintStream(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Mlock(0)", "data":{"hc":{"0":"Tjava.lang.Object"},"hcsMethod":{"0":[[-1]]}}},
-  {"name": "Mprintln(1)", "data":{"hc":{"0":"Tjava.lang.Object"}}, "sub":
-   {"name": "Po(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
- {"name": "SWrappedPrintWriter(3)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{"0":"Tjava.io.PrintWriter"}}, "sub":
-   {"name": "PprintWriter(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
-  {"name": "Mlock(0)", "data":{"hc":{"0":"Tjava.lang.Object"},"hcsMethod":{"0":[[-1]]}}},
-  {"name": "Mprintln(1)", "data":{"hc":{"0":"Tjava.lang.Object"}}, "sub":
-   {"name": "Po(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
  {"name": "C<init>(0)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}},
  {"name": "C<init>(1)", "data":{"annotatedApi":1,"containerMethod":1,"defaultsAnalyzer":1,"hc":{},"independentMethod":2,"notNullMethod":1}, "sub":
   {"name": "Pmessage(0)", "data":{"annotatedApi":1,"immutableParameter":3,"independentParameter":2,"unmodifiedParameter":1}}},

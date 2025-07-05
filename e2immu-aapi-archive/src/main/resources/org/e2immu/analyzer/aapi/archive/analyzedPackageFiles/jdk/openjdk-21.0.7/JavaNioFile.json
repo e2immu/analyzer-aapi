@@ -1,13 +1,5 @@
 [
 {"name": "Tjava.nio.file.Files", "data":{"annotatedApi":1,"defaultsAnalyzer":1,"hc":{}}, "subs":[
- {"name": "SAcceptAllFilter(0)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "Maccept(0)", "data":{"hc":{"0":"Tjava.nio.file.Path"}}, "sub":
-   {"name": "Pentry(0)", "data":{"hcsParameter":{"0":[[-1]]}}}}]},
- {"name": "SFileTypeDetectors(1)", "data":{"hc":{"E":true}}, "subs":[
-  {"name": "C<init>(0)", "data":{"hc":{}}},
-  {"name": "McreateDefaultFileTypeDetector(0)", "data":{"hc":{"0":"Tjava.nio.file.spi.FileTypeDetector"},"hcsMethod":{"0":[[-1]]}}},
-  {"name": "MloadInstalledDetectors(1)", "data":{"hc":{"0":"Tjava.util.List","1":"Tjava.nio.file.spi.FileTypeDetector"},"hcsMethod":{"0":[[-1]],"1":[[0]]}}}]},
  {"name": "C<init>(0)", "data":{"hc":{}}},
  {"name": "Mprovider(0)", "data":{"hc":{"0":"Tjava.nio.file.Path","1":"Tjava.nio.file.spi.FileSystemProvider"},"hcsMethod":{"1":[[-1]]}}, "sub":
   {"name": "Ppath(0)", "data":{"hcsParameter":{"0":[[-1]]}}}},
