@@ -187,7 +187,7 @@ public class TestComposer {
 
         Composer composer = new Composer(javaInspector, set -> "org.e2immu.testannotatedapi", w -> true);
 
-        TypeInfo commandLine = javaInspector.compiledTypesManager().getOrLoad("picocli.CommandLine");
+        TypeInfo commandLine = javaInspector.compiledTypesManager().getOrLoad("picocli.CommandLine", null);
         MethodInfo call = commandLine.findUniqueMethod("call", 2);
         assertEquals("picocli.CommandLine.call(C extends java.util.concurrent.Callable<T>,String...)",
                 call.fullyQualifiedName());
@@ -235,7 +235,8 @@ public class TestComposer {
         javaInspector.initialize(inputConfigurationBuilder.build());
 
         Composer composer = new Composer(javaInspector, set -> "org.e2immu.testannotatedapi", w -> true);
-        TypeInfo annotationConsumer = javaInspector.compiledTypesManager().getOrLoad("org.junit.jupiter.params.support.AnnotationConsumer");
+        TypeInfo annotationConsumer = javaInspector.compiledTypesManager()
+                .getOrLoad("org.junit.jupiter.params.support.AnnotationConsumer", null);
         Collection<TypeInfo> res = composer.compose(Set.of(annotationConsumer));
         assertEquals(1, res.size());
 
@@ -266,7 +267,8 @@ public class TestComposer {
 
         Composer composer = new Composer(javaInspector, set -> "org.e2immu.testannotatedapi", w -> true);
         TypeInfo typeInfo = javaInspector.compiledTypesManager().getOrLoad(
-                "org.springframework.security.config.annotation.web.configurers.AbstractInterceptUrlConfigurer");
+                "org.springframework.security.config.annotation.web.configurers.AbstractInterceptUrlConfigurer",
+                null);
         assertNotNull(typeInfo);
         Collection<TypeInfo> res = composer.compose(Set.of(typeInfo));
         assertEquals(1, res.size());
@@ -315,7 +317,8 @@ public class TestComposer {
 
         Composer composer = new Composer(javaInspector, set -> "org.e2immu.testannotatedapi", w -> true);
         TypeInfo typeInfo = javaInspector.compiledTypesManager().getOrLoad(
-                "org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer");
+                "org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer",
+                null);
         assertNotNull(typeInfo);
 
         Collection<TypeInfo> res = composer.compose(Set.of(typeInfo));

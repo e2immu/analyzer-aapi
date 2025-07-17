@@ -95,7 +95,7 @@ public class AnnotatedApiParser implements AnnotationProvider {
         if (typeInfo.simpleName().endsWith("$")) {
             String simpleNameWithoutDollar = typeInfo.simpleName().substring(0, typeInfo.simpleName().length() - 1);
             String fqn = apiPackage + "." + simpleNameWithoutDollar;
-            TypeInfo targetType = javaInspector.compiledTypesManager().getOrLoad(fqn);
+            TypeInfo targetType = javaInspector.compiledTypesManager().getOrLoad(fqn, typeInfo.compilationUnit().sourceSet());
             if (targetType != null) {
                 annotatedTypes++;
                 transferAnnotations(typeInfo, targetType);
