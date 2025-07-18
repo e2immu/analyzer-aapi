@@ -299,9 +299,9 @@ public class Composer {
                 : runtime.newTranslationMapBuilder(parentTm);
         List<TypeParameter> newTypeParameters = new ArrayList<>();
         for (TypeParameter tp : typeToCopy.typeParameters()) {
-            TypeParameter newTp = runtime.newTypeParameter(tp.comments(), tp.source(), tp.annotations(),
+            TypeParameter newTp = runtime.newTypeParameter(tp.comments(), tp.annotations(),
                     tp.getIndex(), tp.simpleName(), typeInfo);
-            typeInfo.builder().addOrSetTypeParameter(newTp);
+            typeInfo.builder().setSource(tp.source()).addOrSetTypeParameter(newTp);
             tmb.put(tp, newTp);
             newTypeParameters.add(newTp);
             translateFromDollarToReal.put(newTp, tp);
