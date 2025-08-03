@@ -63,7 +63,7 @@ public class AnnotatedApiParser implements AnnotationProvider {
                            List<String> packageList) throws IOException {
         InputConfigurationImpl.Builder builder = new InputConfigurationImpl.Builder()
                 .setAlternativeJREDirectory(alternativeJreOrNull)
-                .addClassPath(InputConfigurationImpl.GRADLE_DEFAULT);
+                .addClassPath(InputConfigurationImpl.DEFAULT_MODULES);
         sourceDirs.forEach(builder::addSources);
         packageList.forEach(builder::addRestrictSourceToPackages);
         addToClasspath.forEach(builder::addClassPath);

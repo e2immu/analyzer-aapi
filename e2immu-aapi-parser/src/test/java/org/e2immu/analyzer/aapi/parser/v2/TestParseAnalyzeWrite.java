@@ -65,7 +65,7 @@ public class TestParseAnalyzeWrite {
     public void test() throws IOException {
         AnnotatedApiParser annotatedApiParser = new AnnotatedApiParser();
         annotatedApiParser.initialize(new InputConfigurationImpl.Builder()
-                        .addClassPath(InputConfigurationImpl.GRADLE_DEFAULT)
+                        .addClassPath(InputConfigurationImpl.DEFAULT_MODULES)
                         .addClassPath(ToolChain.CLASSPATH_SLF4J_LOGBACK)
                         .addClassPath(ToolChain.CLASSPATH_JUNIT)
                         .addClassPath(JavaInspectorImpl.E2IMMU_SUPPORT)
