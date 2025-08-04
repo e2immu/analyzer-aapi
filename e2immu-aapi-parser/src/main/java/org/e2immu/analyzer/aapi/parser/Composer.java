@@ -27,7 +27,6 @@ import org.e2immu.language.cst.api.statement.Block;
 import org.e2immu.language.cst.api.statement.Statement;
 import org.e2immu.language.cst.api.translate.TranslationMap;
 import org.e2immu.language.cst.api.type.ParameterizedType;
-import org.e2immu.language.cst.api.type.TypeParameter;
 import org.e2immu.language.inspection.api.integration.JavaInspector;
 import org.e2immu.util.internal.util.StringUtil;
 import org.slf4j.Logger;
@@ -249,7 +248,7 @@ public class Composer {
         int i = 0;
         for (TypeParameter tp : methodInfo.typeParameters()) {
             TypeParameter newTp = newTypeParameters.get(i++);
-            tp.typeBounds().forEach(tb -> newTp.builder().addTypeBound(tm.translateType(tb)));
+            newTp.builder().setTypeBounds(tp.typeBounds().stream().map(tm::translateType).toList());
             newTp.builder().commit();
         }
 
@@ -299,9 +298,11 @@ public class Composer {
                 : runtime.newTranslationMapBuilder(parentTm);
         List<TypeParameter> newTypeParameters = new ArrayList<>();
         for (TypeParameter tp : typeToCopy.typeParameters()) {
-            TypeParameter newTp = runtime.newTypeParameter(tp.comments(), tp.annotations(),
-                    tp.getIndex(), tp.simpleName(), typeInfo);
-            typeInfo.builder().setSource(tp.source()).addOrSetTypeParameter(newTp);
+            TypeParameter newTp = runtime.newTypeParameter(tp.getIndex(), tp.simpleName(), typeInfo);
+            typeInfo.builder()
+                    .addComments(tp.comments())
+                    .addAnnotations(tp.annotations())
+                    .setSource(tp.source()).addOrSetTypeParameter(newTp);
             tmb.put(tp, newTp);
             newTypeParameters.add(newTp);
             translateFromDollarToReal.put(newTp, tp);
@@ -310,11 +311,7 @@ public class Composer {
         int i = 0;
         for (TypeParameter tp : typeToCopy.typeParameters()) {
             TypeParameter newTp = newTypeParameters.get(i++);
-            for (ParameterizedType typeBound : tp.typeBounds()) {
-                ParameterizedType translatedTypeBound = tm.translateType(typeBound);
-                newTp.builder().addTypeBound(translatedTypeBound);
-            }
-            newTp.builder().commit();
+            newTp.builder().setTypeBounds(tp.typeBounds().stream().map(tm::translateType).toList()).commit();
         }
         return new TypeTm(typeInfo, tm);
     }
